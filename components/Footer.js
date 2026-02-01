@@ -46,32 +46,34 @@ export default function Footer() {
             </h4>
 
             <div className="space-y-3 text-sm">
-              <a
-                href="mustafa82oner@gmail.com"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition"
-              >
-                <Mail className="w-4 h-4" />
-                mustafa82oner@gmail.com
-              </a>
+             <a
+        href="mailto:mustafa82oner@gmail.com"
+        className="flex items-center gap-3 text-gray-400 hover:text-white"
+      >
+        <Mail className="w-4 h-4" />
+        mustafa82oner@gmail.com
+      </a>
 
-              <a
-                href="#"
-                target="_blank"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition"
-              >
-                <Linkedin className="w-4 h-4" />
-               https://www.linkedin.com/in/
-mustafa-oner-82
+      {/* LINKEDIN */}
+      <a
+        href="https://www.linkedin.com/in/mustafa-oner-82/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3 text-gray-400 hover:text-white"
+      >
+        <Linkedin className="w-4 h-4" />
+        https://www.linkedin.com/in/mustafa-oner-82
+      </a>
 
-              </a>
-
-              <a
-                href="#"
-                target="_blank"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition"
-              >
-                <Github className="w-4 h-4" />
-               https://github.com/mustafa-network-tech
+      {/* GITHUB */}
+      <a
+        href="https://github.com/mustafa-network-tech"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3 text-gray-400 hover:text-white"
+      >
+        <Github className="w-4 h-4" />
+        https://github.com/mustafa-network-tech
               </a>
             </div>
           </div>
