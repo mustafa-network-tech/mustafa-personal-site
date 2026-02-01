@@ -333,15 +333,24 @@ export default function Photography() {
       {/* LIGHTBOX */}
       <AnimatePresence>
         {isOpen && currentSrc && (
-          <motion.div
-            className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onMouseDown={(e) => {
-              if (e.target === e.currentTarget) closeLightbox()
-            }}
-          >
+         <motion.div
+  className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  onClick={closeLightbox}
+>
+  <div
+    className="relative"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <button
+      onClick={closeLightbox}
+      className="absolute top-3 right-3 z-10 text-white text-2xl"
+    >
+     ×
+    </button>
+</motion.div>
             {/* Top bar */}
             <div className="absolute top-0 left-0 right-0 flex items-center justify-between p-4 md:p-6">
               <div className="text-white/90 text-sm md:text-base">
