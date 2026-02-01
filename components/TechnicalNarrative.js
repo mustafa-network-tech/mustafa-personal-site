@@ -136,7 +136,6 @@ export default function TechnicalNarrative() {
                   '/photos/from-yesterday-to-today/copper/004.JPG',
                   '/photos/from-yesterday-to-today/copper/005.JPG',
                   '/photos/from-yesterday-to-today/copper/006.JPG',
-                
                 ].map((src, i) => (
                   <div key={i} className="group relative aspect-square overflow-hidden rounded-2xl bg-gray-200">
                     <img

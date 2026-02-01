@@ -46,41 +46,42 @@ export default function Footer() {
             </h4>
 
             <div className="space-y-3 text-sm">
-             <a
-        href="mailto:mustafa82oner@gmail.com"
-        className="flex items-center gap-3 text-gray-400 hover:text-white"
-      >
-        <Mail className="w-4 h-4" />
-        mustafa82oner@gmail.com
-      </a>
 
-      {/* LINKEDIN */}
-      <a
-        href="https://www.linkedin.com/in/mustafa-oner-/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-3 text-gray-400 hover:text-white"
-      >
-        <Linkedin className="w-4 h-4" />
-        https://www.linkedin.com/in/mustafa-oner-
-      </a>
+              <a
+                href="mailto:mustafa82oner@gmail.com"
+                className="flex items-center gap-3 text-gray-400 hover:text-white"
+              >
+                <Mail className="w-4 h-4" />
+                mustafa82oner@gmail.com
+              </a>
 
-      {/* GITHUB */}
-      <a
-        href="https://github.com/mustafa-network-tech"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-3 text-gray-400 hover:text-white"
-      >
-        <Github className="w-4 h-4" />
-        https://github.com/mustafa-network-tech
+              {/* LINKEDIN */}
+              <a
+                href="https://www.linkedin.com/in/mustafa-oner-82/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-400 hover:text-white"
+              >
+                <Linkedin className="w-4 h-4" />
+                https://www.linkedin.com/in/mustafa-oner-82
+              </a>
+
+              {/* GITHUB */}
+              <a
+                href="https://github.com/mustafa-network-tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-400 hover:text-white"
+              >
+                <Github className="w-4 h-4" />
+                https://github.com/mustafa-network-tech
               </a>
             </div>
           </div>
         </motion.div>
         <p className="mt-4 text-sm text-gray-500 text-center">
-  This website serves as a professional portfolio for my telecom field experience and technical work.
-</p>
+          This website serves as a professional portfolio for my telecom field experience and technical work.
+        </p>
 
         {/* Bottom line */}
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-gray-500">
