@@ -184,17 +184,16 @@ export default function Photography() {
               return (
                 <button
                   key={category.title}
+                  type="button"
                   onClick={() => setActiveCategory(index)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    isActive ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${isActive ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
                 >
                   <span className="mr-3">{category.icon}</span>
                   <span className="font-medium">{category.title}</span>
                   <span
-                    className={`ml-3 px-2 py-1 rounded-full text-xs ${
-                      isActive ? 'bg-blue-500' : 'bg-gray-200'
-                    }`}
+                    className={`ml-3 px-2 py-1 rounded-full text-xs ${isActive ? 'bg-blue-500' : 'bg-gray-200'
+                      }`}
                   >
                     {c}
                   </span>
@@ -330,86 +329,90 @@ export default function Photography() {
         </motion.div>
       </div>
 
-      {/* LIGHTBOX */}
+      {/* LIGHTBOX (BULLETPROOF) */}
       <AnimatePresence>
         {isOpen && currentSrc && (
-         <motion.div
-  className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  exit={{ opacity: 0 }}
-  onClick={closeLightbox}
->
-  <div
-    className="relative"
-    onClick={(e) => e.stopPropagation()}
-  >
-    <button
-      onClick={closeLightbox}
-      className="absolute top-3 right-3 z-10 text-white text-2xl"
-    >
-     ×
-    </button>
-</motion.div>
-            {/* Top bar */}
-            <div className="absolute top-0 left-0 right-0 flex items-center justify-between p-4 md:p-6">
-              <div className="text-white/90 text-sm md:text-base">
-                <span className="font-semibold">{active.title}</span>
-                <span className="mx-2 text-white/40">•</span>
-                <span className="text-white/80">
-                  {getLabel()} {activeIndex + 1} / {count}
-                </span>
-              </div>
+          <motion.div
+            className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {/* Backdrop: sadece burası dış tık ile kapatır */}
+            <button
+              type="button"
+              aria-label="Close lightbox"
+              onClick={closeLightbox}
+              className="absolute inset-0 cursor-default"
+            />
 
-              <button
-                type="button"
-                onClick={closeLightbox}
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-white hover:bg-white/15 transition"
-              >
-                <X className="w-5 h-5" />
-                <span className="hidden sm:inline">Close</span>
-              </button>
-            </div>
-
-            {/* Image container */}
-            <div className="absolute inset-0 flex items-center justify-center px-4 py-20 md:px-10">
-              <div className="relative w-full max-w-5xl h-[70vh] md:h-[78vh] rounded-2xl overflow-hidden bg-black/30 border border-white/10">
-                <Image
-                  src={currentSrc}
-                  alt={`${active.title} — ${getLabel()} ${activeIndex + 1}`}
-                  fill
-                  sizes="100vw"
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </div>
-
-            {/* Nav buttons */}
-            {count > 1 && (
-              <>
-                <button
-                  type="button"
-                  onClick={prev}
-                  className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/15 transition"
-                  aria-label="Previous"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
+            {/* Content: bunun içindeki hiçbir tık backdrop'a gitmez */}
+            <div className="relative w-full h-full flex items-center justify-center">
+              {/* Top bar */}
+              <div className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between p-4 md:p-6 pointer-events-auto">
+                <div className="text-white/90 text-sm md:text-base">
+                  <span className="font-semibold">{active.title}</span>
+                  <span className="mx-2 text-white/40">•</span>
+                  <span className="text-white/80">
+                    {getLabel()} {activeIndex + 1} / {count}
+                  </span>
+                </div>
 
                 <button
                   type="button"
-                  onClick={next}
-                  className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/15 transition"
-                  aria-label="Next"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    closeLightbox()
+                  }}
+                  className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-white hover:bg-white/15 transition pointer-events-auto"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <X className="w-5 h-5" />
+                  <span className="hidden sm:inline">Close</span>
                 </button>
-              </>
-            )}
+              </div>
 
-            <div className="absolute bottom-4 left-0 right-0 text-center text-white/60 text-xs md:text-sm px-6">
-              ESC to close · ← / → to navigate · Click outside to close
+              {/* Image container */}
+              <div className="w-full px-4 py-20 md:px-10 pointer-events-none">
+                <div className="relative mx-auto w-full max-w-5xl h-[70vh] md:h-[78vh] rounded-2xl overflow-hidden bg-black/30 border border-white/10 pointer-events-auto">
+                  <Image
+                    src={currentSrc}
+                    alt={`${active.title} — ${getLabel()} ${activeIndex + 1}`}
+                    fill
+                    sizes="100vw"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
+
+              {/* Nav buttons */}
+              {count > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      prev()
+                    }}
+                    className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/15 transition z-50 pointer-events-auto"
+                    aria-label="Previous"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      next()
+                    }}
+                    className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/15 transition z-50 pointer-events-auto"
+                    aria-label="Next"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </>
+              )}
             </div>
           </motion.div>
         )}
