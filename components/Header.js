@@ -39,9 +39,8 @@ export default function Header() {
             <div className="hidden md:block min-w-0">
               <h1 className="text-xl font-semibold text-gray-900 truncate">Mustafa Oner</h1>
               <p className="text-sm text-gray-600 leading-snug">
-                Telecom Field Technician
-                <br />
-                Fiber & Copper Infrastructure | FTTH Operations
+              ✔️Telecom Field Technician ✔️Fiber & Copper Infrastructure 
+               ✔️FTTH Operations
               </p>
             </div>
           </Link>
