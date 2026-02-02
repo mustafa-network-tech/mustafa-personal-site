@@ -15,34 +15,42 @@ export default function TopNotice() {
   if (!visible) return null
 
   return (
-    <div className="fixed top-24 right-6 z-[9999]">
-      <div className="relative w-[340px] max-w-[90vw] rounded-2xl bg-white shadow-xl border border-blue-100 px-5 py-4">
+    <div className="fixed top-16 right-3 left-3 md:left-auto md:top-24 md:right-6 z-[9999] flex justify-end">
+      <div className="relative w-full max-w-[360px] md:w-[340px] rounded-2xl bg-white shadow-xl border border-blue-100 px-4 py-3 md:px-5 md:py-4">
 
-        {/* baloncuk oku */}
-        <div className="absolute -bottom-2 right-10 w-4 h-4 bg-white border-r border-b border-blue-100 rotate-45"></div>
+        {/* baloncuk oku (desktop only) */}
+        <div className="hidden md:block absolute -bottom-2 right-10 w-4 h-4 bg-white border-r border-b border-blue-100 rotate-45" />
 
         <div className="flex items-start justify-between gap-3">
-          <div>
-            <div className="text-xs font-semibold text-blue-700 mb-1 tracking-wide">
+          <div className="min-w-0">
+            <div className="text-[11px] md:text-xs font-semibold text-blue-700 mb-1 tracking-wide">
               Mustafa’s note
             </div>
 
-            <div className="notice-blink text-[15px] leading-snug text-gray-900 font-medium">
-             This is not a traditional CV.
+            {/* Mobil: küçük + kısa görünsün. Desktop: mevcut boy */}
+            <div className="text-sm md:text-[15px] leading-snug text-gray-900 font-medium md:notice-blink">
+              <span className="md:hidden block line-clamp-3">
+                This is not a traditional CV. It shows how I work on real telecom sites — and how I live, observe, and move through the world.
+              </span>
 
-This profile shows how I work on real telecom sites — and also how I live, observe and move through the world around me.
-
-Because field work is not only about tools and procedures.
-It is about attitude, discipline, communication and responsibility.
-
-This page is built to help you understand not only what I do,
-but how I work — and who I am while doing it.
+              <span className="hidden md:block">
+                This is not a traditional CV.
+                <br /><br />
+                This profile shows how I work on real telecom sites — and also how I live,
+                observe and move through the world around me.
+                <br /><br />
+                Because field work is not only about tools and procedures.
+                It is about attitude, discipline, communication and responsibility.
+                <br /><br />
+                This page is built to help you understand not only what I do,
+                but how I work — and who I am while doing it.
+              </span>
             </div>
           </div>
 
           <button
             onClick={() => setVisible(false)}
-            className="p-1 rounded-md hover:bg-gray-100"
+            className="p-1 rounded-md hover:bg-gray-100 shrink-0"
             aria-label="Close"
           >
             <X className="w-4 h-4 text-gray-500" />
@@ -61,14 +69,11 @@ but how I work — and who I am while doing it.
           }
 
           @keyframes bar {
-            from {
-              transform: translateX(-100%);
-            }
-            to {
-              transform: translateX(0%);
-            }
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0%); }
           }
 
+          /* blink sadece desktop'ta kullanılıyor (md:notice-blink) */
           .notice-blink {
             animation: blinkText 1.2s ease-in-out infinite;
           }
