@@ -8,7 +8,7 @@ export default function TopNotice() {
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(false), 8000) // 10 saniye
+    const timer = setTimeout(() => setVisible(false), 8000) // 8 saniye
     return () => clearTimeout(timer)
   }, [])
 
@@ -31,6 +31,8 @@ export default function TopNotice() {
             <div className="text-sm md:text-[15px] leading-snug text-gray-900 font-medium md:notice-blink">
               <span className="md:hidden block line-clamp-3">
                 This is not a traditional CV. It shows how I work on real telecom sites — and how I live, observe, and move through the world.
+                <br></br>
+                MUSTAFA ONER
               </span>
 
               <span className="hidden md:block">
@@ -44,6 +46,8 @@ export default function TopNotice() {
                 <br /><br />
                 This page is built to help you understand not only what I do,
                 but how I work — and who I am while doing it.
+                <br></br>
+                MUSTAFA ONER
               </span>
             </div>
           </div>
@@ -65,7 +69,7 @@ export default function TopNotice() {
         <style jsx>{`
           .notice-bar {
             width: 100%;
-            animation: bar 10s linear forwards;
+            animation: bar 8s linear forwards;
           }
 
           @keyframes bar {
