@@ -62,10 +62,16 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-400 hover:text-white"
               >
-                <Linkedin className="w-4 h-4" />
-                https://www.linkedin.com/in/mustafa-oner-82
               </a>
-
+              <a
+                href="https://www.linkedin.com/in/mustafa-oner-/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-400 hover:text-white"
+              >
+                <Github className="w-4 h-4" />
+                https://www.linkedin.com/in/mustafa-oner-/
+              </a>
               {/* GITHUB */}
               <a
                 href="https://github.com/mustafa-network-tech"

@@ -59,7 +59,7 @@ const projects = [
     icon: <Smartphone className="w-7 h-7" />,
     title: 'Mavi Kadrajla Öğreniyorum',
     description:
-      'An educational and visual-based mobile app concept built around learning through images and short content.',
+      'Live on Google Play. A visual learning mobile app developed for childrens education, focused on learning through images',
     tags: ['Android', 'Mobile App'],
     links: {
       live: 'https://play.google.com/store/apps/details?id=com.mavikadaj.learn',
