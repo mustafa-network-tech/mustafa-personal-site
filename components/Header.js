@@ -59,38 +59,47 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile: Name + Headline + Hamburger */}
-          <div className="md:hidden flex items-center justify-between gap-3 flex-1 min-w-0">
-            <div className="flex flex-col leading-tight min-w-0">
-              <span className="text-sm font-semibold text-gray-900 truncate">Mustafa Oner</span>
-              <span className="text-[12px] text-gray-600 truncate">
-                Telecom Field Tech • Fiber & Copper • FTTH Ops
-              </span>
-            </div>
+         {/* Mobile: Name + Headline + Hamburger */}
+<div className="md:hidden flex items-center justify-between gap-3 flex-1 min-w-0">
+  <div className="flex flex-col leading-tight min-w-0">
+    {/* Name */}
+    <span className="text-sm font-semibold text-gray-900">
+      Mustafa Oner
+    </span>
 
-            <button
-              type="button"
-              className="p-2 flex-shrink-0"
-              onClick={() => setIsOpen((v) => !v)}
-              aria-label="Open menu"
-            >
-              <div className="w-6 h-6 flex flex-col justify-center items-center">
-                <span
-                  className={`block h-0.5 w-6 bg-gray-700 transition-transform duration-200 ${isOpen ? 'rotate-45 translate-y-1' : ''
-                    }`}
-                />
-                <span
-                  className={`block h-0.5 w-6 bg-gray-700 mt-1 transition-opacity duration-200 ${isOpen ? 'opacity-0' : 'opacity-100'
-                    }`}
-                />
-                <span
-                  className={`block h-0.5 w-6 bg-gray-700 mt-1 transition-transform duration-200 ${isOpen ? '-rotate-45 -translate-y-1' : ''
-                    }`}
-                />
-              </div>
-            </button>
-          </div>
-        </div>
+    {/* Headline (2 lines, no ellipsis) */}
+    <span className="text-[12px] text-gray-600 leading-snug whitespace-normal">
+      Telecom Field Technician • Fiber & Copper Infrastructure
+       • FTTH Operations
+    </span>
+  </div>
+
+  {/* Mobile Menu Button */}
+  <button
+    type="button"
+    className="p-2 shrink-0"
+    onClick={() => setIsOpen((v) => !v)}
+    aria-label={isOpen ? "Close menu" : "Open menu"}
+  >
+    <div className="w-6 h-6 flex flex-col justify-center items-center">
+      <span
+        className={`block h-0.5 w-6 bg-gray-700 transition-transform duration-200 ${
+          isOpen ? "rotate-45 translate-y-1" : ""
+        }`}
+      />
+      <span
+        className={`block h-0.5 w-6 bg-gray-700 mt-1 transition-opacity duration-200 ${
+          isOpen ? "opacity-0" : "opacity-100"
+        }`}
+      />
+      <span
+        className={`block h-0.5 w-6 bg-gray-700 mt-1 transition-transform duration-200 ${
+          isOpen ? "-rotate-45 -translate-y-1" : ""
+        }`}
+      />
+    </div>
+  </button>
+</div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>
