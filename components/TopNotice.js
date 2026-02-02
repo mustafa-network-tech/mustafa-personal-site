@@ -16,7 +16,7 @@ export default function TopNotice() {
 
   return (
     <div className="fixed top-16 right-3 left-3 md:left-auto md:top-24 md:right-6 z-[9999] flex justify-end">
-      <div className="relative w-full max-w-[360px] md:w-[340px] rounded-2xl bg-white shadow-xl border border-blue-100 px-4 py-3 md:px-5 md:py-4">
+      <div className="relative w-full max-w-[260px] md:w-[240px] rounded-2xl bg-white shadow-xl border border-blue-100 px-4 py-3 md:px-5 md:py-4">
 
         {/* baloncuk oku (desktop only) */}
         <div className="hidden md:block absolute -bottom-2 right-10 w-4 h-4 bg-white border-r border-b border-blue-100 rotate-45" />
