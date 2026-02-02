@@ -22,9 +22,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center gap-4">
+           </div>
           {/* Logo / Name */}
           <Link href="/" className="flex items-center space-x-3 min-w-0">
             <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-500 ring-offset-2 flex-shrink-0">
+              
               <Image
                 src="/mustafa.jpg"
                 alt="Mustafa profile photo"
@@ -34,7 +36,7 @@ export default function Header() {
                 priority
               />
             </div>
-
+           
             {/* Desktop text */}
             <div className="hidden md:block min-w-0">
               <h1 className="text-xl font-semibold text-gray-900 truncate">Mustafa Oner</h1>
@@ -43,6 +45,7 @@ export default function Header() {
                ✔️FTTH Operations
               </p>
             </div>
+
           </Link>
 
           {/* Desktop Navigation */}
