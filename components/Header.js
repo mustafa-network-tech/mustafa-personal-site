@@ -22,30 +22,24 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center gap-4">
-           </div>
-          {/* Logo / Name */}
+          
+          {/* Fotoğraf + İsim */}
           <Link href="/" className="flex items-center space-x-3 min-w-0">
-            <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-500 ring-offset-2 flex-shrink-0">
-              
-              <Image
-                src="/mustafa.jpg"
-                alt="Mustafa profile photo"
-                width={64}
-                height={64}
-                className="w-16 h-16 object-cover"
-                priority
-              />
-            </div>
-           
+            <Image
+              src="/mustafa.jpg"
+              alt="Mustafa profile photo"
+              width={64}
+              height={64}
+              className="w-16 h-16 object-cover rounded-full ring-2 ring-blue-500 ring-offset-2 flex-shrink-0"
+              priority
+            />
             {/* Desktop text */}
             <div className="hidden md:block min-w-0">
               <h1 className="text-xl font-semibold text-gray-900 truncate">Mustafa Oner</h1>
               <p className="text-sm text-gray-600 leading-snug">
-              ✔️Telecom Field Technician ✔️Fiber & Copper Infrastructure 
-               ✔️FTTH Operations
+                ✔️Telecom Field Technician ✔️Fiber & Copper Infrastructure ✔️FTTH Operations
               </p>
             </div>
-
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,47 +55,47 @@ export default function Header() {
             ))}
           </nav>
 
-         {/* Mobile: Name + Headline + Hamburger */}
-<div className="md:hidden flex items-center justify-between gap-3 flex-1 min-w-0">
-  <div className="flex flex-col leading-tight min-w-0">
-    {/* Name */}
-    <span className="text-sm font-semibold text-gray-900">
-      Mustafa Oner
-    </span>
+          {/* Mobile: Name + Headline + Hamburger */}
+          <div className="md:hidden flex items-center justify-between gap-3 flex-1 min-w-0">
+            <div className="flex flex-col leading-tight min-w-0">
+              {/* Name */}
+              <span className="text-sm font-semibold text-gray-900">
+                Mustafa Oner
+              </span>
 
-    {/* Headline (2 lines, no ellipsis) */}
-    <span className="text-[12px] text-gray-600 leading-snug whitespace-normal">
-      Telecom Field Technician • Fiber & Copper Infrastructure
-       • FTTH Operations
-    </span>
-  </div>
+              {/* Headline */}
+              <span className="text-[12px] text-gray-600 leading-snug whitespace-normal">
+                Telecom Field Technician • Fiber & Copper Infrastructure • FTTH Operations
+              </span>
+            </div>
 
-  {/* Mobile Menu Button */}
-  <button
-    type="button"
-    className="p-2 shrink-0"
-    onClick={() => setIsOpen((v) => !v)}
-    aria-label={isOpen ? "Close menu" : "Open menu"}
-  >
-    <div className="w-6 h-6 flex flex-col justify-center items-center">
-      <span
-        className={`block h-0.5 w-6 bg-gray-700 transition-transform duration-200 ${
-          isOpen ? "rotate-45 translate-y-1" : ""
-        }`}
-      />
-      <span
-        className={`block h-0.5 w-6 bg-gray-700 mt-1 transition-opacity duration-200 ${
-          isOpen ? "opacity-0" : "opacity-100"
-        }`}
-      />
-      <span
-        className={`block h-0.5 w-6 bg-gray-700 mt-1 transition-transform duration-200 ${
-          isOpen ? "-rotate-45 -translate-y-1" : ""
-        }`}
-      />
-    </div>
-  </button>
-</div>
+            {/* Mobile Menu Button */}
+            <button
+              type="button"
+              className="p-2 shrink-0"
+              onClick={() => setIsOpen((v) => !v)}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+            >
+              <div className="w-6 h-6 flex flex-col justify-center items-center">
+                <span
+                  className={`block h-0.5 w-6 bg-gray-700 transition-transform duration-200 ${
+                    isOpen ? "rotate-45 translate-y-1" : ""
+                  }`}
+                />
+                <span
+                  className={`block h-0.5 w-6 bg-gray-700 mt-1 transition-opacity duration-200 ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`block h-0.5 w-6 bg-gray-700 mt-1 transition-transform duration-200 ${
+                    isOpen ? "-rotate-45 -translate-y-1" : ""
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
+        </div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>
