@@ -21,6 +21,11 @@ export default function Identity() {
               <span className="text-blue-700"> understanding the field.</span>
             </h1>
 
+            {/* Secondary line – software visible but telecom stays primary */}
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-6">
+              Telecom field expertise combined with practical web & software development.
+            </p>
+
             <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-blue-400 mb-12"></div>
           </div>
 
