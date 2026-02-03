@@ -13,7 +13,7 @@ export default function Header() {
     { name: 'Identity', href: '#identity' },
     { name: 'Telecom Infrastructure', href: '#telekom' },
     { name: 'Technical Narrative', href: '#technical-narrative' },
-    { name: 'Software', href: '#software' },
+    { name: 'Web & Software', href: '#software' },     // sadece isim güncellendi
     { name: 'Photography', href: '#photography' },
     { name: 'Working Principles', href: '#principles' },
   ]
@@ -45,6 +45,11 @@ export default function Header() {
               {/* Headline */}
               <p className="text-[12px] md:text-sm text-gray-600 leading-snug whitespace-normal">
                 Telecom Field Technician • Fiber & Copper Infrastructure • FTTH Operations
+              </p>
+
+              {/* Secondary line (software visible, but not stealing the role) */}
+              <p className="text-[11px] md:text-xs text-gray-500 leading-snug whitespace-normal">
+                Web Solutions & Frontend • Next.js • React • UI
               </p>
             </div>
           </Link>
