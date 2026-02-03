@@ -2,13 +2,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import {
-  Globe,
-  Smartphone,
-  FileCode2,
-  ExternalLink,
-  Github
-} from 'lucide-react'
+import { Globe, Smartphone, FileCode2, ExternalLink, Github } from 'lucide-react'
 
 /* ----------------------------
    DATA
@@ -20,11 +14,13 @@ const projects = [
     icon: <Globe className="w-7 h-7" />,
     title: 'Kadraj Rotam',
     description:
-      'A visual route and photography focused web platform designed to present places through atmosphere and story.',
+      'A route + photography platform built to present places through atmosphere, story, and clean UI structure.',
+    outcome: 'Live product website (international-ready structure).',
+    focus: ['UI/UX layout', 'Component structure', 'Performance-minded frontend'],
     tags: ['Next.js', 'UI Design', 'Frontend'],
     links: {
       live: 'https://www.kadrajrotam.com.tr',
-      github: '#'
+      
     }
   },
 
@@ -33,11 +29,13 @@ const projects = [
     icon: <Globe className="w-7 h-7" />,
     title: 'Mavi Kadraj',
     description:
-      'A personal photography and visual storytelling website built as a digital portfolio.',
+      'A digital portfolio for photography and visual storytelling—designed for clarity, speed, and long-term content growth.',
+    outcome: 'Live portfolio site (brand + showcase).',
+    focus: ['Design consistency', 'Content sections', 'Mobile-first layout'],
     tags: ['Next.js', 'Design', 'Frontend'],
     links: {
       live: 'https://www.mavikadraj.com.tr',
-      github: '#'
+      
     }
   },
 
@@ -46,11 +44,13 @@ const projects = [
     icon: <Globe className="w-7 h-7" />,
     title: 'Gönül Pusulası',
     description:
-      'A concept platform focused on emotions, short texts and reflective visual narratives.',
+      'A concept site for short texts and reflective narratives—built with lightweight frontend fundamentals.',
+    outcome: 'Live concept website (fast + simple).',
+    focus: ['Clean HTML/CSS', 'Typography', 'Simple navigation'],
     tags: ['HTML', 'CSS', 'Frontend'],
     links: {
       live: 'https://www.gonulpusulasi.com',
-      github: '#'
+      
     }
   },
 
@@ -59,11 +59,12 @@ const projects = [
     icon: <Smartphone className="w-7 h-7" />,
     title: 'Mavi Kadrajla Öğreniyorum',
     description:
-      'Live on Google Play. A visual learning mobile app developed for childrens education, focused on learning through images',
+      'Published on Google Play. A visual learning app for children, designed around image-based learning and simple interactions.',
+    outcome: 'Shipped product on Play Store.',
+    focus: ['Mobile UX basics', 'Practical delivery', 'User-friendly flow'],
     tags: ['Android', 'Mobile App'],
     links: {
-      live: 'https://play.google.com/store/apps/details?id=com.mavikadaj.learn',
-      
+      live: 'https://play.google.com/store/apps/details?id=com.mavikadaj.learn'
     }
   },
 
@@ -72,11 +73,13 @@ const projects = [
     icon: <FileCode2 className="w-7 h-7" />,
     title: 'Job Tracking – HTML Tool',
     description:
-      'A simple browser-based job tracking and note system built with pure HTML and CSS.',
+      'A browser-based job tracking + notes tool built with pure HTML/CSS—simple, fast, and usable.',
+    outcome: 'Live tool (GitHub Pages).',
+    focus: ['Practical utility', 'Zero-dependency', 'Fast load'],
     tags: ['HTML', 'CSS'],
     links: {
       live: 'https://mustafa-network-tech.github.io/pro-track/',
-      github: 'https://mustafa-network-tech.github.io/pro-track/'
+      github: 'https://github.com/mustafa-network-tech/pro-track'
     }
   }
 ]
@@ -123,12 +126,12 @@ export default function SoftwareDigital() {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Simple Builds, Real Output
+                Real Builds, Real Delivery
               </h2>
 
               <p className="text-lg text-gray-600 max-w-3xl">
-                This section presents my personal digital work: three live websites,
-                one lightweight open-source tool and an upcoming Play Store application.
+                I build and ship digital products after work hours—live websites, a practical tool,
+                and a published mobile app. This is my second skillset: focused, consistent, and outcome-driven.
               </p>
             </div>
 
@@ -144,9 +147,7 @@ export default function SoftwareDigital() {
                   className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-blue-600">
-                      {p.icon}
-                    </div>
+                    <div className="text-blue-600">{p.icon}</div>
 
                     <span className="text-xs font-medium px-2 py-1 rounded-full bg-gray-100 text-gray-700">
                       {p.type}
@@ -157,9 +158,29 @@ export default function SoftwareDigital() {
                     {p.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mb-5">
+                  <p className="text-gray-600 text-sm mb-4">
                     {p.description}
                   </p>
+
+                  {/* Outcome */}
+                  {p.outcome && (
+                    <div className="mb-4">
+                      <div className="text-xs font-semibold text-gray-900 mb-1">Outcome</div>
+                      <p className="text-sm text-gray-600">{p.outcome}</p>
+                    </div>
+                  )}
+
+                  {/* Focus */}
+                  {p.focus?.length ? (
+                    <div className="mb-5">
+                      <div className="text-xs font-semibold text-gray-900 mb-2">Focus</div>
+                      <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
+                        {p.focus.map((f) => (
+                          <li key={f}>{f}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {p.tags.map((t) => (
@@ -192,39 +213,38 @@ export default function SoftwareDigital() {
             {/* Minimal statement */}
             <div className="bg-white rounded-2xl p-8 border border-gray-200">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Approach
+                How I Work
               </h3>
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
                   <div className="text-sm font-semibold text-gray-900 mb-2">
-                    Clarity
+                    Delivery Mindset
                   </div>
                   <p className="text-sm text-gray-600">
-                    Clean structure, readable interfaces and simple navigation.
+                    I finish what I start. Small, shipped products beat big unfinished ideas.
                   </p>
                 </div>
 
                 <div>
                   <div className="text-sm font-semibold text-gray-900 mb-2">
-                    Discipline
+                    User-First UI
                   </div>
                   <p className="text-sm text-gray-600">
-                    Small and finished work is more valuable than large unfinished ideas.
+                    Clear navigation, readable layout, and mobile-first structure are non-negotiable.
                   </p>
                 </div>
 
                 <div>
                   <div className="text-sm font-semibold text-gray-900 mb-2">
-                    Consistency
+                    Maintainable Builds
                   </div>
                   <p className="text-sm text-gray-600">
-                    Same design language and technical mindset across all projects.
+                    Clean components, consistent styling, and simple architecture that can scale later.
                   </p>
                 </div>
               </div>
             </div>
-
           </motion.div>
         </div>
       </div>
