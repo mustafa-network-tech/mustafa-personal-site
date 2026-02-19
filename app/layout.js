@@ -8,26 +8,35 @@ import TopNotice from '@/components/TopNotice'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Mustafa Oner | Telecom Field Technician & Infrastructure Specialist',
+  title: 'Mustafa Öner | Telecom Field Operations, Software Developer & Photographer',
 
   description:
     'Telecom field technician with 20+ years of hands-on experience in fiber and copper infrastructure. FTTH / FTTB operations, central office frames, splicing, testing and real field delivery.',
 
   keywords: [
+    'Mustafa Öner',
     'telecom field technician',
     'fiber infrastructure',
-    'copper network',
-    'FTTH',
-    'FTTB',
-    'telecom installation',
-    'fiber splicing',
-    'central office MDF IDF',
-    'access network',
-    'telecom portfolio'
+     "FTTH",
+  "FTTC",
+  "Fiber Access Network",
+  "Telecom Field Operations",
+  "Fiber Splicing",
+  "MDF IDF",
+  "Access Infrastructure",
+  "Telecom Deployment",
+  "Copper Network",
+  "Software Developer",
+  "Web Development",
+  "Digital Project Tracking",
+  "Telecom Software Systems",
+  "Photography",
+  "Nature Photography"
+
   ],
 
   openGraph: {
-    title: 'Mustafa Oner | Telecom Field Technician & Infrastructure Specialist',
+    title: 'Mustafa Öner | Telecom Field Operations, Software Developer & Photographer',
     description:
       'Professional portfolio of a telecom field technician focused on fiber and copper access networks, real field operations and technical delivery.',
     type: 'website'
@@ -35,7 +44,7 @@ export const metadata = {
 
   twitter: {
     card: 'summary',
-    title: 'Mustafa Oner | Telecom Field Technician',
+    title: 'Mustafa Öner | Telecom Field Technician , Software Developer & Photographer',
     description:
       'Telecom infrastructure portfolio – fiber, copper and field operations.'
   }
