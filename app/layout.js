@@ -8,6 +8,8 @@ import TopNotice from '@/components/TopNotice'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
+  metadataBase: new URL('https://mustafaoner.net'),
+alternates: { canonical: '/' },
   title: 'Mustafa Öner | Telecom Field Operations, Software Developer & Photographer',
 
   description:
@@ -26,6 +28,8 @@ export const metadata = {
   "Access Infrastructure",
   "Telecom Deployment",
   "Copper Network",
+   "Next.js",
+    "JavaScript",
   "Software Developer",
   "Web Development",
   "Digital Project Tracking",
