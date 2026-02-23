@@ -44,7 +44,7 @@ export default function Header() {
 
               {/* Headline */}
               <p className="text-[12px] md:text-sm text-gray-600 leading-snug whitespace-normal">
-                Telecom Field Technician • Fiber & Copper Infrastructure • FTTH Operations
+                Field Operations Supervisor • Fiber & Copper Infrastructure • FTTH Operations
               </p>
 
               {/* Secondary line (software visible, but not stealing the role) */}
