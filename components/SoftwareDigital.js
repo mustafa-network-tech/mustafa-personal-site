@@ -2,116 +2,144 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Globe, Smartphone, FileCode2, ExternalLink, Github } from 'lucide-react'
+import { LayoutDashboard, Globe, Smartphone, FileCode2, ExternalLink, MessageCircle, Github, CheckCircle } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
-/* ----------------------------
-   DATA
------------------------------*/
+const INTRO_HIGHLIGHTS_TR = ['dijital çalışmalar', 'gerçek ürünler', 'gerçek projeler'].sort((a, b) => b.length - a.length)
+const INTRO_HIGHLIGHTS_EN = ['digital work', 'real products', 'real projects'].sort((a, b) => b.length - a.length)
 
-const projects = [
-  {
-    type: 'Website',
-    icon: <Globe className="w-7 h-7" />,
-    title: 'Kadraj Rotam',
-    description:
-      'A route + photography platform built to present places through atmosphere, story, and clean UI structure.',
-    outcome: 'Live product website (international-ready structure).',
-    focus: ['UI/UX layout', 'Component structure', 'Performance-minded frontend'],
-    tags: ['Next.js', 'UI Design', 'Frontend'],
-    links: {
-      live: 'https://www.kadrajrotam.com.tr',
-      
-    }
-  },
-
-  {
-    type: 'Website',
-    icon: <Globe className="w-7 h-7" />,
-    title: 'Mavi Kadraj',
-    description:
-      'A digital portfolio for photography and visual storytelling—designed for clarity, speed, and long-term content growth.',
-    outcome: 'Live portfolio site (brand + showcase).',
-    focus: ['Design consistency', 'Content sections', 'Mobile-first layout'],
-    tags: ['Next.js', 'Design', 'Frontend'],
-    links: {
-      live: 'https://www.mavikadraj.com.tr',
-      
-    }
-  },
-
-  {
-    type: 'Website',
-    icon: <Globe className="w-7 h-7" />,
-    title: 'Gönül Pusulası',
-    description:
-      'A concept site for short texts and reflective narratives—built with lightweight frontend fundamentals.',
-    outcome: 'Live concept website (fast + simple).',
-    focus: ['Clean HTML/CSS', 'Typography', 'Simple navigation'],
-    tags: ['HTML', 'CSS', 'Frontend'],
-    links: {
-      live: 'https://www.gonulpusulasi.com',
-      
-    }
-  },
-
-  {
-    type: 'Play Store App',
-    icon: <Smartphone className="w-7 h-7" />,
-    title: 'Mavi Kadrajla Öğreniyorum',
-    description:
-      'Published on Google Play. A visual learning app for children, designed around image-based learning and simple interactions.',
-    outcome: 'Shipped product on Play Store.',
-    focus: ['Mobile UX basics', 'Practical delivery', 'User-friendly flow'],
-    tags: ['Android', 'Mobile App'],
-    links: {
-      live: 'https://play.google.com/store/apps/details?id=com.mavikadaj.learn'
-    }
-  },
-
-  {
-    type: 'Open Source',
-    icon: <FileCode2 className="w-7 h-7" />,
-    title: 'Job Tracking – HTML Tool',
-    description:
-      'A browser-based job tracking + notes tool built with pure HTML/CSS—simple, fast, and usable.',
-    outcome: 'Live tool (GitHub Pages).',
-    focus: ['Practical utility', 'Zero-dependency', 'Fast load'],
-    tags: ['HTML', 'CSS'],
-    links: {
-      live: 'https://mustafa-network-tech.github.io/pro-track/',
-      github: 'https://github.com/mustafa-network-tech/pro-track'
+function highlightSubtitle(text, language) {
+  const phrases = language === 'tr' ? INTRO_HIGHLIGHTS_TR : INTRO_HIGHLIGHTS_EN
+  if (!text || !phrases.length) return text
+  const matches = []
+  for (const phrase of phrases) {
+    let pos = 0
+    while (true) {
+      const idx = text.toLowerCase().indexOf(phrase.toLowerCase(), pos)
+      if (idx === -1) break
+      matches.push({ phrase: text.slice(idx, idx + phrase.length), index: idx })
+      pos = idx + phrase.length
     }
   }
-]
-
-/* ----------------------------
-   Small link button
------------------------------*/
-
-function LinkButton({ href, icon, label }) {
-  if (!href || href === '#') return null
-
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-sm bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
-    >
-      {icon}
-      {label}
-    </a>
+  matches.sort((a, b) => a.index - b.index)
+  const parts = []
+  let last = 0
+  for (const { phrase, index } of matches) {
+    if (index > last) parts.push({ type: 'text', value: text.slice(last, index) })
+    parts.push({ type: 'highlight', value: phrase })
+    last = index + phrase.length
+  }
+  if (last < text.length) parts.push({ type: 'text', value: text.slice(last) })
+  if (parts.length === 0) return text
+  return parts.map((part, i) =>
+    part.type === 'highlight' ? (
+      <span key={i} className="font-semibold" style={{ color: '#0EA5E9' }}>{part.value}</span>
+    ) : (
+      part.value
+    )
   )
 }
 
-/* ----------------------------
-   MAIN COMPONENT
------------------------------*/
+const projectLinks = [
+  null,
+  'https://mk-digital-systems.vercel.app/en',
+  'https://mavikadraj.com.tr',
+  'https://kadrajrotam.com.tr',
+  'https://gonulpusulasi.com',
+  'https://siirdunyasi.com.tr',
+  'https://play.google.com/store/apps/details?id=com.mavikadaj.learn',
+  'https://mustafa-network-tech.github.io/pro-track/',
+]
+
+const projectGithubLinks = [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  'https://github.com/mustafa-network-tech/pro-track',
+]
+
+const projectIcons = [LayoutDashboard, Globe, Globe, Globe, Globe, Globe, Smartphone, FileCode2]
+
+function getCtaLabel(ctaKey, t) {
+  switch (ctaKey) {
+    case 'request': return t.cta_request
+    case 'live': return t.live
+    case 'playstore': return t.play_store
+    case 'demo': return t.cta_demo
+    default: return t.live
+  }
+}
+
+function CtaButton({ project, index, t, darkCard }) {
+  const ctaKey = project.ctaKey || 'live'
+  const label = getCtaLabel(ctaKey, t)
+  const href = ctaKey === 'request' ? '#contact' : (projectLinks[index] || null)
+  const showGithub = ctaKey === 'demo' && projectGithubLinks[index]
+
+  const baseClass = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 [&_svg]:text-current'
+  const primaryClass = darkCard
+    ? 'border border-white/30 text-white hover:bg-white/15 hover:border-white/50 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]'
+    : 'bg-[#2563EB] border border-[#2563EB] text-white hover:bg-[#1d4ed8] hover:border-[#1d4ed8] hover:shadow-[0_0_24px_rgba(37,99,235,0.35)]'
+  const secondaryClass = darkCard
+    ? 'border border-white/25 text-white hover:bg-white/10 hover:border-white/40'
+    : 'bg-[#2563EB] border border-[#2563EB] text-white hover:bg-[#1d4ed8] hover:border-[#1d4ed8] hover:shadow-[0_0_16px_rgba(37,99,235,0.3)]'
+
+  if (ctaKey === 'request') {
+    return (
+      <a
+        href="#contact"
+        className={`group/btn relative ${baseClass} ${primaryClass}`}
+      >
+        <MessageCircle className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
+        {label}
+      </a>
+    )
+  }
+
+  if (!href) return null
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className={`group/btn relative ${baseClass} ${primaryClass}`}
+      >
+        <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
+        {label}
+      </a>
+      {showGithub && (
+        <a href={projectGithubLinks[index]} target="_blank" rel="noreferrer" className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-sm font-medium transition-all duration-300 ${secondaryClass}`}>
+          <Github className="w-4 h-4" />
+          {t.github}
+        </a>
+      )}
+    </div>
+  )
+}
 
 export default function SoftwareDigital() {
+  const { t, language } = useLanguage()
+  const projects = (t.software_projects || []).map((p, index) => {
+    const Icon = projectIcons[index] || Globe
+    return {
+      ...p,
+      IconComponent: Icon,
+    }
+  })
+
   return (
-    <section id="software" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section
+      id="software"
+      className="light-section relative pt-4 pb-20 overflow-hidden"
+      style={{ background: '#F2EFEA' }}
+    >
+      <div className="container relative mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -119,130 +147,110 @@ export default function SoftwareDigital() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            {/* Header */}
-            <div className="mb-14">
-              <div className="inline-block px-4 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-6">
-                Software & Digital
-              </div>
-
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Real Builds, Real Delivery
+            <div className="text-center mb-2">
+              <span
+                className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-1"
+                style={{
+                  color: '#FFFFFF',
+                  background: '#2B313D',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                }}
+              >
+                {t.software_badge}
+              </span>
+              <h2
+                className="text-3xl md:text-5xl font-bold tracking-tight text-[#1E293B] mb-1 leading-tight"
+                style={{ letterSpacing: '-0.02em', fontWeight: 700 }}
+              >
+                {t.software_title}
               </h2>
-
-              <p className="text-lg text-gray-600 max-w-3xl">
-                I build and ship digital products after work hours—live websites, a practical tool,
-                and a published mobile app. This is my second skillset: focused, consistent, and outcome-driven.
+              <p className="text-lg max-w-[760px] mx-auto leading-[1.7] text-[#475569]">
+                {highlightSubtitle(t.software_intro, language)}
               </p>
             </div>
 
-            {/* Cards */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <div className="projects-grid grid grid-cols-1 md:grid-cols-3 gap-[30px] mb-16">
               {projects.map((p, index) => (
                 <motion.div
                   key={`${p.title}-${index}`}
-                  initial={{ opacity: 0, y: 16 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: index * 0.06 }}
-                  className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300"
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="telekom-glass-card group relative rounded-[18px] transition-all duration-[0.35s] ease-out"
+                  style={{ padding: 30 }}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-blue-600">{p.icon}</div>
-
-                    <span className="text-xs font-medium px-2 py-1 rounded-full bg-gray-100 text-gray-700">
+                    <div className="card-icon-container shrink-0">
+                      <p.IconComponent className="w-6 h-6" />
+                    </div>
+                    <span className="card-tag inline-block">
                       {p.type}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3
+                    className="telekom-card-title text-[18px] font-semibold mb-3 leading-tight text-[#1E293B]"
+                  >
                     {p.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p
+                    className="text-sm mb-4 text-[#475569]"
+                    style={{ lineHeight: 1.6 }}
+                  >
                     {p.description}
                   </p>
 
-                  {/* Outcome */}
-                  {p.outcome && (
-                    <div className="mb-4">
-                      <div className="text-xs font-semibold text-gray-900 mb-1">Outcome</div>
-                      <p className="text-sm text-gray-600">{p.outcome}</p>
-                    </div>
-                  )}
-
-                  {/* Focus */}
                   {p.focus?.length ? (
-                    <div className="mb-5">
-                      <div className="text-xs font-semibold text-gray-900 mb-2">Focus</div>
-                      <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
+                    <div className="mb-4 space-y-2">
+                      <div className="text-[11px] font-bold text-[#64748B] uppercase tracking-widest">{t.focus}</div>
+                      <ul className="space-y-1.5">
                         {p.focus.map((f) => (
-                          <li key={f}>{f}</li>
+                          <li key={f} className="flex items-start gap-2 text-sm text-[#475569]">
+                            <CheckCircle className="w-4 h-4 shrink-0 mt-0.5 text-[#2563EB]" />
+                            <span className="leading-snug">{f}</span>
+                          </li>
                         ))}
                       </ul>
                     </div>
                   ) : null}
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {p.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
-                      >
-                        {t}
+                  <div className="flex flex-wrap gap-2">
+                    {(p.tags || []).map((tag) => (
+                      <span key={tag} className="card-tag inline-block">
+                        {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    <LinkButton
-                      href={p.links?.live}
-                      label={p.type === 'Play Store App' ? 'Play Store' : 'Live'}
-                      icon={<ExternalLink className="w-4 h-4" />}
-                    />
-
-                    <LinkButton
-                      href={p.links?.github}
-                      label="GitHub"
-                      icon={<Github className="w-4 h-4" />}
-                    />
+                  <div className="mt-4 pt-4 border-t border-[rgba(0,0,0,0.08)]">
+                    <CtaButton project={p} index={index} t={t} />
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* Minimal statement */}
-            <div className="bg-white rounded-2xl p-8 border border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                How I Work
-              </h3>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                <div>
-                  <div className="text-sm font-semibold text-gray-900 mb-2">
-                    Delivery Mindset
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    I finish what I start. Small, shipped products beat big unfinished ideas.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="text-sm font-semibold text-gray-900 mb-2">
-                    User-First UI
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    Clear navigation, readable layout, and mobile-first structure are non-negotiable.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="text-sm font-semibold text-gray-900 mb-2">
-                    Maintainable Builds
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    Clean components, consistent styling, and simple architecture that can scale later.
-                  </p>
-                </div>
+            <div
+              className="page-card-hover rounded-2xl p-8 border transition-all duration-[0.35s] ease-out hover:bg-[#F5F4F2] active:scale-[0.995] active:shadow-inner cursor-pointer"
+              style={{
+                background: '#F0EEEA',
+                border: '1px solid rgba(30,41,59,0.08)',
+                boxShadow: '0 10px 30px rgba(15,23,42,0.05)',
+              }}
+            >
+              <h3 className="text-2xl font-semibold text-[#0F172A] mb-6">{t.how_i_work}</h3>
+              {/* Three titles in one horizontal row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-4">
+                <div className="text-base font-semibold text-[#2563EB]">{t.delivery_mindset}</div>
+                <div className="text-base font-semibold text-[#2563EB]">{t.user_first_ui}</div>
+                <div className="text-base font-semibold text-[#2563EB]">{t.maintainable_builds}</div>
+              </div>
+              {/* Descriptions in a row below */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <p className="text-sm text-[#475569] leading-relaxed">{t.delivery_mindset_desc}</p>
+                <p className="text-sm text-[#475569] leading-relaxed">{t.user_first_ui_desc}</p>
+                <p className="text-sm text-[#475569] leading-relaxed">{t.maintainable_builds_desc}</p>
               </div>
             </div>
           </motion.div>

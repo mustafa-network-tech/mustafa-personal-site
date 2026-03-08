@@ -1,84 +1,199 @@
-// components/Identity.js
+// components/Identity.js – Business-focused hero: web, e-commerce, custom software
 'use client'
 
 import { motion } from 'framer-motion'
+import { Globe, ShoppingBag, Code, LayoutDashboard, Smartphone } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
+import HeroCodeCard from '@/components/HeroCodeCard'
+import ScrollingSloganStrip from '@/components/ScrollingSloganStrip'
+
+const HERO_SERVICE_ICONS = [Globe, ShoppingBag, Code, LayoutDashboard, Smartphone]
+
+// Hero background: local image – public/images/hero2-bg.jpeg
+const HERO_BG_IMAGE = '/images/hero2-bg.jpeg'
+
+// Teklif Al butonu – WhatsApp’ta hazır gelen mesaj
+const WHATSAPP_NUMBER = '905456597551'
+const WHATSAPP_DEFAULT_MESSAGE = `Merhaba Mustafa Bey,
+web sitesi / yazılım projesi hakkında bilgi almak istiyorum.
+Uygun olduğunuzda görüşebilir miyiz?`
 
 export default function Identity() {
+  const { t } = useLanguage()
+  const services = t.hero_services || []
+
   return (
-    <section id="identity" className="py-20 md:py-32 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="mb-12">
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-              Building reliable networks
-              <br />
-              starts with
-              <span className="text-blue-700"> understanding the field.</span>
+    <section
+      id="identity"
+      className="hero-section relative min-h-0 md:min-h-[85vh] flex items-center overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #1f2937 0%, #111827 100%)',
+      }}
+    >
+      {/* Background photo – more open; lighter overlay so visual breathes */}
+      <div
+        className="absolute inset-0 bg-cover bg-center pointer-events-none"
+        style={{
+          backgroundImage: `url(${HERO_BG_IMAGE})`,
+          filter: 'brightness(1.22) contrast(1.05) blur(2px)',
+          opacity: 0.62,
+        }}
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(rgba(10,15,30,0.28), rgba(10,15,30,0.28))',
+        }}
+        aria-hidden
+      />
+      {/* Left ambient glow – soft and atmospheric */}
+      <div
+        className="absolute pointer-events-none w-[min(90vw,520px)] h-[min(90vw,520px)] -left-[20%] top-1/2 -translate-y-1/2 rounded-full"
+        style={{
+          background: 'radial-gradient(circle, rgba(56,189,248,0.15), transparent 60%)',
+          filter: 'blur(48px)',
+        }}
+        aria-hidden
+      />
+      {/* Right ambient glow – soft and atmospheric */}
+      <div
+        className="absolute pointer-events-none w-[min(90vw,520px)] h-[min(90vw,520px)] -right-[20%] top-1/2 -translate-y-1/2 rounded-full"
+        style={{
+          background: 'radial-gradient(circle, rgba(59,130,246,0.12), transparent 60%)',
+          filter: 'blur(48px)',
+        }}
+        aria-hidden
+      />
+
+      {/* Desktop: scrolling text flows FROM the right OF the card (strip on card’s right) */}
+      <div
+        className="absolute right-0 hidden md:block pointer-events-none overflow-hidden"
+        style={{
+          top: '50%',
+          transform: 'translateY(-50%)',
+          height: 36,
+          zIndex: 5,
+          width: 'calc(50% - 1.25rem - 340px - 5px)',
+        }}
+        aria-hidden
+      >
+        <ScrollingSloganStrip />
+      </div>
+
+      <div className="container relative z-10 mx-auto px-5 sm:px-6 py-8 max-md:py-10 md:py-32 lg:py-36">
+        {/* Mobile: Eyebrow → Headline → Description → Card → Buttons → Services. Desktop: 2-col grid, card right */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-md:gap-0 md:gap-6 lg:gap-8 md:items-center">
+          {/* Block 1: Eyebrow, Headline, Description – row 1 on both */}
+          <motion.div
+            className="max-w-3xl w-full flex flex-col max-md:items-center max-md:text-center md:col-start-1 md:row-start-1"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <p className="hero-eyebrow mb-3 max-md:mb-4 md:mb-5">{t.hero_eyebrow}</p>
+            <h1
+              className="hero-headline max-md:text-[30px] max-md:leading-[1.15] md:text-[clamp(2rem,5vw,60px)] md:leading-[1.15] max-md:mb-4 md:mb-8"
+              style={{
+                fontFamily: 'var(--font-display), sans-serif',
+                fontWeight: 700,
+                letterSpacing: '-0.02em',
+                color: '#F8FAFC',
+                textShadow: '0 2px 12px rgba(0,0,0,0.35)',
+                marginBottom: 0,
+              }}
+            >
+              {t.hero_headline_before}
+              <span className="hero-handwritten">{t.hero_headline_handwritten}</span>
+              {t.hero_headline_after}
             </h1>
-
-            {/* Secondary line – software visible but telecom stays primary */}
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-6">
-              Telecom field expertise combined with practical web & software development.
+            <p
+              className="max-md:text-[17px] max-md:leading-[1.55] max-md:mb-5 max-md:max-w-full md:mb-10"
+              style={{
+                fontFamily: 'var(--font-sans), Inter, sans-serif',
+                fontSize: 18,
+                lineHeight: 1.6,
+                color: '#E2E8F0',
+                maxWidth: 600,
+                marginTop: 20,
+              }}
+            >
+              {t.hero_description}
             </p>
-
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-blue-400 mb-12"></div>
-          </div>
-
-          {/* 핵심 요약 – recruiter first view */}
-          <div className="mb-12">
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
-              <li>20+ years of hands-on experience in telecom field operations</li>
-              <li>Fiber and copper access networks (FTTH / FTTB)</li>
-              <li>Main distribution frames, outdoor cabinets and building distribution</li>
-              <li>Splicing, termination, testing and labeling workflows</li>
-              <li>As-built documentation and on-site quality control</li>
-            </ul>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <p className="text-lg text-gray-700 mb-6">
-                Telecommunications infrastructure is the backbone of modern cities.
-                Fiber and copper networks carry everyday life.
-                Understanding how these systems behave in real field conditions
-                is more valuable than simply deploying them.
-              </p>
-
-              <p className="text-lg text-gray-700">
-                Every project is a complex problem.
-                In the field, reliable solutions come from experience,
-                structured troubleshooting and disciplined technical execution.
-              </p>
+          </motion.div>
+          {/* Block 2: Circular code card – on mobile between description and buttons; on desktop right column */}
+          <HeroCodeCard />
+          {/* Block 3: Buttons, Service list – row 2 on mobile, row 2 left on desktop */}
+          <div className="flex flex-col max-md:items-center max-md:text-center md:col-start-1 md:row-start-2">
+            <div className="flex flex-wrap max-md:justify-center max-md:gap-3 md:gap-4 max-md:mb-4 md:mb-0">
+              <a
+                href="#software"
+                className="inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 py-3.5 px-5 max-md:px-[22px] max-md:text-base md:px-6 min-h-[48px] max-md:min-w-[140px]"
+                style={{
+                  background: '#2563EB',
+                  color: '#FFFFFF',
+                  borderRadius: 12,
+                  boxShadow: '0 4px 20px rgba(37,99,235,0.35)',
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background = '#1D4ED8'
+                  e.currentTarget.style.boxShadow = '0 8px 28px rgba(37,99,235,0.4)'
+                  e.currentTarget.style.transform = 'translateY(-2px)'
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background = '#2563EB'
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(37,99,235,0.35)'
+                  e.currentTarget.style.transform = 'translateY(0)'
+                }}
+              >
+                {t.hero_cta_primary}
+              </a>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_DEFAULT_MESSAGE)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 py-3.5 px-5 max-md:px-[22px] max-md:text-base md:px-6 min-h-[48px] max-md:min-w-[140px]"
+                style={{
+                  background: '#2563EB',
+                  color: '#FFFFFF',
+                  borderRadius: 12,
+                  boxShadow: '0 4px 20px rgba(37,99,235,0.35)',
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background = '#1D4ED8'
+                  e.currentTarget.style.boxShadow = '0 8px 28px rgba(37,99,235,0.4)'
+                  e.currentTarget.style.transform = 'translateY(-2px)'
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background = '#2563EB'
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(37,99,235,0.35)'
+                  e.currentTarget.style.transform = 'translateY(0)'
+                }}
+              >
+                {t.hero_cta_secondary}
+              </a>
             </div>
-
-            <div className="space-y-6">
-              <div className="border-l-4 border-blue-600 pl-6 py-2">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Technical Depth
-                </h3>
-                <p className="text-gray-600">
-                  End-to-end knowledge from central offices and distribution frames
-                  to subscriber connections, testing and service activation.
-                </p>
+            {services.length > 0 && (
+              <div
+                className="flex flex-wrap items-center max-md:justify-center max-md:gap-x-3 max-md:gap-y-2 max-md:text-sm max-md:mt-4 md:mt-7 md:gap-x-4 md:gap-y-1"
+                style={{ fontSize: 14, color: '#94A3B8' }}
+              >
+                {services.map((label, i) => {
+                  const Icon = HERO_SERVICE_ICONS[i] || Code
+                  return (
+                    <span
+                      key={i}
+                      className={`hero-service-tag hero-service-tag-${i + 1} inline-flex items-center gap-x-1.5`}
+                    >
+                      <Icon className="w-4 h-4 shrink-0" aria-hidden />
+                      <span>{label}</span>
+                    </span>
+                  )
+                })}
               </div>
-
-              <div className="border-l-4 border-gray-300 pl-6 py-2">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  System Thinking
-                </h3>
-                <p className="text-gray-600">
-                  Seeing the whole network, not only individual components.
-                  Understanding infrastructure as a living operational ecosystem.
-                </p>
-              </div>
-            </div>
+            )}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -2,83 +2,86 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { Wifi, Cpu, Zap, Shield, BarChart, Video } from 'lucide-react'
+import { Globe, ShoppingBag, Code, LayoutDashboard, Smartphone, Briefcase } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
-const expertiseAreas = [
-  {
-    icon: <Wifi className="w-8 h-8" />,
-    title: 'Fiber Optical Networks',
-    description:
-      'FTTH / FTTB / FTTC architectures, splice planning and access network design.',
-    keywords: ['GPON', 'XGS-PON', 'OLT', 'ONT', 'Splitter']
-  },
-  {
-    icon: <Cpu className="w-8 h-8" />,
-    title: 'Central Office Technologies',
-    description:
-      'Main distribution frames, patch panel management, cross-connect systems and redundancy planning.',
-    keywords: ['MDF', 'IDF', 'Patch Panel', 'VDF', 'Cable Management']
-  },
-  {
-    icon: <Zap className="w-8 h-8" />,
-    title: 'Power & Energy Systems',
-    description:
-      'DC power systems, UPS solutions, battery banks and grounding management.',
-    keywords: ['-48V DC', 'UPS', 'Rectifier', 'AGM Battery', 'Grounding']
-  },
-  {
-    icon: <Shield className="w-8 h-8" />,
-    title: 'Passive Infrastructure',
-    description:
-      'Cabinet placement strategies, ventilation design, cable routing and fire safety solutions.',
-    keywords: ['Rack', 'Cabinet', 'Cable Tray', 'Duct', 'Firestop']
-  },
-  {
-    icon: <BarChart className="w-8 h-8" />,
-    title: 'Capacity Planning',
-    description:
-      'Traffic analysis, growth forecasting, scaling strategies and investment optimization.',
-    keywords: ['Traffic Engineering', 'Capacity Planning', 'Scaling', 'ROI']
-  },
-  {
-    icon: <Video className="w-8 h-8" />,
-    title: 'Field Operations',
-    description:
-      'Site surveys, standards-compliant implementation and structured testing procedures.',
-    keywords: ['Site Survey', 'As-built', 'Test & Acceptance', 'Handover']
-  }
-]
+const icons = [Globe, ShoppingBag, Code, LayoutDashboard, Smartphone, Briefcase]
+
+// Single phrase per language for subtle handwritten accent in subtitle (hero-style)
+const INTRO_HANDWRITTEN_PHRASE_TR = 'çevrimiçi profesyonel görünmesine'
+const INTRO_HANDWRITTEN_PHRASE_EN = 'look professional online'
+
+function highlightIntroWithHandwritten(text, language) {
+  const phrase = language === 'tr' ? INTRO_HANDWRITTEN_PHRASE_TR : INTRO_HANDWRITTEN_PHRASE_EN
+  if (!text || !phrase) return text
+  const idx = text.indexOf(phrase)
+  if (idx === -1) return text
+  return (
+    <>
+      {text.slice(0, idx)}
+      <span className="hero-handwritten">{phrase}</span>
+      {text.slice(idx + phrase.length)}
+    </>
+  )
+}
 
 export default function TelekomInfrastructure() {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const { t, language } = useLanguage()
+  const expertiseAreas = (t.telekom_areas || []).map((area, i) => ({
+    ...area,
+    IconComponent: icons[i] || Globe,
+  }))
+
+  const titleBefore = t.telekom_title_before ?? ''
+  const titleAccent = t.telekom_title_accent ?? ''
+  const hasSplitTitle = titleBefore !== '' && titleAccent !== ''
 
   return (
-    <section id="telekom" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+    <section
+      id="telekom"
+      className="light-section relative pt-4 pb-20 overflow-hidden"
+      style={{ background: '#F2EFEA' }}
+    >
+      <div className="container relative mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="mb-16">
-              <div className="inline-block px-4 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-6">
-                Technical Expertise
-              </div>
+            <div className="text-center mb-12">
+              <span
+                className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-1"
+                style={{
+                  color: '#FFFFFF',
+                  background: '#2B313D',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                }}
+              >
+                {t.telekom_badge}
+              </span>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Telecom Infrastructure Engineering
+              <h2
+                className="text-3xl md:text-5xl font-bold tracking-tight text-[#1E293B] mb-1 leading-tight"
+                style={{ letterSpacing: '-0.02em', fontWeight: 700 }}
+              >
+                {hasSplitTitle ? (
+                  <>
+                    {titleBefore}
+                    <span style={{ color: '#2563EB', fontFamily: 'var(--font-handwritten), cursive', fontStyle: 'italic' }}>{titleAccent}</span>
+                  </>
+                ) : (
+                  t.telekom_title
+                )}
               </h2>
 
-              <p className="text-lg text-gray-600">
-                Designing fiber and copper networks is not only about pulling
-                cables — it is about shaping the digital backbone of a city.
+              <p className="text-xl max-w-[760px] mx-auto leading-[1.7] text-[#475569]">
+                {highlightIntroWithHandwritten(t.telekom_intro, language)}
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
               {expertiseAreas.map((area, index) => (
                 <motion.div
                   key={index}
@@ -86,97 +89,35 @@ export default function TelekomInfrastructure() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className={`bg-white rounded-xl p-6 border ${
-                    activeIndex === index
-                      ? 'border-blue-500 shadow-lg'
-                      : 'border-gray-200 shadow-sm'
-                  } transition-all duration-300 hover:shadow-md cursor-pointer`}
-                  onClick={() => setActiveIndex(index)}
-                  onMouseEnter={() => setActiveIndex(index)}
+                  className="telekom-glass-card rounded-[18px] transition-all duration-[0.35s] ease-out"
+                  style={{ padding: 30 }}
                 >
-                  <div className="text-blue-600 mb-4">{area.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <div className="card-icon-container mb-4 shrink-0">
+                    <area.IconComponent className="w-6 h-6 shrink-0" />
+                  </div>
+
+                  <h3
+                    className="telekom-card-title text-[18px] font-semibold mb-3 leading-tight text-[#1E293B]"
+                  >
                     {area.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+
+                  <p
+                    className="text-sm mb-4 text-[#475569]"
+                    style={{ lineHeight: 1.6 }}
+                  >
                     {area.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2">
-                    {area.keywords.map((keyword, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
-                      >
+                    {(area.keywords || []).map((keyword, idx) => (
+                      <span key={idx} className="card-tag inline-block">
                         {keyword}
                       </span>
                     ))}
                   </div>
                 </motion.div>
               ))}
-            </div>
-
-            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Telecom infrastructure expertise means making the right decision
-                for every single link.
-              </h3>
-
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
-                    <p className="text-gray-700">
-                      In fiber projects, loss budget calculations define the
-                      long-term reliability of the network.
-                    </p>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
-                    <p className="text-gray-700">
-                      Central office deployment is not just equipment
-                      installation — it is system architecture design.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
-                    <p className="text-gray-700">
-                      Copper line optimization is the discipline of extracting
-                      maximum performance from existing infrastructure.
-                    </p>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
-                    <p className="text-gray-700">
-                      Optical distribution and termination points are critical
-                      nodes of the access network.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
-                    <p className="text-gray-700">
-                      Testing and acceptance processes guarantee long-term
-                      operational stability.
-                    </p>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
-                    <p className="text-gray-700">
-                      Documentation is the operational roadmap for future
-                      maintenance and expansion.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>

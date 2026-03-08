@@ -1,11 +1,15 @@
 // app/layout.js
-import { Inter } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans, Dancing_Script, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import TopNotice from '@/components/TopNotice'
 
 const inter = Inter({ subsets: ['latin'] })
+const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
+const dancingScript = Dancing_Script({ subsets: ['latin'], variable: '--font-handwritten' })
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
 export const metadata = {
   metadataBase: new URL('https://mustafaoner.net'),
@@ -58,13 +62,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       
-      <body className={`${inter.className} bg-white text-gray-900`}>
-        <div className="min-h-screen flex flex-col pt-14">
-          <TopNotice />
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </div>
+      <body className={`${inter.className} ${plusJakarta.variable} ${dancingScript.variable} ${jetbrainsMono.variable} bg-main text-primary`}>
+        <LanguageProvider>
+          <div className="min-h-screen flex flex-col pt-14">
+            <TopNotice />
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   )

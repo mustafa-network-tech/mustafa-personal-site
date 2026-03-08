@@ -4,13 +4,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --bg-main: #1E2228;
+  --bg-secondary: #242933;
+  --bg-card: #2B313D;
+  --text-primary: #F2F4F8;
+  --text-secondary: #C6CCD8;
+  --text-muted: #9CA3B0;
+  --accent: #4F7CFF;
+  --border: #3A4150;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: var(--text-primary);
+  background: var(--bg-main);
   overflow-x: hidden;
 }
 
@@ -24,26 +30,376 @@ section[id] {
   scroll-margin-top: 5rem;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar – dark theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #242933;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: #3A4150;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #4a5264;
 }
 
 /* Selection color */
 ::selection {
-  background-color: rgba(59, 130, 246, 0.3);
-  color: inherit;
+  background-color: rgba(79, 124, 255, 0.22);
+  color: #F2F4F8;
+}
+
+/* Hero – premium software developer portfolio */
+.hero-eyebrow {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #38BDF8;
+}
+.hero-headline {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  color: #F8FAFC;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.hero-highlight {
+  color: #38BDF8;
+  transition: color 0.25s ease;
+}
+.hero-highlight:hover {
+  color: #7DD3FC;
+}
+.hero-handwritten {
+  font-family: var(--font-handwritten), cursive;
+  color: #38BDF8;
+  font-style: italic;
+  transition: color 0.25s ease;
+}
+.hero-handwritten:hover {
+  color: #7DD3FC;
+}
+
+/* Light premium sections – accent override (content sections below hero) */
+.light-section .hero-handwritten {
+  color: #2563EB;
+}
+.light-section .hero-handwritten:hover {
+  color: #1D4ED8;
+}
+
+/* Hero: soft curved bottom (curve belongs to hero); next section starts normally */
+.hero-section {
+  position: relative;
+  margin-bottom: 0;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  overflow: hidden;
+}
+
+/* Pull light area up to close gap and remove black line under hero curve */
+.hero-next-divider-wrapper {
+  margin-top: -2px;
+}
+
+/* Scrolling slogan strip – seamless right-to-left */
+/* Scrolling slogan strip – continuous scroll, source text from i18n */
+.slogan-strip-inner {
+  display: flex;
+  flex-direction: row;
+  animation: slogan-strip-scroll 32s linear infinite;
+}
+.slogan-strip-text {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.78);
+  white-space: nowrap;
+  padding-right: 2em;
+}
+@keyframes slogan-strip-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hero service tags: one burns ~1.5s, goes out, then next – never two at once */
+.hero-service-tag {
+  transition: text-shadow 0.25s ease, color 0.25s ease;
+}
+@keyframes hero-tag-burn {
+  0%, 10% { text-shadow: none; color: #94A3B8; }
+  12%, 36% { text-shadow: 0 0 12px rgba(255,255,255,0.5), 0 0 24px rgba(255,255,255,0.2); color: #E2E8F0; }
+  38%, 100% { text-shadow: none; color: #94A3B8; }
+}
+.hero-service-tag-1 { animation: hero-tag-burn 10s ease-in-out infinite 0s; }
+.hero-service-tag-2 { animation: hero-tag-burn 10s ease-in-out infinite 2.4s; }
+.hero-service-tag-3 { animation: hero-tag-burn 10s ease-in-out infinite 4.8s; }
+.hero-service-tag-4 { animation: hero-tag-burn 10s ease-in-out infinite 7.2s; }
+.hero-service-tag-5 { animation: hero-tag-burn 10s ease-in-out infinite 9.6s; }
+.hero-service-tag-6 { animation: hero-tag-burn 10s ease-in-out infinite 10s; }
+
+/* All page cards: grow on hover (lift + shadow) */
+.page-card-hover {
+  transition: transform 0.35s ease-out, box-shadow 0.35s ease-out;
+}
+.page-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Glossy card system – Software Services & Projects (Vercel / Linear / Dribbble style) */
+.telekom-glass-card {
+  position: relative;
+  background: linear-gradient(180deg, #cfcac2 0%, #bdb7ad 100%);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.35s ease;
+}
+.telekom-glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+  border-radius: 18px;
+  pointer-events: none;
+}
+/* Hover: light from upper-right corner, sweeps around the card */
+.telekom-glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.15) 35%,
+    transparent 60%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.telekom-glass-card:hover::after {
+  opacity: 1;
+}
+.telekom-glass-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: linear-gradient(180deg, #d8d2c8 0%, #c1b9ae 100%);
+  box-shadow:
+    0 0 35px rgba(255, 255, 255, 0.35),
+    0 0 60px rgba(255, 248, 240, 0.2),
+    0 25px 50px rgba(0, 0, 0, 0.18),
+    inset 0 2px 2px rgba(255, 255, 255, 0.4);
+}
+.telekom-glass-card:hover .telekom-card-title {
+  color: #1e293b !important;
+}
+
+/* Instagram cards – same hover as Software Services / Projects (lift, scale, edge glow) */
+.instagram-card-hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.instagram-card-hover:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 0 35px rgba(255, 255, 255, 0.35),
+    0 0 60px rgba(255, 248, 240, 0.2),
+    0 25px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* Floating icon container (Dribbble style) */
+.card-icon-container {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #1e293b;
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.card-icon-container svg {
+  color: white;
+}
+
+/* Modern chip / tag (Vercel / Linear style) */
+.card-tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.65);
+  color: #334155;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+.card-tag:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Process timeline step hover: light blue bg, white icon, 0.3s ease */
+.process-step-circle {
+  transition: all 0.3s ease;
+}
+.process-step-circle:hover {
+  background: #2563EB !important;
+  border-color: #2563EB !important;
+}
+.process-step-circle:hover svg {
+  color: #FFFFFF !important;
+}
+
+/* Divider between hero and next section – line only, no moving light */
+.hero-next-divider {
+  width: 120px;
+  height: 5px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, #38BDF8, transparent);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.45);
+}
+
+/* Projects section – premium card effects */
+@keyframes project-card-sweep {
+  from { transform: translateX(-100%) skewX(-12deg); opacity: 0; }
+  to { transform: translateX(200%) skewX(-12deg); opacity: 0.05; }
+}
+
+.project-card:hover .project-card-sweep-bar {
+  animation: project-card-sweep 2.2s ease-in-out;
+}
+
+.projects-grid:has(.project-card:hover) .project-card:not(:hover) {
+  opacity: 0.72;
+  transition: opacity 0.35s ease;
+}
+
+.project-card {
+  transition: opacity 0.35s ease;
+}
+
+@media (hover: none) {
+  .projects-grid:has(.project-card:hover) .project-card:not(:hover) {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card * {
+    transition-duration: 0.15s !important;
+  }
+  .project-card:hover {
+    transform: none !important;
+  }
+}
+
+/* Project CTA buttons – subtle light wave / shimmer on hover */
+@keyframes cta-shimmer {
+  from { transform: translateX(-100%); opacity: 0.4; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+.cta-btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.cta-btn-shimmer:hover::after {
+  animation: cta-shimmer 0.9s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-btn-shimmer:hover::after {
+    animation: none;
+  }
+}
+
+/* Project CTA buttons – continuous breathing light (accent #0EA5E9) */
+@keyframes cta-btn-breathe-bg {
+  0%, 100% { background-color: rgba(14, 165, 233, 0.07); }
+  33% { background-color: rgba(14, 165, 233, 0.14); }
+  66% { background-color: rgba(14, 165, 233, 0.10); }
+}
+
+@keyframes cta-btn-breathe-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(14, 165, 233, 0.08); }
+  50% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.14); }
+}
+
+.cta-btn-breathing {
+  animation: cta-btn-breathe-bg 4s ease-in-out infinite, cta-btn-breathe-glow 3s ease-in-out infinite;
+}
+
+.cta-btn-breathing.cta-btn-breathing-live {
+  animation-name: cta-btn-breathe-bg-live, cta-btn-breathe-glow;
+}
+
+@keyframes cta-btn-breathe-bg-live {
+  0%, 100% { background-color: rgba(14, 165, 233, 0.10); }
+  33% { background-color: rgba(14, 165, 233, 0.18); }
+  66% { background-color: rgba(14, 165, 233, 0.13); }
+}
+
+.cta-btn-breathing-secondary {
+  animation: cta-btn-breathe-bg-secondary 4s ease-in-out infinite, cta-btn-breathe-glow-soft 3s ease-in-out infinite;
+}
+
+@keyframes cta-btn-breathe-bg-secondary {
+  0%, 100% { background-color: rgba(255, 255, 255, 0.02); }
+  33% { background-color: rgba(255, 255, 255, 0.06); }
+  66% { background-color: rgba(255, 255, 255, 0.04); }
+}
+
+@keyframes cta-btn-breathe-glow-soft {
+  0%, 100% { box-shadow: 0 0 8px rgba(255, 255, 255, 0.03); }
+  50% { box-shadow: 0 0 14px rgba(14, 165, 233, 0.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-btn-breathing,
+  .cta-btn-breathing-secondary {
+    animation: none;
+  }
 }
