@@ -46,6 +46,7 @@ const projectLinks = [
   'https://mavikadraj.com.tr',
   'https://kadrajrotam.com.tr',
   'https://gonulpusulasi.com',
+  'https://mavi-iletisim-demo-kadl605yi-mustafa-oners-projects.vercel.app/',
   'https://siirdunyasi.com.tr',
   'https://play.google.com/store/apps/details?id=com.mavikadaj.learn',
   'https://mustafa-network-tech.github.io/pro-track/',
@@ -59,10 +60,11 @@ const projectGithubLinks = [
   null,
   null,
   null,
+  null,
   'https://github.com/mustafa-network-tech/pro-track',
 ]
 
-const projectIcons = [LayoutDashboard, Globe, Globe, Globe, Globe, Globe, Smartphone, FileCode2]
+const projectIcons = [LayoutDashboard, Globe, Globe, Globe, Globe, Globe, Globe, Smartphone, FileCode2]
 
 function getCtaLabel(ctaKey, t) {
   switch (ctaKey) {
