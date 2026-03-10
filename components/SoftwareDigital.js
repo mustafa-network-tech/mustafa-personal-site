@@ -171,7 +171,7 @@ export default function SoftwareDigital() {
               </p>
             </div>
 
-            <div className="projects-grid grid grid-cols-1 md:grid-cols-3 gap-[30px] mb-16">
+            <div className="projects-grid grid grid-cols-2 md:grid-cols-3 gap-[30px] mb-16">
               {projects.map((p, index) => (
                 <motion.div
                   key={`${p.title}-${index}`}
