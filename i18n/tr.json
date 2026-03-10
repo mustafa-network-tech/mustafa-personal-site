@@ -14,7 +14,12 @@
   "hero_headline_before": "İşiniz için modern web siteleri ve ",
   "hero_headline_handwritten": "akıllı yazılımlar",
   "hero_headline_after": " tasarlıyorum.",
-  "hero_description": "Web siteleri, e-ticaret platformları ve işletmenizi kolaylaştıran özel yazılım çözümleri geliştiriyorum.",
+  "hero_slides": [
+    { "subtitle": "Kurumsal Web Siteleri", "description": "Hızlı, modern ve mobil uyumlu kurumsal web siteleri geliştiriyorum." },
+    { "subtitle": "E-Ticaret Sistemleri", "description": "Online satışa hazır güçlü ve kullanıcı dostu e-ticaret platformları kuruyorum." },
+    { "subtitle": "Özel Yazılım Çözümleri", "description": "İş süreçlerinizi hızlandıran ve yönetimi kolaylaştıran özel yazılımlar geliştiriyorum." },
+    { "subtitle": "Dijital Platformlar", "description": "Modern web teknolojileri ile hızlı ve ölçeklenebilir dijital sistemler tasarlıyorum." }
+  ],
   "hero_cta_primary": "Projeleri Gör",
   "hero_cta_secondary": "Teklif Al",
   "hero_services": ["Web Siteleri", "E-Ticaret Siteleri", "Özel Yazılım", "İş Yönetim Sistemleri", "Mobil Uygulamalar"],

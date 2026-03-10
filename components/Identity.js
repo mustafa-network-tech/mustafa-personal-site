@@ -1,6 +1,7 @@
 // components/Identity.js – Business-focused hero: web, e-commerce, custom software
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Globe, ShoppingBag, Code, LayoutDashboard, Smartphone } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -9,8 +10,16 @@ import ScrollingSloganStrip from '@/components/ScrollingSloganStrip'
 
 const HERO_SERVICE_ICONS = [Globe, ShoppingBag, Code, LayoutDashboard, Smartphone]
 
-// Hero background: local image – public/images/hero2-bg.jpeg
-const HERO_BG_IMAGE = '/images/hero2-bg.jpeg'
+// 4 different hero slides from Unsplash (workspace / coding theme, same style)
+const HERO_SLIDES = [
+  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80',
+  'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80',
+  'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=80',
+  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80',
+]
+const getSlideSrc = (index) => HERO_SLIDES[index]
+const SLIDE_DURATION_MS = 5500
+const SLIDE_TRANSITION_MS = 700
 
 // Teklif Al butonu – WhatsApp’ta hazır gelen mesaj
 const WHATSAPP_NUMBER = '905456597551'
@@ -21,6 +30,23 @@ Uygun olduğunuzda görüşebilir miyiz?`
 export default function Identity() {
   const { t } = useLanguage()
   const services = t.hero_services || []
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  // Preload hero images so they switch without delay
+  useEffect(() => {
+    HERO_SLIDES.forEach((src, i) => {
+      const img = new Image()
+      img.src = getSlideSrc(i)
+    })
+  }, [])
+
+  // Auto-advance to next slide every 5.5s
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length)
+    }, SLIDE_DURATION_MS)
+    return () => clearInterval(timer)
+  }, [])
 
   return (
     <section
@@ -30,16 +56,17 @@ export default function Identity() {
         background: 'linear-gradient(180deg, #1f2937 0%, #111827 100%)',
       }}
     >
-      {/* Background photo – more open; lighter overlay so visual breathes */}
-      <div
-        className="absolute inset-0 bg-cover bg-center pointer-events-none"
-        style={{
-          backgroundImage: `url(${HERO_BG_IMAGE})`,
-          filter: 'brightness(1.22) contrast(1.05) blur(2px)',
-          opacity: 0.62,
-        }}
-        aria-hidden
-      />
+      {/* Background slideshow – one slide at a time, key forces change so photo updates */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+        <div
+          key={currentSlide}
+          className="hero-bg-slide absolute inset-0 bg-cover bg-center"
+style={{
+              backgroundImage: `url(${getSlideSrc(currentSlide)})`,
+            filter: 'brightness(1.22) contrast(1.05) blur(2px)',
+          }}
+        />
+      </div>
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -91,7 +118,9 @@ export default function Identity() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
+            {/* Sabit: küçük üst başlık */}
             <p className="hero-eyebrow mb-3 max-md:mb-4 md:mb-5">{t.hero_eyebrow}</p>
+            {/* Sabit: ana büyük başlık */}
             <h1
               className="hero-headline max-md:text-[30px] max-md:leading-[1.15] md:text-[clamp(2rem,5vw,60px)] md:leading-[1.15] max-md:mb-4 md:mb-8"
               style={{
@@ -107,19 +136,33 @@ export default function Identity() {
               <span className="hero-handwritten">{t.hero_headline_handwritten}</span>
               {t.hero_headline_after}
             </h1>
-            <p
-              className="max-md:text-[17px] max-md:leading-[1.55] max-md:mb-5 max-md:max-w-full md:mb-10"
-              style={{
-                fontFamily: 'var(--font-sans), Inter, sans-serif',
-                fontSize: 18,
-                lineHeight: 1.6,
-                color: '#E2E8F0',
-                maxWidth: 600,
-                marginTop: 20,
-              }}
-            >
-              {t.hero_description}
-            </p>
+            {/* Değişen: slide'a göre kısa başlık ve açıklama */}
+            {(t.hero_slides && t.hero_slides[currentSlide]) && (
+              <div key={currentSlide} className="max-md:mb-5 md:mb-10" style={{ marginTop: 20 }}>
+                <p
+                  className="text-lg font-semibold text-[#F8FAFC] max-md:text-base mb-2"
+                  style={{
+                    fontFamily: 'var(--font-display), sans-serif',
+                    letterSpacing: '-0.01em',
+                    textShadow: '0 1px 8px rgba(0,0,0,0.3)',
+                  }}
+                >
+                  {t.hero_slides[currentSlide].subtitle}
+                </p>
+                <p
+                  className="max-md:text-[17px] max-md:leading-[1.55] max-md:max-w-full"
+                  style={{
+                    fontFamily: 'var(--font-sans), Inter, sans-serif',
+                    fontSize: 18,
+                    lineHeight: 1.6,
+                    color: '#E2E8F0',
+                    maxWidth: 600,
+                  }}
+                >
+                  {t.hero_slides[currentSlide].description}
+                </p>
+              </div>
+            )}
           </motion.div>
           {/* Block 2: Circular code card – on mobile between description and buttons; on desktop right column */}
           <HeroCodeCard />
@@ -194,6 +237,32 @@ export default function Identity() {
             )}
           </div>
         </div>
+      </div>
+
+      {/* Bullet navigation – bottom center, slight transition, no wobble */}
+      <div
+        className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2"
+        role="tablist"
+        aria-label="Hero background slides"
+      >
+        {HERO_SLIDES.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            role="tab"
+            aria-selected={index === currentSlide}
+            aria-label={`Slide ${index + 1}`}
+            onClick={() => setCurrentSlide(index)}
+            className="rounded-full border border-white/40 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827]"
+            style={{
+              width: index === currentSlide ? 10 : 8,
+              height: index === currentSlide ? 10 : 8,
+              minWidth: 8,
+              minHeight: 8,
+              background: index === currentSlide ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.35)',
+            }}
+          />
+        ))}
       </div>
     </section>
   )

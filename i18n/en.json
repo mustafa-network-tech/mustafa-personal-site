@@ -10,11 +10,16 @@
   "menu_principles": "Working Principles",
   "menu_communication": "Communication",
 
-  "hero_eyebrow": "MODERN WEB DEVELOPMENT & DIGITAL SYSTEMS",
+  "hero_eyebrow": "MODERN WEB DEVELOPMENT AND DIGITAL SYSTEMS",
   "hero_headline_before": "I design modern websites and ",
   "hero_headline_handwritten": "smart software",
   "hero_headline_after": " for your business.",
-  "hero_description": "I build websites, e-commerce platforms and custom software that make your business run smoother.",
+  "hero_slides": [
+    { "subtitle": "Corporate Websites", "description": "I develop fast, modern and mobile-friendly corporate websites." },
+    { "subtitle": "E-Commerce Systems", "description": "I build powerful and user-friendly e-commerce platforms for online sales." },
+    { "subtitle": "Custom Software Solutions", "description": "I develop custom software that simplifies operations and improves workflow." },
+    { "subtitle": "Digital Platforms", "description": "I design scalable digital systems with modern web technologies." }
+  ],
   "hero_cta_primary": "View Projects",
   "hero_cta_secondary": "Get a Quote",
   "hero_services": ["Websites", "E-Commerce Sites", "Custom Software", "Business Management Systems", "Mobile Apps"],
