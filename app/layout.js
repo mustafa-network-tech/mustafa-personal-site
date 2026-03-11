@@ -6,7 +6,9 @@ import { LanguageProvider } from '@/contexts/LanguageContext'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import TopNotice from '@/components/TopNotice'
-import { SITE_URL, DEFAULT_META } from '@/lib/seo'
+import JsonLd from '@/components/JsonLd'
+import { SITE_URL, GLOBAL_META } from '@/seo/metadata'
+import { getPersonSchema, getWebsiteSchema } from '@/seo/schema'
 
 const inter = Inter({ subsets: ['latin'] })
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
@@ -17,37 +19,26 @@ const LOCALE_HEADER = 'x-path-locale'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: DEFAULT_META.en.title,
-  },
-  description: DEFAULT_META.en.description,
-  keywords: [
-    'Mustafa Oner',
-    'web developer',
-    'frontend',
-    'Next.js',
-    'React',
-    'UI design',
-    'corporate websites',
-    'e-commerce',
-    'portfolio',
-  ],
+  title: { default: GLOBAL_META.en.title },
+  description: GLOBAL_META.en.description,
+  keywords: GLOBAL_META.en.keywords,
   openGraph: {
     type: 'website',
     locale: 'en_US',
     alternateLocale: 'tr_TR',
   },
-  twitter: {
-    card: 'summary_large_image',
-  },
+  twitter: { card: 'summary_large_image' },
 }
 
 export default async function RootLayout({ children }) {
   const headersList = await headers()
   const locale = headersList.get(LOCALE_HEADER) || 'en'
+  const personSchema = getPersonSchema(locale)
+  const websiteSchema = getWebsiteSchema()
   return (
     <html lang={locale}>
       <body className={`${inter.className} ${plusJakarta.variable} ${dancingScript.variable} ${jetbrainsMono.variable} bg-main text-primary`}>
+        <JsonLd data={[personSchema, websiteSchema]} />
         <LanguageProvider initialLocale={locale}>
           <div className="min-h-screen flex flex-col pt-14">
             <TopNotice />

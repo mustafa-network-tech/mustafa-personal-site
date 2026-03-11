@@ -1,23 +1,18 @@
 // app/projects/page.js – English projects list
 import Link from 'next/link'
-import { SITE_URL, PAGE_META, PROJECT_SLUGS, PROJECT_META } from '@/lib/seo'
+import { PAGE_META, PROJECT_SLUGS, PROJECT_META, OG_IMAGES } from '@/seo/metadata'
+import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
+
+const meta = PAGE_META.projects.en
+const og = buildOpenGraph({ locale: 'en', path: '/projects', title: meta.title, description: meta.description, image: OG_IMAGES.en })
+const twitter = buildTwitterCard({ title: meta.title, description: meta.description, image: OG_IMAGES.en })
 
 export const metadata = {
-  title: PAGE_META.projects.en.title,
-  description: PAGE_META.projects.en.description,
-  alternates: {
-    canonical: '/projects',
-    languages: {
-      en: '/projects',
-      tr: '/tr/projects',
-      'x-default': '/projects',
-    },
-  },
-  openGraph: {
-    title: PAGE_META.projects.en.title,
-    description: PAGE_META.projects.en.description,
-    url: `${SITE_URL}/projects`,
-  },
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: '/projects', languages: { en: '/projects', tr: '/tr/projects', 'x-default': '/projects' } },
+  openGraph: og,
+  twitter,
 }
 
 export default function ProjectsEn() {

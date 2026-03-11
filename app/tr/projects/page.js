@@ -1,23 +1,18 @@
 // app/tr/projects/page.js – Turkish projects list
 import Link from 'next/link'
-import { SITE_URL, PAGE_META, PROJECT_SLUGS, PROJECT_META } from '@/lib/seo'
+import { PAGE_META, PROJECT_SLUGS, PROJECT_META, OG_IMAGES } from '@/seo/metadata'
+import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
+
+const meta = PAGE_META.projects.tr
+const og = buildOpenGraph({ locale: 'tr', path: '/tr/projects', title: meta.title, description: meta.description, image: OG_IMAGES.tr })
+const twitter = buildTwitterCard({ title: meta.title, description: meta.description, image: OG_IMAGES.tr })
 
 export const metadata = {
-  title: PAGE_META.projects.tr.title,
-  description: PAGE_META.projects.tr.description,
-  alternates: {
-    canonical: '/tr/projects',
-    languages: {
-      tr: '/tr/projects',
-      en: '/projects',
-      'x-default': '/projects',
-    },
-  },
-  openGraph: {
-    title: PAGE_META.projects.tr.title,
-    description: PAGE_META.projects.tr.description,
-    url: `${SITE_URL}/tr/projects`,
-  },
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: '/tr/projects', languages: { tr: '/tr/projects', en: '/projects', 'x-default': '/projects' } },
+  openGraph: og,
+  twitter,
 }
 
 export default function ProjectsTr() {
