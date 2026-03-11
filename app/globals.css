@@ -48,6 +48,21 @@ section[id] {
   background: #4a5264;
 }
 
+/* Mustafa's Note card – slides down from envelope (top-right), envelope stays fixed */
+.animate-note-slide-down {
+  animation: note-slide-down 0.5s ease-out forwards;
+}
+@keyframes note-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Selection color */
 ::selection {
   background-color: rgba(79, 124, 255, 0.22);
