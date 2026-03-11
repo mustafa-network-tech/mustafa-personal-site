@@ -5,11 +5,28 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
   const { language, setLanguage, t } = useLanguage()
+  const isTr = pathname.startsWith('/tr')
+  const homeHref = isTr ? '/tr' : '/'
+
+  const switchTo = (lang) => {
+    setLanguage(lang)
+    if (lang === 'tr') {
+      const path = isTr ? pathname : '/tr' + (pathname === '/' ? '' : pathname)
+      router.push(path)
+    } else {
+      const path = (pathname.replace(/^\/tr/, '') || '/')
+      router.push(path)
+    }
+    setIsOpen(false)
+  }
 
   const navItems = [
     { key: 'menu_identity', href: '#identity' },
@@ -26,7 +43,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-4">
           {/* Left: Photo + Name/Headline */}
-          <Link href="/" className="flex items-center gap-3 min-w-0">
+          <Link href={homeHref} className="flex items-center gap-3 min-w-0">
             <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-[#4F7CFF]/50 ring-offset-2 ring-offset-[#2B313D] flex-shrink-0">
               <Image
                 src="/mustafa.jpg"
@@ -65,7 +82,7 @@ export default function Header() {
             <div className="flex items-center gap-1.5 shrink-0">
               <button
                 type="button"
-                onClick={() => setLanguage('tr')}
+                onClick={() => switchTo('tr')}
                 className={`px-2 py-1 rounded text-sm font-medium transition-colors ${language === 'tr' ? 'bg-[#4F7CFF]/20 text-[#4F7CFF] ring-1 ring-[#4F7CFF]' : 'text-[#D8DEE8] hover:text-[#4F7CFF]'}`}
                 aria-label="Türkçe"
                 title="Türkçe"
@@ -74,7 +91,7 @@ export default function Header() {
               </button>
               <button
                 type="button"
-                onClick={() => setLanguage('en')}
+                onClick={() => switchTo('en')}
                 className={`px-2 py-1 rounded text-sm font-medium transition-colors ${language === 'en' ? 'bg-[#4F7CFF]/20 text-[#4F7CFF] ring-1 ring-[#4F7CFF]' : 'text-[#D8DEE8] hover:text-[#4F7CFF]'}`}
                 aria-label="English"
                 title="English"
@@ -131,7 +148,7 @@ export default function Header() {
                 <div className="flex items-center gap-2 pt-3 mt-2 border-t border-[#3A4150]">
                   <button
                     type="button"
-                    onClick={() => { setLanguage('tr'); setIsOpen(false); }}
+                    onClick={() => switchTo('tr')}
                     className={`px-2 py-1 rounded text-sm font-medium ${language === 'tr' ? 'bg-[#4F7CFF]/20 text-[#4F7CFF] ring-1 ring-[#4F7CFF]' : 'text-[#D8DEE8]'}`}
                     aria-label="Türkçe"
                   >
@@ -139,7 +156,7 @@ export default function Header() {
                   </button>
                   <button
                     type="button"
-                    onClick={() => { setLanguage('en'); setIsOpen(false); }}
+                    onClick={() => switchTo('en')}
                     className={`px-2 py-1 rounded text-sm font-medium ${language === 'en' ? 'bg-[#4F7CFF]/20 text-[#4F7CFF] ring-1 ring-[#4F7CFF]' : 'text-[#D8DEE8]'}`}
                     aria-label="English"
                   >

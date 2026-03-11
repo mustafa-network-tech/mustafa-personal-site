@@ -8,8 +8,8 @@ const LanguageContext = createContext(null)
 
 const STORAGE_KEY = 'mustafa-site-lang'
 
-export function LanguageProvider({ children }) {
-  const [language, setLanguageState] = useState('en')
+export function LanguageProvider({ children, initialLocale }) {
+  const [language, setLanguageState] = useState(() => (initialLocale === 'tr' ? 'tr' : 'en'))
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -17,6 +17,10 @@ export function LanguageProvider({ children }) {
     const stored = typeof window !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null
     if (stored === 'tr' || stored === 'en') setLanguageState(stored)
   }, [])
+
+  useEffect(() => {
+    if (initialLocale === 'tr' || initialLocale === 'en') setLanguageState(initialLocale)
+  }, [initialLocale])
 
   const setLanguage = (lang) => {
     if (lang !== 'en' && lang !== 'tr') return
