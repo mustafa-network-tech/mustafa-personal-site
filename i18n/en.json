@@ -80,6 +80,22 @@
   "github": "GitHub",
   "cta_request": "Get in Touch",
   "cta_demo": "GitHub Pages / Demo",
+  "view_demo": "View Demo",
+  "demo_card_badge": "Mustafa Öner | MK Digital Systems Demo",
+  "demo_section_title": "Demo Sites",
+  "demo_projects": [
+    { "title": "Mavi İletişim – Telecom and Technical Service", "description": "Corporate demo for telecom and technical services.", "tags": ["Next.js", "Corporate", "Demo"], "url": "https://mavi-iletisim-demo.vercel.app/" },
+    { "title": "Law Office – Corporate Website", "description": "Corporate website demo for law firms.", "tags": ["Next.js", "Corporate", "Demo"], "url": "https://hukuk-demo.vercel.app/" },
+    { "title": "Consulting – Corporate Website", "description": "Corporate website demo for consulting services.", "tags": ["Next.js", "Corporate", "Demo"], "url": "https://danismanlik-demo.vercel.app/" },
+    { "title": "Beauty Salon – Corporate Website", "description": "Corporate website demo for beauty and wellness.", "tags": ["Next.js", "Corporate", "Demo"], "url": "https://guzellik-salonu-demo-web.vercel.app/" },
+    { "title": "Mavi Şarkılar – Music Platform", "description": "Demo music platform interface and structure.", "tags": ["Next.js", "UI", "Demo"], "url": "https://spotify-demo-hazel.vercel.app/" },
+    { "title": "ARIA – Social Media Platform", "description": "Demo social media platform UI and user flow.", "tags": ["Next.js", "UI", "Demo"], "url": "https://aria-demo-omega.vercel.app/" },
+    { "title": "Mavi Kadraj – Photography Platform", "description": "A digital portfolio platform built around photography, nature and visual storytelling.", "tags": ["WordPress", "Design", "Frontend"], "url": "https://mavikadraj.com.tr" },
+    { "title": "Kadraj Rotam – Route Discovery Platform", "description": "A photography-focused route discovery platform. A digital project for visual stories and discovery points.", "tags": ["Next.js", "UI Design", "Frontend"], "url": "https://kadrajrotam.com.tr" },
+    { "title": "Gönül Pusulası – Text Platform", "description": "A simple digital text platform built around poetry, emotion and narrative.", "tags": ["HTML", "CSS", "Frontend"], "url": "https://gonulpusulasi.com" },
+    { "title": "Şiir Dünyası – Content Platform", "description": "A simple content platform for sharing poetry and literary content online.", "tags": ["HTML", "CSS", "Frontend"], "url": "https://siirdunyasi.com.tr" },
+    { "title": "Mavi Kadrajla Öğreniyorum – Android App", "description": "A simple Android education app for children, focused on visual learning.", "tags": ["Android", "Mobile App"], "url": "https://play.google.com/store/apps/details?id=com.mavikadaj.learn" }
+  ],
   "how_i_work": "How I Work",
   "delivery_mindset": "Delivery Mindset",
   "delivery_mindset_desc": "I finish what I start. Small, shipped products beat big unfinished ideas.",
@@ -88,15 +104,9 @@
   "maintainable_builds": "Maintainable Builds",
   "maintainable_builds_desc": "Clean components, consistent styling, and simple architecture that can scale later.",
   "software_projects": [
-    { "type": "SaaS Platform", "title": "MK Field Ops", "description": "A SaaS-based operations management system for planning, tracking and managing telecom field operations.", "focus": ["Field team management", "Work order tracking", "Operations reports", "Process management"], "tags": ["Next.js", "Dashboard", "SaaS", "Operations"], "ctaKey": "request" },
+    { "type": "SaaS Platform", "title": "MK OPS", "description": "A SaaS-based operations management system for planning, tracking and managing telecom field operations.", "focus": ["Field team management", "Work order tracking", "Operations reports", "Process management"], "tags": ["Next.js", "Dashboard", "SaaS", "Operations"], "ctaKey": "live" },
     { "type": "Website", "title": "MK Digital Systems", "description": "A digital production brand building websites, e-commerce platforms, custom software and digital solutions.", "focus": ["Corporate websites", "E-commerce solutions", "Custom software projects", "Digital system development"], "tags": ["Next.js", "Web Development", "UI Systems"], "ctaKey": "live" },
-    { "type": "Website", "title": "Mavi Kadraj", "description": "A digital portfolio platform built around photography, nature and visual storytelling.", "focus": ["Photo portfolio", "Storytelling", "Visual archive", "Minimal design"], "tags": ["Next.js", "Design", "Frontend"], "ctaKey": "live" },
-    { "type": "Website", "title": "Kadraj Rotam", "description": "A photography-focused route discovery platform. A digital project for visual stories and discovery points.", "focus": ["Route discovery structure", "Photo stories", "Minimal UI", "Performance-focused frontend"], "tags": ["Next.js", "UI Design", "Frontend"], "ctaKey": "live" },
-    { "type": "Website", "title": "Gönül Pusulası", "description": "A simple digital text platform built around poetry, emotion and narrative.", "focus": ["Text narrative", "Minimal typography", "Reading experience", "Simple content structure"], "tags": ["HTML", "CSS", "Frontend"], "ctaKey": "live" },
-    { "type": "Website", "title": "Mavi İletişim Demo Website", "description": "Demo corporate website built to showcase a frontend product system structure. Demonstrates product listing, category hierarchy, product detail page, variation selection, and demo cart interaction, with a focus on UI architecture and product flow.", "focus": ["Product & category architecture (listing, filtering, hierarchy)", "Product detail page and variation selection interaction", "Demo cart workflow and state management", "Minimal, performance-focused UI structure"], "tags": ["Next.js", "UI Design", "Frontend", "Demo System"], "ctaKey": "live" },
-    { "type": "Website", "title": "Şiir Dünyası", "description": "A simple content platform for sharing poetry and literary content online.", "focus": ["Poetry content", "Reading experience", "Simple navigation", "Lightweight build"], "tags": ["HTML", "CSS", "Frontend"], "ctaKey": "live" },
-    { "type": "Play Store App", "title": "Mavi Kadrajla Öğreniyorum", "description": "A simple Android education app for children, focused on visual learning.", "focus": ["Mobile user experience", "Simple interaction", "Learning-focused design"], "tags": ["Android", "Mobile App"], "ctaKey": "playstore" },
-    { "type": "Open Source Tool", "title": "Job Tracking – HTML Tool", "description": "A simple browser-based job tracking and note-taking tool.", "focus": ["Simple job tracking", "Zero dependency", "Quick use", "Lightweight build"], "tags": ["HTML", "CSS"], "ctaKey": "demo" }
+    { "type": "Open Source Tool", "title": "Job Tracking – HTML Tool", "description": "A simple browser-based job tracking and note-taking tool.", "focus": ["Simple job tracking", "Zero dependency", "Quick use", "Lightweight build"], "tags": ["HTML", "CSS"], "ctaKey": "demo", "ctaLabel": "Panel" }
   ],
 
   "photo_badge": "Photography",
@@ -176,6 +186,10 @@
   "contact_sending": "Sending…",
   "contact_success": "Message sent. I'll get back to you soon.",
   "contact_error": "Something went wrong. Please try again or email me directly.",
+
+  "cta_custom_project_title": "Want to Develop a Custom Project?",
+  "cta_custom_project_desc": "I develop web platforms, custom software projects and digital systems. You can get in touch to discuss your project.",
+  "cta_custom_project_btn": "Get in Touch",
 
   "footer_name": "Mustafa Oner",
   "footer_desc": "I work on modern web applications, user interfaces and digital product development.\n\nThis website was created to share my software projects, development approach and personal work.",

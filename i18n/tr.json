@@ -80,6 +80,22 @@
   "github": "GitHub",
   "cta_request": "Talep Al",
   "cta_demo": "GitHub Pages / Demo",
+  "view_demo": "View Demo",
+  "demo_card_badge": "Mustafa Öner | MK Digital Systems Demo",
+  "demo_section_title": "Demo Siteler",
+  "demo_projects": [
+    { "title": "Mavi İletişim – Telekom ve Teknik Servis", "description": "Telekom ve teknik servis kurumsal demo.", "tags": ["Next.js", "Kurumsal", "Demo"], "url": "https://mavi-iletisim-demo.vercel.app/" },
+    { "title": "Hukuk Bürosu – Kurumsal Web Sitesi", "description": "Hukuk büroları için kurumsal web sitesi demo.", "tags": ["Next.js", "Kurumsal", "Demo"], "url": "https://hukuk-demo.vercel.app/" },
+    { "title": "Danışmanlık – Kurumsal Web Sitesi", "description": "Danışmanlık hizmetleri için kurumsal web sitesi demo.", "tags": ["Next.js", "Kurumsal", "Demo"], "url": "https://danismanlik-demo.vercel.app/" },
+    { "title": "Güzellik Salonu – Kurumsal Web Sitesi", "description": "Güzellik ve bakım için kurumsal web sitesi demo.", "tags": ["Next.js", "Kurumsal", "Demo"], "url": "https://guzellik-salonu-demo-web.vercel.app/" },
+    { "title": "Mavi Şarkılar – Müzik Platformu", "description": "Müzik platformu arayüz ve yapı demo.", "tags": ["Next.js", "UI", "Demo"], "url": "https://spotify-demo-hazel.vercel.app/" },
+    { "title": "ARIA – Sosyal Medya Platformu", "description": "Sosyal medya platformu arayüz ve kullanıcı akışı demo.", "tags": ["Next.js", "UI", "Demo"], "url": "https://aria-demo-omega.vercel.app/" },
+    { "title": "Mavi Kadraj – Fotoğraf Platformu", "description": "Fotoğraf, doğa ve görsel anlatım üzerine kurulu dijital portföy platformu.", "tags": ["WordPress", "Design", "Frontend"], "url": "https://mavikadraj.com.tr" },
+    { "title": "Kadraj Rotam – Rota Keşif Platformu", "description": "Fotoğraf odaklı rota keşfi platformu. Görsel hikayeler ve keşif noktaları için hazırlanmış dijital proje.", "tags": ["Next.js", "UI Design", "Frontend"], "url": "https://kadrajrotam.com.tr" },
+    { "title": "Gönül Pusulası – Metin Platformu", "description": "Şiir, duygu ve anlatı üzerine kurulu sade bir dijital metin platformu.", "tags": ["HTML", "CSS", "Frontend"], "url": "https://gonulpusulasi.com" },
+    { "title": "Şiir Dünyası – İçerik Platformu", "description": "Şiir ve edebi içeriklerin dijital ortamda paylaşılması için hazırlanan sade içerik platformu.", "tags": ["HTML", "CSS", "Frontend"], "url": "https://siirdunyasi.com.tr" },
+    { "title": "Mavi Kadrajla Öğreniyorum – Android Uygulaması", "description": "Çocuklar için görsel öğrenme üzerine hazırlanmış basit Android eğitim uygulaması.", "tags": ["Android", "Mobile App"], "url": "https://play.google.com/store/apps/details?id=com.mavikadaj.learn" }
+  ],
   "how_i_work": "Nasıl Çalışırım",
   "delivery_mindset": "Teslimat Zihniyeti",
   "delivery_mindset_desc": "Başladığım işi bitiririm. Küçük, teslim edilmiş ürünler büyük bitmemiş fikirlerden iyidir.",
@@ -88,15 +104,9 @@
   "maintainable_builds": "Sürdürülebilir Yapılar",
   "maintainable_builds_desc": "Temiz bileşenler, tutarlı stil ve ileride ölçeklenebilecek basit mimari.",
   "software_projects": [
-    { "type": "SaaS Platform", "title": "MK Field Ops", "description": "Telekom saha operasyonlarının planlanması, takibi ve yönetimi için geliştirilen SaaS tabanlı bir operasyon yönetim sistemi.", "focus": ["Saha ekip yönetimi", "İş emri takibi", "Operasyon raporları", "Süreç yönetimi"], "tags": ["Next.js", "Dashboard", "SaaS", "Operations"], "ctaKey": "request" },
+    { "type": "SaaS Platform", "title": "MK OPS", "description": "Telekom saha operasyonlarının planlanması, takibi ve yönetimi için geliştirilen SaaS tabanlı bir operasyon yönetim sistemi.", "focus": ["Saha ekip yönetimi", "İş emri takibi", "Operasyon raporları", "Süreç yönetimi"], "tags": ["Next.js", "Dashboard", "SaaS", "Operations"], "ctaKey": "live" },
     { "type": "Website", "title": "MK Digital Systems", "description": "Web siteleri, e-ticaret platformları, özel yazılımlar ve dijital çözümler geliştiren dijital üretim markası.", "focus": ["Kurumsal web siteleri", "E-ticaret çözümleri", "Özel yazılım projeleri", "Dijital sistem geliştirme"], "tags": ["Next.js", "Web Development", "UI Systems"], "ctaKey": "live" },
-    { "type": "Website", "title": "Mavi Kadraj", "description": "Fotoğraf, doğa ve görsel anlatım üzerine kurulu dijital portföy platformu.", "focus": ["Fotoğraf portföyü", "Hikaye anlatımı", "Görsel arşiv", "Minimal tasarım"], "tags": ["Next.js", "Design", "Frontend"], "ctaKey": "live" },
-    { "type": "Website", "title": "Kadraj Rotam", "description": "Fotoğraf odaklı rota keşfi platformu. Görsel hikayeler ve keşif noktaları için hazırlanmış dijital proje.", "focus": ["Rota keşif yapısı", "Fotoğraf hikayeleri", "Minimal UI", "Performans odaklı frontend"], "tags": ["Next.js", "UI Design", "Frontend"], "ctaKey": "live" },
-    { "type": "Website", "title": "Gönül Pusulası", "description": "Şiir, duygu ve anlatı üzerine kurulu sade bir dijital metin platformu.", "focus": ["Metin anlatımı", "Minimal tipografi", "Okuma deneyimi", "Basit içerik yapısı"], "tags": ["HTML", "CSS", "Frontend"], "ctaKey": "live" },
-    { "type": "Website", "title": "Mavi İletişim Demo Web Sitesi", "description": "Kurumsal bir frontend ürün sistemi yapısını göstermek için hazırlanmış demo web sitesi. Ürün listeleme, kategori yapısı, ürün detay sayfası, varyant seçimi ve demo sepet etkileşimi ile UI mimarisi ve ürün akışı odaklı bir örnek sunar.", "focus": ["Ürün ve kategori mimarisi (listing, filtreleme, hiyerarşi)", "Ürün detay sayfası ve varyant seçimi etkileşimi", "Demo sepet akışı ve state yönetimi", "Minimal, performans odaklı arayüz yapısı"], "tags": ["Next.js", "UI Design", "Frontend", "Demo System"], "ctaKey": "live" },
-    { "type": "Website", "title": "Şiir Dünyası", "description": "Şiir ve edebi içeriklerin dijital ortamda paylaşılması için hazırlanan sade içerik platformu.", "focus": ["Şiir içerikleri", "Okuma deneyimi", "Basit navigasyon", "Hafif yapı"], "tags": ["HTML", "CSS", "Frontend"], "ctaKey": "live" },
-    { "type": "Play Store App", "title": "Mavi Kadrajla Öğreniyorum", "description": "Çocuklar için görsel öğrenme üzerine hazırlanmış basit Android eğitim uygulaması.", "focus": ["Mobil kullanıcı deneyimi", "Basit etkileşim", "Öğrenme odaklı tasarım"], "tags": ["Android", "Mobile App"], "ctaKey": "playstore" },
-    { "type": "Open Source Tool", "title": "Job Tracking – HTML Tool", "description": "Tarayıcı üzerinden çalışan basit iş takip ve not alma aracı.", "focus": ["Basit iş takibi", "Sıfır bağımlılık", "Hızlı kullanım", "Hafif yapı"], "tags": ["HTML", "CSS"], "ctaKey": "demo" }
+    { "type": "Open Source Tool", "title": "Job Tracking – HTML Tool", "description": "Tarayıcı üzerinden çalışan basit iş takip ve not alma aracı.", "focus": ["Basit iş takibi", "Sıfır bağımlılık", "Hızlı kullanım", "Hafif yapı"], "tags": ["HTML", "CSS"], "ctaKey": "demo", "ctaLabel": "Panel" }
   ],
 
   "photo_badge": "Fotoğraf",
@@ -176,6 +186,10 @@
   "contact_sending": "Gönderiliyor…",
   "contact_success": "Mesajınız iletildi. En kısa sürede dönüş yapacağım.",
   "contact_error": "Bir sorun oluştu. Lütfen tekrar deneyin veya doğrudan e-posta gönderin.",
+
+  "cta_custom_project_title": "Özel Bir Proje Geliştirmek İster misiniz?",
+  "cta_custom_project_desc": "Web platformları, özel yazılım projeleri ve dijital sistemler geliştiriyorum. Projenizi konuşmak için iletişime geçebilirsiniz.",
+  "cta_custom_project_btn": "İletişime Geç",
 
   "footer_name": "Mustafa Öner",
   "footer_desc": "Modern web uygulamaları, kullanıcı arayüzleri ve dijital ürün geliştirme üzerine çalışıyorum.\n\nBu web sitesi yazılım projelerimi, geliştirme yaklaşımımı ve kişisel çalışmalarımı paylaşmak için hazırlanmıştır.",

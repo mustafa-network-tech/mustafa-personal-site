@@ -41,30 +41,18 @@ function highlightSubtitle(text, language) {
 }
 
 const projectLinks = [
-  null,
+  'https://www.mk-ops.tr',
   'https://mk-digital-systems.vercel.app/en',
-  'https://mavikadraj.com.tr',
-  'https://kadrajrotam.com.tr',
-  'https://gonulpusulasi.com',
-  'https://mavi-iletisim-demo-kadl605yi-mustafa-oners-projects.vercel.app/',
-  'https://siirdunyasi.com.tr',
-  'https://play.google.com/store/apps/details?id=com.mavikadaj.learn',
   'https://mustafa-network-tech.github.io/pro-track/',
 ]
 
 const projectGithubLinks = [
   null,
   null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
   'https://github.com/mustafa-network-tech/pro-track',
 ]
 
-const projectIcons = [LayoutDashboard, Globe, Globe, Globe, Globe, Globe, Globe, Smartphone, FileCode2]
+const projectIcons = [LayoutDashboard, Globe, FileCode2]
 
 function getCtaLabel(ctaKey, t) {
   switch (ctaKey) {
@@ -78,9 +66,9 @@ function getCtaLabel(ctaKey, t) {
 
 function CtaButton({ project, index, t, darkCard }) {
   const ctaKey = project.ctaKey || 'live'
-  const label = getCtaLabel(ctaKey, t)
+  const label = project.ctaLabel != null ? project.ctaLabel : getCtaLabel(ctaKey, t)
   const href = ctaKey === 'request' ? '#contact' : (projectLinks[index] || null)
-  const showGithub = ctaKey === 'demo' && projectGithubLinks[index]
+  const showGithub = !project.ctaLabel && ctaKey === 'demo' && projectGithubLinks[index]
 
   const baseClass = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 [&_svg]:text-current'
   const primaryClass = darkCard
@@ -232,6 +220,91 @@ export default function SoftwareDigital() {
                 </motion.div>
               ))}
             </div>
+
+            {/* Demo Sites – subheading + 6 cards */}
+            {(t.demo_section_title && (t.demo_projects || []).length > 0) && (
+              <div className="mb-16">
+                <h3
+                  className="text-2xl md:text-3xl font-bold tracking-tight text-[#1E293B] mb-6"
+                  style={{ letterSpacing: '-0.02em' }}
+                >
+                  {t.demo_section_title}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+                  {(t.demo_projects || []).map((project, index) => (
+                    <motion.div
+                      key={`demo-${project.title}-${index}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.08 }}
+                      className="telekom-glass-card group relative rounded-[18px] transition-all duration-[0.35s] ease-out"
+                      style={{ padding: 30 }}
+                    >
+                      {t.demo_card_badge && (
+                        <span
+                          className="inline-block text-[10px] font-medium tracking-wide text-[#64748B] mb-3 px-2.5 py-1 rounded-md border border-[rgba(0,0,0,0.08)] bg-[rgba(0,0,0,0.03)]"
+                          style={{ letterSpacing: '0.02em' }}
+                        >
+                          {t.demo_card_badge}
+                        </span>
+                      )}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="card-icon-container shrink-0">
+                          <Globe className="w-6 h-6 text-[#334155]" />
+                        </div>
+                        <span className="card-tag inline-block">Demo</span>
+                      </div>
+                      <h4 className="telekom-card-title text-[18px] font-semibold mb-3 leading-tight text-[#1E293B]">
+                        {project.title}
+                      </h4>
+                      <p className="text-sm mb-4 text-[#475569]" style={{ lineHeight: 1.6 }}>
+                        {project.description}
+                      </p>
+                      {(project.tags || []).length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {(project.tags || []).map((tag) => (
+                            <span key={tag} className="card-tag inline-block">{tag}</span>
+                          ))}
+                        </div>
+                      )}
+                      <div className="mt-4 pt-4 border-t border-[rgba(0,0,0,0.08)]">
+                        <a
+                          href={project.url || '#'}
+                          target={project.url ? '_blank' : undefined}
+                          rel={project.url ? 'noopener noreferrer' : undefined}
+                          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 bg-[#2563EB] border border-[#2563EB] text-white hover:bg-[#1d4ed8] hover:border-[#1d4ed8] hover:shadow-[0_0_24px_rgba(37,99,235,0.35)] [&_svg]:text-current"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          {t.view_demo || 'View Demo'}
+                        </a>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* CTA: Custom project – under demo cards */}
+                {t.cta_custom_project_title && (
+                  <div className="mt-12 mb-16 text-center max-w-2xl mx-auto">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#1E293B] mb-3">
+                      {t.cta_custom_project_title}
+                    </h3>
+                    <p className="text-sm md:text-base text-[#475569] mb-6 leading-relaxed">
+                      {t.cta_custom_project_desc}
+                    </p>
+                    <a
+                      href="https://wa.me/905456597551"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-[12px] text-sm font-semibold bg-[#25D366] text-white border border-[#25D366] hover:bg-[#20BD5A] hover:border-[#20BD5A] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(37,211,102,0.35)]"
+                    >
+                      {t.cta_custom_project_btn}
+                    </a>
+                  </div>
+                )}
+
+              </div>
+            )}
 
             <div
               className="page-card-hover rounded-2xl p-8 border transition-all duration-[0.35s] ease-out hover:bg-[#F5F4F2] active:scale-[0.995] active:shadow-inner cursor-pointer"
