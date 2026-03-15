@@ -3,9 +3,7 @@ import { headers } from 'next/headers'
 import { Inter, Plus_Jakarta_Sans, Dancing_Script, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import TopNotice from '@/components/TopNotice'
+import LayoutShell from '@/components/LayoutShell'
 import JsonLd from '@/components/JsonLd'
 import { SITE_URL, GLOBAL_META } from '@/seo/metadata'
 import { getPersonSchema, getWebsiteSchema } from '@/seo/schema'
@@ -40,12 +38,7 @@ export default async function RootLayout({ children }) {
       <body className={`${inter.className} ${plusJakarta.variable} ${dancingScript.variable} ${jetbrainsMono.variable} bg-main text-primary`}>
         <JsonLd data={[personSchema, websiteSchema]} />
         <LanguageProvider initialLocale={locale}>
-          <div className="min-h-screen flex flex-col pt-14">
-            <TopNotice />
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
+          <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>
       </body>
     </html>

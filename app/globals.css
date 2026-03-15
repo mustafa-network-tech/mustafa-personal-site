@@ -427,3 +427,95 @@ section[id] {
     animation: none;
   }
 }
+
+/* Showcase – ambient animated background (Hero + Cards) */
+.showcase-hero-bg {
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.showcase-hero-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, #0f172a 0%, #1e293b 20%, #0f172a 40%, #1e3a5f 60%, #0f172a 80%, #1e293b 100%);
+  background-size: 200% 200%;
+  animation: showcase-gradient-drift 28s ease-in-out infinite;
+  opacity: 0.95;
+}
+@keyframes showcase-gradient-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.showcase-hero-orb {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
+  animation: showcase-orb-float 25s ease-in-out infinite;
+  will-change: transform;
+}
+.showcase-hero-orb:nth-child(2) { width: min(60vw, 400px); height: min(60vw, 400px); left: 10%; top: 20%; background: #3b82f6; animation-delay: 0s; }
+.showcase-hero-orb:nth-child(3) { width: min(50vw, 320px); height: min(50vw, 320px); right: 15%; top: 50%; background: #8b5cf6; animation-delay: -8s; }
+.showcase-hero-orb:nth-child(4) { width: min(40vw, 280px); height: min(40vw, 280px); left: 50%; bottom: 10%; background: #06b6d4; animation-delay: -16s; }
+@keyframes showcase-orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(5%, -8%) scale(1.05); }
+  66% { transform: translate(-5%, 5%) scale(0.98); }
+}
+.showcase-hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.showcase-hero-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(148, 163, 184, 0.5);
+  animation: showcase-particle-float 32s ease-in-out infinite;
+  will-change: transform;
+  transition: opacity 0.2s ease-out;
+}
+@keyframes showcase-particle-float {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(8px, -12px); }
+  50% { transform: translate(-6px, 8px); }
+  75% { transform: translate(10px, 4px); }
+}
+.showcase-typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: showcase-cursor-blink 1s step-end infinite;
+}
+@keyframes showcase-cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.animate-circle-shine {
+  animation: circle-shine 1.8s ease-out forwards;
+}
+@keyframes circle-shine {
+  0% {
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.6), 0 0 48px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.08);
+    filter: brightness(1.25);
+  }
+  40% {
+    box-shadow: 0 0 32px rgba(255, 255, 255, 0.45), 0 0 64px rgba(255, 255, 255, 0.2), inset 0 0 16px rgba(255, 255, 255, 0.05);
+    filter: brightness(1.15);
+  }
+  100% {
+    box-shadow: none;
+    filter: brightness(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .showcase-hero-gradient, .showcase-hero-orb, .showcase-hero-particle { animation: none; }
+  .animate-circle-shine { animation: none; }
+}
+@media (max-width: 768px) {
+  .showcase-hero-particles .showcase-hero-particle:nth-child(n+6) { display: none; }
+}
