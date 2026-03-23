@@ -6,7 +6,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext'
 import LayoutShell from '@/components/LayoutShell'
 import JsonLd from '@/components/JsonLd'
 import { SITE_URL, GLOBAL_META } from '@/seo/metadata'
-import { getPersonSchema, getWebsiteSchema } from '@/seo/schema'
+import { getPersonSchema, getWebsiteSchema, getOrganizationSchema } from '@/seo/schema'
 
 const inter = Inter({ subsets: ['latin'] })
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
@@ -32,11 +32,12 @@ export default async function RootLayout({ children }) {
   const headersList = await headers()
   const locale = headersList.get(LOCALE_HEADER) || 'en'
   const personSchema = getPersonSchema(locale)
-  const websiteSchema = getWebsiteSchema()
+  const websiteSchema = getWebsiteSchema(locale)
+  const orgSchema = getOrganizationSchema()
   return (
     <html lang={locale}>
       <body className={`${inter.className} ${plusJakarta.variable} ${dancingScript.variable} ${jetbrainsMono.variable} bg-main text-primary`}>
-        <JsonLd data={[personSchema, websiteSchema]} />
+        <JsonLd data={[personSchema, websiteSchema, orgSchema]} />
         <LanguageProvider initialLocale={locale}>
           <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>

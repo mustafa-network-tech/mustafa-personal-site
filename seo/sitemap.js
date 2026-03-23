@@ -10,6 +10,7 @@ export const SITEMAP_PATHS = [
   '/projects',
   '/services',
   '/contact',
+  '/vitrin',
   ...PROJECT_SLUGS.map((slug) => `/projects/${slug}`),
 ]
 

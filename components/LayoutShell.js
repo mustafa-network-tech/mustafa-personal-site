@@ -5,13 +5,13 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import TopNotice from '@/components/TopNotice'
 
-const SHOWCASE_PATHS = ['/showcase', '/tr/showcase']
+const VITRIN_PATHS = ['/vitrin', '/tr/vitrin']
 
 export default function LayoutShell({ children }) {
   const pathname = usePathname()
-  const isShowcase = SHOWCASE_PATHS.some((p) => pathname === p || pathname.startsWith(p + '/'))
+  const isVitrin = VITRIN_PATHS.some((p) => pathname === p || pathname.startsWith(p + '/'))
 
-  if (isShowcase) {
+  if (isVitrin) {
     return <main className="flex-grow">{children}</main>
   }
 

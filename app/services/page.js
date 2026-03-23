@@ -1,15 +1,23 @@
 // app/services/page.js – English services
-import Link from 'next/link'
-import { PAGE_META, OG_IMAGES } from '@/seo/metadata'
+import { PAGE_META, OG_IMAGES, GLOBAL_META } from '@/seo/metadata'
 import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
+import { getBreadcrumbListSchema, getServicesPageSchema } from '@/seo/schema'
+import JsonLd from '@/components/JsonLd'
+import ServicesPageContent from '@/components/ServicesPageContent'
 
 const meta = PAGE_META.services.en
 const og = buildOpenGraph({ locale: 'en', path: '/services', title: meta.title, description: meta.description, image: OG_IMAGES.en })
-const twitter = buildTwitterCard({ title: meta.title, description: meta.description, image: OG_IMAGES.en })
+const twitter = buildTwitterCard({ locale: 'en', title: meta.title, description: meta.description, image: OG_IMAGES.en })
+
+const breadcrumbJson = getBreadcrumbListSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: '/services' },
+])
 
 export const metadata = {
   title: meta.title,
   description: meta.description,
+  keywords: GLOBAL_META.en.keywords,
   alternates: { canonical: '/services', languages: { en: '/services', tr: '/tr/services', 'x-default': '/services' } },
   openGraph: og,
   twitter,
@@ -17,14 +25,9 @@ export const metadata = {
 
 export default function ServicesEn() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-3xl">
-      <h1 className="text-3xl font-bold text-[#F8FAFC] mb-2">Services</h1>
-      <p className="text-[#E2E8F0] mb-8">{meta.description}</p>
-      <p>
-        <Link href="/" className="text-[#94A3B8] hover:text-[#F8FAFC]">
-          ← Back to home
-        </Link>
-      </p>
-    </div>
+    <>
+      <JsonLd data={[breadcrumbJson, getServicesPageSchema('en')]} />
+      <ServicesPageContent />
+    </>
   )
 }

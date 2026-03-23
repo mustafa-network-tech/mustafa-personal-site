@@ -5,7 +5,7 @@ import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
 
 const meta = PAGE_META.home.tr
 const og = buildOpenGraph({ locale: 'tr', path: '/tr', title: meta.title, description: meta.description, image: OG_IMAGES.tr })
-const twitter = buildTwitterCard({ title: meta.title, description: meta.description, image: OG_IMAGES.tr })
+const twitter = buildTwitterCard({ locale: 'tr', title: meta.title, description: meta.description, image: OG_IMAGES.tr })
 
 export const metadata = {
   title: meta.title,

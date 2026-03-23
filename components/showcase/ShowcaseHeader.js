@@ -30,7 +30,7 @@ export default function ShowcaseHeader() {
   const switchLang = () => {
     const next = language === 'tr' ? 'en' : 'tr'
     setLanguage(next)
-    router.push(next === 'tr' ? '/tr/showcase' : '/showcase')
+    router.push(next === 'tr' ? '/tr/vitrin' : '/vitrin')
   }
 
   return (

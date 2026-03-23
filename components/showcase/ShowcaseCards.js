@@ -22,11 +22,13 @@ function Card({ title, titleKey, typeKey, url, descKey }) {
   const displayTitle = titleKey ? (t[titleKey] || title) : title
   const typeColor = getTypeColor(typeKey)
   const description = descKey ? t[descKey] : null
+  const ariaLabel = `${displayTitle} — ${t[typeKey] || ''}. ${description ? `${description} ` : ''}${t.showcase_view_site} (${t.showcase_cards_heading})`
   return (
     <Link
       href={url || '#'}
       target={url ? '_blank' : undefined}
       rel={url ? 'noopener noreferrer' : undefined}
+      aria-label={url ? `${ariaLabel}. Opens in a new tab` : ariaLabel}
       className="group relative block rounded-xl border border-[rgba(255,255,255,0.08)] bg-[#1e293b]/80 p-4 overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:border-[rgba(148,163,184,0.35)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.35),0_0_0_1px_rgba(148,163,184,0.15)] hover:bg-[#1e293b]"
     >
       {/* Watermark */}

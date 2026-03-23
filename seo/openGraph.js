@@ -28,15 +28,16 @@ export function buildOpenGraph(opts) {
 
 /**
  * Build Twitter card metadata (summary_large_image).
+ * @param {object} opts - title, description, image, locale (en|tr for fallback copy/image)
  */
 export function buildTwitterCard(opts) {
-  const { title, description, image } = opts
-  const meta = GLOBAL_META.en
+  const { title, description, image, locale = 'en' } = opts
+  const meta = GLOBAL_META[locale] || GLOBAL_META.en
   return {
     card: 'summary_large_image',
     title: title || meta.title,
     description: description || meta.description,
-    images: [image || OG_IMAGES.en],
+    images: [image || OG_IMAGES[locale] || OG_IMAGES.en],
   }
 }
 
@@ -50,6 +51,6 @@ export function pageSocialMeta(pageKey, locale, path, overrides = {}) {
   const image = overrides.image ?? OG_IMAGES[locale]
   return {
     openGraph: buildOpenGraph({ locale, path, title, description, image }),
-    twitter: buildTwitterCard({ title, description, image }),
+    twitter: buildTwitterCard({ locale, title, description, image }),
   }
 }

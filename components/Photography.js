@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
+import InstagramSection from '@/components/InstagramSection'
 
 const categoryIcons = [Grid, Aperture, Eye, Camera]
 // Clear, distinct background colors per gallery – nature photography (inactive bg, active bg, text on inactive)
@@ -30,7 +31,7 @@ const categoryImages = [
 ]
 
 export default function Photography() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const photoCategories = (t.photo_categories || []).map((cat, i) => {
     const Icon = categoryIcons[i] || Grid
     return {
@@ -226,11 +227,19 @@ export default function Photography() {
                     border: '1px solid rgba(30,41,59,0.08)',
                     boxShadow: '0 10px 30px rgba(15,23,42,0.05)',
                   }}
-                  aria-label={`Open ${active.title} ${getLabel()} ${index + 1}`}
+                  aria-label={
+                    language === 'tr'
+                      ? `Büyüt: ${active.title}, ${getLabel()} ${index + 1} — Mustafa Öner`
+                      : `Open lightbox: ${active.title}, ${getLabel()} ${index + 1} — Mustafa Oner`
+                  }
                 >
                   <Image
                     src={src}
-                    alt={`${active.title} — ${getLabel()} ${index + 1}`}
+                    alt={
+                      language === 'tr'
+                        ? `${active.title} — ${getLabel()} ${index + 1}, Mustafa Öner fotoğraf portföyü`
+                        : `${active.title} — ${getLabel()} ${index + 1}, Mustafa Oner photography portfolio`
+                    }
                     fill
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
@@ -257,6 +266,9 @@ export default function Photography() {
               </p>
             </div>
           )}
+
+          {/* Instagram preview — complements photography; supports social/creative discovery */}
+          <InstagramSection />
 
           {/* Philosophy – background close to section, same palette */}
           <div className="page-card-hover rounded-2xl p-8 md:p-12 shadow-card transition-all duration-300" style={{ background: '#EDE9E3', border: '1px solid rgba(30,41,59,0.08)' }}>
@@ -331,7 +343,11 @@ export default function Photography() {
                 <div className="relative mx-auto w-full max-w-5xl h-[70vh] md:h-[78vh] rounded-2xl overflow-hidden bg-black/30 border border-white/10 pointer-events-auto">
                   <Image
                     src={currentSrc}
-                    alt={`${active.title} — ${getLabel()} ${activeIndex + 1}`}
+                    alt={
+                      language === 'tr'
+                        ? `${active.title} — ${getLabel()} ${activeIndex + 1}, Mustafa Öner fotoğraf portföyü`
+                        : `${active.title} — ${getLabel()} ${activeIndex + 1}, Mustafa Oner photography portfolio`
+                    }
                     fill
                     sizes="100vw"
                     className="object-contain"

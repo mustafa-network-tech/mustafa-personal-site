@@ -1,6 +1,7 @@
 // components/SoftwareDigital.js
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { LayoutDashboard, Globe, Smartphone, FileCode2, ExternalLink, MessageCircle, Github, CheckCircle } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -157,6 +158,16 @@ export default function SoftwareDigital() {
               <p className="text-lg max-w-[760px] mx-auto leading-[1.7] text-[#475569]">
                 {highlightSubtitle(t.software_intro, language)}
               </p>
+              {t.software_vitrin_link && (
+                <p className="text-center mt-4">
+                  <Link
+                    href={language === 'tr' ? '/tr/vitrin' : '/vitrin'}
+                    className="text-sm font-medium text-[#2563EB] hover:underline focus:outline-none focus:ring-2 focus:ring-[#2563EB]/40 rounded"
+                  >
+                    {t.software_vitrin_link}
+                  </Link>
+                </p>
+              )}
             </div>
 
             <div className="projects-grid grid grid-cols-2 md:grid-cols-3 gap-[30px] mb-16">

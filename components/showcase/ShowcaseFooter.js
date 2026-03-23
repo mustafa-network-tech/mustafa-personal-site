@@ -3,7 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const WHATSAPP_URL = 'https://wa.me/905456597551'
-const LINKEDIN_URL = 'https://www.linkedin.com/in/mustafa-oner-/'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/mustafa-oner-82/'
 const EMAIL_URL = 'mailto:mustafa82oner@gmail.com'
 
 function IconButton({ href, label, children }) {

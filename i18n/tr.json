@@ -3,6 +3,7 @@
   "title": "Web Geliştirici • Next.js • React • UI Sistemleri",
 
   "menu_identity": "Kimlik",
+  "menu_vitrin": "Vitrin",
   "menu_infrastructure": "Yazılım Hizmetleri",
   "menu_narrative": "Yazılım Süreci",
   "menu_web": "Projeler",
@@ -73,6 +74,11 @@
   "software_badge": "Portföy",
   "software_title": "Projeler",
   "software_intro": "Gerçek projeler, gerçek ürünler. Web, mobil ve yazılım alanında geliştirdiğim dijital çalışmalar.",
+  "software_vitrin_link": "Tüm örnekleri vitrinde incele",
+  "projects_page_lead": "Yayına alınmış ve demo projelerin seçilmiş özeti: kurumsal siteler, platformlar ve araçlar. Web geliştirme, arayüz sistemleri ve özel yazılımın pratikte nasıl bir araya geldiğini görmek için kullanın.",
+  "services_page_lead": "Kurumsal web sitesi, e-ticaret, yönetim paneli, mobil uygulama ve özel yazılım ihtiyacı olan ekipler için düzenli hizmetler — planlama, geliştirme ve sürdürülebilir yapı öncelikli.",
+  "contact_page_lead": "Kısa bir özet, zaman çerçevesi ve hedeflediğiniz sonucu yazın. Uygunluk ve sonraki adımlarla dönüş yaparım.",
+  "footer_explore": "Keşfet",
   "outcome": "Sonuç",
   "focus": "Odak",
   "live": "Canlı Site",
@@ -273,5 +279,5 @@
   "showcase_footer_sections_title": "Bölümler",
   "showcase_footer_contact_title": "İletişim",
   "showcase_footer_copyright_left": "© 2026 Mustafa Öner / MK Digital Systems",
-  "showcase_footer_copyright_right": "Digital Project Showcase"
+  "showcase_footer_copyright_right": "Dijital Proje Vitrini"
 }
