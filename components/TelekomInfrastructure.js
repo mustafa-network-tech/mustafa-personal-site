@@ -1,9 +1,11 @@
 // components/TelekomInfrastructure.js
 'use client'
 
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Globe, ShoppingBag, Code, LayoutDashboard, Smartphone, Briefcase } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getSectionIds } from '@/lib/sectionIds'
 
 const icons = [Globe, ShoppingBag, Code, LayoutDashboard, Smartphone, Briefcase]
 
@@ -38,7 +40,7 @@ export default function TelekomInfrastructure() {
 
   return (
     <section
-      id="telekom"
+      id={s.services}
       className="light-section relative pt-4 pb-20 overflow-hidden"
       style={{ background: '#F2EFEA' }}
     >

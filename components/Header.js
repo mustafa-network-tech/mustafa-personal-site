@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getSectionIds } from '@/lib/sectionIds'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,6 +17,8 @@ export default function Header() {
   const isTr = pathname.startsWith('/tr')
   const homeHref = isTr ? '/tr' : '/'
   const vitrinHref = isTr ? '/tr/vitrin' : '/vitrin'
+  // URL (/tr vs /) ile hash slug’ları eşleşsin; dil anahtarı pathname’e göre
+  const s = getSectionIds(isTr ? 'tr' : 'en')
 
   const switchTo = (lang) => {
     setLanguage(lang)
@@ -30,14 +33,14 @@ export default function Header() {
   }
 
   const navItems = [
-    { key: 'menu_identity', href: `${homeHref}#identity` },
-    { key: 'menu_infrastructure', href: `${homeHref}#telekom` },
-    { key: 'menu_narrative', href: `${homeHref}#software-approach` },
-    { key: 'menu_web', href: `${homeHref}#software` },
+    { key: 'menu_identity', href: `${homeHref}#${s.hero}` },
+    { key: 'menu_infrastructure', href: `${homeHref}#${s.services}` },
+    { key: 'menu_narrative', href: `${homeHref}#${s.narrative}` },
+    { key: 'menu_web', href: `${homeHref}#${s.projects}` },
     { key: 'menu_vitrin', href: vitrinHref, isPage: true },
-    { key: 'menu_photography', href: `${homeHref}#photography` },
-    { key: 'menu_principles', href: `${homeHref}#principles` },
-    { key: 'menu_communication', href: `${homeHref}#contact-form` },
+    { key: 'menu_photography', href: `${homeHref}#${s.photography}` },
+    { key: 'menu_principles', href: `${homeHref}#${s.principles}` },
+    { key: 'menu_communication', href: `${homeHref}#${s.contact}` },
   ]
 
   return (

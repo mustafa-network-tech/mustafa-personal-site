@@ -1,7 +1,9 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getSectionIds } from '@/lib/sectionIds'
 
 const INTRO_HIGHLIGHTS_TR = ['kullanıcı deneyimi', 'güven veren', 'doğru yapı'].sort((a, b) => b.length - a.length)
 const INTRO_HIGHLIGHTS_EN = ['user experience', 'trustworthy', 'solid structure'].sort((a, b) => b.length - a.length)
@@ -39,6 +41,9 @@ function highlightPhrases(text, language) {
 }
 
 export default function TechnicalNarrative() {
+  const pathname = usePathname()
+  const isTr = pathname.startsWith('/tr')
+  const s = getSectionIds(isTr ? 'tr' : 'en')
   const { t, language } = useLanguage()
 
   const titleBefore = t.narrative_heading_before ?? ''
@@ -48,7 +53,7 @@ export default function TechnicalNarrative() {
 
   return (
     <section
-      id="software-approach"
+      id={s.narrative}
       className="light-section relative pt-4 pb-24 md:pt-6 md:pb-32 overflow-hidden"
       style={{ background: '#F2EFEA' }}
     >

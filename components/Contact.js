@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getSectionIds } from '@/lib/sectionIds'
 
 const inputBase =
   'w-full rounded-[10px] px-3 py-3 border bg-white/80 text-[#000000] transition-colors outline-none focus:border-[#2563EB] placeholder:text-[#94A3B8] placeholder:opacity-80'
@@ -12,6 +14,9 @@ const CONTACT_EMAIL = 'mustafa82oner@gmail.com'
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID
 
 export default function Contact() {
+  const pathname = usePathname()
+  const isTr = pathname.startsWith('/tr')
+  const s = getSectionIds(isTr ? 'tr' : 'en')
   const { t } = useLanguage()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -54,7 +59,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact-form" className="py-16 md:py-20" style={{ background: '#F5F3EF' }}>
+    <section id={s.contact} className="py-16 md:py-20" style={{ background: '#F5F3EF' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-[640px] mx-auto">
           <div className="text-center mb-10">
