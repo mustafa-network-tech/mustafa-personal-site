@@ -2,11 +2,9 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { LayoutDashboard, Globe, Smartphone, FileCode2, ExternalLink, MessageCircle, Github, CheckCircle } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { getSectionIds } from '@/lib/sectionIds'
 
 const INTRO_HIGHLIGHTS_TR = ['dijital çalışmalar', 'gerçek ürünler', 'gerçek projeler'].sort((a, b) => b.length - a.length)
 const INTRO_HIGHLIGHTS_EN = ['digital work', 'real products', 'real projects'].sort((a, b) => b.length - a.length)
@@ -67,10 +65,10 @@ function getCtaLabel(ctaKey, t) {
   }
 }
 
-function CtaButton({ project, index, t, darkCard, contactHash }) {
+function CtaButton({ project, index, t, darkCard }) {
   const ctaKey = project.ctaKey || 'live'
   const label = project.ctaLabel != null ? project.ctaLabel : getCtaLabel(ctaKey, t)
-  const href = ctaKey === 'request' ? contactHash : (projectLinks[index] || null)
+  const href = ctaKey === 'request' ? '#contact' : (projectLinks[index] || null)
   const showGithub = !project.ctaLabel && ctaKey === 'demo' && projectGithubLinks[index]
 
   const baseClass = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 [&_svg]:text-current'
@@ -84,7 +82,7 @@ function CtaButton({ project, index, t, darkCard, contactHash }) {
   if (ctaKey === 'request') {
     return (
       <a
-        href={contactHash}
+        href="#contact"
         className={`group/btn relative ${baseClass} ${primaryClass}`}
       >
         <MessageCircle className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
@@ -117,10 +115,6 @@ function CtaButton({ project, index, t, darkCard, contactHash }) {
 }
 
 export default function SoftwareDigital() {
-  const pathname = usePathname()
-  const isTr = pathname.startsWith('/tr')
-  const s = getSectionIds(isTr ? 'tr' : 'en')
-  const contactHash = `#${s.contact}`
   const { t, language } = useLanguage()
   const projects = (t.software_projects || []).map((p, index) => {
     const Icon = projectIcons[index] || Globe
@@ -132,7 +126,7 @@ export default function SoftwareDigital() {
 
   return (
     <section
-      id={s.projects}
+      id="software"
       className="light-section relative pt-4 pb-20 overflow-hidden"
       style={{ background: '#F2EFEA' }}
     >
@@ -232,7 +226,7 @@ export default function SoftwareDigital() {
                   </div>
 
                   <div className="mt-4 pt-4 border-t border-[rgba(0,0,0,0.08)]">
-                    <CtaButton project={p} index={index} t={t} contactHash={contactHash} />
+                    <CtaButton project={p} index={index} t={t} />
                   </div>
                 </motion.div>
               ))}

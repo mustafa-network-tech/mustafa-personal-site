@@ -2,11 +2,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Globe, ShoppingBag, Code, LayoutDashboard, Smartphone } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { getSectionIds } from '@/lib/sectionIds'
 import HeroCodeCard from '@/components/HeroCodeCard'
 import ScrollingSloganStrip from '@/components/ScrollingSloganStrip'
 
@@ -30,9 +28,6 @@ web sitesi / yazılım projesi hakkında bilgi almak istiyorum.
 Uygun olduğunuzda görüşebilir miyiz?`
 
 export default function Identity() {
-  const pathname = usePathname()
-  const isTr = pathname.startsWith('/tr')
-  const s = getSectionIds(isTr ? 'tr' : 'en')
   const { t } = useLanguage()
   const services = t.hero_services || []
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -55,7 +50,7 @@ export default function Identity() {
 
   return (
     <section
-      id={s.hero}
+      id="identity"
       className="hero-section relative min-h-0 md:min-h-[85vh] flex items-center overflow-hidden"
       style={{
         background: 'linear-gradient(180deg, #1f2937 0%, #111827 100%)',
@@ -175,7 +170,7 @@ style={{
           <div className="flex flex-col max-md:items-center max-md:text-center md:col-start-1 md:row-start-2">
             <div className="flex flex-wrap max-md:justify-center max-md:gap-3 md:gap-4 max-md:mb-4 md:mb-0">
               <a
-                href={`#${s.projects}`}
+                href="#software"
                 className="inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 py-3.5 px-5 max-md:px-[22px] max-md:text-base md:px-6 min-h-[48px] max-md:min-w-[140px]"
                 style={{
                   background: '#2563EB',

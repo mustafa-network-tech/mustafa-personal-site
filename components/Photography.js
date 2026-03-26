@@ -1,6 +1,5 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useMemo, useState } from 'react'
 import {
@@ -14,7 +13,6 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { getSectionIds } from '@/lib/sectionIds'
 import InstagramSection from '@/components/InstagramSection'
 
 const categoryIcons = [Grid, Aperture, Eye, Camera]
@@ -33,9 +31,6 @@ const categoryImages = [
 ]
 
 export default function Photography() {
-  const pathname = usePathname()
-  const isTr = pathname.startsWith('/tr')
-  const s = getSectionIds(isTr ? 'tr' : 'en')
   const { t, language } = useLanguage()
   const photoCategories = (t.photo_categories || []).map((cat, i) => {
     const Icon = categoryIcons[i] || Grid
@@ -115,7 +110,7 @@ export default function Photography() {
   const introLines = (t.photo_intro || '').split('\n\n').filter(Boolean)
 
   return (
-    <section id={s.photography} className="pt-4 pb-20 px-4 light-section relative overflow-hidden" style={{ background: '#F2EFEA' }}>
+    <section id="photography" className="pt-4 pb-20 px-4 light-section relative overflow-hidden" style={{ background: '#F2EFEA' }}>
       <div className="container mx-auto max-w-6xl relative">
         {/* Subtle blurred photo preview on category chip hover */}
         {hoveredCategoryIndex != null && categoryImages[hoveredCategoryIndex]?.[0] && (

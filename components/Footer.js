@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { getSectionIds } from '@/lib/sectionIds'
 import { Mail, Linkedin, Github } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -13,7 +12,6 @@ export default function Footer() {
   const { t } = useLanguage()
   const pathname = usePathname()
   const isTr = pathname.startsWith('/tr')
-  const s = getSectionIds(isTr ? 'tr' : 'en')
   const home = isTr ? '/tr' : '/'
   const services = isTr ? '/tr/services' : '/services'
   const projects = isTr ? '/tr/projects' : '/projects'
@@ -21,7 +19,7 @@ export default function Footer() {
   const contactPage = isTr ? '/tr/contact' : '/contact'
 
   return (
-    <footer id="site-footer" className="bg-secondary border-t border-divider text-sub">
+    <footer id="contact" className="bg-secondary border-t border-divider text-sub">
       <div className="container mx-auto px-6 py-16 max-w-6xl">
 
         <motion.div
@@ -75,7 +73,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`${home}#${s.photography}`} className="text-sub hover:text-primary transition-colors">
+                  <Link href={`${home}#photography`} className="text-sub hover:text-primary transition-colors">
                     {t.menu_photography}
                   </Link>
                 </li>

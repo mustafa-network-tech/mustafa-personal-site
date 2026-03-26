@@ -1,10 +1,8 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { ClipboardList, Palette, Code, TestTube, Rocket } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { getSectionIds } from '@/lib/sectionIds'
 
 const STEP_ICONS = [ClipboardList, Palette, Code, TestTube, Rocket]
 
@@ -44,15 +42,12 @@ function highlightQuotePhrases(text, language) {
 }
 
 export default function ProcessTimeline() {
-  const pathname = usePathname()
-  const isTr = pathname.startsWith('/tr')
-  const s = getSectionIds(isTr ? 'tr' : 'en')
   const { t, language } = useLanguage()
   const steps = t.process_steps || []
 
   return (
     <section
-      id={s.process}
+      id="process"
       className="light-section relative pt-4 pb-20 md:pt-6 md:pb-24 overflow-hidden"
       style={{ background: '#F2EFEA' }}
     >

@@ -1,16 +1,11 @@
 // components/WorkingPrinciples.js
 'use client'
 
-import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Check, X, Target, Filter, Zap, Users } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { getSectionIds } from '@/lib/sectionIds'
 
 export default function WorkingPrinciples() {
-  const pathname = usePathname()
-  const isTr = pathname.startsWith('/tr')
-  const s = getSectionIds(isTr ? 'tr' : 'en')
   const { t } = useLanguage()
   const principles = [
     { title: t.how_i_work, items: (t.principles_how_i_work_items || []).map((text) => ({ text, positive: true })), icon: <Target className="w-6 h-6" /> },
@@ -18,7 +13,7 @@ export default function WorkingPrinciples() {
     { title: t.avoid, items: (t.principles_avoid_items || []).map((text) => ({ text, positive: false })), icon: <X className="w-6 h-6" /> }
   ]
   return (
-    <section id={s.principles} className="pt-4 pb-20 light-section" style={{ background: '#F2EFEA' }}>
+    <section id="principles" className="pt-4 pb-20 light-section" style={{ background: '#F2EFEA' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div

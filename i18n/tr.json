@@ -2,7 +2,7 @@
   "name": "Mustafa Öner",
   "title": "Web Geliştirici • Next.js • React • UI Sistemleri",
 
-  "menu_identity": "Ana sayfa",
+  "menu_identity": "Kimlik",
   "menu_vitrin": "Vitrin",
   "menu_infrastructure": "Yazılım Hizmetleri",
   "menu_narrative": "Yazılım Süreci",
@@ -268,7 +268,7 @@
   "showcase_card_desc_mavi_kadrajla_ogreniyorum": "Eğitim ve dijital içerik için hazırlanan öğrenme uygulaması.",
   "showcase_cta_heading": "Yeni bir proje mi planlıyorsunuz?",
   "showcase_cta_subtext": "Bizimle birlikte çalışmak için iletişime geçin.",
-  "showcase_cta_whatsapp": "WhatsApp'la iletişime geçin",
+  "showcase_cta_whatsapp": "WhatsApp'ta Sohbet Et",
   "showcase_cta_linkedin": "LinkedIn'de Görüntüle",
   "showcase_cta_email": "E-posta Gönder",
   "showcase_footer_closing_title": "Birlikte anlamlı projeler üretelim",
