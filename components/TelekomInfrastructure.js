@@ -28,9 +28,6 @@ function highlightIntroWithHandwritten(text, language) {
 }
 
 export default function TelekomInfrastructure() {
-  const pathname = usePathname()
-  const isTr = pathname.startsWith('/tr')
-  const s = getSectionIds(isTr ? 'tr' : 'en')
   const { t, language } = useLanguage()
   const expertiseAreas = (t.telekom_areas || []).map((area, i) => ({
     ...area,
