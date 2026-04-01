@@ -267,7 +267,7 @@ export default function Photography() {
             </div>
           )}
 
-          {/* Instagram preview — complements photography; supports social/creative discovery */}
+          {/* Instagram — Mavi Kadraj profil linki */}
           <InstagramSection />
 
           {/* Philosophy – background close to section, same palette */}

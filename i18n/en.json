@@ -111,8 +111,7 @@
   "maintainable_builds_desc": "Clean components, consistent styling, and simple architecture that can scale later.",
   "software_projects": [
     { "type": "SaaS Platform", "title": "MK OPS", "description": "A SaaS-based operations management system for planning, tracking and managing telecom field operations.", "focus": ["Field team management", "Work order tracking", "Operations reports", "Process management"], "tags": ["Next.js", "Dashboard", "SaaS", "Operations"], "ctaKey": "live" },
-    { "type": "Website", "title": "MK Digital Systems", "description": "A digital production brand building websites, e-commerce platforms, custom software and digital solutions.", "focus": ["Corporate websites", "E-commerce solutions", "Custom software projects", "Digital system development"], "tags": ["Next.js", "Web Development", "UI Systems"], "ctaKey": "live" },
-    { "type": "Open Source Tool", "title": "Job Tracking – HTML Tool", "description": "A simple browser-based job tracking and note-taking tool.", "focus": ["Simple job tracking", "Zero dependency", "Quick use", "Lightweight build"], "tags": ["HTML", "CSS"], "ctaKey": "demo", "ctaLabel": "Panel" }
+    { "type": "Website", "title": "MK Digital Systems", "description": "A digital production brand building websites, e-commerce platforms, custom software and digital solutions.", "focus": ["Corporate websites", "E-commerce solutions", "Custom software projects", "Digital system development"], "tags": ["Next.js", "Web Development", "UI Systems"], "ctaKey": "live" }
   ],
 
   "photo_badge": "Photography",
@@ -129,9 +128,6 @@
   "photo_light_desc": "The right light turns an ordinary scene into a memory.",
   "photo_belonging": "Belonging",
   "photo_belonging_desc": "Places change — but some corners feel like home forever.",
-  "instagram": "Instagram",
-  "instagram_heading": "A few sample posts",
-  "instagram_intro": "Three glimpses from my feed — moments, light, and places.",
   "follow_instagram": "Follow @mavi_kadraj14",
   "close": "Close",
   "photo_categories": [
@@ -239,7 +235,6 @@
   "showcase_card_mustafaoner": "Mustafa Oner",
   "showcase_card_mk_digital": "MK Digital Systems",
   "showcase_card_mk_ops": "MK Ops",
-  "showcase_card_job_tracking": "Job Tracking",
   "showcase_card_aria": "ARIA",
   "showcase_card_mavi_iletisim": "Blue Communication",
   "showcase_card_mavi_sarkilar": "Blue Songs",
@@ -253,7 +248,6 @@
   "showcase_card_mavi_kadrajla_ogreniyorum": "Learning with Mavi Kadraj",
   "showcase_card_desc_mk_digital": "Digital platform presenting web systems, projects and digital solutions.",
   "showcase_card_desc_mk_ops": "Operations management system designed for tracking tasks and workflows.",
-  "showcase_card_desc_job_tracking": "Simple system for managing tasks, job progress and field operations.",
   "showcase_card_desc_aria": "Experimental digital platform focused on modern interface structures.",
   "showcase_card_desc_mavi_iletisim": "Corporate website designed for telecom and communication services.",
   "showcase_card_desc_mavi_sarkilar": "Music themed platform for presenting songs and digital content.",

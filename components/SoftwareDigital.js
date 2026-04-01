@@ -3,7 +3,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { LayoutDashboard, Globe, Smartphone, FileCode2, ExternalLink, MessageCircle, Github, CheckCircle } from 'lucide-react'
+import { LayoutDashboard, Globe, ExternalLink, MessageCircle, Github, CheckCircle } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const INTRO_HIGHLIGHTS_TR = ['dijital çalışmalar', 'gerçek ürünler', 'gerçek projeler'].sort((a, b) => b.length - a.length)
@@ -44,16 +44,11 @@ function highlightSubtitle(text, language) {
 const projectLinks = [
   'https://www.mk-ops.tr',
   'https://mk-digital-systems.vercel.app/en',
-  'https://mustafa-network-tech.github.io/pro-track/',
 ]
 
-const projectGithubLinks = [
-  null,
-  null,
-  'https://github.com/mustafa-network-tech/pro-track',
-]
+const projectGithubLinks = [null, null]
 
-const projectIcons = [LayoutDashboard, Globe, FileCode2]
+const projectIcons = [LayoutDashboard, Globe]
 
 function getCtaLabel(ctaKey, t) {
   switch (ctaKey) {

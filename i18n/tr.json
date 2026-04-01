@@ -111,8 +111,7 @@
   "maintainable_builds_desc": "Temiz bileşenler, tutarlı stil ve ileride ölçeklenebilecek basit mimari.",
   "software_projects": [
     { "type": "SaaS Platform", "title": "MK OPS", "description": "Telekom saha operasyonlarının planlanması, takibi ve yönetimi için geliştirilen SaaS tabanlı bir operasyon yönetim sistemi.", "focus": ["Saha ekip yönetimi", "İş emri takibi", "Operasyon raporları", "Süreç yönetimi"], "tags": ["Next.js", "Dashboard", "SaaS", "Operations"], "ctaKey": "live" },
-    { "type": "Website", "title": "MK Digital Systems", "description": "Web siteleri, e-ticaret platformları, özel yazılımlar ve dijital çözümler geliştiren dijital üretim markası.", "focus": ["Kurumsal web siteleri", "E-ticaret çözümleri", "Özel yazılım projeleri", "Dijital sistem geliştirme"], "tags": ["Next.js", "Web Development", "UI Systems"], "ctaKey": "live" },
-    { "type": "Open Source Tool", "title": "Job Tracking – HTML Tool", "description": "Tarayıcı üzerinden çalışan basit iş takip ve not alma aracı.", "focus": ["Basit iş takibi", "Sıfır bağımlılık", "Hızlı kullanım", "Hafif yapı"], "tags": ["HTML", "CSS"], "ctaKey": "demo", "ctaLabel": "Panel" }
+    { "type": "Website", "title": "MK Digital Systems", "description": "Web siteleri, e-ticaret platformları, özel yazılımlar ve dijital çözümler geliştiren dijital üretim markası.", "focus": ["Kurumsal web siteleri", "E-ticaret çözümleri", "Özel yazılım projeleri", "Dijital sistem geliştirme"], "tags": ["Next.js", "Web Development", "UI Systems"], "ctaKey": "live" }
   ],
 
   "photo_badge": "Fotoğraf",
@@ -129,9 +128,6 @@
   "photo_light_desc": "Doğru ışık sıradan bir sahneyi bir anıya dönüştürür.",
   "photo_belonging": "Aidiyet",
   "photo_belonging_desc": "Mekânlar değişir — ama bazı köşeler sonsuza kadar ev gibi hissettirir.",
-  "instagram": "Instagram",
-  "instagram_heading": "Birkaç örnek paylaşım",
-  "instagram_intro": "Akışımdan üç kare — anlar, ışık ve mekânlar.",
   "follow_instagram": "@mavi_kadraj14 Takip Et",
   "close": "Kapat",
   "photo_categories": [
@@ -239,7 +235,6 @@
   "showcase_card_mustafaoner": "Mustafa Öner",
   "showcase_card_mk_digital": "MK Digital Systems",
   "showcase_card_mk_ops": "MK Ops",
-  "showcase_card_job_tracking": "Job Tracking",
   "showcase_card_aria": "ARIA",
   "showcase_card_mavi_iletisim": "Mavi İletişim",
   "showcase_card_mavi_sarkilar": "Mavi Şarkılar",
@@ -253,7 +248,6 @@
   "showcase_card_mavi_kadrajla_ogreniyorum": "Mavi Kadrajla Öğreniyorum",
   "showcase_card_desc_mk_digital": "Web sistemleri, projeler ve dijital çözümleri sunan dijital platform.",
   "showcase_card_desc_mk_ops": "Görev ve iş akışlarını takip için tasarlanmış operasyon yönetim sistemi.",
-  "showcase_card_desc_job_tracking": "Görevler, iş ilerlemesi ve saha operasyonları için basit yönetim sistemi.",
   "showcase_card_desc_aria": "Modern arayüz yapılarına odaklanan deneysel dijital platform.",
   "showcase_card_desc_mavi_iletisim": "Telekom ve iletişim hizmetleri için kurumsal web sitesi.",
   "showcase_card_desc_mavi_sarkilar": "Şarkılar ve dijital içerik sunan müzik temalı platform.",
