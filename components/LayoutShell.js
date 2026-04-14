@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import TopNotice from '@/components/TopNotice'
+import PortfolioAssistant from '@/components/PortfolioAssistant'
 
 const VITRIN_PATHS = ['/vitrin', '/tr/vitrin']
 
@@ -11,16 +12,21 @@ export default function LayoutShell({ children }) {
   const pathname = usePathname()
   const isVitrin = VITRIN_PATHS.some((p) => pathname === p || pathname.startsWith(p + '/'))
 
-  if (isVitrin) {
-    return <main className="flex-grow">{children}</main>
-  }
-
-  return (
+  const shell = isVitrin ? (
+    <main className="flex-grow">{children}</main>
+  ) : (
     <div className="min-h-screen flex flex-col pt-14">
       <TopNotice />
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
     </div>
+  )
+
+  return (
+    <>
+      {shell}
+      <PortfolioAssistant />
+    </>
   )
 }

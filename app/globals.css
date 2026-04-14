@@ -236,6 +236,24 @@ section[id] {
   color: #1e293b !important;
 }
 
+/* Portfolio assistant — typing indicator dots */
+@keyframes assistant-dot {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.assistant-typing-dot {
+  animation: assistant-dot 1.2s ease-in-out infinite;
+}
+
 /* Client feedback — horizontal marquee (pause on track hover) */
 @keyframes client-feedback-marquee {
   0% {
