@@ -195,7 +195,6 @@ export default function PortfolioAssistant() {
                   <p className="whitespace-pre-line text-sm font-medium leading-relaxed text-slate-800">
                     {t.assistant_welcome}
                   </p>
-                  <p className="mt-2 text-[11px] text-slate-500">{t.assistant_welcome_timing}</p>
                 </div>
               )}
 
@@ -231,10 +230,6 @@ export default function PortfolioAssistant() {
                 </div>
               )}
             </div>
-
-            <p className="shrink-0 border-t border-slate-200/70 bg-slate-50/40 px-4 py-2.5 text-[11px] leading-relaxed text-slate-500">
-              {t.assistant_footer_note}
-            </p>
 
             <div className="flex shrink-0 gap-2 border-t border-slate-200/80 bg-white/80 p-3">
               <input

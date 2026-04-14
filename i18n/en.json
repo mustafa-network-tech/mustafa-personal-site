@@ -133,12 +133,10 @@
   "assistant_fab_label": "Digital project consultant — open chat",
   "assistant_modal_title": "A Short Roadmap for Your Project",
   "assistant_modal_subtitle": "Quick guidance on web, e‑commerce, and software projects",
-  "assistant_welcome": "Hi 👋\nTell me briefly what you want to build, and I will outline a clear path and rough timeline.",
-  "assistant_welcome_timing": "Typical reply time: 5–10 seconds",
+  "assistant_welcome": "Hi 👋\nWrite briefly what you want to build; I will sketch a clear roadmap for you.",
   "assistant_placeholder": "e.g. I want to launch an online store",
   "assistant_analyzing": "Analyzing",
   "assistant_send": "Send",
-  "assistant_footer_note": "Answers stay within a general frame. A short call is enough to lock a concrete plan.",
   "assistant_close": "Close",
   "photo_categories": [
     { "title": "Nature", "description": "Landscapes, sunsets, sky and quiet light — places where I slow down and breathe.", "label": "Scene" },
