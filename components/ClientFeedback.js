@@ -29,7 +29,7 @@ function TestimonialCard({ item, index }) {
 
   return (
     <article
-      className="group relative flex-shrink-0 w-[min(100vw-2.5rem,320px)] sm:w-[300px] md:w-[320px] rounded-xl border border-slate-200/90 bg-white/75 backdrop-blur-sm px-6 py-5 shadow-[0_4px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-[0_12px_40px_rgba(37,99,235,0.12)] snap-center"
+      className="group relative w-[min(18rem,calc(100vw-2.5rem))] max-w-[320px] shrink-0 sm:w-[300px] md:w-[320px] rounded-xl border border-slate-200/90 bg-white/75 backdrop-blur-sm px-6 py-5 shadow-[0_4px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-[0_12px_40px_rgba(37,99,235,0.12)] snap-center"
       style={{ boxShadow: '0 4px 24px rgba(15,23,42,0.06), inset 0 1px 0 rgba(255,255,255,0.85)' }}
     >
       <div className="flex items-start gap-4">

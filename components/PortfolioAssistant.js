@@ -39,9 +39,15 @@ export default function PortfolioAssistant() {
   /** idle | analyzing | streaming */
   const [phase, setPhase] = useState('idle')
   const [streamingText, setStreamingText] = useState('')
+  /** Portal yalnızca mount sonrası — SSR ile ilk client render aynı kalsın (hydration). */
+  const [portalReady, setPortalReady] = useState(false)
   const scrollRef = useRef(null)
   const inputRef = useRef(null)
   const timersRef = useRef([])
+
+  useEffect(() => {
+    setPortalReady(true)
+  }, [])
 
   const clearTimers = useCallback(() => {
     timersRef.current.forEach(clearTimeout)
@@ -58,17 +64,18 @@ export default function PortfolioAssistant() {
   }, [messages, phase, streamingText, scrollToBottom])
 
   useEffect(() => {
+    if (!portalReady) return undefined
     if (open) {
       const t0 = setTimeout(() => inputRef.current?.focus(), 320)
+      const prev = document.body.style.overflow
       document.body.style.overflow = 'hidden'
       return () => {
         clearTimeout(t0)
-        document.body.style.overflow = ''
+        document.body.style.overflow = prev
       }
     }
-    document.body.style.overflow = ''
     return undefined
-  }, [open])
+  }, [open, portalReady])
 
   useEffect(() => {
     if (!open) clearTimers()
@@ -128,7 +135,6 @@ export default function PortfolioAssistant() {
     timersRef.current.push(tid)
   }, [input, phase, runReply])
 
-  const mounted = typeof document !== 'undefined'
   const busy = phase !== 'idle'
 
   const modal = (
@@ -270,7 +276,7 @@ export default function PortfolioAssistant() {
         <AssistantConsultantAvatar className="h-[2.65rem] w-[2.65rem] md:h-[3rem] md:w-[3rem]" />
       </button>
 
-      {mounted && createPortal(modal, document.body)}
+      {portalReady && createPortal(modal, document.body)}
     </>
   )
 }
