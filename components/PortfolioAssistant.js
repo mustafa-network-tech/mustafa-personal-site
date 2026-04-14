@@ -5,8 +5,28 @@ import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { X, Send } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import AssistantConsultantAvatar from '@/components/AssistantConsultantAvatar'
 import { getAssistantReply } from '@/lib/portfolioAssistantBrain'
+
+const CONSULTANT_PHOTO_SRC = '/images/mk-cozum-consultant.png'
+
+function ConsultantPhotoCircle({ sizePx, className = '' }) {
+  return (
+    <div
+      className={`relative shrink-0 overflow-hidden rounded-full bg-slate-200 shadow-[0_2px_8px_rgba(15,23,42,0.12)] ring-2 ring-white/90 ${className}`}
+      style={{ width: sizePx, height: sizePx }}
+    >
+      {/* Yerel img: Next/Image SSR optimizasyon farklarından kaynaklanan hidrasyon uyarılarını önler */}
+      <img
+        src={CONSULTANT_PHOTO_SRC}
+        alt=""
+        width={sizePx}
+        height={sizePx}
+        className="h-full w-full object-cover object-[center_20%]"
+        decoding="async"
+      />
+    </div>
+  )
+}
 
 function TypingDots() {
   return (
@@ -154,27 +174,16 @@ export default function PortfolioAssistant() {
             role="dialog"
             aria-modal="true"
             aria-labelledby={panelId}
-            className="relative z-10 flex max-h-[min(90vh,680px)] w-full max-w-[420px] flex-col overflow-hidden rounded-2xl border border-white/60 bg-white/90 text-slate-900 shadow-[0_25px_80px_-12px_rgba(15,23,42,0.35),0_0_0_1px_rgba(255,255,255,0.8)_inset] ring-1 ring-slate-200/60 backdrop-blur-xl"
+            className="relative z-10 flex max-h-[min(92vh,720px)] w-full max-w-[420px] flex-col overflow-hidden rounded-2xl border border-white/60 bg-white/92 text-slate-900 shadow-[0_25px_80px_-12px_rgba(15,23,42,0.35),0_0_0_1px_rgba(255,255,255,0.8)_inset] ring-1 ring-slate-200/60 backdrop-blur-xl"
             initial={{ opacity: 0, scale: 0.94, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 8 }}
             transition={{ type: 'spring', stiffness: 420, damping: 34 }}
           >
-            <header className="flex shrink-0 items-center gap-3 border-b border-slate-200/70 bg-gradient-to-b from-white/95 to-slate-50/40 px-4 py-3.5">
-              <div
-                className="shrink-0 rounded-full bg-white p-0.5 shadow-[0_2px_12px_rgba(37,99,235,0.15)] ring-2 ring-sky-100/90"
-                aria-hidden
-              >
-                <AssistantConsultantAvatar variant="header" className="h-11 w-11 rounded-full" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <h2 id={panelId} className="text-[15px] font-semibold leading-snug tracking-tight text-slate-900">
-                  {t.assistant_modal_title}
-                </h2>
-                <p className="mt-0.5 text-[11px] font-medium leading-snug text-slate-500 sm:text-xs">
-                  {t.assistant_modal_subtitle}
-                </p>
-              </div>
+            <header className="flex shrink-0 items-center gap-3 border-b border-slate-200/70 bg-gradient-to-b from-white/98 to-slate-50/50 px-4 py-3.5">
+              <h2 id={panelId} className="min-w-0 flex-1 text-[15px] font-semibold leading-snug tracking-tight text-slate-900">
+                {t.assistant_modal_title}
+              </h2>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -187,24 +196,31 @@ export default function PortfolioAssistant() {
 
             <div
               ref={scrollRef}
-              className="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-4"
-              style={{ maxHeight: 'min(48vh, 400px)' }}
+              className="min-h-0 flex-1 space-y-3 overflow-y-auto px-3 py-4 sm:px-4"
+              style={{ maxHeight: 'min(52vh, 420px)' }}
             >
               {messages.length === 0 && phase === 'idle' && (
-                <div className="rounded-2xl border border-slate-200/80 bg-gradient-to-br from-slate-50/95 to-white px-3.5 py-3 shadow-sm">
-                  <p className="whitespace-pre-line text-sm font-medium leading-relaxed text-slate-800">
-                    {t.assistant_welcome}
-                  </p>
+                <div className="flex justify-start gap-2.5 items-end">
+                  <ConsultantPhotoCircle sizePx={32} />
+                  <div className="max-w-[min(100%,calc(100%-2.5rem))] flex-1 rounded-2xl border border-slate-200/85 bg-gradient-to-br from-slate-50/98 to-white px-3.5 py-3 shadow-[0_2px_12px_rgba(15,23,42,0.06)]">
+                    <p className="whitespace-pre-line text-sm font-medium leading-relaxed text-slate-800">
+                      {t.assistant_welcome}
+                    </p>
+                  </div>
                 </div>
               )}
 
               {messages.map((m) => (
-                <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div
+                  key={m.id}
+                  className={`flex gap-2.5 ${m.role === 'user' ? 'justify-end' : 'justify-start items-end'}`}
+                >
+                  {m.role === 'assistant' && <ConsultantPhotoCircle sizePx={32} />}
                   <div
-                    className={`max-w-[92%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm ${
+                    className={`rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-[0_2px_10px_rgba(15,23,42,0.06)] ${
                       m.role === 'user'
-                        ? 'bg-[#2563EB] text-white'
-                        : 'border border-slate-200/90 bg-white/95 text-slate-800'
+                        ? 'max-w-[88%] bg-[#2563EB] text-white'
+                        : 'max-w-[min(88%,calc(100%-2.75rem))] border border-slate-200/90 bg-white/98 text-slate-800'
                     }`}
                   >
                     <span className={m.role === 'assistant' ? 'whitespace-pre-line' : ''}>{m.text}</span>
@@ -213,8 +229,9 @@ export default function PortfolioAssistant() {
               ))}
 
               {phase === 'analyzing' && (
-                <div className="flex justify-start">
-                  <div className="max-w-[92%] rounded-2xl border border-slate-200/90 bg-white/95 px-3.5 py-2.5 text-sm text-slate-700">
+                <div className="flex justify-start gap-2.5 items-end">
+                  <ConsultantPhotoCircle sizePx={32} />
+                  <div className="max-w-[min(88%,calc(100%-2.75rem))] rounded-2xl border border-slate-200/90 bg-white/98 px-3.5 py-2.5 text-sm text-slate-700 shadow-[0_2px_10px_rgba(15,23,42,0.06)]">
                     <span>{t.assistant_analyzing}</span>
                     <TypingDots />
                   </div>
@@ -222,8 +239,9 @@ export default function PortfolioAssistant() {
               )}
 
               {phase === 'streaming' && streamingText && (
-                <div className="flex justify-start">
-                  <div className="max-w-[92%] rounded-2xl border border-slate-200/90 bg-white/95 px-3.5 py-2.5 text-sm leading-relaxed text-slate-800">
+                <div className="flex justify-start gap-2.5 items-end">
+                  <ConsultantPhotoCircle sizePx={32} />
+                  <div className="max-w-[min(88%,calc(100%-2.75rem))] rounded-2xl border border-slate-200/90 bg-white/98 px-3.5 py-2.5 text-sm leading-relaxed text-slate-800 shadow-[0_2px_10px_rgba(15,23,42,0.06)]">
                     {streamingText}
                     <span className="ml-0.5 inline-block h-3 w-0.5 animate-pulse bg-slate-500 align-middle" aria-hidden />
                   </div>
@@ -231,7 +249,7 @@ export default function PortfolioAssistant() {
               )}
             </div>
 
-            <div className="flex shrink-0 gap-2 border-t border-slate-200/80 bg-white/80 p-3">
+            <div className="flex shrink-0 gap-2 border-t border-slate-200/80 bg-white/85 p-3">
               <input
                 ref={inputRef}
                 type="text"
@@ -268,13 +286,20 @@ export default function PortfolioAssistant() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed bottom-5 right-5 z-[190] flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-[#2563EB] text-white shadow-[0_10px_40px_rgba(37,99,235,0.45)] ring-2 ring-white/40 transition hover:scale-[1.04] hover:bg-[#1d4ed8] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#2563EB]/35 md:bottom-8 md:right-8 md:h-[3.75rem] md:w-[3.75rem]"
+        className="fixed bottom-5 right-5 z-[190] h-[3.5rem] w-[3.5rem] overflow-hidden rounded-full shadow-[0_12px_40px_rgba(15,23,42,0.2)] ring-[3px] ring-white/95 transition hover:scale-[1.04] hover:shadow-[0_16px_48px_rgba(15,23,42,0.25)] focus:outline-none focus-visible:ring-4 focus-visible:ring-slate-400/35 md:bottom-8 md:right-8 md:h-[3.75rem] md:w-[3.75rem]"
         aria-haspopup="dialog"
         aria-expanded={open}
         aria-controls={open ? panelId : undefined}
         aria-label={t.assistant_fab_label}
       >
-        <AssistantConsultantAvatar variant="fab" className="h-[2.65rem] w-[2.65rem] md:h-[3rem] md:w-[3rem]" />
+        <img
+          src={CONSULTANT_PHOTO_SRC}
+          alt=""
+          width={60}
+          height={60}
+          className="h-full w-full object-cover object-[center_20%]"
+          decoding="async"
+        />
       </button>
 
       {portalReady && createPortal(modal, document.body)}

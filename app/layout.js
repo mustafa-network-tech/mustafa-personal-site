@@ -35,7 +35,7 @@ export default async function RootLayout({ children }) {
   const websiteSchema = getWebsiteSchema(locale)
   const orgSchema = getOrganizationSchema()
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.className} ${plusJakarta.variable} ${dancingScript.variable} ${jetbrainsMono.variable} bg-main text-primary`}>
         <JsonLd data={[personSchema, websiteSchema, orgSchema]} />
         <LanguageProvider initialLocale={locale}>
