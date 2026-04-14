@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Mail, Linkedin, Github } from 'lucide-react'
+import { Mail, Linkedin } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/mustafa-oner-82/'
@@ -104,16 +104,6 @@ export default function Footer() {
               >
                 <Linkedin className="w-4 h-4 shrink-0" aria-hidden />
                 LinkedIn
-              </a>
-
-              <a
-                href="https://github.com/mustafa-network-tech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sub hover:text-primary"
-              >
-                <Github className="w-4 h-4 shrink-0" aria-hidden />
-                GitHub
               </a>
             </div>
           </div>

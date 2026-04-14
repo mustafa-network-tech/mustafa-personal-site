@@ -25,10 +25,7 @@ export function getPersonSchema(locale = 'en') {
       'Digital systems',
       'UI systems',
     ],
-    sameAs: [
-      'https://www.linkedin.com/in/mustafa-oner-82/',
-      'https://github.com/mustafa-network-tech',
-    ],
+    sameAs: ['https://www.linkedin.com/in/mustafa-oner-82/'],
   }
 }
 
