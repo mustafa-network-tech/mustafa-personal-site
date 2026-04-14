@@ -6,6 +6,7 @@ import ProcessTimeline from '@/components/ProcessTimeline'
 import TechnicalNarrative from '@/components/TechnicalNarrative'
 import SoftwareDigital from '@/components/SoftwareDigital'
 import Photography from '@/components/Photography'
+import ClientFeedback from '@/components/ClientFeedback'
 import WorkingPrinciples from '@/components/WorkingPrinciples'
 import Contact from '@/components/Contact'
 
@@ -26,6 +27,7 @@ export default function HomeContent() {
       <ProcessTimeline />
       <SoftwareDigital />
       <Photography />
+      <ClientFeedback />
       <WorkingPrinciples />
       <Contact />
     </>

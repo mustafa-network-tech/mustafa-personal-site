@@ -137,6 +137,31 @@
     { "title": "Lines & Patterns", "description": "Shapes, symmetry, textures — beauty found in structure.", "label": "Pattern" }
   ],
 
+  "client_feedback_badge": "Experiences",
+  "client_feedback_title": "Client Experiences",
+  "client_feedback_subtitle": "Real feedback from real collaborations — clarity, reliability, and pace matter.",
+  "client_feedback_items": [
+    { "name": "Ahmet K.", "role": "Telecom Operations Manager", "quote": "Communication stayed clear from day one. Deliveries were predictable and the scope did not quietly drift." },
+    { "name": "Elif S.", "role": "E-commerce Business Owner", "quote": "We ended up with a store we could run day to day. Small fixes landed quickly without extra noise." },
+    { "name": "Murat T.", "role": "Lawyer", "quote": "Technical choices were explained with trade-offs, not jargon. That made it easier to sign off with confidence." },
+    { "name": "Defne A.", "role": "Architect", "quote": "The portfolio structure is easy for visitors to scan. Pages still feel fast on phones." },
+    { "name": "Onur Y.", "role": "Small Business Owner", "quote": "Straightforward scope. When something was not realistic, he flagged it early instead of later." },
+    { "name": "Can D.", "role": "Software Startup Founder", "quote": "Solid front-end discipline. Handoff notes were usable by our team the same week." },
+    { "name": "Burak M.", "role": "Factory Manager", "quote": "The dashboard uses plain language for supervisors. Training time stayed short." },
+    { "name": "Zeynep L.", "role": "Freelance Designer", "quote": "Collaboration was paced well and matched the direction we gave. No endless revision loops." },
+    { "name": "Kerem B.", "role": "Telecom Operations Manager", "quote": "Field workflows were mapped sensibly. We spent less time clarifying things over email." },
+    { "name": "Ayşe H.", "role": "E-commerce Business Owner", "quote": "Checkout feels cleaner now. Our rough numbers suggested fewer abandoned carts." },
+    { "name": "Emre G.", "role": "Lawyer", "quote": "Privacy-related decisions were framed with options, not buzzwords. That built trust." },
+    { "name": "Selin K.", "role": "Architect", "quote": "The mobile layout finally matches how we present work on-site to clients." },
+    { "name": "Hakan V.", "role": "Small Business Owner", "quote": "When a dependency slipped, the timeline update was honest. That was refreshing." },
+    { "name": "Volkan R.", "role": "Software Startup Founder", "quote": "He cared about performance budgets. The site stayed snappy as we added content." },
+    { "name": "Gizem N.", "role": "Factory Manager", "quote": "Saved filters on the reporting view became part of the morning routine — small but very useful." },
+    { "name": "Barış F.", "role": "Freelance Designer", "quote": "Micro-interactions are restrained. It reads serious without looking like a template." },
+    { "name": "Deniz C.", "role": "Lawyer", "quote": "CMS edits did not break layouts. Components behaved the way we expected." },
+    { "name": "Cem Ö.", "role": "E-commerce Business Owner", "quote": "Analytics tags were added carefully. We did not watch site speed tank afterward." },
+    { "name": "Nehir P.", "role": "Architect", "quote": "The kickoff questions were sharper than what we heard from three previous vendors." }
+  ],
+
   "principles_badge": "Working Principles",
   "principles_title": "The Filter",
   "principles_intro": "Quality is defined not only by what you choose to build, but also by what you deliberately choose not to build.",

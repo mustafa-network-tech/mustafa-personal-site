@@ -236,6 +236,31 @@ section[id] {
   color: #1e293b !important;
 }
 
+/* Client feedback — horizontal marquee (pause on track hover) */
+@keyframes client-feedback-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.client-feedback-marquee-inner {
+  animation: client-feedback-marquee 78s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-feedback-marquee-inner {
+    animation: none;
+  }
+}
+
+.client-feedback-marquee-track:hover .client-feedback-marquee-inner {
+  animation-play-state: paused;
+}
+
 /* Floating icon container (Dribbble style) */
 .card-icon-container {
   width: 48px;
