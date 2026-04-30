@@ -90,6 +90,7 @@
   "demo_card_badge": "Mustafa Öner | MK Digital Systems Demo",
   "demo_section_title": "Demo Sites",
   "demo_projects": [
+    { "title": "Musty Music – Music Site", "description": "Artist portfolio and music-focused interface demo.", "tags": ["Next.js", "UI", "Demo"], "url": "https://mk-music3.vercel.app/?lang=tr" },
     { "title": "Mavi İletişim – Telecom and Technical Service", "description": "Corporate demo for telecom and technical services.", "tags": ["Next.js", "Corporate", "Demo"], "url": "https://mavi-iletisim-demo.vercel.app/" },
     { "title": "Law Office – Corporate Website", "description": "Corporate website demo for law firms.", "tags": ["Next.js", "Corporate", "Demo"], "url": "https://hukuk-demo.vercel.app/" },
     { "title": "Consulting – Corporate Website", "description": "Corporate website demo for consulting services.", "tags": ["Next.js", "Corporate", "Demo"], "url": "https://danismanlik-demo.vercel.app/" },
@@ -270,6 +271,7 @@
   "showcase_card_aria": "ARIA",
   "showcase_card_mavi_iletisim": "Blue Communication",
   "showcase_card_mavi_sarkilar": "Blue Songs",
+  "showcase_card_musty_music": "Musty Music",
   "showcase_card_hukuk_burosu": "Law Office",
   "showcase_card_guzellik_salonu": "Beauty Salon",
   "showcase_card_danismanlik": "Consultancy",
@@ -283,6 +285,7 @@
   "showcase_card_desc_aria": "Experimental digital platform focused on modern interface structures.",
   "showcase_card_desc_mavi_iletisim": "Corporate website designed for telecom and communication services.",
   "showcase_card_desc_mavi_sarkilar": "Music themed platform for presenting songs and digital content.",
+  "showcase_card_desc_musty_music": "Artist portfolio and music-focused interface demo.",
   "showcase_card_desc_hukuk_burosu": "Professional law firm website focused on trust and corporate identity.",
   "showcase_card_desc_guzellik_salonu": "Modern beauty salon website designed for services and appointments.",
   "showcase_card_desc_danismanlik": "Corporate consulting website presenting services and expertise.",

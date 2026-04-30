@@ -9,6 +9,7 @@ export const PROJECTS = [
   { label: 'ARIA', typeKey: 'showcase_type_platform', titleKey: 'showcase_card_aria', url: 'https://aria-demo-omega.vercel.app/', descKey: 'showcase_card_desc_aria' },
   { label: 'Mavi İletişim', typeKey: 'showcase_type_corporate', titleKey: 'showcase_card_mavi_iletisim', url: 'https://mavi-iletisim-demo.vercel.app/', descKey: 'showcase_card_desc_mavi_iletisim' },
   { label: 'Mavi Şarkılar', typeKey: 'showcase_type_corporate', titleKey: 'showcase_card_mavi_sarkilar', url: 'https://spotify-demo-hazel.vercel.app/', descKey: 'showcase_card_desc_mavi_sarkilar' },
+  { label: 'Musty Music', typeKey: 'showcase_type_corporate', titleKey: 'showcase_card_musty_music', url: 'https://mk-music3.vercel.app/?lang=tr', descKey: 'showcase_card_desc_musty_music' },
   { label: 'Hukuk Bürosu', typeKey: 'showcase_type_corporate', titleKey: 'showcase_card_hukuk_burosu', url: 'https://hukuk-demo.vercel.app/', descKey: 'showcase_card_desc_hukuk_burosu' },
   { label: 'Güzellik Salonu', typeKey: 'showcase_type_corporate', titleKey: 'showcase_card_guzellik_salonu', url: 'https://guzellik-salonu-demo-web.vercel.app/', descKey: 'showcase_card_desc_guzellik_salonu' },
   { label: 'Danışmanlık', typeKey: 'showcase_type_corporate', titleKey: 'showcase_card_danismanlik', url: 'https://danismanlik-demo.vercel.app/', descKey: 'showcase_card_desc_danismanlik' },
@@ -22,7 +23,7 @@ export const PROJECTS = [
 
 export const SECTIONS = [
   { sectionId: 'showcase-section-platforms', titleKey: 'showcase_section_platforms_title', descKey: 'showcase_section_platforms_desc', icon: '⚙', cardTitles: ['MK Digital Systems', 'MK Ops', 'ARIA'] },
-  { sectionId: 'showcase-section-corporate', titleKey: 'showcase_section_corporate_title', descKey: 'showcase_section_corporate_desc', icon: '🏢', cardTitles: ['Mavi İletişim', 'Mavi Şarkılar', 'Hukuk Bürosu', 'Güzellik Salonu', 'Danışmanlık'] },
+  { sectionId: 'showcase-section-corporate', titleKey: 'showcase_section_corporate_title', descKey: 'showcase_section_corporate_desc', icon: '🏢', cardTitles: ['Musty Music', 'Mavi İletişim', 'Mavi Şarkılar', 'Hukuk Bürosu', 'Güzellik Salonu', 'Danışmanlık'] },
   { sectionId: 'showcase-section-personal', titleKey: 'showcase_section_personal_title', descKey: 'showcase_section_personal_desc', icon: '🚀', cardTitles: ['MustafaOner.net', 'Mavi Kadraj', 'Kadraj Rotam', 'Gönül Pusulası', 'Şiir Dünyası'] },
   { sectionId: 'showcase-section-apps', titleKey: 'showcase_section_apps_title', descKey: 'showcase_section_apps_desc', icon: '📱', cardTitles: ['Mavi Kadrajla Öğreniyorum'] },
 ]
