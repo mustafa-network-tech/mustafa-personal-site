@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import ProjectRequestForm from '@/components/ProjectRequestForm'
 import LocalSeoSampleProjects from '@/components/localSeo/LocalSeoSampleProjects'
+import LocalSeoHero from '@/components/localSeo/LocalSeoHero'
+import LocalSeoCityNav from '@/components/localSeo/LocalSeoCityNav'
 
 /**
  * @param {{ page: import('@/lib/localSeo/pages').typeof LOCAL_SEO_PAGES[0] }} props
@@ -8,29 +10,8 @@ import LocalSeoSampleProjects from '@/components/localSeo/LocalSeoSampleProjects
 export default function LocalSeoPageContent({ page }) {
   return (
     <article>
-      <section className="relative border-b border-[rgba(248,250,252,0.08)] overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-40 pointer-events-none"
-          style={{
-            background:
-              'radial-gradient(ellipse 80% 60% at 50% -20%, rgba(79,124,255,0.18), transparent 60%)',
-          }}
-          aria-hidden
-        />
-        <div className="container mx-auto px-4 py-14 md:py-20 max-w-4xl relative">
-          <p className="hero-eyebrow mb-4">{page.hero.eyebrow}</p>
-          <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#F8FAFC] tracking-tight leading-tight mb-5">
-            {page.hero.title}
-          </h1>
-          <p className="text-lg text-[#CBD5E1] leading-relaxed max-w-2xl mb-8">{page.hero.description}</p>
-          <Link
-            href="#proje-talep-formu"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-[#4F7CFF] hover:bg-[#3d6ae8] transition-colors"
-          >
-            {page.hero.ctaLabel}
-          </Link>
-        </div>
-      </section>
+      <LocalSeoHero slug={page.slug} hero={page.hero} />
+      <LocalSeoCityNav cityKey={page.cityKey} cityName={page.cityName} currentSlug={page.slug} />
 
       <section className="container mx-auto px-4 py-12 md:py-14 max-w-3xl">
         <h2 className="text-xl font-semibold text-[#F8FAFC] mb-4">{page.introTitle}</h2>

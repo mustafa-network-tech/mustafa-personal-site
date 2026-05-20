@@ -80,7 +80,10 @@ export default function Footer() {
                 </li>
               </ul>
             </nav>
-            <FooterLocalSeoCities title={t.footer_local_seo_cities} />
+            <FooterLocalSeoCities
+              title={t.footer_local_seo_cities}
+              storeTitle={t.footer_local_seo_store_pages}
+            />
           </div>
 
           <div>

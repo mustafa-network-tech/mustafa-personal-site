@@ -63,6 +63,19 @@ section[id] {
   }
 }
 
+/* Şehir SEO hero — arka plan + daktilo */
+.local-seo-hero-overlay {
+  background: linear-gradient(
+    105deg,
+    rgba(30, 34, 40, 0.82) 0%,
+    rgba(30, 34, 40, 0.68) 45%,
+    rgba(30, 34, 40, 0.78) 100%
+  );
+}
+.local-seo-typewriter-text {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+}
+
 /* Footer — şehir SEO pill */
 .local-seo-city-pill {
   padding: 0.35rem 0.75rem;
