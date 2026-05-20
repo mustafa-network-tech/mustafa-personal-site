@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Mail, Linkedin } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import FooterLocalSeoCities from '@/components/localSeo/FooterLocalSeoCities'
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/mustafa-oner-82/'
 
@@ -79,6 +80,7 @@ export default function Footer() {
                 </li>
               </ul>
             </nav>
+            <FooterLocalSeoCities title={t.footer_local_seo_cities} />
           </div>
 
           <div>

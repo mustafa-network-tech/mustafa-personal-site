@@ -63,6 +63,21 @@ section[id] {
   }
 }
 
+/* Footer — şehir SEO pill */
+.local-seo-city-pill {
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.local-seo-city-pill:hover {
+  border-color: rgba(79, 124, 255, 0.35);
+  background: rgba(79, 124, 255, 0.12);
+  transform: translateY(-1px);
+}
+
 /* Selection color */
 ::selection {
   background-color: rgba(79, 124, 255, 0.22);
