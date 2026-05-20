@@ -81,8 +81,8 @@ export default function Footer() {
               </ul>
             </nav>
             <FooterLocalSeoCities
-              title={t.footer_local_seo_cities}
-              storeTitle={t.footer_local_seo_store_pages}
+              citiesTitle={t.footer_local_seo_cities}
+              servicesTitle={t.footer_local_seo_services}
             />
           </div>
 

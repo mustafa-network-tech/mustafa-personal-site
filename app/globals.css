@@ -90,6 +90,15 @@ section[id] {
   background: rgba(79, 124, 255, 0.12);
   transform: translateY(-1px);
 }
+.local-seo-service-badge {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(79, 124, 255, 0.35);
+  background: rgba(79, 124, 255, 0.1);
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
 
 /* Selection color */
 ::selection {
