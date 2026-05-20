@@ -1,5 +1,9 @@
+'use client'
+
 import Link from 'next/link'
+import DemoProjectCard from '@/components/DemoProjectCard'
 import { pickProjectsForSlug } from '@/lib/localSeo/projectPool'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const SHOWCASE_HREF = '/vitrin'
 
@@ -7,44 +11,46 @@ const SHOWCASE_HREF = '/vitrin'
  * @param {{ slug: string, sectionTitle?: string }} props
  */
 export default function LocalSeoSampleProjects({ slug, sectionTitle = 'Örnek çalışmalar' }) {
+  const { t } = useLanguage()
   const projects = pickProjectsForSlug(slug, 2)
+  const badge = t.demo_card_badge
+  const ctaLabel = t.view_demo || 'View Demo'
 
   return (
-    <section className="py-14 md:py-16 border-t border-[rgba(248,250,252,0.08)]" aria-labelledby="local-seo-projects-heading">
+    <section
+      className="py-14 md:py-16"
+      style={{ background: '#F5F3EF' }}
+      aria-labelledby="local-seo-projects-heading"
+    >
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 id="local-seo-projects-heading" className="text-xl md:text-2xl font-semibold text-[#F8FAFC] mb-2">
+        <h2
+          id="local-seo-projects-heading"
+          className="text-2xl md:text-3xl font-bold tracking-tight text-[#1E293B] mb-2"
+          style={{ letterSpacing: '-0.02em' }}
+        >
           {sectionTitle}
         </h2>
-        <p className="text-[#94A3B8] text-sm mb-8 max-w-2xl">
-          Demo, vitrin ve kişisel portföy projelerinden seçilmiş örnekler — müşteri gizliliği kapsamında canlı referans yerine
-          gösterilir.
+        <p className="text-sm md:text-base text-[#475569] mb-8 max-w-2xl leading-relaxed">
+          Demo ve vitrin projelerinden seçilmiş örnekler — canlı demo adresine giderek inceleyebilirsiniz.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
           {projects.map((project) => (
-            <article
+            <DemoProjectCard
               key={project.id}
-              className="rounded-2xl overflow-hidden border border-[rgba(248,250,252,0.1)] bg-[rgba(15,23,42,0.45)]"
-            >
-              <div
-                className={`h-32 md:h-36 bg-gradient-to-br ${project.tone} flex items-end p-4`}
-                role="img"
-                aria-label={`${project.title} görsel alanı`}
-              >
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-white/80 px-2 py-1 rounded-md bg-black/25">
-                  {project.tag}
-                </span>
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-[#F8FAFC] mb-2">{project.title}</h3>
-                <p className="text-sm text-[#CBD5E1] leading-relaxed">{project.description}</p>
-              </div>
-            </article>
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              url={project.url}
+              badge={badge}
+              ctaLabel={ctaLabel}
+              typeLabel={project.typeLabel}
+            />
           ))}
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-10 text-center">
           <Link
             href={SHOWCASE_HREF}
-            className="inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-semibold text-white bg-[#4F7CFF] hover:bg-[#3d6ae8] transition-colors"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-[12px] text-sm font-semibold text-white bg-[#2563EB] border border-[#2563EB] hover:bg-[#1d4ed8] transition-all duration-300 hover:-translate-y-0.5"
           >
             Tüm Projeleri Gör
           </Link>

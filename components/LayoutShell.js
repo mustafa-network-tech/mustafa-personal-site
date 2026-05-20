@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import TopNotice from '@/components/TopNotice'
-import PortfolioAssistant from '@/components/PortfolioAssistant'
 
 const VITRIN_PATHS = ['/vitrin', '/tr/vitrin']
 
@@ -23,10 +22,5 @@ export default function LayoutShell({ children }) {
     </div>
   )
 
-  return (
-    <>
-      {shell}
-      <PortfolioAssistant />
-    </>
-  )
+  return shell
 }

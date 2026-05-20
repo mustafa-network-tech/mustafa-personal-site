@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import LocalProjectRequestForm from '@/components/localSeo/LocalProjectRequestForm'
+import ProjectRequestForm from '@/components/ProjectRequestForm'
 import LocalSeoSampleProjects from '@/components/localSeo/LocalSeoSampleProjects'
 
 /**
@@ -76,7 +76,12 @@ export default function LocalSeoPageContent({ page }) {
         </Link>
       </section>
 
-      <LocalProjectRequestForm defaultCity={page.defaultCity} />
+      <ProjectRequestForm
+        formId="proje-talep-formu"
+        defaultCity={page.defaultCity}
+        titleKey="project_request_title"
+        subtitleKey="project_request_subtitle"
+      />
     </article>
   )
 }
