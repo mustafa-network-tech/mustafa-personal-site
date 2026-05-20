@@ -90,14 +90,18 @@ section[id] {
   background: rgba(79, 124, 255, 0.12);
   transform: translateY(-1px);
 }
-.local-seo-service-badge {
-  display: inline-block;
-  padding: 0.35rem 0.7rem;
+.local-seo-service-pill {
+  padding: 0.35rem 0.75rem;
   border-radius: 9999px;
-  border: 1px solid rgba(79, 124, 255, 0.35);
-  background: rgba(79, 124, 255, 0.1);
-  color: var(--text-primary);
-  letter-spacing: 0.02em;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(148, 163, 184, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.local-seo-service-pill:hover {
+  border-color: rgba(148, 163, 184, 0.45);
+  background: rgba(148, 163, 184, 0.14);
+  transform: translateY(-1px);
 }
 
 /* Selection color */
