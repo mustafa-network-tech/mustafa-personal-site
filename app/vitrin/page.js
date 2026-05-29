@@ -13,7 +13,7 @@ export const metadata = {
   keywords: GLOBAL_META.en.keywords,
   alternates: {
     canonical: '/vitrin',
-    languages: { en: '/vitrin', tr: '/tr/vitrin', 'x-default': '/vitrin' },
+    languages: { en: '/vitrin', tr: '/tr/vitrin', 'x-default': '/tr/vitrin' },
   },
   openGraph: og,
   twitter,

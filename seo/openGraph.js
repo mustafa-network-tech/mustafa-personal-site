@@ -10,9 +10,9 @@ import { SITE_URL, OG_IMAGES, GLOBAL_META, PAGE_META } from './metadata'
  * @param {object} opts - { locale, path, title?, description?, image? }
  */
 export function buildOpenGraph(opts) {
-  const { locale = 'en', path = '', title, description, image } = opts
+  const { locale = 'tr', path = '', title, description, image } = opts
   const url = path ? `${SITE_URL}${path}` : SITE_URL
-  const img = image || OG_IMAGES[locale] || OG_IMAGES.en
+  const img = image || OG_IMAGES[locale] || OG_IMAGES.tr
   const siteName = locale === 'tr' ? 'Mustafa Öner' : 'Mustafa Oner'
   const ogLocale = locale === 'tr' ? 'tr_TR' : 'en_US'
   return {
@@ -31,13 +31,13 @@ export function buildOpenGraph(opts) {
  * @param {object} opts - title, description, image, locale (en|tr for fallback copy/image)
  */
 export function buildTwitterCard(opts) {
-  const { title, description, image, locale = 'en' } = opts
-  const meta = GLOBAL_META[locale] || GLOBAL_META.en
+  const { title, description, image, locale = 'tr' } = opts
+  const meta = GLOBAL_META[locale] || GLOBAL_META.tr
   return {
     card: 'summary_large_image',
     title: title || meta.title,
     description: description || meta.description,
-    images: [image || OG_IMAGES[locale] || OG_IMAGES.en],
+    images: [image || OG_IMAGES[locale] || OG_IMAGES.tr],
   }
 }
 

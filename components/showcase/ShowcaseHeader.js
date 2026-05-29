@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { homeHrefFor, isTurkishPath, toEnglishPath, toTurkishPath } from '@/lib/i18n/routes'
 
 const PROFILE_IMAGES = [
   { src: '/showcase/mk-logo.png', alt: 'MK Digital Systems' },
@@ -16,8 +17,8 @@ export default function ShowcaseHeader() {
   const pathname = usePathname()
   const router = useRouter()
   const { language, setLanguage, t } = useLanguage()
-  const isTr = pathname.startsWith('/tr')
-  const homeHref = isTr ? '/tr' : '/'
+  const isTr = isTurkishPath(pathname)
+  const homeHref = homeHrefFor(pathname)
   const [profileIndex, setProfileIndex] = useState(0)
 
   useEffect(() => {
@@ -30,7 +31,14 @@ export default function ShowcaseHeader() {
   const switchLang = () => {
     const next = language === 'tr' ? 'en' : 'tr'
     setLanguage(next)
-    router.push(next === 'tr' ? '/tr/vitrin' : '/vitrin')
+    const target = pathname.includes('/vitrin')
+      ? next === 'tr'
+        ? '/tr/vitrin'
+        : '/vitrin'
+      : next === 'tr'
+        ? toTurkishPath(pathname)
+        : toEnglishPath(pathname)
+    router.push(target)
   }
 
   return (

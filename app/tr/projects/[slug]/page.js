@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     keywords: GLOBAL_META.tr.keywords,
-    alternates: { canonical: path, languages: { tr: path, en: `/projects/${slug}`, 'x-default': `/projects/${slug}` } },
+    alternates: { canonical: path, languages: { tr: path, en: `/projects/${slug}`, 'x-default': path } },
     openGraph: og,
     twitter,
   }

@@ -29,7 +29,8 @@ Uygun olduğunuzda görüşebilir miyiz?`
 
 export default function Identity() {
   const { t } = useLanguage()
-  const services = t.hero_services || []
+  const services = Array.isArray(t.hero_services) ? t.hero_services : []
+  const heroSlides = Array.isArray(t.hero_slides) ? t.hero_slides : []
   const [currentSlide, setCurrentSlide] = useState(0)
 
   // Preload hero images so they switch without delay
@@ -137,7 +138,7 @@ style={{
               {t.hero_headline_after}
             </h1>
             {/* Değişen: slide'a göre kısa başlık ve açıklama */}
-            {(t.hero_slides && t.hero_slides[currentSlide]) && (
+            {(heroSlides[currentSlide]) && (
               <div key={currentSlide} className="max-md:mb-5 md:mb-10" style={{ marginTop: 20 }}>
                 <p
                   className="text-lg font-semibold text-[#F8FAFC] max-md:text-base mb-2"
@@ -147,7 +148,7 @@ style={{
                     textShadow: '0 1px 8px rgba(0,0,0,0.3)',
                   }}
                 >
-                  {t.hero_slides[currentSlide].subtitle}
+                  {heroSlides[currentSlide]?.subtitle || ''}
                 </p>
                 <p
                   className="max-md:text-[17px] max-md:leading-[1.55] max-md:max-w-full"
@@ -159,7 +160,7 @@ style={{
                     maxWidth: 600,
                   }}
                 >
-                  {t.hero_slides[currentSlide].description}
+                  {heroSlides[currentSlide]?.description || ''}
                 </p>
               </div>
             )}

@@ -8,7 +8,7 @@ const PERSON_NAME = 'Mustafa Öner'
 const PERSON_NAME_EN = 'Mustafa Oner'
 
 /** Person schema – portfolio / professional */
-export function getPersonSchema(locale = 'en') {
+export function getPersonSchema(locale = 'tr') {
   const name = locale === 'tr' ? PERSON_NAME : PERSON_NAME_EN
   return {
     '@context': 'https://schema.org',
@@ -41,7 +41,7 @@ export function getOrganizationSchema() {
 }
 
 /** Website schema with site search potential */
-export function getWebsiteSchema(locale = 'en') {
+export function getWebsiteSchema(locale = 'tr') {
   const name = locale === 'tr' ? 'Mustafa Öner — Web Geliştirme ve Dijital Sistemler' : 'Mustafa Oner — Web Development & Digital Systems'
   return {
     '@context': 'https://schema.org',
@@ -75,7 +75,7 @@ export function getBreadcrumbListSchema(items) {
 }
 
 /** Contact page */
-export function getContactPageSchema(locale = 'en') {
+export function getContactPageSchema(locale = 'tr') {
   return {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
@@ -94,7 +94,7 @@ export function getContactPageSchema(locale = 'en') {
 }
 
 /** Service listing page */
-export function getServicesPageSchema(locale = 'en') {
+export function getServicesPageSchema(locale = 'tr') {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',

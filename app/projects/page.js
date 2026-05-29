@@ -20,7 +20,7 @@ export const metadata = {
   title: meta.title,
   description: meta.description,
   keywords: GLOBAL_META.en.keywords,
-  alternates: { canonical: '/projects', languages: { en: '/projects', tr: '/tr/projects', 'x-default': '/projects' } },
+  alternates: { canonical: '/projects', languages: { en: '/projects', tr: '/tr/projects', 'x-default': '/tr/projects' } },
   openGraph: og,
   twitter,
 }

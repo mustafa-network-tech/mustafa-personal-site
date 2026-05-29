@@ -82,6 +82,8 @@ export default function SoftwareDigital() {
     const Icon = projectIcons[index] || Globe
     return {
       ...p,
+      focus: Array.isArray(p.focus) ? p.focus : [],
+      tags: Array.isArray(p.tags) ? p.tags : [],
       IconComponent: Icon,
     }
   })
@@ -171,9 +173,9 @@ export default function SoftwareDigital() {
 
                   {p.focus?.length ? (
                     <div className="mb-4 space-y-2">
-                      <div className="text-[11px] font-bold text-[#64748B] uppercase tracking-widest">{t.focus}</div>
+                      <div className="text-[11px] font-bold text-[#64748B] uppercase tracking-widest">{t.focus || ''}</div>
                       <ul className="space-y-1.5">
-                        {p.focus.map((f) => (
+                        {(p.focus || []).map((f) => (
                           <li key={f} className="flex items-start gap-2 text-sm text-[#475569]">
                             <CheckCircle className="w-4 h-4 shrink-0 mt-0.5 text-[#2563EB]" />
                             <span className="leading-snug">{f}</span>
@@ -210,7 +212,7 @@ export default function SoftwareDigital() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
                   {(t.demo_projects || []).map((project, index) => (
                     <motion.div
-                      key={`demo-${project.title}-${index}`}
+                      key={`demo-${project?.title ?? 'demo'}-${index}`}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -218,11 +220,11 @@ export default function SoftwareDigital() {
                       className="h-full"
                     >
                       <DemoProjectCard
-                        title={project.title}
-                        description={project.description}
-                        tags={project.tags || []}
-                        url={project.url}
-                        badge={t.demo_card_badge}
+                        title={project?.title || ''}
+                        description={project?.description || ''}
+                        tags={Array.isArray(project?.tags) ? project.tags : []}
+                        url={project?.url}
+                        badge={t.demo_card_badge || ''}
                         ctaLabel={t.view_demo || 'View Demo'}
                         typeLabel="Demo"
                       />

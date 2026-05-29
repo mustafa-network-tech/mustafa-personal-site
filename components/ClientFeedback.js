@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 function avatarInitials(displayName) {
+  if (!displayName || typeof displayName !== 'string') return '?'
   const cleaned = displayName.replace(/\./g, '').trim()
   const parts = cleaned.split(/\s+/).filter(Boolean)
   if (parts.length >= 2) {
@@ -41,18 +42,20 @@ function TestimonialCard({ item, index }) {
           {initials}
         </div>
         <div className="min-w-0 flex-1 pt-0.5">
-          <p className="text-[15px] font-semibold text-[#0F172A]">{item.name}</p>
-          <p className="mt-0.5 text-xs font-medium leading-snug text-[#64748B]">{item.role}</p>
+          <p className="text-[15px] font-semibold text-[#0F172A]">{item.name || ''}</p>
+          <p className="mt-0.5 text-xs font-medium leading-snug text-[#64748B]">{item.role || ''}</p>
         </div>
       </div>
-      <p className="mt-4 text-sm leading-relaxed text-[#475569] line-clamp-3">{item.quote}</p>
+      <p className="mt-4 text-sm leading-relaxed text-[#475569] line-clamp-3">{item.quote || ''}</p>
     </article>
   )
 }
 
 export default function ClientFeedback() {
   const { t } = useLanguage()
-  const items = t.client_feedback_items || []
+  const items = (t.client_feedback_items || []).filter(
+    (item) => item && typeof item === 'object' && item.name && item.quote
+  )
 
   const loopItems = useMemo(() => (items.length ? [...items, ...items] : []), [items])
 
@@ -79,16 +82,16 @@ export default function ClientFeedback() {
               className="mb-3 inline-block rounded-full border border-slate-200/80 bg-white/80 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#475569] shadow-sm"
               style={{ letterSpacing: '0.12em' }}
             >
-              {t.client_feedback_badge}
+              {t.client_feedback_badge || ''}
             </span>
             <h2
               id="client-feedback-heading"
               className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl"
               style={{ letterSpacing: '-0.02em' }}
             >
-              {t.client_feedback_title}
+              {t.client_feedback_title || ''}
             </h2>
-            <p className="mt-3 text-base leading-relaxed text-[#64748B] md:text-lg">{t.client_feedback_subtitle}</p>
+            <p className="mt-3 text-base leading-relaxed text-[#64748B] md:text-lg">{t.client_feedback_subtitle || ''}</p>
           </div>
         </motion.div>
 

@@ -87,7 +87,7 @@ export default function ServicesPageContent() {
           <span className="text-[#475569]" aria-hidden>
             ·
           </span>
-          <Link href={isTr ? '/tr' : '/'} className="text-[#94A3B8] hover:text-[#F8FAFC]">
+          <Link href={isTr ? '/tr' : '/en'} className="text-[#94A3B8] hover:text-[#F8FAFC]">
             {isTr ? 'Ana sayfa' : 'Home'}
           </Link>
         </nav>

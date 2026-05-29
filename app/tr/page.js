@@ -13,7 +13,7 @@ export const metadata = {
   keywords: GLOBAL_META.tr.keywords,
   alternates: {
     canonical: '/tr',
-    languages: { tr: '/tr', en: '/', 'x-default': '/' },
+    languages: { tr: '/tr', en: '/en', 'x-default': '/tr' },
   },
   openGraph: og,
   twitter,

@@ -1,21 +1,29 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect } from 'react'
+import { createContext, useContext, useState, useEffect, useMemo } from 'react'
+import { usePathname } from 'next/navigation'
 import en from '@/i18n/en.json'
 import tr from '@/i18n/tr.json'
+import { mergeMessages } from '@/lib/i18n/mergeMessages'
+import { resolveLocale } from '@/lib/i18n/resolveLocale'
 
 const LanguageContext = createContext(null)
 
 const STORAGE_KEY = 'mustafa-site-lang'
 
-export function LanguageProvider({ children, initialLocale = 'en' }) {
-  const [language, setLanguageState] = useState(() => (initialLocale === 'tr' ? 'tr' : 'en'))
+const MESSAGES = {
+  en: mergeMessages(en, tr),
+  tr: mergeMessages(tr, en),
+}
+
+export function LanguageProvider({ children, initialLocale = 'tr' }) {
+  const pathname = usePathname()
+  const routeLocale = resolveLocale(pathname, initialLocale)
+  const [language, setLanguageState] = useState(routeLocale)
 
   useEffect(() => {
-    if (initialLocale === 'tr' || initialLocale === 'en') {
-      setLanguageState(initialLocale)
-    }
-  }, [initialLocale])
+    setLanguageState(resolveLocale(pathname, initialLocale))
+  }, [pathname, initialLocale])
 
   const setLanguage = (lang) => {
     if (lang !== 'en' && lang !== 'tr') return
@@ -23,7 +31,10 @@ export function LanguageProvider({ children, initialLocale = 'en' }) {
     if (typeof window !== 'undefined') localStorage.setItem(STORAGE_KEY, lang)
   }
 
-  const translations = language === 'tr' ? tr : en
+  const translations = useMemo(
+    () => MESSAGES[language === 'tr' ? 'tr' : 'en'] ?? MESSAGES.en,
+    [language]
+  )
 
   const value = {
     language,

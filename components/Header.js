@@ -7,24 +7,30 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getKey } from '@/lib/i18n/mergeMessages'
+import {
+  homeHrefFor,
+  isTurkishPath,
+  toEnglishPath,
+  toTurkishPath,
+  vitrinHrefFor,
+} from '@/lib/i18n/routes'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
   const { language, setLanguage, t } = useLanguage()
-  const isTr = pathname.startsWith('/tr')
-  const homeHref = isTr ? '/tr' : '/'
-  const vitrinHref = isTr ? '/tr/vitrin' : '/vitrin'
+  const isTr = isTurkishPath(pathname)
+  const homeHref = homeHrefFor(pathname)
+  const vitrinHref = vitrinHrefFor(pathname)
 
   const switchTo = (lang) => {
     setLanguage(lang)
     if (lang === 'tr') {
-      const path = isTr ? pathname : '/tr' + (pathname === '/' ? '' : pathname)
-      router.push(path)
+      router.push(toTurkishPath(pathname))
     } else {
-      const path = pathname.replace(/^\/tr/, '') || '/'
-      router.push(path)
+      router.push(toEnglishPath(pathname))
     }
     setIsOpen(false)
   }
@@ -77,7 +83,7 @@ export default function Header() {
                     href={item.href}
                     className="text-[#D8DEE8] hover:text-[#4F7CFF] transition-colors text-sm font-medium"
                   >
-                    {t[item.key]}
+                    {getKey(t, item.key, item.key)}
                   </Link>
                 ) : (
                   <a
@@ -85,7 +91,7 @@ export default function Header() {
                     href={item.href}
                     className="text-[#D8DEE8] hover:text-[#4F7CFF] transition-colors text-sm font-medium"
                   >
-                    {t[item.key]}
+                    {getKey(t, item.key, item.key)}
                   </a>
                 )
               )}
@@ -154,7 +160,7 @@ export default function Header() {
                       className="text-[#D8DEE8] hover:text-[#4F7CFF] py-2 px-4 rounded-lg hover:bg-white/5 transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
-                      {t[item.key]}
+                      {getKey(t, item.key, item.key)}
                     </Link>
                   ) : (
                     <a
@@ -163,7 +169,7 @@ export default function Header() {
                       className="text-[#D8DEE8] hover:text-[#4F7CFF] py-2 px-4 rounded-lg hover:bg-white/5 transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
-                      {t[item.key]}
+                      {getKey(t, item.key, item.key)}
                     </a>
                   )
                 )}

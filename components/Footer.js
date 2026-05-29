@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { Mail, Linkedin, Instagram } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import FooterLocalSeoCities from '@/components/localSeo/FooterLocalSeoCities'
+import { homeHrefFor, isTurkishPath } from '@/lib/i18n/routes'
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/mustafa-oner-82/'
 const WHATSAPP_URL = 'https://wa.me/905456597551'
@@ -31,8 +32,8 @@ function TelegramIcon() {
 export default function Footer() {
   const { t } = useLanguage()
   const pathname = usePathname()
-  const isTr = pathname.startsWith('/tr')
-  const home = isTr ? '/tr' : '/'
+  const isTr = isTurkishPath(pathname)
+  const home = homeHrefFor(pathname)
   const services = isTr ? '/tr/services' : '/services'
   const projects = isTr ? '/tr/projects' : '/projects'
   const vitrin = isTr ? '/tr/vitrin' : '/vitrin'
@@ -63,7 +64,7 @@ export default function Footer() {
               {t.footer_focus}
             </h3>
             <ul className="space-y-2 text-sm text-sub">
-              {t.footer_focus_items.map((item, i) => (
+              {(t.footer_focus_items || []).map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>

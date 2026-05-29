@@ -146,7 +146,7 @@ export default function WorkingPrinciples() {
             {/* Final Statement */}
             <div className="mt-16 text-center">
               <p className="text-xl italic max-w-2xl mx-auto" style={{ color: '#475569' }}>
-                “{t.principles_final_quote}
+                “{t.principles_final_quote || ''}”
               </p>
             </div>
           </motion.div>

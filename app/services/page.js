@@ -18,7 +18,7 @@ export const metadata = {
   title: meta.title,
   description: meta.description,
   keywords: GLOBAL_META.en.keywords,
-  alternates: { canonical: '/services', languages: { en: '/services', tr: '/tr/services', 'x-default': '/services' } },
+  alternates: { canonical: '/services', languages: { en: '/services', tr: '/tr/services', 'x-default': '/tr/services' } },
   openGraph: og,
   twitter,
 }

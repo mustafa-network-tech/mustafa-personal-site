@@ -18,7 +18,7 @@ export const metadata = {
   title: meta.title,
   description: meta.description,
   keywords: GLOBAL_META.tr.keywords,
-  alternates: { canonical: '/tr/contact', languages: { tr: '/tr/contact', en: '/contact', 'x-default': '/contact' } },
+  alternates: { canonical: '/tr/contact', languages: { tr: '/tr/contact', en: '/contact', 'x-default': '/tr/contact' } },
   openGraph: og,
   twitter,
 }
