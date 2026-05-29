@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { LayoutDashboard, Globe, ExternalLink, MessageCircle, Github, CheckCircle } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import DemoProjectCard from '@/components/DemoProjectCard'
+import ClientFeedback from '@/components/ClientFeedback'
 
 const INTRO_HIGHLIGHTS_TR = ['dijital çalışmalar', 'gerçek ürünler', 'gerçek projeler'].sort((a, b) => b.length - a.length)
 const INTRO_HIGHLIGHTS_EN = ['digital work', 'real products', 'real projects'].sort((a, b) => b.length - a.length)
@@ -135,16 +136,31 @@ export default function SoftwareDigital() {
             transition={{ duration: 0.6 }}
           >
             <div className="text-center mb-2">
-              <span
-                className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-1"
-                style={{
-                  color: '#FFFFFF',
-                  background: '#2B313D',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                }}
-              >
-                {t.software_badge}
-              </span>
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-1">
+                {t.projects_count_badge && (
+                  <span
+                    className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase"
+                    style={{
+                      color: '#FFFFFF',
+                      background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+                      border: '1px solid rgba(37,99,235,0.35)',
+                      boxShadow: '0 4px 14px rgba(37,99,235,0.25)',
+                    }}
+                  >
+                    {t.projects_count_badge}
+                  </span>
+                )}
+                <span
+                  className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase"
+                  style={{
+                    color: '#FFFFFF',
+                    background: '#2B313D',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                  }}
+                >
+                  {t.software_badge}
+                </span>
+              </div>
               <h2
                 className="text-3xl md:text-5xl font-bold tracking-tight text-[#1E293B] mb-1 leading-tight"
                 style={{ letterSpacing: '-0.02em', fontWeight: 700 }}
@@ -259,6 +275,8 @@ export default function SoftwareDigital() {
                     </motion.div>
                   ))}
                 </div>
+
+                <ClientFeedback />
 
                 {/* CTA: Custom project – under demo cards */}
                 {t.cta_custom_project_title && (
