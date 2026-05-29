@@ -71,10 +71,9 @@
     { "title": "Sürekli Gelişim ve Destek", "description": "Bir dijital ürün yayına çıktıktan sonra da gelişmeye devam eder. Güncellemeler, iyileştirmeler ve yeni ihtiyaçlara göre yapılan düzenlemeler ile sistemin uzun süre verimli çalışması sağlanır.", "points": ["İçerik ve yapı güncellemeleri", "Performans iyileştirmeleri", "Yeni özellik geliştirmeleri", "Kullanıcı deneyimi düzenlemeleri", "Sistem bakım ve kontrolü"] }
   ],
 
-  "software_badge": "Portföy",
-  "projects_count_badge": "+500 Proje",
-  "software_title": "Projeler",
-  "software_intro": "Gerçek projeler, gerçek ürünler. Web, mobil ve yazılım alanında geliştirdiğim dijital çalışmalar.",
+  "software_trust_badge": "500+ Tamamlanan Çalışma",
+  "software_title": "Gerçek Projeler",
+  "software_intro": "Gerçek projeler, gerçek ürünler. Web, mobil ve yazılım alanlarında geliştirdiğim dijital çözümlerden seçilmiş çalışmalar.",
   "software_vitrin_link": "Tüm örnekleri vitrinde incele",
   "projects_page_lead": "Yayına alınmış ve demo projelerin seçilmiş özeti: kurumsal siteler, platformlar ve araçlar. Web geliştirme, arayüz sistemleri ve özel yazılımın pratikte nasıl bir araya geldiğini görmek için kullanın.",
   "services_page_lead": "Kurumsal web sitesi, e-ticaret, yönetim paneli, mobil uygulama ve özel yazılım ihtiyacı olan ekipler için düzenli hizmetler — planlama, geliştirme ve sürdürülebilir yapı öncelikli.",

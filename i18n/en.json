@@ -71,10 +71,9 @@
     { "title": "Ongoing Growth & Support", "description": "A digital product keeps evolving after launch. Updates, improvements and adjustments to new needs keep the system running efficiently over time.", "points": ["Content and structure updates", "Performance improvements", "New feature development", "User experience refinements", "System maintenance and monitoring"] }
   ],
 
-  "software_badge": "Portfolio",
-  "projects_count_badge": "+500 Projects",
-  "software_title": "Projects",
-  "software_intro": "Real projects, real products. Digital work I have built in web, mobile and software.",
+  "software_trust_badge": "500+ Completed Projects",
+  "software_title": "Real Projects",
+  "software_intro": "Real projects, real products. Selected work from digital solutions I've built across web, mobile, and software.",
   "software_vitrin_link": "Browse the full project showcase",
   "projects_page_lead": "A curated list of shipped and demo work: corporate sites, platforms and tools. Use it to see how web development, UI systems and custom software come together in practice.",
   "services_page_lead": "Structured services for teams that need corporate websites, e-commerce, management panels, mobile apps and custom software — planned, built and maintained with clarity.",

@@ -8,41 +8,6 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import DemoProjectCard from '@/components/DemoProjectCard'
 import ClientFeedback from '@/components/ClientFeedback'
 
-const INTRO_HIGHLIGHTS_TR = ['dijital çalışmalar', 'gerçek ürünler', 'gerçek projeler'].sort((a, b) => b.length - a.length)
-const INTRO_HIGHLIGHTS_EN = ['digital work', 'real products', 'real projects'].sort((a, b) => b.length - a.length)
-
-function highlightSubtitle(text, language) {
-  const phrases = language === 'tr' ? INTRO_HIGHLIGHTS_TR : INTRO_HIGHLIGHTS_EN
-  if (!text || !phrases.length) return text
-  const matches = []
-  for (const phrase of phrases) {
-    let pos = 0
-    while (true) {
-      const idx = text.toLowerCase().indexOf(phrase.toLowerCase(), pos)
-      if (idx === -1) break
-      matches.push({ phrase: text.slice(idx, idx + phrase.length), index: idx })
-      pos = idx + phrase.length
-    }
-  }
-  matches.sort((a, b) => a.index - b.index)
-  const parts = []
-  let last = 0
-  for (const { phrase, index } of matches) {
-    if (index > last) parts.push({ type: 'text', value: text.slice(last, index) })
-    parts.push({ type: 'highlight', value: phrase })
-    last = index + phrase.length
-  }
-  if (last < text.length) parts.push({ type: 'text', value: text.slice(last) })
-  if (parts.length === 0) return text
-  return parts.map((part, i) =>
-    part.type === 'highlight' ? (
-      <span key={i} className="font-semibold" style={{ color: '#0EA5E9' }}>{part.value}</span>
-    ) : (
-      part.value
-    )
-  )
-}
-
 const projectLinks = [
   'https://www.mk-ops.tr',
   'https://mk-digital-systems.vercel.app/en',
@@ -135,40 +100,29 @@ export default function SoftwareDigital() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="text-center mb-2">
-              <div className="flex flex-wrap items-center justify-center gap-2 mb-1">
-                {t.projects_count_badge && (
-                  <span
-                    className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase"
-                    style={{
-                      color: '#FFFFFF',
-                      background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
-                      border: '1px solid rgba(37,99,235,0.35)',
-                      boxShadow: '0 4px 14px rgba(37,99,235,0.25)',
-                    }}
-                  >
-                    {t.projects_count_badge}
-                  </span>
-                )}
+            <div className="mb-10 text-center md:mb-12">
+              {t.software_trust_badge && (
                 <span
-                  className="inline-block px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase"
+                  className="inline-block rounded-full px-5 py-2.5 text-[13px] font-semibold tracking-wide transition-transform duration-300 ease-out hover:scale-[1.03]"
                   style={{
                     color: '#FFFFFF',
-                    background: '#2B313D',
-                    border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #1D4ED8 100%)',
+                    border: '1px solid rgba(147,197,253,0.4)',
+                    boxShadow:
+                      '0 4px 22px rgba(37,99,235,0.3), 0 0 36px rgba(59,130,246,0.14), inset 0 1px 0 rgba(255,255,255,0.2)',
                   }}
                 >
-                  {t.software_badge}
+                  {t.software_trust_badge}
                 </span>
-              </div>
+              )}
               <h2
-                className="text-3xl md:text-5xl font-bold tracking-tight text-[#1E293B] mb-1 leading-tight"
-                style={{ letterSpacing: '-0.02em', fontWeight: 700 }}
+                className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#1E293B] md:mt-6 md:text-[2.75rem]"
+                style={{ letterSpacing: '-0.025em' }}
               >
                 {t.software_title}
               </h2>
-              <p className="text-lg max-w-[760px] mx-auto leading-[1.7] text-[#475569]">
-                {highlightSubtitle(t.software_intro, language)}
+              <p className="mx-auto mt-4 max-w-[720px] text-base leading-[1.75] text-[#475569] md:text-lg">
+                {t.software_intro}
               </p>
               {t.software_vitrin_link && (
                 <p className="text-center mt-4">
