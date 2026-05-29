@@ -104,6 +104,14 @@ section[id] {
   transform: translateY(-1px);
 }
 
+.local-seo-footer-cities summary::-webkit-details-marker {
+  display: none;
+}
+
+.local-seo-footer-cities summary::marker {
+  content: '';
+}
+
 /* Selection color */
 ::selection {
   background-color: rgba(79, 124, 255, 0.22);

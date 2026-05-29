@@ -69,9 +69,26 @@ export default function LocalSeoLandingPage({ params }) {
     },
   }
 
+  const jsonLd = [webPageSchema, breadcrumbJson]
+
+  if (page.faqs?.length) {
+    jsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: page.faqs.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    })
+  }
+
   return (
     <>
-      <JsonLd data={[webPageSchema, breadcrumbJson]} />
+      <JsonLd data={jsonLd} />
       <LocalSeoPageContent page={page} />
     </>
   )

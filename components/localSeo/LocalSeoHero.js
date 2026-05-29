@@ -91,12 +91,22 @@ export default function LocalSeoHero({ slug, hero }) {
         <p className="text-base md:text-lg text-[#CBD5E1] leading-relaxed max-w-2xl mb-8 drop-shadow-sm">
           {hero.description}
         </p>
-        <Link
-          href="#proje-talep-formu"
-          className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-[#4F7CFF] hover:bg-[#3d6ae8] transition-colors shadow-lg shadow-[rgba(79,124,255,0.25)]"
-        >
-          {hero.ctaLabel}
-        </Link>
+        <div className="flex flex-wrap items-center gap-3">
+          <Link
+            href="#proje-talep-formu"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-[#4F7CFF] hover:bg-[#3d6ae8] transition-colors shadow-lg shadow-[rgba(79,124,255,0.25)]"
+          >
+            {hero.ctaLabel || 'Ücretsiz Görüşme'}
+          </Link>
+          <a
+            href="https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-semibold text-[#F8FAFC] border border-[rgba(248,250,252,0.25)] bg-[rgba(43,49,61,0.55)] hover:bg-[rgba(43,49,61,0.85)] transition-colors"
+          >
+            WhatsApp ile İletişim
+          </a>
+        </div>
       </div>
     </section>
   )

@@ -3,6 +3,10 @@ import ProjectRequestForm from '@/components/ProjectRequestForm'
 import LocalSeoSampleProjects from '@/components/localSeo/LocalSeoSampleProjects'
 import LocalSeoHero from '@/components/localSeo/LocalSeoHero'
 import LocalSeoCityNav from '@/components/localSeo/LocalSeoCityNav'
+import LocalSeoAdvantages from '@/components/localSeo/LocalSeoAdvantages'
+import LocalSeoFaq from '@/components/localSeo/LocalSeoFaq'
+import LocalSeoOtherCities from '@/components/localSeo/LocalSeoOtherCities'
+import LocalSeoContactCta from '@/components/localSeo/LocalSeoContactCta'
 
 /**
  * @param {{ page: import('@/lib/localSeo/pages').typeof LOCAL_SEO_PAGES[0] }} props
@@ -15,7 +19,12 @@ export default function LocalSeoPageContent({ page }) {
 
       <section className="container mx-auto px-4 py-12 md:py-14 max-w-3xl">
         <h2 className="text-xl font-semibold text-[#F8FAFC] mb-4">{page.introTitle}</h2>
-        <p className="text-[#94A3B8] leading-relaxed">{page.introText}</p>
+        <p className="text-[#94A3B8] leading-relaxed mb-4">{page.introText}</p>
+        {page.introParagraphs?.map((paragraph) => (
+          <p key={paragraph.slice(0, 48)} className="text-[#94A3B8] leading-relaxed mb-4 last:mb-0">
+            {paragraph}
+          </p>
+        ))}
       </section>
 
       <section className="bg-[rgba(15,23,42,0.35)] border-y border-[rgba(248,250,252,0.06)] py-14 md:py-16">
@@ -45,17 +54,26 @@ export default function LocalSeoPageContent({ page }) {
         </section>
       ))}
 
-      <LocalSeoSampleProjects slug={page.slug} sectionTitle={`${page.cityName} için örnek projeler`} />
+      <LocalSeoSampleProjects slug={page.slug} sectionTitle={`${page.cityName} için proje vitrini`} />
 
-      <section className="container mx-auto px-4 py-10 max-w-3xl text-center">
-        <p className="text-[#CBD5E1] mb-4">{page.ctaClosing}</p>
-        <Link
-          href="#proje-talep-formu"
-          className="text-[#4F7CFF] font-medium hover:underline"
-        >
-          Talep formuna geç →
-        </Link>
-      </section>
+      {page.advantages?.length > 0 && (
+        <LocalSeoAdvantages title={page.advantagesTitle} items={page.advantages} />
+      )}
+
+      {page.faqs?.length > 0 && <LocalSeoFaq cityName={page.cityName} items={page.faqs} />}
+
+      <LocalSeoOtherCities currentCityKey={page.cityKey} cityName={page.cityName} />
+
+      <LocalSeoContactCta cityName={page.cityName} />
+
+      {page.ctaClosing && (
+        <section className="container mx-auto px-4 py-6 max-w-3xl text-center">
+          <p className="text-[#CBD5E1] mb-4">{page.ctaClosing}</p>
+          <Link href="#proje-talep-formu" className="text-[#4F7CFF] font-medium hover:underline">
+            Talep formuna geç →
+          </Link>
+        </section>
+      )}
 
       <ProjectRequestForm
         formId="proje-talep-formu"
