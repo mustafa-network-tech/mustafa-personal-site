@@ -1,6 +1,7 @@
 // app/layout.js
 import { headers } from 'next/headers'
 import { Inter, Plus_Jakarta_Sans, Dancing_Script, JetBrains_Mono } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import LayoutShell from '@/components/LayoutShell'
@@ -41,6 +42,18 @@ export default async function RootLayout({ children }) {
         <LanguageProvider initialLocale={locale}>
           <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-574KJBEVJL"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-574KJBEVJL');
+          `}
+        </Script>
       </body>
     </html>
   )
