@@ -2,6 +2,7 @@
 import { headers } from 'next/headers'
 import { Inter, Plus_Jakarta_Sans, Dancing_Script, JetBrains_Mono } from 'next/font/google'
 import Script from 'next/script'
+import WhatsAppButton from '@/components/WhatsAppButton'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import LayoutShell from '@/components/LayoutShell'
@@ -42,6 +43,7 @@ export default async function RootLayout({ children }) {
         <LanguageProvider initialLocale={locale}>
           <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>
+        <WhatsAppButton />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-574KJBEVJL"
           strategy="afterInteractive"
