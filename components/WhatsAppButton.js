@@ -11,8 +11,8 @@ const WA_URL =
 function handleClick() {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', 'whatsapp_click', {
-      event_category: 'engagement',
-      event_label: 'whatsapp_float_button',
+      event_category: 'lead',
+      event_label: 'floating_whatsapp_button',
     })
   }
 }
