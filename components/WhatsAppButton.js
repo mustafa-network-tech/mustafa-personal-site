@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+
 const WA_URL =
   'https://wa.me/905456597551?text=' +
   encodeURIComponent(
@@ -16,8 +18,33 @@ function handleClick() {
 }
 
 export default function WhatsAppButton() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    // Kısa gecikmeyle göster (sayfa yüklendikten sonra)
+    const showTimer = setTimeout(() => setVisible(true), 800)
+    // 5 saniye sonra gizle
+    const hideTimer = setTimeout(() => setVisible(false), 5800)
+    return () => {
+      clearTimeout(showTimer)
+      clearTimeout(hideTimer)
+    }
+  }, [])
+
   return (
     <>
+      {/* Balon tooltip */}
+      <div className={`wa-tooltip ${visible ? 'wa-tooltip--visible' : ''}`}>
+        <p className="wa-tooltip__title">
+          İşletmeniz İçin Profesyonel Web Sitesi ve Özel Yazılım Çözümleri
+        </p>
+        <p className="wa-tooltip__sub">
+          Ücretsiz Ön Görüşme İçin Hemen İletişime Geçin
+        </p>
+        {/* Balonun sağ alt köşesine bakan ok */}
+        <span className="wa-tooltip__arrow" />
+      </div>
+
       <a
         href={WA_URL}
         target="_blank"
@@ -26,7 +53,6 @@ export default function WhatsAppButton() {
         aria-label="WhatsApp ile iletişime geç"
         className="wa-float-btn"
       >
-        {/* WhatsApp SVG ikonu */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
@@ -40,6 +66,7 @@ export default function WhatsAppButton() {
       </a>
 
       <style>{`
+        /* ── Float buton ── */
         .wa-float-btn {
           position: fixed;
           bottom: 24px;
@@ -56,15 +83,62 @@ export default function WhatsAppButton() {
           transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
           text-decoration: none;
         }
-
         .wa-float-btn:hover {
           transform: scale(1.12);
           background-color: #1ebe5d;
           box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6);
         }
-
         .wa-float-btn:active {
           transform: scale(0.96);
+        }
+
+        /* ── Tooltip balon ── */
+        .wa-tooltip {
+          position: fixed;
+          bottom: 90px;
+          right: 20px;
+          z-index: 9998;
+          max-width: 230px;
+          background: #ffffff;
+          border-radius: 12px;
+          padding: 12px 14px;
+          box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+          border-left: 4px solid #25D366;
+          opacity: 0;
+          transform: translateY(8px) scale(0.96);
+          transition: opacity 0.35s ease, transform 0.35s ease;
+          pointer-events: none;
+        }
+        .wa-tooltip--visible {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          pointer-events: auto;
+        }
+        .wa-tooltip__title {
+          margin: 0 0 4px;
+          font-size: 12.5px;
+          font-weight: 700;
+          color: #111;
+          line-height: 1.4;
+        }
+        .wa-tooltip__sub {
+          margin: 0;
+          font-size: 11.5px;
+          font-weight: 500;
+          color: #25D366;
+          line-height: 1.4;
+        }
+        /* Balonun altındaki ok işareti */
+        .wa-tooltip__arrow {
+          position: absolute;
+          bottom: -8px;
+          right: 20px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 8px solid #ffffff;
+          filter: drop-shadow(0 2px 2px rgba(0,0,0,0.08));
         }
 
         @media (max-width: 640px) {
@@ -73,6 +147,14 @@ export default function WhatsAppButton() {
             right: 16px;
             width: 50px;
             height: 50px;
+          }
+          .wa-tooltip {
+            bottom: 78px;
+            right: 12px;
+            max-width: 200px;
+          }
+          .wa-tooltip__arrow {
+            right: 16px;
           }
         }
       `}</style>
