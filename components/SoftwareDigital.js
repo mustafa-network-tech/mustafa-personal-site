@@ -4,27 +4,36 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { LayoutDashboard, Globe, ExternalLink, MessageCircle, Github, CheckCircle } from 'lucide-react'
+import { ExternalLink, MessageCircle, CheckCircle } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import DemoProjectCard from '@/components/DemoProjectCard'
 import ClientFeedback from '@/components/ClientFeedback'
 
-const projectLinks = [
-  'https://www.mk-ops.tr',
-  'https://mk-digital-systems.vercel.app/en',
-]
-
-const projectGithubLinks = [null, null]
-
-const projectIcons = [LayoutDashboard, Globe]
-
-// software_projects için arka plan görselleri (index sırası i18n dosyasıyla eşleşir)
+// software_projects arka plan görselleri (i18n sırasıyla)
 const softwareProjectImages = [
   '/images/projects/mk-ops.jpeg',
   '/images/projects/mk-digital-systems.jpeg',
 ]
 
-// demo_projects için arka plan görselleri (i18n demo_projects dizisiyle aynı sıra)
+// software_projects açıklama override (kullanıcı isteğiyle güncellendi)
+const softwareProjectDescriptions = {
+  tr: [
+    'Telekom, fiber optik ve saha operasyonları için geliştirilmiş SaaS tabanlı operasyon yönetim platformu.',
+    'Web siteleri, e-ticaret platformları ve özel yazılım çözümleri geliştiren dijital üretim markası.',
+  ],
+  en: [
+    'SaaS-based operations management platform for telecom, fiber optic and field operations.',
+    'Digital production brand developing websites, e-commerce platforms and custom software solutions.',
+  ],
+}
+
+// software_projects buton konfigürasyonu
+const softwareProjectLinks = [
+  { live: 'https://www.mk-ops.tr', demo: 'https://www.mk-ops.tr' },
+  { live: 'https://mk-digital-systems.vercel.app/en', demo: null },
+]
+
+// demo_projects arka plan görselleri (i18n demo_projects dizisiyle aynı sıra)
 const demoProjectImages = [
   '/images/projects/musty-music.jpeg',
   '/images/projects/mavi-iletisim.jpeg',
@@ -40,76 +49,15 @@ const demoProjectImages = [
   '/images/projects/mavi-kadrajla-ogreniyorum.jpeg',
 ]
 
-function getCtaLabel(ctaKey, t) {
-  switch (ctaKey) {
-    case 'request': return t.cta_request
-    case 'live': return t.live
-    case 'playstore': return t.play_store
-    case 'demo': return t.cta_demo
-    default: return t.live
-  }
-}
-
-function CtaButton({ project, index, t, darkCard }) {
-  const ctaKey = project.ctaKey || 'live'
-  const label = project.ctaLabel != null ? project.ctaLabel : getCtaLabel(ctaKey, t)
-  const href = ctaKey === 'request' ? '#contact' : (projectLinks[index] || null)
-  const showGithub = !project.ctaLabel && ctaKey === 'demo' && projectGithubLinks[index]
-
-  const baseClass = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 [&_svg]:text-current'
-  const primaryClass = darkCard
-    ? 'border border-white/30 text-white hover:bg-white/15 hover:border-white/50 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]'
-    : 'bg-[#2563EB] border border-[#2563EB] text-white hover:bg-[#1d4ed8] hover:border-[#1d4ed8] hover:shadow-[0_0_24px_rgba(37,99,235,0.35)]'
-  const secondaryClass = darkCard
-    ? 'border border-white/25 text-white hover:bg-white/10 hover:border-white/40'
-    : 'bg-[#2563EB] border border-[#2563EB] text-white hover:bg-[#1d4ed8] hover:border-[#1d4ed8] hover:shadow-[0_0_16px_rgba(37,99,235,0.3)]'
-
-  if (ctaKey === 'request') {
-    return (
-      <a
-        href="#contact"
-        className={`group/btn relative ${baseClass} ${primaryClass}`}
-      >
-        <MessageCircle className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
-        {label}
-      </a>
-    )
-  }
-
-  if (!href) return null
-
-  return (
-    <div className="flex flex-wrap gap-2">
-      <a
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        className={`group/btn relative ${baseClass} ${primaryClass}`}
-      >
-        <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
-        {label}
-      </a>
-      {showGithub && (
-        <a href={projectGithubLinks[index]} target="_blank" rel="noreferrer" className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-sm font-medium transition-all duration-300 ${secondaryClass}`}>
-          <Github className="w-4 h-4" />
-          {t.github}
-        </a>
-      )}
-    </div>
-  )
-}
-
 export default function SoftwareDigital() {
   const { t, language } = useLanguage()
-  const projects = (t.software_projects || []).map((p, index) => {
-    const Icon = projectIcons[index] || Globe
-    return {
-      ...p,
-      focus: Array.isArray(p.focus) ? p.focus : [],
-      tags: Array.isArray(p.tags) ? p.tags : [],
-      IconComponent: Icon,
-    }
-  })
+  const projects = (t.software_projects || []).map((p) => ({
+    ...p,
+    focus: Array.isArray(p.focus) ? p.focus : [],
+    tags: Array.isArray(p.tags) ? p.tags : [],
+  }))
+
+  const descOverrides = softwareProjectDescriptions[language] || softwareProjectDescriptions.tr
 
   return (
     <section
@@ -125,6 +73,7 @@ export default function SoftwareDigital() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+            {/* ── Bölüm başlığı ── */}
             <div className="mb-10 text-center md:mb-12">
               {t.software_trust_badge && (
                 <span
@@ -161,9 +110,13 @@ export default function SoftwareDigital() {
               )}
             </div>
 
-            <div className="projects-grid grid grid-cols-2 md:grid-cols-3 gap-[30px] mb-16">
+            {/* ── Software Projects kartları ── */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
               {projects.map((p, index) => {
                 const bgImage = softwareProjectImages[index]
+                const description = descOverrides[index] || p.description
+                const links = softwareProjectLinks[index] || {}
+
                 return (
                   <motion.div
                     key={`${p.title}-${index}`}
@@ -171,66 +124,107 @@ export default function SoftwareDigital() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="group relative rounded-[18px] overflow-hidden transition-all duration-[0.35s] ease-out hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                    className="group flex flex-col rounded-[20px] overflow-hidden border border-[#E2E8F0] bg-white shadow-[0_2px_10px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(15,23,42,0.13)]"
                   >
-                    {/* Arka plan görseli */}
-                    {bgImage && (
-                      <>
+                    {/* Üst: Proje görseli */}
+                    <div className="relative w-full shrink-0 overflow-hidden bg-[#F1F5F9]" style={{ height: 220 }}>
+                      {bgImage && (
                         <Image
                           src={bgImage}
                           alt={p.title}
                           fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-110"
-                          sizes="(max-width: 768px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 50vw"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/52 to-black/82 transition-all duration-500 group-hover:from-black/45 group-hover:to-black/88" />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none" />
-                      </>
-                    )}
+                      )}
+                    </div>
 
-                    {/* İçerik */}
-                    <div className="relative z-10" style={{ padding: 26 }}>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-white/15 border border-white/25 backdrop-blur-sm">
-                          <p.IconComponent className="w-5 h-5 text-white" />
-                        </div>
-                        <span className="inline-block text-[11px] font-semibold px-3 py-1 rounded-full text-white/85 bg-white/15 border border-white/25 backdrop-blur-sm">
+                    {/* Alt: İçerik (saf beyaz, görsel yok) */}
+                    <div className="flex flex-col flex-grow p-6">
+                      {/* Tip etiketi */}
+                      <div className="mb-3">
+                        <span className="inline-block text-[11px] font-semibold px-3 py-1 rounded-full bg-[#EEF2FF] text-[#4F46E5] border border-[#E0E7FF]">
                           {p.type}
                         </span>
                       </div>
 
-                      <h3 className="text-[18px] font-bold mb-3 leading-tight text-white drop-shadow-md">
+                      {/* Başlık */}
+                      <h3 className="text-[20px] font-bold text-[#0F172A] mb-2 leading-tight">
                         {p.title}
                       </h3>
 
-                      <p className="text-sm mb-4 text-white/78" style={{ lineHeight: 1.6 }}>
-                        {p.description}
+                      {/* Açıklama */}
+                      <p className="text-[14px] text-[#64748B] leading-relaxed mb-4 line-clamp-3">
+                        {description}
                       </p>
 
-                      {p.focus?.length ? (
-                        <div className="mb-4 space-y-2">
-                          <div className="text-[11px] font-bold text-white/55 uppercase tracking-widest">{t.focus || ''}</div>
+                      {/* Odak noktaları */}
+                      {p.focus.length > 0 && (
+                        <div className="mb-4">
+                          <div className="text-[11px] font-bold text-[#94A3B8] uppercase tracking-widest mb-2">
+                            {t.focus || ''}
+                          </div>
                           <ul className="space-y-1.5">
-                            {(p.focus || []).map((f) => (
-                              <li key={f} className="flex items-start gap-2 text-sm text-white/78">
-                                <CheckCircle className="w-4 h-4 shrink-0 mt-0.5 text-white/70" />
+                            {p.focus.map((f) => (
+                              <li key={f} className="flex items-start gap-2 text-[13px] text-[#475569]">
+                                <CheckCircle className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#2563EB]" />
                                 <span className="leading-snug">{f}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
-                      ) : null}
+                      )}
 
-                      <div className="flex flex-wrap gap-1.5">
-                        {(p.tags || []).map((tag) => (
-                          <span key={tag} className="inline-block text-[11px] font-medium px-2.5 py-0.5 rounded-full text-white/70 bg-white/10 border border-white/20">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                      {/* Teknoloji etiketleri */}
+                      {p.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-4">
+                          {p.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="inline-block text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0]"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
 
-                      <div className="mt-4 pt-4 border-t border-white/20">
-                        <CtaButton project={p} index={index} t={t} darkCard />
+                      {/* Butonlar */}
+                      <div className="mt-auto pt-4 border-t border-[#F1F5F9] flex flex-wrap gap-2">
+                        {/* Canlı Site */}
+                        {links.live && (
+                          <a
+                            href={links.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-[10px] text-sm font-semibold bg-[#2563EB] text-white border border-[#2563EB] transition-all duration-300 hover:bg-[#1d4ed8] hover:border-[#1d4ed8] hover:shadow-[0_4px_16px_rgba(37,99,235,0.35)] hover:-translate-y-0.5"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5" />
+                            {t.live || 'Canlı Site'}
+                          </a>
+                        )}
+                        {/* Canlı Demo (sadece 1. kart — MK OPS) */}
+                        {links.demo && index === 0 && (
+                          <a
+                            href={links.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-[10px] text-sm font-semibold bg-white text-[#1E293B] border border-[#E2E8F0] transition-all duration-300 hover:bg-[#F8FAFC] hover:border-[#CBD5E1] hover:-translate-y-0.5"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5 text-[#64748B]" />
+                            {language === 'tr' ? 'Canlı Demo' : 'Live Demo'}
+                          </a>
+                        )}
+                        {/* Teklif Al (sadece 1. kart — MK OPS) */}
+                        {index === 0 && (
+                          <a
+                            href="#contact"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-[10px] text-sm font-semibold bg-[#25D366] text-white border border-[#25D366] transition-all duration-300 hover:bg-[#1ebe5d] hover:border-[#1ebe5d] hover:shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:-translate-y-0.5"
+                          >
+                            <MessageCircle className="w-3.5 h-3.5" />
+                            {t.cta_request || 'Teklif Al'}
+                          </a>
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -238,7 +232,7 @@ export default function SoftwareDigital() {
               })}
             </div>
 
-            {/* Demo Sites – subheading + 6 cards */}
+            {/* ── Demo Sites ── */}
             {(t.demo_section_title && (t.demo_projects || []).length > 0) && (
               <div className="mb-16">
                 <h3
@@ -247,14 +241,14 @@ export default function SoftwareDigital() {
                 >
                   {t.demo_section_title}
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {(t.demo_projects || []).map((project, index) => (
                     <motion.div
                       key={`demo-${project?.title ?? 'demo'}-${index}`}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.08 }}
+                      transition={{ duration: 0.4, delay: index * 0.06 }}
                       className="h-full"
                     >
                       <DemoProjectCard
@@ -262,7 +256,6 @@ export default function SoftwareDigital() {
                         description={project?.description || ''}
                         tags={Array.isArray(project?.tags) ? project.tags : []}
                         url={project?.url}
-                        badge={t.demo_card_badge || ''}
                         ctaLabel={t.view_demo || 'View Demo'}
                         typeLabel="Demo"
                         image={demoProjectImages[index] || null}
@@ -273,7 +266,7 @@ export default function SoftwareDigital() {
 
                 <ClientFeedback />
 
-                {/* CTA: Custom project – under demo cards */}
+                {/* CTA: Özel proje */}
                 {t.cta_custom_project_title && (
                   <div className="mt-12 mb-16 text-center max-w-2xl mx-auto">
                     <h3 className="text-xl md:text-2xl font-bold text-[#1E293B] mb-3">
@@ -292,10 +285,10 @@ export default function SoftwareDigital() {
                     </a>
                   </div>
                 )}
-
               </div>
             )}
 
+            {/* ── Nasıl Çalışırım ── */}
             <div
               className="page-card-hover rounded-2xl p-8 border transition-all duration-[0.35s] ease-out hover:bg-[#F5F4F2] active:scale-[0.995] active:shadow-inner cursor-pointer"
               style={{
@@ -305,13 +298,11 @@ export default function SoftwareDigital() {
               }}
             >
               <h3 className="text-2xl font-semibold text-[#0F172A] mb-6">{t.how_i_work}</h3>
-              {/* Three titles in one horizontal row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-4">
                 <div className="text-base font-semibold text-[#2563EB]">{t.delivery_mindset}</div>
                 <div className="text-base font-semibold text-[#2563EB]">{t.user_first_ui}</div>
                 <div className="text-base font-semibold text-[#2563EB]">{t.maintainable_builds}</div>
               </div>
-              {/* Descriptions in a row below */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 <p className="text-sm text-[#475569] leading-relaxed">{t.delivery_mindset_desc}</p>
                 <p className="text-sm text-[#475569] leading-relaxed">{t.user_first_ui_desc}</p>
