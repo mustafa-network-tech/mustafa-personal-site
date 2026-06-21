@@ -44,6 +44,8 @@ const demoProjectImages = [
   '/images/projects/gonupusulasi.jpeg',
   '/images/projects/siirdunyasi.jpeg',
   '/images/projects/mavi-kadrajla-ogreniyorum.jpeg',
+  '/images/projects/namehup.jpeg',
+  '/images/projects/schnappli.jpeg',
 ]
 
 // demo_projects slugları (Projeyi İncele linki için)
@@ -60,6 +62,8 @@ const demoProjectSlugs = [
   'gonul-pusulasi',
   'siir-dunyasi',
   'mavi-kadrajla-ogreniyorum',
+  'namehub',
+  'schnappli',
 ]
 
 export default function SoftwareDigital() {

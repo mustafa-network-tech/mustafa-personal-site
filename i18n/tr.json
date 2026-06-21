@@ -104,7 +104,9 @@
     { "title": "Kadraj Rotam – Rota Keşif Platformu", "description": "Fotoğraf odaklı rota keşfi platformu. Görsel hikayeler ve keşif noktaları için hazırlanmış dijital proje.", "tags": ["Next.js", "UI Design", "Frontend"], "url": "https://kadrajrotam.com.tr" },
     { "title": "Gönül Pusulası – Metin Platformu", "description": "Şiir, duygu ve anlatı üzerine kurulu sade bir dijital metin platformu.", "tags": ["HTML", "CSS", "Frontend"], "url": "https://gonulpusulasi.com" },
     { "title": "Şiir Dünyası – İçerik Platformu", "description": "Şiir ve edebi içeriklerin dijital ortamda paylaşılması için hazırlanan sade içerik platformu.", "tags": ["HTML", "CSS", "Frontend"], "url": "https://siirdunyasi.com.tr" },
-    { "title": "Mavi Kadrajla Öğreniyorum – Android Uygulaması", "description": "Çocuklar için görsel öğrenme üzerine hazırlanmış basit Android eğitim uygulaması.", "tags": ["Android", "Mobile App"], "url": "https://play.google.com/store/apps/details?id=com.mavikadaj.learn" }
+    { "title": "Mavi Kadrajla Öğreniyorum – Android Uygulaması", "description": "Çocuklar için görsel öğrenme üzerine hazırlanmış basit Android eğitim uygulaması.", "tags": ["Android", "Mobile App"], "url": "https://play.google.com/store/apps/details?id=com.mavikadaj.learn" },
+    { "title": "Namehub.tr – Kurumsal Web Sitesi", "description": "Türkiye pazarına yönelik geliştirilmiş modern kurumsal web sitesi projesi.", "tags": ["Next.js", "Web Development", "UI Design"], "url": "https://namehub.tr" },
+    { "title": "Schnappli – iOS & Android Uygulama", "description": "İsviçre'de aktif olarak kullanılan iOS ve Android mobil uygulama projesi.", "tags": ["iOS", "Android", "Mobile App"], "url": "#" }
   ],
   "how_i_work": "Nasıl Çalışırım",
   "delivery_mindset": "Teslimat Zihniyeti",
