@@ -1,11 +1,10 @@
-// app/tr/projects/page.js – Turkish projects list
-import Link from 'next/link'
-import { PAGE_META, PROJECT_SLUGS, PROJECT_META, OG_IMAGES, GLOBAL_META } from '@/seo/metadata'
+// app/tr/projects/page.js – Premium portfolio galerisi (TR)
+import { PAGE_META, OG_IMAGES, GLOBAL_META } from '@/seo/metadata'
 import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
 import { getBreadcrumbListSchema } from '@/seo/schema'
 import JsonLd from '@/components/JsonLd'
-import ProjectCard from '@/components/ProjectCard'
-import tr from '@/i18n/tr.json'
+import PortfolioCard from '@/components/projects/PortfolioCard'
+import { ALL_PROJECTS } from '@/lib/projects/projectsData'
 
 const meta = PAGE_META.projects.tr
 const og = buildOpenGraph({ locale: 'tr', path: '/tr/projects', title: meta.title, description: meta.description, image: OG_IMAGES.tr })
@@ -20,113 +19,48 @@ export const metadata = {
   title: meta.title,
   description: meta.description,
   keywords: GLOBAL_META.tr.keywords,
-  alternates: { canonical: '/tr/projects', languages: { tr: '/tr/projects', en: '/projects', 'x-default': '/tr/projects' } },
+  alternates: {
+    canonical: '/tr/projects',
+    languages: { tr: '/tr/projects', en: '/projects', 'x-default': '/tr/projects' },
+  },
   openGraph: og,
   twitter,
 }
 
 export default function ProjectsTr() {
-  const t = tr
   return (
-    <div className="container mx-auto px-4 py-16 max-w-3xl">
+    <>
       <JsonLd data={breadcrumbJson} />
-      <article>
-        <h1 className="text-3xl font-bold text-[#F8FAFC] mb-2">Projeler</h1>
-        <p className="text-[#E2E8F0] mb-6 leading-relaxed">{t.projects_page_lead}</p>
-        <p className="text-[#94A3B8] text-sm mb-10">{meta.description}</p>
 
-        <section aria-labelledby="case-studies-heading-tr">
-          <h2 id="case-studies-heading-tr" className="text-xl font-semibold text-[#F8FAFC] mb-4">
-            Örnek proje sayfaları
-          </h2>
-          <ul className="space-y-3 list-none">
-            {PROJECT_SLUGS.map((slug) => {
-              const pm = PROJECT_META[slug]
-              const title = pm?.tr?.title?.split('|')[0]?.trim() || slug
-              return (
-                <li key={slug}>
-                  <Link href={`/tr/projects/${slug}`} className="text-[#4F7CFF] hover:underline font-medium">
-                    {title}
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
-        </section>
-
-        <section className="mt-16 pt-12 border-t border-[rgba(248,250,252,0.12)]" aria-labelledby="demo-projects-heading-tr">
-          <h2 id="demo-projects-heading-tr" className="text-2xl font-bold text-[#F8FAFC] mb-6">
-            {t.demo_section_title}
-          </h2>
-          <div
-            className="rounded-2xl p-6 md:p-8"
-            style={{
-              background: '#F0EEEA',
-              border: '1px solid rgba(30,41,59,0.08)',
-              boxShadow: '0 10px 30px rgba(15,23,42,0.05)',
-            }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {(t.demo_projects || []).map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.tags || []}
-                  ctaLabel={t.view_demo}
-                  ctaHref={project.url || '#'}
-                  type="Demo"
-                  badge={t.demo_card_badge}
-                />
-              ))}
-            </div>
+      <div className="min-h-screen bg-[#F8FAFC]">
+        {/* ── Sayfa başlığı ── */}
+        <div className="bg-white border-b border-[#E2E8F0]">
+          <div className="max-w-6xl mx-auto px-6 md:px-12 py-14">
+            <span className="inline-block text-[12px] font-semibold tracking-widest text-[#4F46E5] uppercase mb-4">
+              Portföy
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0F172A] leading-tight mb-4">
+              Projeler
+            </h1>
+            <p className="text-lg text-[#475569] max-w-2xl leading-relaxed">
+              {meta.description}
+            </p>
           </div>
-        </section>
+        </div>
 
-        <section className="mt-16" aria-labelledby="how-i-work-heading-tr">
-          <h2 id="how-i-work-heading-tr" className="sr-only">
-            {t.how_i_work}
-          </h2>
-          <div
-            className="page-card-hover rounded-2xl p-8 border transition-all duration-[0.35s] ease-out hover:bg-[#F5F4F2] active:scale-[0.995] active:shadow-inner"
-            style={{
-              background: '#F0EEEA',
-              border: '1px solid rgba(30,41,59,0.08)',
-              boxShadow: '0 10px 30px rgba(15,23,42,0.05)',
-            }}
-          >
-            <h3 className="text-2xl font-semibold text-[#0F172A] mb-6">{t.how_i_work}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-4">
-              <div className="text-base font-semibold text-[#2563EB]">{t.delivery_mindset}</div>
-              <div className="text-base font-semibold text-[#2563EB]">{t.user_first_ui}</div>
-              <div className="text-base font-semibold text-[#2563EB]">{t.maintainable_builds}</div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              <p className="text-sm text-[#475569] leading-relaxed">{t.delivery_mindset_desc}</p>
-              <p className="text-sm text-[#475569] leading-relaxed">{t.user_first_ui_desc}</p>
-              <p className="text-sm text-[#475569] leading-relaxed">{t.maintainable_builds_desc}</p>
-            </div>
+        {/* ── Proje grid ── */}
+        <div className="max-w-6xl mx-auto px-6 md:px-12 py-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ALL_PROJECTS.map((project) => (
+              <PortfolioCard
+                key={project.slug}
+                project={project}
+                locale="tr"
+              />
+            ))}
           </div>
-        </section>
-
-        <nav className="mt-12 flex flex-wrap gap-4 text-sm" aria-label="İlgili sayfalar">
-          <Link href="/tr/services" className="text-[#4F7CFF] hover:underline">
-            Hizmetler
-          </Link>
-          <span className="text-[#475569]">·</span>
-          <Link href="/tr/vitrin" className="text-[#4F7CFF] hover:underline">
-            {t.menu_vitrin}
-          </Link>
-          <span className="text-[#475569]">·</span>
-          <Link href="/tr/contact" className="text-[#4F7CFF] hover:underline">
-            İletişim
-          </Link>
-          <span className="text-[#475569]">·</span>
-          <Link href="/tr" className="text-[#94A3B8] hover:text-[#F8FAFC]">
-            ← Ana sayfa
-          </Link>
-        </nav>
-      </article>
-    </div>
+        </div>
+      </div>
+    </>
   )
 }

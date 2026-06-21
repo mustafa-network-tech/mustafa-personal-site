@@ -27,11 +27,8 @@ const softwareProjectDescriptions = {
   ],
 }
 
-// software_projects buton konfigürasyonu
-const softwareProjectLinks = [
-  { live: 'https://www.mk-ops.tr', demo: 'https://www.mk-ops.tr' },
-  { live: 'https://mk-digital-systems.vercel.app/en', demo: null },
-]
+// software_projects slugları (Projeyi İncele linki için)
+const softwareProjectSlugs = ['mk-ops', 'mk-digital-systems']
 
 // demo_projects arka plan görselleri (i18n demo_projects dizisiyle aynı sıra)
 const demoProjectImages = [
@@ -47,6 +44,22 @@ const demoProjectImages = [
   '/images/projects/gonupusulasi.jpeg',
   '/images/projects/siirdunyasi.jpeg',
   '/images/projects/mavi-kadrajla-ogreniyorum.jpeg',
+]
+
+// demo_projects slugları (Projeyi İncele linki için)
+const demoProjectSlugs = [
+  'musty-music',
+  'mavi-iletisim',
+  'hukuk-burosu',
+  'mavi-danismanlik',
+  'guzellik-salonu',
+  'mavi-sarkilar',
+  'aria',
+  'mavi-kadraj',
+  'kadraj-rotam',
+  'gonul-pusulasi',
+  'siir-dunyasi',
+  'mavi-kadrajla-ogreniyorum',
 ]
 
 export default function SoftwareDigital() {
@@ -115,7 +128,8 @@ export default function SoftwareDigital() {
               {projects.map((p, index) => {
                 const bgImage = softwareProjectImages[index]
                 const description = descOverrides[index] || p.description
-                const links = softwareProjectLinks[index] || {}
+                const slug = softwareProjectSlugs[index]
+                const detailHref = language === 'tr' ? `/tr/projects/${slug}` : `/projects/${slug}`
 
                 return (
                   <motion.div
@@ -189,42 +203,15 @@ export default function SoftwareDigital() {
                         </div>
                       )}
 
-                      {/* Butonlar */}
-                      <div className="mt-auto pt-4 border-t border-[#F1F5F9] flex flex-wrap gap-2">
-                        {/* Canlı Site */}
-                        {links.live && (
-                          <a
-                            href={links.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-[10px] text-sm font-semibold bg-[#2563EB] text-white border border-[#2563EB] transition-all duration-300 hover:bg-[#1d4ed8] hover:border-[#1d4ed8] hover:shadow-[0_4px_16px_rgba(37,99,235,0.35)] hover:-translate-y-0.5"
-                          >
-                            <ExternalLink className="w-3.5 h-3.5" />
-                            {t.live || 'Canlı Site'}
-                          </a>
-                        )}
-                        {/* Canlı Demo (sadece 1. kart — MK OPS) */}
-                        {links.demo && index === 0 && (
-                          <a
-                            href={links.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-[10px] text-sm font-semibold bg-white text-[#1E293B] border border-[#E2E8F0] transition-all duration-300 hover:bg-[#F8FAFC] hover:border-[#CBD5E1] hover:-translate-y-0.5"
-                          >
-                            <ExternalLink className="w-3.5 h-3.5 text-[#64748B]" />
-                            {language === 'tr' ? 'Canlı Demo' : 'Live Demo'}
-                          </a>
-                        )}
-                        {/* Teklif Al (sadece 1. kart — MK OPS) */}
-                        {index === 0 && (
-                          <a
-                            href="#contact"
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-[10px] text-sm font-semibold bg-[#25D366] text-white border border-[#25D366] transition-all duration-300 hover:bg-[#1ebe5d] hover:border-[#1ebe5d] hover:shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:-translate-y-0.5"
-                          >
-                            <MessageCircle className="w-3.5 h-3.5" />
-                            {t.cta_request || 'Teklif Al'}
-                          </a>
-                        )}
+                      {/* Buton: Projeyi İncele */}
+                      <div className="mt-auto pt-4 border-t border-[#F1F5F9]">
+                        <Link
+                          href={detailHref}
+                          className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#2563EB] transition-all duration-200 hover:gap-2.5"
+                        >
+                          {language === 'tr' ? 'Projeyi İncele' : 'View Project'}
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </Link>
                       </div>
                     </div>
                   </motion.div>
@@ -256,9 +243,10 @@ export default function SoftwareDigital() {
                         description={project?.description || ''}
                         tags={Array.isArray(project?.tags) ? project.tags : []}
                         url={project?.url}
-                        ctaLabel={t.view_demo || 'View Demo'}
                         typeLabel="Demo"
                         image={demoProjectImages[index] || null}
+                        slug={demoProjectSlugs[index] || null}
+                        locale={language}
                       />
                     </motion.div>
                   ))}
