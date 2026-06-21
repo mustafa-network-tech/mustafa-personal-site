@@ -1,6 +1,7 @@
 // components/SoftwareDigital.js
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { LayoutDashboard, Globe, ExternalLink, MessageCircle, Github, CheckCircle } from 'lucide-react'
@@ -16,6 +17,28 @@ const projectLinks = [
 const projectGithubLinks = [null, null]
 
 const projectIcons = [LayoutDashboard, Globe]
+
+// software_projects için arka plan görselleri (index sırası i18n dosyasıyla eşleşir)
+const softwareProjectImages = [
+  '/images/projects/mk-ops.jpeg',
+  '/images/projects/mk-digital-systems.jpeg',
+]
+
+// demo_projects için arka plan görselleri (i18n demo_projects dizisiyle aynı sıra)
+const demoProjectImages = [
+  '/images/projects/musty-music.jpeg',
+  '/images/projects/mavi-iletisim.jpeg',
+  '/images/projects/hukuk.jpeg',
+  '/images/projects/mavi-danismanlik.jpeg',
+  '/images/projects/guzellik-saloni.jpeg',
+  '/images/projects/mavi-sarkiler.jpeg',
+  '/images/projects/aria.jpeg',
+  '/images/projects/mavi-kadraj.jpeg',
+  '/images/projects/kadraj-rotam.jpeg',
+  '/images/projects/gonupusulasi.jpeg',
+  '/images/projects/siirdunyasi.jpeg',
+  '/images/projects/mavi-kadrajla-ogreniyorum.jpeg',
+]
 
 function getCtaLabel(ctaKey, t) {
   switch (ctaKey) {
@@ -139,65 +162,80 @@ export default function SoftwareDigital() {
             </div>
 
             <div className="projects-grid grid grid-cols-2 md:grid-cols-3 gap-[30px] mb-16">
-              {projects.map((p, index) => (
-                <motion.div
-                  key={`${p.title}-${index}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="telekom-glass-card group relative rounded-[18px] transition-all duration-[0.35s] ease-out"
-                  style={{ padding: 30 }}
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="card-icon-container shrink-0">
-                      <p.IconComponent className="w-6 h-6" />
-                    </div>
-                    <span className="card-tag inline-block">
-                      {p.type}
-                    </span>
-                  </div>
-
-                  <h3
-                    className="telekom-card-title text-[18px] font-semibold mb-3 leading-tight text-[#1E293B]"
+              {projects.map((p, index) => {
+                const bgImage = softwareProjectImages[index]
+                return (
+                  <motion.div
+                    key={`${p.title}-${index}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="group relative rounded-[18px] overflow-hidden transition-all duration-[0.35s] ease-out hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
                   >
-                    {p.title}
-                  </h3>
+                    {/* Arka plan görseli */}
+                    {bgImage && (
+                      <>
+                        <Image
+                          src={bgImage}
+                          alt={p.title}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          sizes="(max-width: 768px) 50vw, 33vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/52 to-black/82 transition-all duration-500 group-hover:from-black/45 group-hover:to-black/88" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none" />
+                      </>
+                    )}
 
-                  <p
-                    className="text-sm mb-4 text-[#475569]"
-                    style={{ lineHeight: 1.6 }}
-                  >
-                    {p.description}
-                  </p>
+                    {/* İçerik */}
+                    <div className="relative z-10" style={{ padding: 26 }}>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-white/15 border border-white/25 backdrop-blur-sm">
+                          <p.IconComponent className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="inline-block text-[11px] font-semibold px-3 py-1 rounded-full text-white/85 bg-white/15 border border-white/25 backdrop-blur-sm">
+                          {p.type}
+                        </span>
+                      </div>
 
-                  {p.focus?.length ? (
-                    <div className="mb-4 space-y-2">
-                      <div className="text-[11px] font-bold text-[#64748B] uppercase tracking-widest">{t.focus || ''}</div>
-                      <ul className="space-y-1.5">
-                        {(p.focus || []).map((f) => (
-                          <li key={f} className="flex items-start gap-2 text-sm text-[#475569]">
-                            <CheckCircle className="w-4 h-4 shrink-0 mt-0.5 text-[#2563EB]" />
-                            <span className="leading-snug">{f}</span>
-                          </li>
+                      <h3 className="text-[18px] font-bold mb-3 leading-tight text-white drop-shadow-md">
+                        {p.title}
+                      </h3>
+
+                      <p className="text-sm mb-4 text-white/78" style={{ lineHeight: 1.6 }}>
+                        {p.description}
+                      </p>
+
+                      {p.focus?.length ? (
+                        <div className="mb-4 space-y-2">
+                          <div className="text-[11px] font-bold text-white/55 uppercase tracking-widest">{t.focus || ''}</div>
+                          <ul className="space-y-1.5">
+                            {(p.focus || []).map((f) => (
+                              <li key={f} className="flex items-start gap-2 text-sm text-white/78">
+                                <CheckCircle className="w-4 h-4 shrink-0 mt-0.5 text-white/70" />
+                                <span className="leading-snug">{f}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : null}
+
+                      <div className="flex flex-wrap gap-1.5">
+                        {(p.tags || []).map((tag) => (
+                          <span key={tag} className="inline-block text-[11px] font-medium px-2.5 py-0.5 rounded-full text-white/70 bg-white/10 border border-white/20">
+                            {tag}
+                          </span>
                         ))}
-                      </ul>
+                      </div>
+
+                      <div className="mt-4 pt-4 border-t border-white/20">
+                        <CtaButton project={p} index={index} t={t} darkCard />
+                      </div>
                     </div>
-                  ) : null}
-
-                  <div className="flex flex-wrap gap-2">
-                    {(p.tags || []).map((tag) => (
-                      <span key={tag} className="card-tag inline-block">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-4 pt-4 border-t border-[rgba(0,0,0,0.08)]">
-                    <CtaButton project={p} index={index} t={t} />
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                )
+              })}
             </div>
 
             {/* Demo Sites – subheading + 6 cards */}
@@ -227,6 +265,7 @@ export default function SoftwareDigital() {
                         badge={t.demo_card_badge || ''}
                         ctaLabel={t.view_demo || 'View Demo'}
                         typeLabel="Demo"
+                        image={demoProjectImages[index] || null}
                       />
                     </motion.div>
                   ))}
