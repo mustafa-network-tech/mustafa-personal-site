@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import { getProjectTypeIcon } from '@/components/projects/projectVisuals'
+import ProjectCardCta from '@/components/projects/ProjectCardCta'
 
 /**
  * Kompakt proje kartı — görselsiz, yazılım portföyü vitrini.
@@ -55,10 +55,7 @@ export default function PortfolioCard({ project, locale = 'tr' }) {
       )}
 
       <div className="mt-auto pt-3 border-t border-[#F1F5F9]">
-        <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#2563EB] transition-[gap] duration-200 group-hover:gap-2.5">
-          {btnLabel}
-          <ArrowRight className="w-3.5 h-3.5" />
-        </span>
+        <ProjectCardCta label={btnLabel} />
       </div>
     </Link>
   )

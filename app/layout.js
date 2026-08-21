@@ -1,6 +1,6 @@
 // app/layout.js
 import { headers } from 'next/headers'
-import { Inter, Plus_Jakarta_Sans, Dancing_Script, JetBrains_Mono } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans, Dancing_Script, JetBrains_Mono, Caveat } from 'next/font/google'
 import Script from 'next/script'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import './globals.css'
@@ -13,6 +13,7 @@ import { getPersonSchema, getWebsiteSchema, getOrganizationSchema } from '@/seo/
 const inter = Inter({ subsets: ['latin'] })
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
 const dancingScript = Dancing_Script({ subsets: ['latin'], variable: '--font-handwritten' })
+const caveat = Caveat({ subsets: ['latin', 'latin-ext'], weight: ['500', '600'], variable: '--font-card-script' })
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
 const LOCALE_HEADER = 'x-path-locale'
@@ -38,7 +39,7 @@ export default async function RootLayout({ children }) {
   const orgSchema = getOrganizationSchema()
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.className} ${plusJakarta.variable} ${dancingScript.variable} ${jetbrainsMono.variable} bg-main text-primary`}>
+      <body className={`${inter.className} ${plusJakarta.variable} ${dancingScript.variable} ${caveat.variable} ${jetbrainsMono.variable} bg-main text-primary`}>
         <JsonLd data={[personSchema, websiteSchema, orgSchema]} />
         <LanguageProvider initialLocale={locale}>
           <LayoutShell>{children}</LayoutShell>

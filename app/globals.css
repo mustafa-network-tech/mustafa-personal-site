@@ -159,6 +159,31 @@ section[id] {
   color: #1D4ED8;
 }
 
+/* Proje kartı CTA — modern el yazısı, amber */
+.project-card-cta {
+  font-family: var(--font-card-script), cursive;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: #D97706;
+  transition: color 250ms ease;
+}
+.project-card-cta-icon {
+  transition: transform 250ms ease;
+}
+.group:hover .project-card-cta {
+  color: #B45309;
+}
+.group:hover .project-card-cta-icon {
+  transform: translateX(4px);
+}
+@media (max-width: 640px) {
+  .project-card-cta {
+    font-size: 15px;
+  }
+}
+
 /* Hero: soft curved bottom (curve belongs to hero); next section starts normally */
 .hero-section {
   position: relative;
