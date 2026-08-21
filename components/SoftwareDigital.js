@@ -1,19 +1,11 @@
 // components/SoftwareDigital.js
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ExternalLink, MessageCircle, CheckCircle } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import DemoProjectCard from '@/components/DemoProjectCard'
 import ClientFeedback from '@/components/ClientFeedback'
-
-// software_projects arka plan görselleri (i18n sırasıyla)
-const softwareProjectImages = [
-  '/images/projects/mk-ops.jpeg',
-  '/images/projects/mk-digital-systems.jpeg',
-]
 
 // software_projects açıklama override (kullanıcı isteğiyle güncellendi)
 const softwareProjectDescriptions = {
@@ -29,24 +21,6 @@ const softwareProjectDescriptions = {
 
 // software_projects slugları (Projeyi İncele linki için)
 const softwareProjectSlugs = ['mk-ops', 'mk-digital-systems']
-
-// demo_projects arka plan görselleri (i18n demo_projects dizisiyle aynı sıra)
-const demoProjectImages = [
-  '/images/projects/musty-music.jpeg',
-  '/images/projects/mavi-iletisim.jpeg',
-  '/images/projects/hukuk.jpeg',
-  '/images/projects/mavi-danismanlik.jpeg',
-  '/images/projects/guzellik-saloni.jpeg',
-  '/images/projects/mavi-sarkiler.jpeg',
-  '/images/projects/aria.jpeg',
-  '/images/projects/mavi-kadraj.jpeg',
-  '/images/projects/kadraj-rotam.jpeg',
-  '/images/projects/gonupusulasi.jpeg',
-  '/images/projects/siirdunyasi.jpeg',
-  '/images/projects/mavi-kadrajla-ogreniyorum.jpeg',
-  '/images/projects/namehup.jpeg',
-  '/images/projects/schnappli.jpeg',
-]
 
 // demo_projects slugları (Projeyi İncele linki için)
 const demoProjectSlugs = [
@@ -128,96 +102,29 @@ export default function SoftwareDigital() {
             </div>
 
             {/* ── Software Projects kartları ── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
               {projects.map((p, index) => {
-                const bgImage = softwareProjectImages[index]
                 const description = descOverrides[index] || p.description
                 const slug = softwareProjectSlugs[index]
-                const detailHref = language === 'tr' ? `/tr/projects/${slug}` : `/projects/${slug}`
 
                 return (
                   <motion.div
                     key={`${p.title}-${index}`}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="group flex flex-col rounded-[20px] overflow-hidden border border-[#E2E8F0] bg-white shadow-[0_2px_10px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(15,23,42,0.13)]"
+                    transition={{ duration: 0.35, delay: index * 0.08 }}
+                    className="h-full"
                   >
-                    {/* Üst: Proje görseli */}
-                    <div className="relative w-full shrink-0 overflow-hidden bg-[#F1F5F9]" style={{ height: 220 }}>
-                      {bgImage && (
-                        <Image
-                          src={bgImage}
-                          alt={p.title}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                      )}
-                    </div>
-
-                    {/* Alt: İçerik (saf beyaz, görsel yok) */}
-                    <div className="flex flex-col flex-grow p-6">
-                      {/* Tip etiketi */}
-                      <div className="mb-3">
-                        <span className="inline-block text-[11px] font-semibold px-3 py-1 rounded-full bg-[#EEF2FF] text-[#4F46E5] border border-[#E0E7FF]">
-                          {p.type}
-                        </span>
-                      </div>
-
-                      {/* Başlık */}
-                      <h3 className="text-[20px] font-bold text-[#0F172A] mb-2 leading-tight">
-                        {p.title}
-                      </h3>
-
-                      {/* Açıklama */}
-                      <p className="text-[14px] text-[#64748B] leading-relaxed mb-4 line-clamp-3">
-                        {description}
-                      </p>
-
-                      {/* Odak noktaları */}
-                      {p.focus.length > 0 && (
-                        <div className="mb-4">
-                          <div className="text-[11px] font-bold text-[#94A3B8] uppercase tracking-widest mb-2">
-                            {t.focus || ''}
-                          </div>
-                          <ul className="space-y-1.5">
-                            {p.focus.map((f) => (
-                              <li key={f} className="flex items-start gap-2 text-[13px] text-[#475569]">
-                                <CheckCircle className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#2563EB]" />
-                                <span className="leading-snug">{f}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-
-                      {/* Teknoloji etiketleri */}
-                      {p.tags.length > 0 && (
-                        <div className="flex flex-wrap gap-1.5 mb-4">
-                          {p.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="inline-block text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0]"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-
-                      {/* Buton: Projeyi İncele */}
-                      <div className="mt-auto pt-4 border-t border-[#F1F5F9]">
-                        <Link
-                          href={detailHref}
-                          className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#2563EB] transition-all duration-200 hover:gap-2.5"
-                        >
-                          {language === 'tr' ? 'Projeyi İncele' : 'View Project'}
-                          <ExternalLink className="w-3.5 h-3.5" />
-                        </Link>
-                      </div>
-                    </div>
+                    <DemoProjectCard
+                      title={p.title}
+                      description={description}
+                      tags={p.tags}
+                      typeLabel={p.type}
+                      slug={slug}
+                      locale={language}
+                      focus={p.focus}
+                    />
                   </motion.div>
                 )
               })}
@@ -232,14 +139,14 @@ export default function SoftwareDigital() {
                 >
                   {t.demo_section_title}
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {(t.demo_projects || []).map((project, index) => (
                     <motion.div
                       key={`demo-${project?.title ?? 'demo'}-${index}`}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 16 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.06 }}
+                      transition={{ duration: 0.35, delay: index * 0.04 }}
                       className="h-full"
                     >
                       <DemoProjectCard
@@ -248,7 +155,6 @@ export default function SoftwareDigital() {
                         tags={Array.isArray(project?.tags) ? project.tags : []}
                         url={project?.url}
                         typeLabel="Demo"
-                        image={demoProjectImages[index] || null}
                         slug={demoProjectSlugs[index] || null}
                         locale={language}
                       />

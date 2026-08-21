@@ -22,7 +22,7 @@ export default function PortfolioCard({ project, locale = 'tr' }) {
       aria-label={`${data.title} — ${btnLabel}`}
     >
       <div className="flex items-start justify-between gap-3 mb-2.5">
-        <span className="inline-block max-w-[calc(100%-2.25rem)] truncate text-[11px] font-semibold tracking-wide uppercase text-[#4F46E5] px-2 py-0.5 rounded-md bg-[#EEF2FF] border border-[#E0E7FF]">
+        <span className="inline-block max-w-[calc(100%-2.25rem)] truncate text-[11px] font-semibold tracking-wide uppercase text-[#4F46E5] px-2 py-0.5 rounded-md bg-[#EEF2FF] border border-[#E0E7FF] transition-colors duration-200 group-hover:border-[#818CF8]">
           {category}
         </span>
         <span
@@ -46,7 +46,7 @@ export default function PortfolioCard({ project, locale = 'tr' }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[11px] font-medium text-[#475569] px-2 py-0.5 rounded-md bg-[#F8FAFC] border border-[#E2E8F0]"
+              className="text-[11px] font-medium tracking-tight text-[#475569] px-2 py-0.5 rounded-md bg-[#F8FAFC] border border-[#E2E8F0] transition-colors duration-200 group-hover:border-[#C7D2FE] group-hover:bg-white"
             >
               {tag}
             </span>

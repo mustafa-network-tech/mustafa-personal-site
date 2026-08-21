@@ -4,13 +4,11 @@ import PortfolioCard from '@/components/projects/PortfolioCard'
 import { getProjectTypeIcon, getProjectStatus } from '@/components/projects/projectVisuals'
 import { getProjectDetailSections } from '@/seo/metadata'
 
-function CaseSection({ index, title, children }) {
+function CaseSection({ title, children }) {
   return (
     <section>
-      <h2 className="flex items-baseline gap-3 text-[17px] font-semibold text-[#0F172A] mb-4">
-        <span className="font-mono text-[12px] font-medium tracking-wider text-[#94A3B8]">{index}</span>
-        <span className="text-[#CBD5E1]" aria-hidden="true">—</span>
-        <span>{title}</span>
+      <h2 className="text-[17px] font-semibold text-[#0F172A] mb-4">
+        {title}
       </h2>
       {children}
     </section>
@@ -70,11 +68,8 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
           {data.features.map((feature, i) => (
             <div
               key={i}
-              className="rounded-[12px] border border-[#E2E8F0] bg-white px-4 py-3.5"
+              className="rounded-[12px] border border-[#E2E8F0] bg-white px-4 py-3.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#C7D2FE] hover:bg-[#FAFBFF]"
             >
-              <span className="block font-mono text-[11px] text-[#94A3B8] mb-1.5">
-                {String(i + 1).padStart(2, '0')}
-              </span>
               <p className="text-[14px] text-[#334155] leading-snug">{feature}</p>
             </div>
           ))}
@@ -91,7 +86,7 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-block text-[13px] font-medium px-3 py-1 rounded-md bg-white border border-[#E2E8F0] text-[#334155]"
+              className="inline-flex items-center text-[12px] font-medium tracking-tight px-2.5 py-1 rounded-md bg-white border border-[#E2E8F0] text-[#475569] transition-all duration-200 hover:border-[#818CF8] hover:text-[#3730A3] hover:bg-[#EEF2FF]"
             >
               {tag}
             </span>
@@ -106,7 +101,7 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
       title: locale === 'tr' ? 'Proje Durumu' : 'Project Status',
       body: (
         <p className="text-[15px] text-[#475569]">
-          <span className="inline-flex items-center px-2.5 py-1 rounded-md border border-[#E2E8F0] bg-white text-[13px] font-medium text-[#0F172A]">
+          <span className="inline-flex items-center px-2.5 py-1 rounded-md border border-[#E2E8F0] bg-white text-[13px] font-medium text-[#0F172A] transition-all duration-200 hover:border-[#818CF8] hover:bg-[#EEF2FF]">
             {status}
           </span>
         </p>
@@ -133,7 +128,7 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
             >
               <Icon className="h-4 w-4" />
             </span>
-            <span className="inline-block text-[11px] font-semibold tracking-wide uppercase text-[#4F46E5] px-2.5 py-1 rounded-md bg-[#EEF2FF] border border-[#E0E7FF]">
+            <span className="inline-block text-[11px] font-semibold tracking-wide uppercase text-[#4F46E5] px-2.5 py-1 rounded-md bg-[#EEF2FF] border border-[#E0E7FF] transition-colors duration-200 hover:border-[#818CF8] hover:bg-[#E0E7FF]">
               {category}
             </span>
           </div>
@@ -202,12 +197,8 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 md:py-16">
         <div className="max-w-3xl space-y-12">
-          {sections.map((section, i) => (
-            <CaseSection
-              key={section.key}
-              index={String(i + 1).padStart(2, '0')}
-              title={section.title}
-            >
+          {sections.map((section) => (
+            <CaseSection key={section.key} title={section.title}>
               {section.body}
             </CaseSection>
           ))}
