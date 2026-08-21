@@ -581,3 +581,10 @@ section[id] {
 @media (max-width: 768px) {
   .showcase-hero-particles .showcase-hero-particle:nth-child(n+6) { display: none; }
 }
+
+/* Proje detay — sade header yüzeyi */
+.project-case-header {
+  background-color: #F8FAFC;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 0.8px, transparent 0.8px);
+  background-size: 16px 16px;
+}

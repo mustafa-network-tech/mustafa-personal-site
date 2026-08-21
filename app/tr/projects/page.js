@@ -35,22 +35,22 @@ export default function ProjectsTr() {
       <div className="min-h-screen bg-[#F8FAFC]">
         {/* ── Sayfa başlığı ── */}
         <div className="bg-white border-b border-[#E2E8F0]">
-          <div className="max-w-6xl mx-auto px-6 md:px-12 py-14">
-            <span className="inline-block text-[12px] font-semibold tracking-widest text-[#4F46E5] uppercase mb-4">
+          <div className="max-w-6xl mx-auto px-6 md:px-12 py-10 md:py-12">
+            <span className="inline-block text-[12px] font-semibold tracking-widest text-[#4F46E5] uppercase mb-3">
               Portföy
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0F172A] leading-tight mb-4">
+            <h1 className="text-3xl md:text-4xl font-semibold text-[#0F172A] leading-tight tracking-tight mb-3">
               Projeler
             </h1>
-            <p className="text-lg text-[#475569] max-w-2xl leading-relaxed">
+            <p className="text-base md:text-lg text-[#475569] max-w-2xl leading-relaxed">
               {meta.description}
             </p>
           </div>
         </div>
 
         {/* ── Proje grid ── */}
-        <div className="max-w-6xl mx-auto px-6 md:px-12 py-14">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 py-10 md:py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {ALL_PROJECTS.map((project) => (
               <PortfolioCard
                 key={project.slug}

@@ -10,10 +10,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { getKey } from '@/lib/i18n/mergeMessages'
 import {
   homeHrefFor,
-  isTurkishPath,
   toEnglishPath,
   toTurkishPath,
-  vitrinHrefFor,
 } from '@/lib/i18n/routes'
 
 export default function Header() {
@@ -21,9 +19,7 @@ export default function Header() {
   const pathname = usePathname()
   const router = useRouter()
   const { language, setLanguage, t } = useLanguage()
-  const isTr = isTurkishPath(pathname)
   const homeHref = homeHrefFor(pathname)
-  const vitrinHref = vitrinHrefFor(pathname)
 
   const switchTo = (lang) => {
     setLanguage(lang)
@@ -40,7 +36,6 @@ export default function Header() {
     { key: 'menu_infrastructure', href: `${homeHref}#telekom` },
     { key: 'menu_narrative', href: `${homeHref}#software-approach` },
     { key: 'menu_web', href: `${homeHref}#software` },
-    { key: 'menu_vitrin', href: vitrinHref, isPage: true },
     { key: 'menu_photography', href: `${homeHref}#photography` },
     { key: 'menu_principles', href: `${homeHref}#principles` },
     { key: 'menu_communication', href: `${homeHref}#contact-form` },
