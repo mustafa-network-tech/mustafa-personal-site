@@ -16,7 +16,7 @@ export const PROJECTS = [
   { label: 'MustafaOner.net', typeKey: 'showcase_type_website', titleKey: 'showcase_card_mustafaoner', url: 'https://www.mustafaoner.net', descKey: 'showcase_card_desc_mustafa_oner' },
   { label: 'Mavi Kadraj', typeKey: 'showcase_type_website', titleKey: 'showcase_card_mavi_kadraj', url: 'https://www.mavikadraj.com.tr', descKey: 'showcase_card_desc_mavi_kadraj' },
   { label: 'Kadraj Rotam', typeKey: 'showcase_type_website', titleKey: 'showcase_card_kadraj_rotam', url: 'https://kadrajrotam.com.tr', descKey: 'showcase_card_desc_kadraj_rotam' },
-  { label: 'Gönül Pusulası', typeKey: 'showcase_type_website', titleKey: 'showcase_card_gonul_pusulasi', url: 'https://gonulpusulasi.vercel.app/', descKey: 'showcase_card_desc_gonul_pusulasi' },
+  { label: 'Gönül Pusulası', typeKey: 'showcase_type_website', titleKey: 'showcase_card_gonul_pusulasi', url: 'https://gonulpusulasi.oner334480.workers.dev/', descKey: 'showcase_card_desc_gonul_pusulasi' },
   { label: 'Şiir Dünyası', typeKey: 'showcase_type_website', titleKey: 'showcase_card_siir_dunyasi', url: 'https://siir-dunyasi1.vercel.app/', descKey: 'showcase_card_desc_siir_dunyasi' },
   { label: 'Mavi Kadrajla Öğreniyorum', typeKey: 'showcase_type_app', titleKey: 'showcase_card_mavi_kadrajla_ogreniyorum', url: 'https://play.google.com/store/apps/details?id=com.mavikadaj.learn', descKey: 'showcase_card_desc_mavi_kadrajla_ogreniyorum' },
 ]
