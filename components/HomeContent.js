@@ -25,6 +25,8 @@ Object.assign(COPY.tr, {
   processLead: 'Keşif → Tasarım → Geliştirme → Test → Yayın',
 })
 COPY.en.processLead = 'Discover → Design → Build → Test → Launch'
+COPY.tr.archive = 'Tüm Projeler'
+COPY.en.archive = 'All Projects'
 SERVICES.tr[0][1] = 'DİJİTAL DENEYİMLER'
 SERVICES.tr[1][1] = 'İŞ SİSTEMLERİ'
 SERVICES.tr[2][1] = 'GÖRSEL İÇERİK'

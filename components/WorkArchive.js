@@ -1,10 +1,18 @@
-'use client'
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
-const demos=new Set(['musty-music','mavi-iletisim','hukuk-burosu','mavi-danismanlik','guzellik-salonu','mavi-sarkilar','aria'])
-const operations=new Set(['mk-ops','mk-digital-systems'])
-const mobiles=new Set(['schnappli','mavi-kadrajla-ogreniyorum'])
-const category=p=>demos.has(p.slug)?'experiments':operations.has(p.slug)?'operations':mobiles.has(p.slug)?'mobile':'web'
-export default function WorkArchive({projects,locale='tr'}){const [filter,setFilter]=useState('all');const prefix=locale==='tr'?'/tr':'';const labels=locale==='tr'?[['all','Tümü'],['operations','Operasyon'],['web','Web'],['mobile','Mobil'],['experiments','Deneyler']]:[['all','All'],['operations','Operations'],['web','Web'],['mobile','Mobile'],['experiments','Experiments']];const visible=projects.filter(p=>filter==='all'||category(p)===filter);return <div className="studio-site min-h-screen bg-[#f1efe9] text-[#151515]"><header className="studio-section pb-12"><div className="studio-shell"><p className="studio-kicker">WORK / ARCHIVE</p><h1 className="studio-display mt-8 text-[clamp(4rem,10vw,10rem)] leading-[.82] tracking-[-.07em]">SELECTED<br/>WORK</h1><p className="mt-8 max-w-xl text-xl text-black/55">{locale==='tr'?'Dijital ürünler, sistemler ve deneyimler. Gerçek işler ile concept çalışmalar açıkça ayrılmıştır.':'Digital products, systems and experiences. Shipped work and concept studies are clearly separated.'}</p></div></header><main className="studio-shell pb-28"><div className="sticky top-[70px] z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-black/15 bg-[#f1efe9]/95 px-4 py-4 backdrop-blur md:mx-0 md:px-0">{labels.map(([key,label])=><button key={key} onClick={()=>setFilter(key)} className={`solution-chip whitespace-nowrap ${filter===key?'is-active':''}`} aria-pressed={filter===key}>{label}</button>)}</div><div className="mt-12 grid gap-x-4 gap-y-16 md:grid-cols-2">{visible.map((p,i)=>{const d=p[locale]||p.tr;const wide=i%5===0;return <article key={p.slug} className={wide?'md:col-span-2':''}><Link href={`${prefix}/projects/${p.slug}`} className={`group block ${wide?'md:grid md:grid-cols-12 md:items-end md:gap-8':''}`}><div className={`relative aspect-[16/10] overflow-hidden bg-[#d9d7d1] ${wide?'md:col-span-8':''}`}><Image src={p.image} alt={d.title} fill sizes={wide?'80vw':'50vw'} className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"/><span className="absolute left-4 top-4 bg-[#151515] px-3 py-1.5 text-[10px] tracking-[.15em] text-white">{demos.has(p.slug)?'CONCEPT / DEMO':'SELECTED WORK'}</span></div><div className={wide?'md:col-span-4 md:pb-4':''}><p className="studio-kicker mt-5 text-black/45">{p.category[locale]}</p><div className="mt-2 flex items-end justify-between gap-4"><h2 className="studio-display text-3xl tracking-[-.04em] md:text-4xl">{d.title}</h2><ArrowUpRight className="h-5 w-5 shrink-0"/></div><p className="mt-3 max-w-xl text-black/55">{d.shortDesc}</p></div></Link></article>})}</div></main></div>}
+
+export default function WorkArchive({ projects, locale = 'tr' }) {
+  const tr = locale === 'tr'
+  return <div className="studio-site min-h-screen text-[#151515]" style={{backgroundColor:'#f1efe9'}}>
+    <header className="pb-12 pt-10 md:pt-16"><div className="studio-shell">
+      <p className="studio-kicker">{tr ? 'PROJELER' : 'PROJECTS'}</p>
+      <h1 className="studio-display mt-8 whitespace-pre-line text-[clamp(4rem,10vw,10rem)] leading-[.82] tracking-[-.07em]">{tr ? 'TÜM\nPROJELER' : 'ALL\nPROJECTS'}</h1>
+      <p className="mt-8 max-w-xl text-xl text-black/55">{tr ? 'Web siteleri, dijital ürünler, mobil uygulamalar ve operasyon sistemleri.' : 'Websites, digital products, mobile applications and operation systems.'}</p>
+    </div></header>
+    <main className="studio-shell pb-28"><div className="border-t border-black/15">
+      {projects.map((project) => { const content=project[locale]||project.tr; return <article key={project.slug} className="grid gap-5 border-b border-black/15 py-8 md:grid-cols-12 md:items-center md:py-10">
+        <div className="md:col-span-5">{project.liveUrl ? <a href={project.liveUrl} target="_blank" rel="noreferrer" className="group inline-flex max-w-full items-center gap-3 rounded-full border border-black/20 bg-white px-5 py-3 text-sm font-semibold transition hover:border-[#151515] hover:bg-[#151515] hover:text-white"><span className="truncate">{content.title}</span><ArrowUpRight className="h-4 w-4 shrink-0"/></a> : <span className="inline-flex max-w-full items-center rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-black/40">{content.title}</span>}</div>
+        <div className="md:col-span-7"><p className="leading-relaxed text-black/60">{content.shortDesc}</p>{!project.liveUrl&&<p className="mt-2 text-xs font-semibold uppercase tracking-[.12em] text-black/35">{tr?'Canlı bağlantı yakında':'Live link coming soon'}</p>}</div>
+      </article>})}
+    </div></main>
+  </div>
+}
