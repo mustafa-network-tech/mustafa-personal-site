@@ -1,126 +1,104 @@
 'use client'
 
-import { useMemo } from 'react'
-import { motion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
+import { ArrowLeft, ArrowRight, X } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { customerTestimonials } from '@/lib/testimonialsData'
 
-function avatarInitials(displayName) {
-  if (!displayName || typeof displayName !== 'string') return '?'
-  const cleaned = displayName.replace(/\./g, '').trim()
-  const parts = cleaned.split(/\s+/).filter(Boolean)
-  if (parts.length >= 2) {
-    const a = parts[0][0]
-    const b = parts[parts.length - 1][0]
-    return (a + b).toUpperCase()
-  }
-  return cleaned.slice(0, 2).toUpperCase() || '?'
+function initials(name) {
+  return name.replace(/\./g, '').split(/\s+/).map((part) => part[0]).join('').slice(0, 2).toLocaleUpperCase('tr-TR')
 }
 
-const avatarGradients = [
-  'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)',
-  'linear-gradient(135deg, #64748B 0%, #334155 100%)',
-  'linear-gradient(135deg, #0EA5E9 0%, #0369A1 100%)',
-  'linear-gradient(135deg, #6366F1 0%, #4338CA 100%)',
-  'linear-gradient(135deg, #475569 0%, #1E293B 100%)',
-]
-
-function TestimonialCard({ item, index }) {
-  const initials = avatarInitials(item.name)
-  const bg = avatarGradients[index % avatarGradients.length]
-
+function TestimonialCard({ item, language, onRead }) {
+  const review = item.review[language] || item.review.tr
+  const service = item.service[language] || item.service.tr
+  const isLong = review.length > 190
   return (
-    <article
-      className="group relative w-[min(18rem,calc(100vw-2.5rem))] max-w-[320px] shrink-0 sm:w-[300px] md:w-[320px] rounded-xl border border-slate-200/90 bg-white/75 backdrop-blur-sm px-6 py-5 shadow-[0_4px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-[0_12px_40px_rgba(37,99,235,0.12)] snap-center"
-      style={{ boxShadow: '0 4px 24px rgba(15,23,42,0.06), inset 0 1px 0 rgba(255,255,255,0.85)' }}
-    >
-      <div className="flex items-start gap-4">
-        <div
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-xs font-semibold tracking-tight text-white ring-2 ring-white/80"
-          style={{ background: bg }}
-          aria-hidden
-        >
-          {initials}
-        </div>
-        <div className="min-w-0 flex-1 pt-0.5">
-          <p className="text-[15px] font-semibold text-[#0F172A]">{item.name || ''}</p>
-          <p className="mt-0.5 text-xs font-medium leading-snug text-[#64748B]">{item.role || ''}</p>
-        </div>
+    <article className="testimonial-card flex h-[280px] flex-col rounded-2xl border border-black/10 bg-white p-6 md:p-7">
+      <div className="flex items-center gap-4">
+        <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#151515] text-xs font-semibold tracking-[.08em] text-white" aria-hidden="true">{initials(item.name)}</div>
+        <div className="min-w-0"><h3 className="font-semibold text-[#151515]">{item.name}</h3><p className="mt-1 text-xs leading-snug text-black/50">{service}</p></div>
       </div>
-      <p className="mt-4 text-sm leading-relaxed text-[#475569] line-clamp-3">{item.quote || ''}</p>
+      {item.rating != null && <p className="mt-6 text-sm tracking-[.14em]" aria-label={`${item.rating} / 5`}>{'★'.repeat(item.rating)}</p>}
+      <p className={`mt-6 text-sm leading-6 text-black/70 ${isLong ? 'line-clamp-4' : ''}`}>“{review}”</p>
+      <div className="mt-auto flex items-end justify-between gap-4 pt-6">
+        <div className="text-[10px] font-semibold uppercase tracking-[.14em] text-black/35">
+          {item.source === 'Armut' && (language === 'tr' ? 'Armut müşteri yorumu' : 'Customer review on Armut')}
+          {!item.source && item.location && (item.location[language] || item.location.tr)}
+        </div>
+        {isLong && <button type="button" onClick={onRead} className="shrink-0 border-b border-black/35 pb-1 text-xs font-semibold text-[#151515] transition hover:border-black">{language === 'tr' ? 'Devamını oku' : 'Read more'}</button>}
+      </div>
     </article>
   )
 }
 
-export default function ClientFeedback() {
-  const { t } = useLanguage()
-  const items = (t.client_feedback_items || []).filter(
-    (item) => item && typeof item === 'object' && item.name && item.quote
-  )
-
-  const loopItems = useMemo(() => (items.length ? [...items, ...items] : []), [items])
-
-  if (!items.length) return null
-
+function TestimonialDialog({ item, language, onClose, returnFocusRef }) {
+  const closeRef = useRef(null)
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow
+    const returnFocusElement = returnFocusRef.current
+    document.body.style.overflow = 'hidden'
+    closeRef.current?.focus()
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') onClose()
+      if (event.key === 'Tab') { event.preventDefault(); closeRef.current?.focus() }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', onKeyDown)
+      returnFocusElement?.focus()
+    }
+  }, [onClose, returnFocusRef])
+  const review = item.review[language] || item.review.tr
+  const service = item.service[language] || item.service.tr
   return (
-    <section
-      id="client-feedback"
-      className="relative overflow-hidden border-t border-slate-200/60 py-16 md:py-20"
-      style={{
-        background: 'linear-gradient(180deg, #FAFBFC 0%, #F1F5F9 55%, #EEF2F6 100%)',
-      }}
-      aria-labelledby="client-feedback-heading"
-    >
-      <div className="container relative mx-auto max-w-6xl px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className="mx-auto mb-10 max-w-2xl text-center md:mb-12">
-            <span
-              className="mb-3 inline-block rounded-full border border-slate-200/80 bg-white/80 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#475569] shadow-sm"
-              style={{ letterSpacing: '0.12em' }}
-            >
-              {t.client_feedback_badge || ''}
-            </span>
-            <h2
-              id="client-feedback-heading"
-              className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl"
-              style={{ letterSpacing: '-0.02em' }}
-            >
-              {t.client_feedback_title || ''}
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-[#64748B] md:text-lg">{t.client_feedback_subtitle || ''}</p>
-          </div>
-        </motion.div>
+    <div className="fixed inset-0 z-[100] grid place-items-center bg-black/70 p-4 backdrop-blur-sm" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+      <div role="dialog" aria-modal="true" aria-labelledby="testimonial-dialog-title" className="relative max-h-[85svh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-[#f1efe9] p-7 text-[#151515] shadow-2xl md:p-10">
+        <button ref={closeRef} type="button" onClick={onClose} className="absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full border border-black/15 transition hover:bg-black hover:text-white" aria-label={language === 'tr' ? 'Yorumu kapat' : 'Close review'}><X className="h-4 w-4" /></button>
+        <div className="grid h-12 w-12 place-items-center rounded-full bg-[#151515] text-xs font-semibold tracking-[.08em] text-white" aria-hidden="true">{initials(item.name)}</div>
+        <h2 id="testimonial-dialog-title" className="studio-display mt-7 pr-14 text-4xl">{item.name}</h2>
+        <p className="mt-2 text-sm text-black/50">{service}</p>
+        <p className="mt-8 text-lg leading-8 text-black/75">“{review}”</p>
+        {(item.source || item.location) && <p className="mt-8 border-t border-black/10 pt-5 text-xs font-semibold uppercase tracking-[.14em] text-black/40">{item.source === 'Armut' ? (language === 'tr' ? 'Armut müşteri yorumu' : 'Customer review on Armut') : (item.location?.[language] || item.location?.tr)}</p>}
+      </div>
+    </div>
+  )
+}
 
-        {/* Desktop: infinite marquee */}
-        <div className="client-feedback-marquee-track relative -mx-4 hidden overflow-hidden px-4 md:block">
-          <div
-            className="client-feedback-marquee-inner flex gap-6"
-            style={{ width: 'max-content' }}
-          >
-            {loopItems.map((item, i) => (
-              <TestimonialCard key={`marquee-${i}-${item.name}`} item={item} index={i} />
-            ))}
+export default function ClientFeedback() {
+  const { language } = useLanguage()
+  const trackRef = useRef(null)
+  const triggerRef = useRef(null)
+  const [selected, setSelected] = useState(null)
+  const move = (direction) => {
+    const track = trackRef.current
+    if (!track) return
+    const card = track.querySelector('.testimonial-card')
+    track.scrollBy({ left: direction * ((card?.getBoundingClientRect().width || track.clientWidth) + 16), behavior: 'smooth' })
+  }
+  const openReview = (item, event) => { triggerRef.current = event.currentTarget; setSelected(item) }
+  return (
+    <section id="client-feedback" className="overflow-hidden bg-[#f1efe9] py-20 text-[#151515] md:py-28" aria-labelledby="client-feedback-heading">
+      <div className="studio-shell">
+        <div className="grid items-end gap-8 md:grid-cols-12">
+          <div className="md:col-span-8">
+            <p className="studio-kicker text-black/45">{language === 'tr' ? 'GERÇEK İŞ BİRLİKLERİ' : 'REAL COLLABORATIONS'}</p>
+            <h2 id="client-feedback-heading" className="studio-display mt-5 text-5xl tracking-[-.055em] md:text-7xl">{language === 'tr' ? 'Müşteri Deneyimleri' : 'Client Experiences'}</h2>
+            <p className="mt-5 max-w-xl text-lg text-black/55">{language === 'tr' ? 'Birlikte çalıştığımız müşterilerin gerçek deneyimleri.' : 'Real experiences from clients we have worked with.'}</p>
+          </div>
+          <div className="flex gap-2 md:col-span-4 md:justify-end">
+            <button type="button" onClick={() => move(-1)} className="grid h-12 w-12 place-items-center rounded-full border border-black/20 transition hover:bg-[#151515] hover:text-white" aria-label={language === 'tr' ? 'Önceki yorumlar' : 'Previous reviews'}><ArrowLeft className="h-4 w-4" /></button>
+            <button type="button" onClick={() => move(1)} className="grid h-12 w-12 place-items-center rounded-full border border-black/20 transition hover:bg-[#151515] hover:text-white" aria-label={language === 'tr' ? 'Sonraki yorumlar' : 'Next reviews'}><ArrowRight className="h-4 w-4" /></button>
           </div>
         </div>
-
-        {/* Mobile: horizontal swipe */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.45, delay: 0.1 }}
-          className="flex gap-4 overflow-x-auto overflow-y-hidden pb-4 pt-1 [-webkit-overflow-scrolling:touch] [scrollbar-width:thin] md:hidden snap-x snap-mandatory px-1"
-          style={{ scrollbarColor: '#CBD5E1 transparent' }}
-        >
-          {items.map((item, i) => (
-            <TestimonialCard key={`mobile-${i}-${item.name}`} item={item} index={i} />
-          ))}
-        </motion.div>
+        <div ref={trackRef} className="testimonial-viewport mt-12 overflow-x-auto pb-4 md:mt-16">
+          <div className="testimonial-track flex w-max gap-4">
+            {[...customerTestimonials, ...customerTestimonials].map((item, index) => <div key={`${item.id}-${index}`} className="testimonial-slide shrink-0 snap-start"><TestimonialCard item={item} language={language} onRead={(event) => openReview(item, event)} /></div>)}
+          </div>
+        </div>
       </div>
+      {selected && <TestimonialDialog item={selected} language={language} onClose={() => setSelected(null)} returnFocusRef={triggerRef} />}
     </section>
   )
 }

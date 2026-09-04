@@ -72,7 +72,7 @@
     { "title": "Sürekli Gelişim ve Destek", "description": "Bir dijital ürün yayına çıktıktan sonra da gelişmeye devam eder. Güncellemeler, iyileştirmeler ve yeni ihtiyaçlara göre yapılan düzenlemeler ile sistemin uzun süre verimli çalışması sağlanır.", "points": ["İçerik ve yapı güncellemeleri", "Performans iyileştirmeleri", "Yeni özellik geliştirmeleri", "Kullanıcı deneyimi düzenlemeleri", "Sistem bakım ve kontrolü"] }
   ],
 
-  "software_trust_badge": "500+ Tamamlanan Çalışma",
+  "software_trust_badge": "Seçilmiş Gerçek Çalışmalar",
   "software_title": "Gerçek Projeler",
   "software_intro": "Gerçek projeler, gerçek ürünler. Web, mobil ve yazılım alanlarında geliştirdiğim dijital çözümlerden seçilmiş çalışmalar.",
   "software_vitrin_link": "Tüm örnekleri vitrinde incele",
@@ -141,31 +141,6 @@
     { "title": "Sessiz Anlar", "description": "Küçük sessizlikler, dürüst ışık, sizde kalan sade sahneler.", "label": "An" },
     { "title": "Yolda", "description": "Hareket, hava, yol kenarı hikâyeleri — dünya olduğu gibi.", "label": "Kare" },
     { "title": "Çizgiler ve Desenler", "description": "Şekiller, simetri, dokular — yapıda bulunan güzellik.", "label": "Desen" }
-  ],
-
-  "client_feedback_badge": "Deneyimler",
-  "client_feedback_title": "Müşteri Deneyimleri",
-  "client_feedback_subtitle": "Gerçek iş birliklerinden, ölçülü geri bildirimler — netlik, güvenilirlik ve tempo önemli.",
-  "client_feedback_items": [
-    { "name": "Ahmet K.", "role": "Telekom Operasyon Müdürü", "quote": "İletişim ilk günden net kaldı. Teslimler tahmin edilebilirdi, kapsam da sessizce genişlemedi." },
-    { "name": "Elif S.", "role": "E-ticaret İşletmecisi", "quote": "Günlük yönetebileceğimiz bir mağaza çıktı. Küçük düzeltmeler hızlı geldi, gereksiz karmaşa olmadı." },
-    { "name": "Murat T.", "role": "Avukat", "quote": "Teknik tercihler jargon yığınıyla değil, artı-eksiyle anlatıldı. Karar vermek kolaylaştı." },
-    { "name": "Defne A.", "role": "Mimar", "quote": "Portföy yapısı ziyaretçi için taranabilir. Telefonda da sayfalar hızlı hissediyor." },
-    { "name": "Onur Y.", "role": "KOBİ Sahibi", "quote": "Kapsam sadeydi. Mümkün olmayan bir şey varken erken söyledi, sonraya bırakmadı." },
-    { "name": "Can D.", "role": "Yazılım Girişimcisi", "quote": "Ön yüz disiplini sağlam. Devretme notları aynı hafta ekibimizde işe yarar haldeydi." },
-    { "name": "Burak M.", "role": "Fabrika Müdürü", "quote": "Panel dil olarak sade; vardiya sorumluları için eğitim süresi kısa kaldı." },
-    { "name": "Zeynep L.", "role": "Serbest Tasarımcı", "quote": "İş birliği temposu iyiydi, verdiğimiz yöne uydu. Sonsuz revizyon döngüsü olmadı." },
-    { "name": "Kerem B.", "role": "Telekom Operasyon Müdürü", "quote": "Saha akışları mantıklı kuruldu. E-postada netleştirmek için harcadığımız zaman azaldı." },
-    { "name": "Ayşe H.", "role": "E-ticaret İşletmecisi", "quote": "Ödeme adımları daha sade. Kabaca sayılara göre yarım kalan sepet biraz azaldı." },
-    { "name": "Emre G.", "role": "Avukat", "quote": "Gizlilikle ilgili seçenekler moda kelimelerle değil, seçeneklerle çerçevelendi. Güven verdi." },
-    { "name": "Selin K.", "role": "Mimar", "quote": "Mobil düzen artık sahada müşteriye gösterdiğimiz düzenle uyumlu." },
-    { "name": "Hakan V.", "role": "KOBİ Sahibi", "quote": "Bir bağımlılık gecikince takvim güncellemesi dürüsttü. Ferahlatıcıydı." },
-    { "name": "Volkan R.", "role": "Yazılım Girişimcisi", "quote": "Performans bütçesine önem verdi. İçerik ekledikçe site ağırlaşmadı." },
-    { "name": "Gizem N.", "role": "Fabrika Müdürü", "quote": "Rapor ekranındaki kayıtlı filtreler sabah rutinine oturdu — küçük ama işe yarar." },
-    { "name": "Barış F.", "role": "Serbest Tasarımcı", "quote": "Mikro etkileşimler abartısız. Ciddi bir markaya yakışıyor, şablon hissi vermiyor." },
-    { "name": "Deniz C.", "role": "Avukat", "quote": "Panelden metin güncellemeleri düzeni bozmadı. Bileşenler beklediğimiz gibi davrandı." },
-    { "name": "Cem Ö.", "role": "E-ticaret İşletmecisi", "quote": "Analitik etiketleri dikkatli eklendi. Sonrasında site hızının çakılmasını izlemedik." },
-    { "name": "Nehir P.", "role": "Mimar", "quote": "Kick-off’taki sorular, önceki üç firmadan duyduklarımızdan daha isabetliydi." }
   ],
 
   "principles_badge": "Çalışma İlkeleri",

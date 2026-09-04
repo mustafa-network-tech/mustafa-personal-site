@@ -3,7 +3,6 @@
 import { usePathname } from 'next/navigation'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import TopNotice from '@/components/TopNotice'
 
 const VITRIN_PATHS = ['/vitrin', '/tr/vitrin']
 
@@ -14,8 +13,7 @@ export default function LayoutShell({ children }) {
   const shell = isVitrin ? (
     <main className="flex-grow">{children}</main>
   ) : (
-    <div className="min-h-screen flex flex-col pt-14">
-      <TopNotice />
+    <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />

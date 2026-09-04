@@ -8,9 +8,9 @@ export const SITE_URL = 'https://mustafaoner.net'
 /** Global default meta (fallback) */
 export const GLOBAL_META = {
   en: {
-    title: 'Mustafa Oner | Web Developer, Web Design & Digital Systems',
+    title: 'Mustafa Oner | Digital Products & Creative Technology',
     description:
-      'Web development and web design for corporate websites, e-commerce, custom software, management panels, mobile apps and digital product builds. Portfolio and services by Mustafa Oner.',
+      'Digital products, custom software, operation systems, web experiences and visual content by Mustafa Oner Digital Studio.',
     keywords: [
       'web development',
       'web design',
@@ -29,9 +29,9 @@ export const GLOBAL_META = {
     ],
   },
   tr: {
-    title: 'Mustafa Öner | Web Geliştirme, Web Tasarım ve Dijital Sistemler',
+    title: 'Mustafa Öner | Dijital Ürünler ve Creative Technology',
     description:
-      'Kurumsal web sitesi, e-ticaret, özel yazılım, yönetim paneli, mobil uygulama ve dijital ürün geliştirme. Mustafa Öner portföy ve hizmetleri.',
+      'Dijital ürünler, özel yazılım, operasyon sistemleri, web deneyimleri ve görsel içerik. Mustafa Öner Digital Studio.',
     keywords: [
       'web geliştirme',
       'web tasarım',

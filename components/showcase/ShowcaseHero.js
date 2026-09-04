@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const TYPING_SPEED = 70
@@ -9,7 +9,7 @@ const PAUSE_AFTER_TITLE_MS = 2500
 
 export default function ShowcaseHero() {
   const { t, language } = useLanguage()
-  const items = t.showcase_hero_items || []
+  const items = useMemo(() => t.showcase_hero_items || [], [t.showcase_hero_items])
   const [itemIndex, setItemIndex] = useState(0)
   const [displayTitle, setDisplayTitle] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)

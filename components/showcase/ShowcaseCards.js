@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { CARD_DATA, SECTIONS } from './showcaseProjects'
 
@@ -37,9 +38,11 @@ function Card({ title, titleKey, typeKey, url, descKey }) {
         style={{ opacity: 0.06 }}
         aria-hidden
       >
-        <img
+        <Image
           src={CARD_LOGO_WATERMARK}
           alt=""
+          width={160}
+          height={160}
           className="object-contain max-w-full max-h-full"
           style={{ filter: 'blur(0.5px)' }}
         />

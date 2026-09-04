@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, ArrowUpRight, MessageCircle } from 'lucide-react'
 import PortfolioCard from '@/components/projects/PortfolioCard'
 import { getProjectTypeIcon, getProjectStatus } from '@/components/projects/projectVisuals'
@@ -195,7 +196,12 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
         </div>
       </header>
 
-      <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 md:py-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-20">
+        {project.image && (
+          <figure className="relative mb-16 aspect-[16/9] overflow-hidden bg-[#E2E8F0] md:mb-24">
+            <Image src={project.image} alt={`${data.title} — ${data.shortDesc}`} fill sizes="(max-width: 768px) 100vw, 1200px" className="object-cover" priority />
+          </figure>
+        )}
         <div className="max-w-3xl space-y-12">
           {sections.map((section) => (
             <CaseSection key={section.key} title={section.title}>
