@@ -18,11 +18,10 @@ export function getProjectTypeIcon(project) {
 }
 
 /**
- * Durum alanı veri şemasında yok.
- * Yalnızca kategorideki "Demo" ifadesi veya canlı URL'den çıkarılır.
- * Çıkarılamıyorsa null döner — sahte durum üretilmez.
+ * Merkezi durum alanını kullanır; eski çağrılar için kategori/URL yedeğini korur.
  */
 export function getProjectStatus(project, locale = 'tr') {
+  if (project?.status) return project.status[locale] || project.status.tr
   const catTr = (project?.category?.tr || '').toLowerCase()
   const catEn = (project?.category?.en || '').toLowerCase()
   if (catTr.includes('demo') || catEn.includes('demo')) {

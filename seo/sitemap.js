@@ -2,7 +2,8 @@
  * Sitemap URL list for app/sitemap.js. Türkçe ana dil; EN + TR sayfalar.
  */
 
-import { SITE_URL, PROJECT_SLUGS } from './metadata'
+import { SITE_URL } from './metadata'
+import { ALL_SLUGS as PROJECT_SLUGS } from '@/lib/projects/projectsData'
 import { getAllLocalSeoSlugs } from '@/lib/localSeo/pages'
 
 const LOCAL_SEO_PATHS = getAllLocalSeoSlugs().map((slug) => `/${slug}`)

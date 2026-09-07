@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getProjectTypeIcon } from '@/components/projects/projectVisuals'
+import { getProjectTypeIcon, getProjectStatus } from '@/components/projects/projectVisuals'
 import ProjectCardCta from '@/components/projects/ProjectCardCta'
 
 /**
@@ -55,6 +55,7 @@ export default function PortfolioCard({ project, locale = 'tr' }) {
       )}
 
       <div className="mt-auto pt-3 border-t border-[#F1F5F9]">
+        <p className="mb-3 text-xs text-[#475569]">{getProjectStatus(project, locale)}</p>
         <ProjectCardCta label={btnLabel} />
       </div>
     </Link>

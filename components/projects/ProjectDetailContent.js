@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, ArrowUpRight, MessageCircle } from 'lucide-react'
 import PortfolioCard from '@/components/projects/PortfolioCard'
+import ProjectGallery from '@/components/projects/ProjectGallery'
 import { getProjectTypeIcon, getProjectStatus } from '@/components/projects/projectVisuals'
 import { getProjectDetailSections } from '@/seo/metadata'
 
@@ -138,6 +139,7 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
             {data.title}
           </h1>
 
+          {data.subtitle && <p className="mb-5 text-lg text-[#475569]">{data.subtitle}</p>}
           {data.shortDesc && (
             <p className="text-[16px] md:text-[17px] text-[#475569] leading-relaxed max-w-2xl mb-7">
               {data.shortDesc}
@@ -197,11 +199,12 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
       </header>
 
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-20">
-        {project.image && (
+        {project.image && !project.imageUrls?.length && (
           <figure className="relative mb-16 aspect-[16/9] overflow-hidden bg-[#E2E8F0] md:mb-24">
             <Image src={project.image} alt={`${data.title} — ${data.shortDesc}`} fill sizes="(max-width: 768px) 100vw, 1200px" className="object-cover" priority />
           </figure>
         )}
+        <ProjectGallery imageUrls={project.imageUrls} name={data.title} locale={locale} galleryStyle={project.galleryStyle} />
         <div className="max-w-3xl space-y-12">
           {sections.map((section) => (
             <CaseSection key={section.key} title={section.title}>
