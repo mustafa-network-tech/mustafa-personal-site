@@ -28,7 +28,7 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
   const category = project.category[locale] || project.category.tr
   const backHref = locale === 'tr' ? '/tr/projects' : '/projects'
   const backLabel = locale === 'tr' ? 'Projelere Dön' : 'Back to Projects'
-  const liveLabel = locale === 'tr' ? 'Canlı Projeyi Gör' : 'View Live Project'
+  const liveLabel = project.liveCta?.[locale] || project.liveCta?.tr || (locale === 'tr' ? 'Canlı Projeyi Gör' : 'View Live Project')
   const requestLabel = locale === 'tr' ? 'Teklif Al' : 'Request Proposal'
   const relatedLabel = locale === 'tr' ? 'İlgili Projeler' : 'Related Projects'
   const isPlayStore = project.liveUrl?.includes('play.google.com')
