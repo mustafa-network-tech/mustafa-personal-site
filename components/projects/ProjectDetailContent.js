@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { ArrowLeft, ArrowUpRight, MessageCircle } from 'lucide-react'
 import PortfolioCard from '@/components/projects/PortfolioCard'
 import ProjectGallery from '@/components/projects/ProjectGallery'
+import ProjectFeatures from '@/components/projects/ProjectFeatures'
 import { getProjectTypeIcon, getProjectStatus } from '@/components/projects/projectVisuals'
 import { getProjectDetailSections } from '@/seo/metadata'
 
@@ -65,18 +66,7 @@ export default function ProjectDetailContent({ project, locale = 'tr', related =
     sections.push({
       key: 'features',
       title: locale === 'tr' ? 'Öne Çıkan Özellikler' : 'Key Features',
-      body: (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {data.features.map((feature, i) => (
-            <div
-              key={i}
-              className="rounded-[12px] border border-[#E2E8F0] bg-white px-4 py-3.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#C7D2FE] hover:bg-[#FAFBFF]"
-            >
-              <p className="text-[14px] text-[#334155] leading-snug">{feature}</p>
-            </div>
-          ))}
-        </div>
-      ),
+      body: <ProjectFeatures features={data.features} />,
     })
   }
   if (project.tags?.length > 0) {
