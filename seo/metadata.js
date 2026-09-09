@@ -180,10 +180,6 @@ export const PROJECT_META = {
     en: { title: 'Namehub.tr | Corporate Website', description: 'Modern corporate website project developed for the Turkish market.' },
     tr: { title: 'Namehub.tr | Kurumsal Web Sitesi', description: 'Türkiye pazarına yönelik geliştirilmiş modern kurumsal web sitesi projesi.' },
   },
-  'schnappli': {
-    en: { title: 'Schnappli | Switzerland iOS and Android Mobile App', description: 'Mobile application project developed for iOS and Android platforms for the Swiss market.' },
-    tr: { title: 'Schnappli | İsviçre iOS ve Android Mobil Uygulama', description: 'İsviçre pazarı için geliştirilen iOS ve Android platformlarına yönelik mobil uygulama projesi.' },
-  },
 }
 
 /** Extra on-page copy for project detail (no fabricated metrics) */

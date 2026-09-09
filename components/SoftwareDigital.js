@@ -37,7 +37,6 @@ const demoProjectSlugs = [
   'siir-dunyasi',
   'mavi-kadrajla-ogreniyorum',
   'namehub',
-  'schnappli',
 ]
 
 export default function SoftwareDigital() {
