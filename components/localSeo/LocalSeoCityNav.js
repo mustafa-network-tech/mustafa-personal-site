@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { localSeoHref } from '@/lib/localSeo/canonicalRoutes.mjs'
 import { getPagesForCityKey, getPageLinkLabel } from '@/lib/localSeo/pages'
 
 /**
@@ -32,7 +33,7 @@ export default function LocalSeoCityNav({ cityKey, cityName, currentSlug }) {
                   </span>
                 ) : (
                   <Link
-                    href={`/${p.slug}`}
+                    href={localSeoHref(p.slug)}
                     className="inline-block text-xs font-medium px-3 py-1.5 rounded-full border border-[rgba(248,250,252,0.12)] text-[#CBD5E1] hover:text-[#F8FAFC] hover:border-[rgba(79,124,255,0.35)] hover:bg-[rgba(79,124,255,0.08)] transition-colors"
                   >
                     {p.label}

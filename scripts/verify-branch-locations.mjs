@@ -18,7 +18,7 @@ async function dataModule(file) {
   let text = await fs.readFile(file, 'utf8')
   for (const match of [...text.matchAll(/from\s+['"]([^'"]+)['"]/g)]) {
     const target = match[1].startsWith('@/') ? path.resolve(match[1].slice(2)) : path.resolve(path.dirname(file), match[1])
-    text = text.replace(match[0], `from '${await dataModule(`${target}.js`)}'`)
+    text = text.replace(match[0], `from '${await dataModule(path.extname(target) ? target : `${target}.js`)}'`)
   }
   const url = `data:text/javascript;base64,${Buffer.from(text).toString('base64')}`
   cache.set(file, url)

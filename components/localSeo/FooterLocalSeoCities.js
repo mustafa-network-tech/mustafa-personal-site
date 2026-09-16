@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { localSeoHref } from '@/lib/localSeo/canonicalRoutes.mjs'
 import { FOOTER_SEO_CITIES } from '@/lib/localSeo/pages'
 import { getPrimarySlugForCity, getServiceFooterLinks } from '@/lib/localSeo/serviceCategories'
 
@@ -34,7 +35,7 @@ export default function FooterLocalSeoCities({
               return (
                 <li key={city.key}>
                   <Link
-                    href={`/${slug}`}
+                    href={localSeoHref(slug)}
                     className="local-seo-city-pill text-xs font-medium text-sub hover:text-primary transition-all duration-200"
                   >
                     {city.label}
@@ -52,7 +53,7 @@ export default function FooterLocalSeoCities({
           {serviceLinks.map((service) => (
             <li key={service.key}>
               <Link
-                href={`/${service.slug}`}
+                href={localSeoHref(service.slug)}
                 className="local-seo-service-pill text-xs font-medium text-sub hover:text-primary transition-all duration-200"
               >
                 {service.label}

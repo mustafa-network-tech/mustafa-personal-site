@@ -25,7 +25,7 @@ async function moduleUrl(filename) {
     const target = match[1].startsWith('@/')
       ? path.join(root, match[1].slice(2))
       : path.resolve(path.dirname(filename), match[1])
-    source = source.replace(match[0], `from '${await moduleUrl(`${target}.js`)}'`)
+    source = source.replace(match[0], `from '${await moduleUrl(path.extname(target) ? target : `${target}.js`)}'`)
   }
   const url = `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`
   moduleCache.set(filename, url)

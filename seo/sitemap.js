@@ -6,8 +6,9 @@ import { SITE_URL } from './metadata'
 import { ALL_SLUGS as PROJECT_SLUGS } from '@/lib/projects/projectsData'
 import { getAllLocalSeoSlugs } from '@/lib/localSeo/pages'
 import { LANDING_SLUGS, landingHref } from '@/lib/landingPages/routes'
+import { LOCAL_SEO_REDIRECTS } from '@/lib/localSeo/canonicalRoutes.mjs'
 
-const LOCAL_SEO_PATHS = getAllLocalSeoSlugs().map((slug) => `/${slug}`)
+const LOCAL_SEO_PATHS = getAllLocalSeoSlugs().map((slug) => `/${slug}`).filter((path) => !Object.hasOwn(LOCAL_SEO_REDIRECTS, path))
 
 /** İngilizce kök sayfalar (/tr öneki ile Türkçe karşılığı da üretilir) */
 const EN_BASE_PATHS = [

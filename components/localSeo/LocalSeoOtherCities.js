@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { localSeoHref } from '@/lib/localSeo/canonicalRoutes.mjs'
 import { getOtherCityLinks } from '@/lib/localSeo/pages'
 
 /**
@@ -19,7 +20,7 @@ export default function LocalSeoOtherCities({ currentCityKey, cityName }) {
         {links.map((city) => (
           <li key={city.key}>
             <Link
-              href={`/${city.slug}`}
+              href={localSeoHref(city.slug)}
               className="local-seo-city-pill text-xs font-medium text-sub hover:text-primary transition-all duration-200"
             >
               {city.label}
