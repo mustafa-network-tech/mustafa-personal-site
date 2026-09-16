@@ -1,6 +1,7 @@
 node_modules
 .next
 .next-verify
+.next-seo-*
 out
 .env.local
 .env*.local

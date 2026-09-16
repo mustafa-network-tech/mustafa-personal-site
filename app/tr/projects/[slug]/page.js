@@ -5,6 +5,7 @@ import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
 import { getProjectSchema, getBreadcrumbListSchema } from '@/seo/schema'
 import JsonLd from '@/components/JsonLd'
 import ProjectDetailContent from '@/components/projects/ProjectDetailContent'
+import RelatedLandingLinks from '@/components/landingPages/RelatedLandingLinks'
 import { getProjectBySlug, getRelatedProjects, ALL_SLUGS } from '@/lib/projects/projectsData'
 
 export async function generateMetadata({ params }) {
@@ -51,6 +52,7 @@ export default function ProjectDetailTr({ params }) {
     <>
       <JsonLd data={[projectSchema, breadcrumbJson]} />
       <ProjectDetailContent project={project} locale="tr" related={related} />
+      <RelatedLandingLinks projectSlug={project.slug} />
     </>
   )
 }

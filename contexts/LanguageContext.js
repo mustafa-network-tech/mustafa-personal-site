@@ -22,7 +22,10 @@ export function LanguageProvider({ children, initialLocale = 'tr' }) {
   const [language, setLanguageState] = useState(routeLocale)
 
   useEffect(() => {
-    setLanguageState(resolveLocale(pathname, initialLocale))
+    const nextLocale = resolveLocale(pathname, initialLocale)
+    setLanguageState(nextLocale)
+    // The root layout is retained during client navigation between locales.
+    document.documentElement.lang = nextLocale
   }, [pathname, initialLocale])
 
   const setLanguage = (lang) => {

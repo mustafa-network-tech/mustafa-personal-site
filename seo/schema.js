@@ -34,6 +34,7 @@ export function getOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
     name: 'MK Digital Systems',
     url: SITE_URL,
     description: 'Digital production and web development focused on corporate sites, platforms and custom software.',

@@ -5,6 +5,7 @@
 import { SITE_URL } from './metadata'
 import { ALL_SLUGS as PROJECT_SLUGS } from '@/lib/projects/projectsData'
 import { getAllLocalSeoSlugs } from '@/lib/localSeo/pages'
+import { LANDING_SLUGS, landingHref } from '@/lib/landingPages/routes'
 
 const LOCAL_SEO_PATHS = getAllLocalSeoSlugs().map((slug) => `/${slug}`)
 
@@ -32,6 +33,10 @@ export function getSitemapUrls() {
 
   for (const path of LOCAL_SEO_PATHS) {
     urls.push({ url: `${SITE_URL}${path}`, lastModified: now })
+  }
+
+  for (const slug of LANDING_SLUGS) {
+    urls.push({ url: `${SITE_URL}${landingHref(slug)}`, lastModified: now })
   }
 
   return urls
