@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BranchLocation from '@/components/BranchLocation'
 import { getProjectBySlug } from '@/lib/projects/projectsData'
 import { getLandingBreadcrumbs } from '@/lib/landingPages/pages'
 import { LANDING_ROUTES, landingHref } from '@/lib/landingPages/routes'
@@ -94,6 +95,8 @@ export default function LandingPageContent({ page }) {
           <div className="md:col-span-8">{page.faqs.map(([question, answer]) => <details key={question} className="border-t border-black/20 py-5"><summary className="cursor-pointer py-2 text-lg font-semibold leading-7">{question}</summary><p className="mt-4 max-w-3xl text-base leading-8 text-[#555]">{answer}</p></details>)}</div>
         </div>
       </section>
+
+      <BranchLocation city={page.city} />
 
       <section className="py-16 md:py-24" aria-labelledby="contact-heading">
         <div className="studio-shell">

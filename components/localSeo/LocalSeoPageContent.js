@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BranchLocation from '@/components/BranchLocation'
 import ProjectRequestForm from '@/components/ProjectRequestForm'
 import LocalSeoSampleProjects from '@/components/localSeo/LocalSeoSampleProjects'
 import LocalSeoHero from '@/components/localSeo/LocalSeoHero'
@@ -65,6 +66,8 @@ export default function LocalSeoPageContent({ page }) {
       <LocalSeoOtherCities currentCityKey={page.cityKey} cityName={page.cityName} />
 
       <LocalSeoContactCta cityName={page.cityName} />
+
+      <BranchLocation city={page.cityKey} />
 
       {page.ctaClosing && (
         <section className="container mx-auto px-4 py-6 max-w-3xl text-center">
