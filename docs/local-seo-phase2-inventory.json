@@ -1,0 +1,4826 @@
+[
+  {
+    "url": "/bolu-kurumsal-web-sitesi",
+    "city": "Bolu",
+    "before": {
+      "title": "Bolu Kurumsal Web Sitesi | Yönetim Paneli ve B2B Yapı",
+      "description": "Bolu’daki üretici ve tedarikçiler için yönetim panelli kurumsal web sitesi. Hizmet, katalog ve referans sayfalarını işletmenizin yapısına göre planlayın.",
+      "h1": "Bolu Kurumsal Web Sitesi",
+      "intent": "Bolu Kurumsal Web Sitesi — Üretici ve tedarikçi bilgilerini satın alma sürecine göre düzenleyin",
+      "projects": [
+        {
+          "id": "mk-ops",
+          "detailHref": "/tr/projects/mk-ops",
+          "title": "MK OPS",
+          "description": "Saha operasyonları için SaaS tabanlı operasyon yönetim sistemi.",
+          "tags": [
+            "Next.js",
+            "Dashboard",
+            "SaaS"
+          ],
+          "url": "https://www.mk-ops.tr",
+          "typeLabel": "Sistem"
+        },
+        {
+          "id": "mavi-iletisim",
+          "detailHref": "/tr/projects/mavi-iletisim",
+          "title": "Mavi İletişim – Telekom ve Teknik Servis",
+          "description": "Telekom ve teknik servis kurumsal demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://mavi-iletisim-demo.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/tr/bolu-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/tr/bolu-web-tasarim",
+        "https://www.mk-ops.tr",
+        "/tr/projects/mk-ops",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "tel:+905456597551",
+        "https://mustafaoner.net",
+        "https://share.google/NN1pgMOMagNid1Uhl",
+        "https://www.google.com/maps/dir/?api=1&destination=MK+Digital+Systems&destination_place_id=ChIJGY9ZkYk_nUAREyJv0XrdeII",
+        "https://wa.me/905456597551",
+        "/tr/contact",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/tr/bolu-web-tasarim",
+        "/tr/bolu-otel-pansiyon-web-sitesi",
+        "/tr/bolu-fotografci-web-sitesi",
+        "/tr/bolu-santiye-yonetim-sistemi"
+      ],
+      "similarities": [
+        {
+          "slug": "izmit-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0
+        },
+        {
+          "slug": "izmit-fabrika-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0
+        },
+        {
+          "slug": "adapazari-e-ticaret-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0
+        }
+      ],
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Bolu Kurumsal Web Sitesi | Yönetim Paneli ve B2B Yapı",
+      "description": "Bolu’daki üretici ve tedarikçiler için yönetim panelli kurumsal web sitesi. Hizmet, katalog ve referans sayfalarını işletmenizin yapısına göre planlayın.",
+      "h1": "Bolu Kurumsal Web Sitesi",
+      "projects": [
+        "/tr/projects/mk-ops",
+        "/tr/projects/mavi-iletisim"
+      ],
+      "projectRationale": "Önceki aşama korundu.",
+      "incoming": [
+        "/tr/bolu-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/tr/bolu-web-tasarim",
+        "https://www.mk-ops.tr",
+        "/tr/projects/mk-ops",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "tel:+905456597551",
+        "https://mustafaoner.net",
+        "https://share.google/NN1pgMOMagNid1Uhl",
+        "https://www.google.com/maps/dir/?api=1&destination=MK+Digital+Systems&destination_place_id=ChIJGY9ZkYk_nUAREyJv0XrdeII",
+        "https://wa.me/905456597551",
+        "/tr/contact",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/tr/bolu-web-tasarim",
+        "/bolu-kurumsal-web-sitesi"
+      ]
+    },
+    "assessment": "Önceki aşama korundu; yeni içerik veya proje seçimi uygulanmadı.",
+    "change": "Korundu"
+  },
+  {
+    "url": "/izmit-web-tasarim",
+    "city": "İzmit",
+    "before": {
+      "title": "İzmit Web Tasarım | Kocaeli Endüstri ve B2B Dijital Üretim",
+      "description": "İzmit ve Kocaeli sanayi firmaları için B2B odaklı web tasarım: hızlı yükleme, net kapasite sayfaları, mobil saha erişimi ve SEO uyumlu endüstriyel arayüz.",
+      "h1": "İzmit Web Tasarım",
+      "intent": "İzmit Web Tasarım — İzmit’te endüstri ve B2B için dijital vitrin",
+      "projects": [
+        {
+          "id": "aria",
+          "detailHref": "/tr/projects/aria",
+          "title": "ARIA – Sosyal Medya Platformu",
+          "description": "Sosyal medya platformu arayüz ve kullanıcı akışı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://aria-demo-omega.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mk-digital",
+          "title": "MK Digital Systems",
+          "description": "Web siteleri, e-ticaret ve özel yazılım geliştiren dijital üretim markası.",
+          "tags": [
+            "Next.js",
+            "Web Development",
+            "UI Systems"
+          ],
+          "url": "https://mk-digital-systems.vercel.app/en",
+          "typeLabel": "Platform"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/izmit-fabrika-web-sitesi",
+        "https://aria-demo-omega.vercel.app/",
+        "/tr/projects/aria",
+        "https://mk-digital-systems.vercel.app/en",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/izmit-fabrika-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "canakkale-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.05
+        },
+        {
+          "slug": "bartin-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.046
+        },
+        {
+          "slug": "balikesir-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.04
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "izmit-fabrika-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.012
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "İzmit Web Tasarım | Hizmet ve İşletme Siteleri",
+      "description": "İzmit’te işletmeniz için hizmetleri, çalışma alanını ve iletişim yollarını anlatan web sitesi. Sayfa kapsamını mevcut içerik ve müşteri sorularıyla planlayın.",
+      "h1": "İzmit Web Tasarım",
+      "projects": [
+        "mavi-iletisim",
+        "mavi-danismanlik"
+      ],
+      "projectRationale": "Teknik servis ve danışmanlık demoları hizmetten iletişime geçişi gösterir; İzmit müşteri işi olarak sunulmaz.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/izmit-fabrika-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/izmit-web-tasarim"
+      ]
+    },
+    "assessment": "Genel sayfa da kapasite, sertifika ve B2B hedefliyordu. Genel işletme/hizmet ile teknik fabrika içeriği ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/izmit-fabrika-web-sitesi",
+    "city": "İzmit",
+    "before": {
+      "title": "İzmit Fabrika ve Sanayi Web Sitesi | Üretim Odaklı Dijital Vitrin",
+      "description": "İzmit fabrika ve sanayi firmaları için kapasite, üretim hattı, sertifika ve tedarik süreçlerini anlatan kurumsal web sitesi. B2B güven ve hızlı teklif akışı.",
+      "h1": "İzmit Fabrika Web Sitesi",
+      "intent": "İzmit Fabrika Web Sitesi — İzmit’te üretim gücünü dijitalde anlatın",
+      "projects": [
+        {
+          "id": "siir-dunyasi",
+          "detailHref": "/tr/projects/siir-dunyasi",
+          "title": "Şiir Dünyası – İçerik Platformu",
+          "description": "Şiir ve edebi içeriklerin dijital ortamda paylaşımı.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://siir-dunyasi1.vercel.app/",
+          "typeLabel": "Kişisel"
+        },
+        {
+          "id": "mavi-iletisim",
+          "detailHref": "/tr/projects/mavi-iletisim",
+          "title": "Mavi İletişim – Telekom ve Teknik Servis",
+          "description": "Telekom ve teknik servis kurumsal demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://mavi-iletisim-demo.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/izmit-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/izmit-web-tasarim",
+        "https://siir-dunyasi1.vercel.app/",
+        "/tr/projects/siir-dunyasi",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/izmit-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "duzce-kurumsal-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.027
+        },
+        {
+          "slug": "karabuk-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.013
+        },
+        {
+          "slug": "izmit-web-tasarim",
+          "sameCity": true,
+          "shingleJaccard": 0.012
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "izmit-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.012
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "İzmit Fabrika ve Sanayi Web Sitesi | Üretim Odaklı Dijital Vitrin",
+      "description": "İzmit fabrika ve sanayi firmaları için kapasite, üretim hattı, sertifika ve tedarik süreçlerini anlatan kurumsal web sitesi. B2B güven ve hızlı teklif akışı.",
+      "h1": "İzmit Fabrika Web Sitesi",
+      "projects": [],
+      "projectRationale": "Portföyde bu kapsama birebir karşılık gelen bir fabrika tanıtım sitesi bulunmuyor. Görüşmede kendi ürün ve teknik belgeleriniz üzerinden sayfa kapsamı belirlenir.",
+      "incoming": [
+        "/izmit-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/izmit-web-tasarim",
+        "/tr/web-tasarim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi"
+      ]
+    },
+    "assessment": "Genel sayfa da kapasite, sertifika ve B2B hedefliyordu. Genel işletme/hizmet ile teknik fabrika içeriği ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/adapazari-e-ticaret-web-sitesi",
+    "city": "Adapazarı",
+    "before": {
+      "title": "Adapazarı E-Ticaret Web Sitesi | Online Satış ve Mağaza Altyapısı",
+      "description": "Adapazarı ve Sakarya için e-ticaret web sitesi: ürün kataloğu, sepet akışı, ödeme planı, mobil alışveriş ve SEO uyumlu mağaza yapısı. KOBİ’ler için aşamalı büyüme.",
+      "h1": "Adapazarı E-Ticaret Web Sitesi",
+      "intent": "Adapazarı E-Ticaret Web Sitesi — Adapazarı’nda online satış için sağlam temel",
+      "projects": [
+        {
+          "id": "siir-dunyasi",
+          "detailHref": "/tr/projects/siir-dunyasi",
+          "title": "Şiir Dünyası – İçerik Platformu",
+          "description": "Şiir ve edebi içeriklerin dijital ortamda paylaşımı.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://siir-dunyasi1.vercel.app/",
+          "typeLabel": "Kişisel"
+        },
+        {
+          "id": "aria",
+          "detailHref": "/tr/projects/aria",
+          "title": "ARIA – Sosyal Medya Platformu",
+          "description": "Sosyal medya platformu arayüz ve kullanıcı akışı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://aria-demo-omega.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/adapazari-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/adapazari-web-tasarim",
+        "https://siir-dunyasi1.vercel.app/",
+        "/tr/projects/siir-dunyasi",
+        "https://aria-demo-omega.vercel.app/",
+        "/tr/projects/aria",
+        "/tr/bolu-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/adapazari-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "zonguldak-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.01
+        },
+        {
+          "slug": "zonguldak-kucuk-isletme-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.01
+        },
+        {
+          "slug": "duzce-seo-uyumlu-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.008
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "adapazari-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.005
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Adapazarı E-Ticaret Web Sitesi | Online Satış ve Mağaza Altyapısı",
+      "description": "Adapazarı ve Sakarya için e-ticaret web sitesi: ürün kataloğu, sepet akışı, ödeme planı, mobil alışveriş ve SEO uyumlu mağaza yapısı. KOBİ’ler için aşamalı büyüme.",
+      "h1": "Adapazarı E-Ticaret Web Sitesi",
+      "projects": [],
+      "projectRationale": "Mevcut portföyde uçtan uca e-ticaret mağazası örneği bulunmuyor. Ürün, ödeme ve teslimat gereksinimleri ayrı değerlendirilir; ilgisiz bir demo mağaza örneği olarak gösterilmez.",
+      "incoming": [
+        "/adapazari-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/adapazari-web-tasarim",
+        "/tr/web-tasarim",
+        "/tr/bolu-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/adapazari-web-tasarim",
+        "/adapazari-e-ticaret-web-sitesi"
+      ]
+    },
+    "assessment": "Tanıtım ile online satış niyeti zaten ayrılabiliyordu. Metadata korundu; ödeme/entegrasyon iddiaları koşullarıyla açıklandı.",
+    "change": "Hedefli içerik, proje ve bağlantı düzeltmesi"
+  },
+  {
+    "url": "/adapazari-web-tasarim",
+    "city": "Adapazarı",
+    "before": {
+      "title": "Adapazarı Web Tasarım | Sakarya İşletmeleri İçin Modern Arayüz",
+      "description": "Adapazarı web tasarım: yerel hizmet, perakende ve ticaret firmaları için özgün arayüz, hızlı sayfa yapısı, mobil uyum ve SEO dostu üretim.",
+      "h1": "Adapazarı Web Tasarım",
+      "intent": "Adapazarı Web Tasarım — Adapazarı’nda yerel marka, güçlü dijital arayüz",
+      "projects": [
+        {
+          "id": "danismanlik",
+          "detailHref": "/tr/projects/mavi-danismanlik",
+          "title": "Danışmanlık – Kurumsal Web Sitesi",
+          "description": "Danışmanlık hizmetleri için kurumsal web sitesi demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://danismanlik-demo.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "guzellik",
+          "detailHref": "/tr/projects/guzellik-salonu",
+          "title": "Güzellik Salonu – Kurumsal Web Sitesi",
+          "description": "Güzellik ve bakım için kurumsal web sitesi demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://guzellik-salonu-demo-web.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/adapazari-e-ticaret-web-sitesi",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "https://guzellik-salonu-demo-web.vercel.app/",
+        "/tr/projects/guzellik-salonu",
+        "/tr/bolu-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/adapazari-e-ticaret-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "zonguldak-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.041
+        },
+        {
+          "slug": "canakkale-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.037
+        },
+        {
+          "slug": "bartin-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.037
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "adapazari-e-ticaret-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.005
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Adapazarı Web Tasarım | Sakarya İşletmeleri İçin Modern Arayüz",
+      "description": "Adapazarı web tasarım: yerel hizmet, perakende ve ticaret firmaları için özgün arayüz, hızlı sayfa yapısı, mobil uyum ve SEO dostu üretim.",
+      "h1": "Adapazarı Web Tasarım",
+      "projects": [
+        "mavi-danismanlik",
+        "guzellik-salonu"
+      ],
+      "projectRationale": "Hizmet sunumu ve iletişim için iki mevcut demo. Adapazarı’nda yapılmış müşteri projeleri değildir.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/tr/web-tasarim",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "https://guzellik-salonu-demo-web.vercel.app/",
+        "/tr/projects/guzellik-salonu",
+        "/tr/bolu-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/adapazari-web-tasarim"
+      ]
+    },
+    "assessment": "Tanıtım ile online satış niyeti zaten ayrılabiliyordu. Metadata korundu; ödeme/entegrasyon iddiaları koşullarıyla açıklandı.",
+    "change": "Hedefli içerik, proje ve bağlantı düzeltmesi"
+  },
+  {
+    "url": "/duzce-seo-uyumlu-web-sitesi",
+    "city": "Düzce",
+    "before": {
+      "title": "Düzce SEO Uyumlu Web Sitesi | Arama Görünürlüğü ve Teknik Temel",
+      "description": "Düzce için SEO uyumlu web sitesi: teknik meta, hız, mobil uyum, semantik HTML ve içerik iskeletiyle Google’da görünürlük hedefleyen yapılandırılmış çözüm.",
+      "h1": "Düzce SEO Uyumlu Web Sitesi",
+      "intent": "Düzce SEO Uyumlu Web Sitesi — Düzce’de görünürlük için teknik SEO temeli",
+      "projects": [
+        {
+          "id": "gonul-pusulasi",
+          "detailHref": "/tr/projects/gonul-pusulasi",
+          "title": "Gönül Pusulası – Metin Platformu",
+          "description": "Şiir, duygu ve anlatı üzerine sade dijital metin platformu.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://gonulpusulasi.oner334480.workers.dev/",
+          "typeLabel": "Kişisel"
+        },
+        {
+          "id": "musty-music",
+          "detailHref": "/tr/projects/musty-music",
+          "title": "Musty Music – Müzik Sitesi",
+          "description": "Sanatçı portföyü ve müzik odaklı arayüz demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://mk-music3.vercel.app/?lang=tr",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/duzce-kurumsal-web-tasarim",
+        "https://gonulpusulasi.oner334480.workers.dev/",
+        "/tr/projects/gonul-pusulasi",
+        "https://mk-music3.vercel.app/?lang=tr",
+        "/tr/projects/musty-music",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/duzce-kurumsal-web-tasarim",
+        "/tr/duzce-santiye-yonetim-sistemi"
+      ],
+      "similarities": [
+        {
+          "slug": "adapazari-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.018
+        },
+        {
+          "slug": "zonguldak-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.017
+        },
+        {
+          "slug": "zonguldak-kucuk-isletme-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.017
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "duzce-kurumsal-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.006
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Düzce SEO Uyumlu Web Sitesi | Arama Görünürlüğü ve Teknik Temel",
+      "description": "Düzce için SEO uyumlu web sitesi: teknik meta, hız, mobil uyum, semantik HTML ve içerik iskeletiyle Google’da görünürlük hedefleyen yapılandırılmış çözüm.",
+      "h1": "Düzce SEO Uyumlu Web Sitesi",
+      "projects": [
+        "mavi-iletisim"
+      ],
+      "projectRationale": "Mavi İletişim hizmet sayfası düzenini incelemek içindir. Bir SEO başarı hikâyesi veya sıralama sonucu olarak sunulmaz.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/duzce-kurumsal-web-tasarim",
+        "/tr/web-tasarim",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/duzce-seo-uyumlu-web-sitesi"
+      ]
+    },
+    "assessment": "Teknik SEO ile kurumsal şirket yapısı farklı ihtiyaçlar. Metadata korundu; mevcut site incelemesi ve veri gereksinimi netleştirildi.",
+    "change": "Hedefli içerik, proje ve bağlantı düzeltmesi"
+  },
+  {
+    "url": "/duzce-kurumsal-web-tasarim",
+    "city": "Düzce",
+    "before": {
+      "title": "Düzce Kurumsal Web Tasarım | Profesyonel Marka ve Arayüz",
+      "description": "Düzce kurumsal web tasarım: güven veren layout, yönetilebilir içerik, referans alanları ve modern kurumsal dil. KOBİ ve üretim firmaları için premium dijital kimlik.",
+      "h1": "Düzce Kurumsal Web Tasarım",
+      "intent": "Düzce Kurumsal Web Tasarım — Düzce’de kurumsal çizgide dijital prestij",
+      "projects": [
+        {
+          "id": "mk-ops",
+          "detailHref": "/tr/projects/mk-ops",
+          "title": "MK OPS",
+          "description": "Saha operasyonları için SaaS tabanlı operasyon yönetim sistemi.",
+          "tags": [
+            "Next.js",
+            "Dashboard",
+            "SaaS"
+          ],
+          "url": "https://www.mk-ops.tr",
+          "typeLabel": "Sistem"
+        },
+        {
+          "id": "aria",
+          "detailHref": "/tr/projects/aria",
+          "title": "ARIA – Sosyal Medya Platformu",
+          "description": "Sosyal medya platformu arayüz ve kullanıcı akışı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://aria-demo-omega.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/duzce-seo-uyumlu-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "https://www.mk-ops.tr",
+        "/tr/projects/mk-ops",
+        "https://aria-demo-omega.vercel.app/",
+        "/tr/projects/aria",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/tr/duzce-santiye-yonetim-sistemi"
+      ],
+      "similarities": [
+        {
+          "slug": "izmit-fabrika-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.027
+        },
+        {
+          "slug": "izmit-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.01
+        },
+        {
+          "slug": "adapazari-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.009
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "duzce-seo-uyumlu-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.006
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Düzce Kurumsal Web Tasarım | Profesyonel Marka ve Arayüz",
+      "description": "Düzce kurumsal web tasarım: güven veren layout, yönetilebilir içerik, referans alanları ve modern kurumsal dil. KOBİ ve üretim firmaları için premium dijital kimlik.",
+      "h1": "Düzce Kurumsal Web Tasarım",
+      "projects": [
+        "mavi-iletisim",
+        "mavi-danismanlik"
+      ],
+      "projectRationale": "Kurumsal hizmetlerin sınıflandırılması için mevcut demolar incelenebilir. Panel ve yetki ihtiyaçları ayrıca kapsamlandırılır.",
+      "incoming": [
+        "/duzce-seo-uyumlu-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim"
+      ]
+    },
+    "assessment": "Teknik SEO ile kurumsal şirket yapısı farklı ihtiyaçlar. Metadata korundu; mevcut site incelemesi ve veri gereksinimi netleştirildi.",
+    "change": "Hedefli içerik, proje ve bağlantı düzeltmesi"
+  },
+  {
+    "url": "/zonguldak-web-tasarim",
+    "city": "Zonguldak",
+    "before": {
+      "title": "Zonguldak Web Tasarım | Maden, Enerji ve Yerel Ticaret Dijital",
+      "description": "Zonguldak web tasarım: maden, enerji, lojistik ve yerel ticarete uygun sade arayüzler. Hızlı iletişim, mobil uyum ve Karadeniz iş dinamiklerine uygun dijital vitrin.",
+      "h1": "Zonguldak Web Tasarım",
+      "intent": "Zonguldak Web Tasarım — Zonguldak’ta bölgesel güç, dijital netlik",
+      "projects": [
+        {
+          "id": "siir-dunyasi",
+          "detailHref": "/tr/projects/siir-dunyasi",
+          "title": "Şiir Dünyası – İçerik Platformu",
+          "description": "Şiir ve edebi içeriklerin dijital ortamda paylaşımı.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://siir-dunyasi1.vercel.app/",
+          "typeLabel": "Kişisel"
+        },
+        {
+          "id": "musty-music",
+          "detailHref": "/tr/projects/musty-music",
+          "title": "Musty Music – Müzik Sitesi",
+          "description": "Sanatçı portföyü ve müzik odaklı arayüz demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://mk-music3.vercel.app/?lang=tr",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "https://siir-dunyasi1.vercel.app/",
+        "/tr/projects/siir-dunyasi",
+        "https://mk-music3.vercel.app/?lang=tr",
+        "/tr/projects/musty-music",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/zonguldak-kucuk-isletme-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "adapazari-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.041
+        },
+        {
+          "slug": "izmit-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.026
+        },
+        {
+          "slug": "zonguldak-kucuk-isletme-web-sitesi",
+          "sameCity": true,
+          "shingleJaccard": 0.023
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "zonguldak-kucuk-isletme-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.023
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Zonguldak Web Tasarım | Maden, Enerji ve Yerel Ticaret Dijital",
+      "description": "Zonguldak web tasarım: maden, enerji, lojistik ve yerel ticarete uygun sade arayüzler. Hızlı iletişim, mobil uyum ve Karadeniz iş dinamiklerine uygun dijital vitrin.",
+      "h1": "Zonguldak Web Tasarım",
+      "projects": [
+        "mavi-iletisim"
+      ],
+      "projectRationale": "Teknik hizmetlerin anlatımı için Mavi İletişim demosu incelenebilir. Maden veya enerji tesisi referansı değildir.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/zonguldak-web-tasarim"
+      ]
+    },
+    "assessment": "Genel web tasarım ile küçük işletme sayfası hâlâ aynı temel tanıtım/iletişim ihtiyacını karşılayabiliyor; birleştirme adayı.",
+    "change": "Hedefli içerik, proje ve bağlantı düzeltmesi"
+  },
+  {
+    "url": "/zonguldak-kucuk-isletme-web-sitesi",
+    "city": "Zonguldak",
+    "before": {
+      "title": "Zonguldak Küçük İşletme Web Sitesi | KOBİ ve Esnaf Vitrini",
+      "description": "Zonguldak küçük işletmeler için uygun bütçeli, profesyonel web sitesi: menü, hizmet, konum, galeri ve WhatsApp iletişim odaklı dijital vitrin.",
+      "h1": "Zonguldak Küçük İşletme Web Sitesi",
+      "intent": "Zonguldak Küçük İşletme Web Sitesi — Zonguldak KOBİ’leri için büyük bütçe şart değil",
+      "projects": [
+        {
+          "id": "musty-music",
+          "detailHref": "/tr/projects/musty-music",
+          "title": "Musty Music – Müzik Sitesi",
+          "description": "Sanatçı portföyü ve müzik odaklı arayüz demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://mk-music3.vercel.app/?lang=tr",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mavi-kadraj",
+          "detailHref": "/tr/projects/mavi-kadraj",
+          "title": "Mavi Kadraj – Fotoğraf Platformu",
+          "description": "Fotoğraf, doğa ve görsel anlatım üzerine dijital portföy.",
+          "tags": [
+            "WordPress",
+            "Design",
+            "Frontend"
+          ],
+          "url": "https://www.mavikadraj.com.tr",
+          "typeLabel": "Kişisel"
+        }
+      ],
+      "incoming": [
+        "/zonguldak-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/zonguldak-web-tasarim",
+        "https://mk-music3.vercel.app/?lang=tr",
+        "/tr/projects/musty-music",
+        "https://www.mavikadraj.com.tr",
+        "/tr/projects/mavi-kadraj",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/zonguldak-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "adapazari-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.024
+        },
+        {
+          "slug": "zonguldak-web-tasarim",
+          "sameCity": true,
+          "shingleJaccard": 0.023
+        },
+        {
+          "slug": "duzce-seo-uyumlu-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.017
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "zonguldak-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.023
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Zonguldak Küçük İşletme Web Sitesi | KOBİ ve Esnaf Vitrini",
+      "description": "Zonguldak küçük işletmeler için uygun bütçeli, profesyonel web sitesi: menü, hizmet, konum, galeri ve WhatsApp iletişim odaklı dijital vitrin.",
+      "h1": "Zonguldak Küçük İşletme Web Sitesi",
+      "projects": [
+        "mavi-kafe",
+        "guzellik-salonu"
+      ],
+      "projectRationale": "Menü, hizmet ve iletişim düzeni için küçük işletme demoları. Zonguldak’ta müşteri kurulumu oldukları iddia edilmez.",
+      "incoming": [
+        "/zonguldak-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/zonguldak-web-tasarim",
+        "/tr/web-tasarim",
+        "https://mk-kafe.vercel.app/",
+        "/tr/projects/mavi-kafe",
+        "https://guzellik-salonu-demo-web.vercel.app/",
+        "/tr/projects/guzellik-salonu",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi"
+      ]
+    },
+    "assessment": "Genel web tasarım ile küçük işletme sayfası hâlâ aynı temel tanıtım/iletişim ihtiyacını karşılayabiliyor; birleştirme adayı.",
+    "change": "Hedefli içerik, proje ve bağlantı düzeltmesi"
+  },
+  {
+    "url": "/canakkale-otel-web-sitesi",
+    "city": "Çanakkale",
+    "before": {
+      "title": "Çanakkale Otel Web Sitesi | Rezervasyon ve Turizm Odaklı Dijital Vitrin",
+      "description": "Çanakkale otel, pansiyon ve butik konaklama işletmeleri için oda tipleri, galeri, konum ve doğrudan rezervasyon akışı sunan mobil uyumlu otel web sitesi. Sezon kampanyaları ve yerel SEO desteği.",
+      "h1": "Çanakkale Otel Web Sitesi",
+      "intent": "Çanakkale Otel Web Sitesi — Çanakkale’de konaklama işletmeniz için rezervasyon odaklı site",
+      "projects": [
+        {
+          "id": "aria",
+          "detailHref": "/tr/projects/aria",
+          "title": "ARIA – Sosyal Medya Platformu",
+          "description": "Sosyal medya platformu arayüz ve kullanıcı akışı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://aria-demo-omega.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mavi-iletisim",
+          "detailHref": "/tr/projects/mavi-iletisim",
+          "title": "Mavi İletişim – Telekom ve Teknik Servis",
+          "description": "Telekom ve teknik servis kurumsal demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://mavi-iletisim-demo.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/canakkale-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/canakkale-web-tasarim",
+        "https://aria-demo-omega.vercel.app/",
+        "/tr/projects/aria",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/canakkale-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "bartin-mobil-uyumlu-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.013
+        },
+        {
+          "slug": "izmit-fabrika-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.008
+        },
+        {
+          "slug": "canakkale-web-tasarim",
+          "sameCity": true,
+          "shingleJaccard": 0.008
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "canakkale-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.008
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Çanakkale Otel Web Sitesi | Oda ve Rezervasyon Talebi",
+      "description": "Çanakkale otel ve pansiyonları için oda bilgisi, galeri, konum ve rezervasyon talebi odaklı site. İçerik ve iletişim kapsamını işletmenize göre planlayın.",
+      "h1": "Çanakkale Otel Web Sitesi",
+      "projects": [
+        "mavi-kadraj-otel"
+      ],
+      "projectRationale": "Bolu kurgusuyla hazırlanmış Mavi Kadraj Otel demosu oda ve galeri düzenini gösterir. Çanakkale’de bir müşteri oteli veya canlı rezervasyon altyapısı olarak sunulmaz.",
+      "incoming": [
+        "/canakkale-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/canakkale-web-tasarim",
+        "/tr/web-tasarim",
+        "https://mk-otel.vercel.app/",
+        "/tr/projects/mavi-kadraj-otel",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/canakkale-web-tasarim",
+        "/canakkale-otel-web-sitesi"
+      ]
+    },
+    "assessment": "Otel niyeti ayrı. Genel sayfanın Bartın ile paylaştığı anlatım özgünleştirildi; otel içeriği rezervasyon talebi olarak netleştirildi.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/canakkale-web-tasarim",
+    "city": "Çanakkale",
+    "before": {
+      "title": "Çanakkale Web Tasarım | Turizm ve Yerel İşletmeler İçin Dijital Vitrin",
+      "description": "Çanakkale turizm, restoran, rehberlik ve yerel hizmet işletmeleri için mobil uyumlu, hızlı ve SEO dostu web tasarım. Gelibolu ve sahil hattına uygun landing ve WhatsApp CTA.",
+      "h1": "Çanakkale Web Tasarım",
+      "intent": "Çanakkale Web Tasarım — Çanakkale’de turizm ve yerel işletmelerin dijital vitrini",
+      "projects": [
+        {
+          "id": "mavi-iletisim",
+          "detailHref": "/tr/projects/mavi-iletisim",
+          "title": "Mavi İletişim – Telekom ve Teknik Servis",
+          "description": "Telekom ve teknik servis kurumsal demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://mavi-iletisim-demo.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mavi-sarkilar",
+          "detailHref": "/tr/projects/mavi-sarkilar",
+          "title": "Mavi Şarkılar – Müzik Platformu",
+          "description": "Müzik platformu arayüz ve yapı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://spotify-demo-hazel.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/canakkale-otel-web-sitesi",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "https://spotify-demo-hazel.vercel.app/",
+        "/tr/projects/mavi-sarkilar",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/canakkale-otel-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "bartin-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.405
+        },
+        {
+          "slug": "balikesir-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.238
+        },
+        {
+          "slug": "izmit-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.05
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "canakkale-otel-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.008
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Çanakkale Web Tasarım | Turizm ve Yerel İşletmeler İçin Dijital Vitrin",
+      "description": "Çanakkale turizm, restoran, rehberlik ve yerel hizmet işletmeleri için mobil uyumlu, hızlı ve SEO dostu web tasarım. Gelibolu ve sahil hattına uygun landing ve WhatsApp CTA.",
+      "h1": "Çanakkale Web Tasarım",
+      "projects": [
+        "mavi-kafe",
+        "mavi-gayrimenkul"
+      ],
+      "projectRationale": "Menü ve ilan sunumunu gösteren portföy demoları farklı işletme ihtiyaçlarını karşılaştırmaya yardımcı olur.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/canakkale-otel-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mk-kafe.vercel.app/",
+        "/tr/projects/mavi-kafe",
+        "https://mk-emlak-swfa.vercel.app/",
+        "/tr/projects/mavi-gayrimenkul",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/canakkale-web-tasarim"
+      ]
+    },
+    "assessment": "Otel niyeti ayrı. Genel sayfanın Bartın ile paylaştığı anlatım özgünleştirildi; otel içeriği rezervasyon talebi olarak netleştirildi.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/balikesir-web-tasarim",
+    "city": "Balıkesir",
+    "before": {
+      "title": "Balıkesir Web Tasarım | Tarım, Turizm ve Sanayi İçin Dijital Vitrin",
+      "description": "Balıkesir tarım, turizm, sanayi ve yerel hizmet işletmeleri için mobil uyumlu, hızlı ve SEO dostu web tasarım. Edremit, Ayvalık ve merkez odaklı landing, WhatsApp CTA ve yerel arama görünürlüğü.",
+      "h1": "Balıkesir Web Tasarım",
+      "intent": "Balıkesir Web Tasarım — Balıkesir’de tarım, turizm ve sanayinin dijital vitrini",
+      "projects": [
+        {
+          "id": "danismanlik",
+          "detailHref": "/tr/projects/mavi-danismanlik",
+          "title": "Danışmanlık – Kurumsal Web Sitesi",
+          "description": "Danışmanlık hizmetleri için kurumsal web sitesi demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://danismanlik-demo.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "guzellik",
+          "detailHref": "/tr/projects/guzellik-salonu",
+          "title": "Güzellik Salonu – Kurumsal Web Sitesi",
+          "description": "Güzellik ve bakım için kurumsal web sitesi demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://guzellik-salonu-demo-web.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/balikesir-dijital-ajans",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "https://guzellik-salonu-demo-web.vercel.app/",
+        "/tr/projects/guzellik-salonu",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/balikesir-dijital-ajans"
+      ],
+      "similarities": [
+        {
+          "slug": "bartin-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.258
+        },
+        {
+          "slug": "canakkale-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.238
+        },
+        {
+          "slug": "izmit-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.04
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "balikesir-dijital-ajans",
+        "sameCity": true,
+        "shingleJaccard": 0.004
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Balıkesir Web Tasarım | Tarım, Turizm ve Sanayi İçin Dijital Vitrin",
+      "description": "Balıkesir tarım, turizm, sanayi ve yerel hizmet işletmeleri için mobil uyumlu, hızlı ve SEO dostu web tasarım. Edremit, Ayvalık ve merkez odaklı landing, WhatsApp CTA ve yerel arama görünürlüğü.",
+      "h1": "Balıkesir Web Tasarım",
+      "projects": [
+        "mavi-kafe",
+        "mavi-gayrimenkul"
+      ],
+      "projectRationale": "Restoran ve gayrimenkul demoları içerik önceliklerini karşılaştırmak içindir; Balıkesir müşteri referansı değildir.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/balikesir-dijital-ajans",
+        "/tr/web-tasarim",
+        "https://mk-kafe.vercel.app/",
+        "/tr/projects/mavi-kafe",
+        "https://mk-emlak-swfa.vercel.app/",
+        "/tr/projects/mavi-gayrimenkul",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/balikesir-web-tasarim"
+      ]
+    },
+    "assessment": "Web sitesi ile ajans ayrımı kapsam belirsizliği taşıyordu. Ajans sayfası mevcut web/yazılım koordinasyonuna daraltıldı; reklam ve sosyal medya vaadi çıkarıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/balikesir-dijital-ajans",
+    "city": "Balıkesir",
+    "before": {
+      "title": "Balıkesir Dijital Ajans | Marka, Web ve Yerel Büyüme Stratejisi",
+      "description": "Balıkesir işletmeleri için dijital ajans hizmetleri: web tasarım, marka kimliği, SEO, sosyal medya ve dönüşüm odaklı içerik. Tarım, turizm ve sanayi KOBİ’lerine özel strateji.",
+      "h1": "Balıkesir Dijital Ajans",
+      "intent": "Balıkesir Dijital Ajans — Balıkesir’de bütünleşik dijital ajans yaklaşımı",
+      "projects": [
+        {
+          "id": "musty-music",
+          "detailHref": "/tr/projects/musty-music",
+          "title": "Musty Music – Müzik Sitesi",
+          "description": "Sanatçı portföyü ve müzik odaklı arayüz demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://mk-music3.vercel.app/?lang=tr",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mavi-kadraj",
+          "detailHref": "/tr/projects/mavi-kadraj",
+          "title": "Mavi Kadraj – Fotoğraf Platformu",
+          "description": "Fotoğraf, doğa ve görsel anlatım üzerine dijital portföy.",
+          "tags": [
+            "WordPress",
+            "Design",
+            "Frontend"
+          ],
+          "url": "https://www.mavikadraj.com.tr",
+          "typeLabel": "Kişisel"
+        }
+      ],
+      "incoming": [
+        "/balikesir-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/balikesir-web-tasarim",
+        "https://mk-music3.vercel.app/?lang=tr",
+        "/tr/projects/musty-music",
+        "https://www.mavikadraj.com.tr",
+        "/tr/projects/mavi-kadraj",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/balikesir-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "balikesir-web-tasarim",
+          "sameCity": true,
+          "shingleJaccard": 0.004
+        },
+        {
+          "slug": "izmit-fabrika-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.003
+        },
+        {
+          "slug": "canakkale-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.002
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "balikesir-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.004
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Balıkesir Dijital Ajans | Web ve Yazılım Proje Planlama",
+      "description": "Balıkesir işletmeleri için web sitesi ve özel yazılım ihtiyaçlarını birlikte değerlendirin. Kapsam, içerik sorumluluğu ve teslim adımlarını netleştirelim.",
+      "h1": "Balıkesir Dijital Ajans",
+      "projects": [
+        "mavi-iletisim",
+        "mavi-danismanlik"
+      ],
+      "projectRationale": "Mevcut kurumsal demolar web üretimi kapsamını gösterir. Reklam performansı veya sosyal medya yönetimi sonucu olarak sunulmaz.",
+      "incoming": [
+        "/balikesir-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/balikesir-web-tasarim",
+        "/tr/ozel-yazilim-gelistirme",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans"
+      ]
+    },
+    "assessment": "Web sitesi ile ajans ayrımı kapsam belirsizliği taşıyordu. Ajans sayfası mevcut web/yazılım koordinasyonuna daraltıldı; reklam ve sosyal medya vaadi çıkarıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/bartin-web-tasarim",
+    "city": "Bartın",
+    "before": {
+      "title": "Bartın Web Tasarım | Sahil Turizmi ve Yerel İşletmeler İçin Dijital Vitrin",
+      "description": "Bartın sahil turizmi, restoran, konaklama ve yerel hizmet işletmeleri için mobil uyumlu, hızlı ve SEO dostu web tasarım. Amasra ve sahil hattına uygun landing, WhatsApp CTA ve yerel arama.",
+      "h1": "Bartın Web Tasarım",
+      "intent": "Bartın Web Tasarım — Bartın’da sahil turizmi ve yerel işletmelerin dijital vitrini",
+      "projects": [
+        {
+          "id": "gonul-pusulasi",
+          "detailHref": "/tr/projects/gonul-pusulasi",
+          "title": "Gönül Pusulası – Metin Platformu",
+          "description": "Şiir, duygu ve anlatı üzerine sade dijital metin platformu.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://gonulpusulasi.oner334480.workers.dev/",
+          "typeLabel": "Kişisel"
+        },
+        {
+          "id": "mavi-iletisim",
+          "detailHref": "/tr/projects/mavi-iletisim",
+          "title": "Mavi İletişim – Telekom ve Teknik Servis",
+          "description": "Telekom ve teknik servis kurumsal demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://mavi-iletisim-demo.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "https://gonulpusulasi.oner334480.workers.dev/",
+        "/tr/projects/gonul-pusulasi",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/tr/bartin-santiye-yonetim-sistemi"
+      ],
+      "similarities": [
+        {
+          "slug": "canakkale-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.405
+        },
+        {
+          "slug": "balikesir-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.258
+        },
+        {
+          "slug": "izmit-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.046
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "bartin-mobil-uyumlu-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.016
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Bartın Web Tasarım | Sahil Turizmi ve Yerel İşletmeler İçin Dijital Vitrin",
+      "description": "Bartın sahil turizmi, restoran, konaklama ve yerel hizmet işletmeleri için mobil uyumlu, hızlı ve SEO dostu web tasarım. Amasra ve sahil hattına uygun landing, WhatsApp CTA ve yerel arama.",
+      "h1": "Bartın Web Tasarım",
+      "projects": [
+        "mavi-kafe",
+        "mavi-kadraj-otel"
+      ],
+      "projectRationale": "Menü ve konaklama sunumu için mevcut demolar. Otel demosunun Bolu kurgusu Bartın müşteri referansı anlamına gelmez.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mk-kafe.vercel.app/",
+        "/tr/projects/mavi-kafe",
+        "https://mk-otel.vercel.app/",
+        "/tr/projects/mavi-kadraj-otel",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/bartin-web-tasarim"
+      ]
+    },
+    "assessment": "Her iki sayfa yeni mobil işletme sitesi sunuyordu. Mobil sayfa mevcut sitedeki tekrarlanabilir kullanım sorunlarına odaklandı; sorgu verisiyle izlenmeli.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/bartin-mobil-uyumlu-web-sitesi",
+    "city": "Bartın",
+    "before": {
+      "title": "Bartın Mobil Uyumlu Web Sitesi | Telefon Öncelikli Dijital Vitrin",
+      "description": "Bartın işletmeleri için mobil öncelikli, hızlı ve dokunmatik dostu web sitesi. Sahil turizmi ve yerel KOBİ’ler için thumb-friendly menü, büyük CTA ve WhatsApp entegrasyonu.",
+      "h1": "Bartın Mobil Uyumlu Web Sitesi",
+      "intent": "Bartın Mobil Uyumlu Web Sitesi — Bartın’da mobil öncelikli web sitesi yaklaşımı",
+      "projects": [
+        {
+          "id": "siir-dunyasi",
+          "detailHref": "/tr/projects/siir-dunyasi",
+          "title": "Şiir Dünyası – İçerik Platformu",
+          "description": "Şiir ve edebi içeriklerin dijital ortamda paylaşımı.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://siir-dunyasi1.vercel.app/",
+          "typeLabel": "Kişisel"
+        },
+        {
+          "id": "aria",
+          "detailHref": "/tr/projects/aria",
+          "title": "ARIA – Sosyal Medya Platformu",
+          "description": "Sosyal medya platformu arayüz ve kullanıcı akışı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://aria-demo-omega.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bartin-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/bartin-web-tasarim",
+        "https://siir-dunyasi1.vercel.app/",
+        "/tr/projects/siir-dunyasi",
+        "https://aria-demo-omega.vercel.app/",
+        "/tr/projects/aria",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/bartin-web-tasarim",
+        "/tr/bartin-santiye-yonetim-sistemi"
+      ],
+      "similarities": [
+        {
+          "slug": "zonguldak-kucuk-isletme-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.016
+        },
+        {
+          "slug": "bartin-web-tasarim",
+          "sameCity": true,
+          "shingleJaccard": 0.016
+        },
+        {
+          "slug": "canakkale-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.015
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "bartin-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.016
+      },
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Bartın Mobil Uyumlu Web Sitesi | Menü ve Form İyileştirme",
+      "description": "Bartın’daki mevcut sitenizin telefonda menü, galeri, form ve iletişim kullanımını değerlendirelim. Sorunlara göre mobil düzenleme ve yenileme kapsamını belirleyin.",
+      "h1": "Bartın Mobil Uyumlu Web Sitesi",
+      "projects": [
+        "mavi-kafe"
+      ],
+      "projectRationale": "Mavi Kafe demosu telefonda menü ve iletişim akışını incelemek içindir; bir mobil performans ölçümü veya başarı garantisi değildir.",
+      "incoming": [
+        "/bartin-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/bartin-web-tasarim",
+        "/tr/web-tasarim",
+        "https://mk-kafe.vercel.app/",
+        "/tr/projects/mavi-kafe",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi"
+      ]
+    },
+    "assessment": "Her iki sayfa yeni mobil işletme sitesi sunuyordu. Mobil sayfa mevcut sitedeki tekrarlanabilir kullanım sorunlarına odaklandı; sorgu verisiyle izlenmeli.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/osmaniye-kurumsal-web-sitesi",
+    "city": "Osmaniye",
+    "before": {
+      "title": "Osmaniye Kurumsal Web Sitesi | Katalog ve Yönetim Paneli",
+      "description": "Osmaniye’de üretim ve ticaret firmaları için kurumsal web sitesi. Katalog, referans ve yönetim paneli ihtiyaçlarınıza uygun sayfa yapısını birlikte belirleyelim.",
+      "h1": "Osmaniye Kurumsal Web Sitesi",
+      "intent": "Osmaniye Kurumsal Web Sitesi — Ticari bilgiyi güncel tutan kurumsal bir yayın düzeni",
+      "projects": [
+        {
+          "id": "hukuk",
+          "detailHref": "/tr/projects/hukuk-burosu",
+          "title": "Hukuk Bürosu – Kurumsal Web Sitesi",
+          "description": "Hukuk büroları için kurumsal web sitesi demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://hukuk-demo.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "aria",
+          "detailHref": "/tr/projects/aria",
+          "title": "ARIA – Sosyal Medya Platformu",
+          "description": "Sosyal medya platformu arayüz ve kullanıcı akışı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://aria-demo-omega.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/tr/osmaniye-web-tasarim",
+        "/tr/osmaniye-cafe-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/tr/osmaniye-web-tasarim",
+        "https://hukuk-demo.vercel.app/",
+        "/tr/projects/hukuk-burosu",
+        "https://aria-demo-omega.vercel.app/",
+        "/tr/projects/aria",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "tel:+905456597551",
+        "https://mustafaoner.net",
+        "https://share.google/MRmkCVOsy2F1GeFXD",
+        "https://www.google.com/maps/dir/?api=1&destination=MK+Digital+Systems&destination_place_id=ChIJO3pH_jHxLhURCxrzzyoz0HM",
+        "https://wa.me/905456597551",
+        "/tr/contact",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/tr/osmaniye-web-tasarim",
+        "/tr/osmaniye-cafe-kurumsal-web-sitesi",
+        "/tr/osmaniye-santiye-yonetim-sistemi"
+      ],
+      "similarities": [
+        {
+          "slug": "bolu-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0
+        },
+        {
+          "slug": "izmit-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0
+        },
+        {
+          "slug": "izmit-fabrika-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0
+        }
+      ],
+      "repeatedParagraphs": []
+    },
+    "after": {
+      "title": "Osmaniye Kurumsal Web Sitesi | Katalog ve Yönetim Paneli",
+      "description": "Osmaniye’de üretim ve ticaret firmaları için kurumsal web sitesi. Katalog, referans ve yönetim paneli ihtiyaçlarınıza uygun sayfa yapısını birlikte belirleyelim.",
+      "h1": "Osmaniye Kurumsal Web Sitesi",
+      "projects": [
+        "/tr/projects/hukuk-burosu",
+        "/tr/projects/aria"
+      ],
+      "projectRationale": "Önceki aşama korundu.",
+      "incoming": [
+        "/tr/osmaniye-web-tasarim",
+        "/tr/osmaniye-cafe-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/tr/osmaniye-web-tasarim",
+        "https://hukuk-demo.vercel.app/",
+        "/tr/projects/hukuk-burosu",
+        "https://aria-demo-omega.vercel.app/",
+        "/tr/projects/aria",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "tel:+905456597551",
+        "https://mustafaoner.net",
+        "https://share.google/MRmkCVOsy2F1GeFXD",
+        "https://www.google.com/maps/dir/?api=1&destination=MK+Digital+Systems&destination_place_id=ChIJO3pH_jHxLhURCxrzzyoz0HM",
+        "https://wa.me/905456597551",
+        "/tr/contact",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/tr/osmaniye-web-tasarim",
+        "/osmaniye-kurumsal-web-sitesi"
+      ]
+    },
+    "assessment": "Önceki aşama korundu; yeni içerik veya proje seçimi uygulanmadı.",
+    "change": "Korundu"
+  },
+  {
+    "url": "/kilis-web-tasarim",
+    "city": "Kilis",
+    "before": {
+      "title": "Kilis Web Tasarım | Sınır Ticareti ve KOBİ Dijital Vitrin",
+      "description": "Kilis küçük işletme ve sınır ticareti için hızlı, mobil uyumlu web tasarım. Landing, SEO, WhatsApp CTA ve yerel görünürlük.",
+      "h1": "Kilis Web Tasarım",
+      "intent": "Kilis Web Tasarım — Kilis’te küçük işletmenin dijital vitrini",
+      "projects": [
+        {
+          "id": "mk-digital",
+          "title": "MK Digital Systems",
+          "description": "Web siteleri, e-ticaret ve özel yazılım geliştiren dijital üretim markası.",
+          "tags": [
+            "Next.js",
+            "Web Development",
+            "UI Systems"
+          ],
+          "url": "https://mk-digital-systems.vercel.app/en",
+          "typeLabel": "Platform"
+        },
+        {
+          "id": "kadraj-rotam",
+          "detailHref": "/tr/projects/kadraj-rotam",
+          "title": "Kadraj Rotam – Rota Keşif Platformu",
+          "description": "Fotoğraf odaklı rota keşfi ve görsel hikâyeler.",
+          "tags": [
+            "Next.js",
+            "UI Design",
+            "Frontend"
+          ],
+          "url": "https://kadrajrotam.com.tr",
+          "typeLabel": "Kişisel"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/kilis-kurumsal-web-sitesi",
+        "https://mk-digital-systems.vercel.app/en",
+        "https://kadrajrotam.com.tr",
+        "/tr/projects/kadraj-rotam",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/kilis-kurumsal-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "bilecik-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.034
+        },
+        {
+          "slug": "karabuk-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.023
+        },
+        {
+          "slug": "kirklareli-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.021
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "kilis-kurumsal-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.012
+      },
+      "repeatedParagraphs": [
+        "Kilis web tasarım teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Kilis Web Tasarım | Sınır Ticareti ve KOBİ Dijital Vitrin",
+      "description": "Kilis küçük işletme ve sınır ticareti için hızlı, mobil uyumlu web tasarım. Landing, SEO, WhatsApp CTA ve yerel görünürlük.",
+      "h1": "Kilis Web Tasarım",
+      "projects": [
+        "mavi-iletisim",
+        "mavi-kafe"
+      ],
+      "projectRationale": "Hizmet listesi ve menü sunumu için demo örnekler. Kilis’te yapılmış müşteri işleri olarak sunulmaz.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/kilis-kurumsal-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "https://mk-kafe.vercel.app/",
+        "/tr/projects/mavi-kafe",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/kilis-web-tasarim"
+      ]
+    },
+    "assessment": "Ticaret ve hizmet anlatımı ortaktı. Ürün/işletme tanıtımı ile ticari katalog ve belge sunumu ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/kilis-kurumsal-web-sitesi",
+    "city": "Kilis",
+    "before": {
+      "title": "Kilis Kurumsal Web Sitesi | Ticaret ve Hizmet Güveni",
+      "description": "Kilis kurumsal web sitesi: çok sayfa, referans, admin panel ve marka tutarlılığı. Sınır ticareti ve hizmet firmaları için profesyonel yapı.",
+      "h1": "Kilis Kurumsal Web Sitesi",
+      "intent": "Kilis Kurumsal Web Sitesi — Kilis’te kurumsal itibar için dijital yapı",
+      "projects": [
+        {
+          "id": "hukuk",
+          "detailHref": "/tr/projects/hukuk-burosu",
+          "title": "Hukuk Bürosu – Kurumsal Web Sitesi",
+          "description": "Hukuk büroları için kurumsal web sitesi demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://hukuk-demo.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mavi-iletisim",
+          "detailHref": "/tr/projects/mavi-iletisim",
+          "title": "Mavi İletişim – Telekom ve Teknik Servis",
+          "description": "Telekom ve teknik servis kurumsal demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://mavi-iletisim-demo.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/kilis-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/kilis-web-tasarim",
+        "https://hukuk-demo.vercel.app/",
+        "/tr/projects/hukuk-burosu",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/kilis-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "bilecik-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.12
+        },
+        {
+          "slug": "kirklareli-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.092
+        },
+        {
+          "slug": "karabuk-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.087
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "kilis-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.012
+      },
+      "repeatedParagraphs": [
+        "Kilis kurumsal web sitesi teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Kilis Kurumsal Web Sitesi | Ticari Katalog ve Firma Bilgisi",
+      "description": "Kilis’te ticaret ve tedarik firmaları için ürün grupları, firma bilgisi ve belge sunumu. Katalog güncellemesi ve teklif iletişimini işletmenize göre planlayın.",
+      "h1": "Kilis Kurumsal Web Sitesi",
+      "projects": [
+        "mavi-iletisim"
+      ],
+      "projectRationale": "Ürün ve hizmet gruplarının kurumsal sunumu için Mavi İletişim demosu. Ticaret entegrasyonu veya yerel müşteri referansı değildir.",
+      "incoming": [
+        "/kilis-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/kilis-web-tasarim",
+        "/tr/web-tasarim",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi"
+      ]
+    },
+    "assessment": "Ticaret ve hizmet anlatımı ortaktı. Ürün/işletme tanıtımı ile ticari katalog ve belge sunumu ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/yalova-web-tasarim",
+    "city": "Yalova",
+    "before": {
+      "title": "Yalova Web Tasarım | Turizm ve Gayrimenkul Dijital Vitrin",
+      "description": "Yalova turizm, emlak ve hizmet sektörü için mobil uyumlu web tasarım. Landing, SEO, hız ve WhatsApp ile dönüşüm.",
+      "h1": "Yalova Web Tasarım",
+      "intent": "Yalova Web Tasarım — Yalova’da turizm ve hizmetin dijital yüzü",
+      "projects": [
+        {
+          "id": "mk-ops",
+          "detailHref": "/tr/projects/mk-ops",
+          "title": "MK OPS",
+          "description": "Saha operasyonları için SaaS tabanlı operasyon yönetim sistemi.",
+          "tags": [
+            "Next.js",
+            "Dashboard",
+            "SaaS"
+          ],
+          "url": "https://www.mk-ops.tr",
+          "typeLabel": "Sistem"
+        },
+        {
+          "id": "hukuk",
+          "detailHref": "/tr/projects/hukuk-burosu",
+          "title": "Hukuk Bürosu – Kurumsal Web Sitesi",
+          "description": "Hukuk büroları için kurumsal web sitesi demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://hukuk-demo.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/yalova-kurumsal-web-sitesi",
+        "https://www.mk-ops.tr",
+        "/tr/projects/mk-ops",
+        "https://hukuk-demo.vercel.app/",
+        "/tr/projects/hukuk-burosu",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/yalova-kurumsal-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "kirklareli-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.067
+        },
+        {
+          "slug": "karabuk-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.06
+        },
+        {
+          "slug": "bilecik-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.058
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "yalova-kurumsal-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.037
+      },
+      "repeatedParagraphs": [
+        "Yalova web tasarım teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Yalova Web Tasarım | Turizm ve Gayrimenkul Dijital Vitrin",
+      "description": "Yalova turizm, emlak ve hizmet sektörü için mobil uyumlu web tasarım. Landing, SEO, hız ve WhatsApp ile dönüşüm.",
+      "h1": "Yalova Web Tasarım",
+      "projects": [
+        "mavi-gayrimenkul",
+        "mavi-kadraj-otel"
+      ],
+      "projectRationale": "İlan ve oda sunumunu karşılaştırmak için iki demo. Otel örneği Bolu kurgusundadır; Yalova müşteri projesi değildir.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/yalova-kurumsal-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mk-emlak-swfa.vercel.app/",
+        "/tr/projects/mavi-gayrimenkul",
+        "https://mk-otel.vercel.app/",
+        "/tr/projects/mavi-kadraj-otel",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/yalova-web-tasarim"
+      ]
+    },
+    "assessment": "İki sayfa turizm/emlak/hizmet sunumunda örtüşüyordu. İşletme tanıtımı ile şirket/faaliyet ve yayın sorumluluğu ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/yalova-kurumsal-web-sitesi",
+    "city": "Yalova",
+    "before": {
+      "title": "Yalova Kurumsal Web Sitesi | Turizm ve Hizmet Markası",
+      "description": "Yalova kurumsal web: çok sayfa, admin panel, referans ve marka güveni. Turizm, emlak ve hizmet şirketleri için.",
+      "h1": "Yalova Kurumsal Web Sitesi",
+      "intent": "Yalova Kurumsal Web Sitesi — Yalova’da kurumsal marka için dijital omurga",
+      "projects": [
+        {
+          "id": "aria",
+          "detailHref": "/tr/projects/aria",
+          "title": "ARIA – Sosyal Medya Platformu",
+          "description": "Sosyal medya platformu arayüz ve kullanıcı akışı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://aria-demo-omega.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "siir-dunyasi",
+          "detailHref": "/tr/projects/siir-dunyasi",
+          "title": "Şiir Dünyası – İçerik Platformu",
+          "description": "Şiir ve edebi içeriklerin dijital ortamda paylaşımı.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://siir-dunyasi1.vercel.app/",
+          "typeLabel": "Kişisel"
+        }
+      ],
+      "incoming": [
+        "/yalova-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/yalova-web-tasarim",
+        "https://aria-demo-omega.vercel.app/",
+        "/tr/projects/aria",
+        "https://siir-dunyasi1.vercel.app/",
+        "/tr/projects/siir-dunyasi",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/yalova-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "bilecik-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.114
+        },
+        {
+          "slug": "kirklareli-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.11
+        },
+        {
+          "slug": "karabuk-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.099
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "yalova-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.037
+      },
+      "repeatedParagraphs": [
+        "Yalova kurumsal web sitesi teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Yalova Kurumsal Web Sitesi | Şirket ve Hizmet Yapısı",
+      "description": "Yalova’daki hizmet ve turizm şirketleri için faaliyet alanları, ekip ve referans sunumu. Çok sayfalı içerik yapısını ve yayın sorumluluğunu birlikte planlayın.",
+      "h1": "Yalova Kurumsal Web Sitesi",
+      "projects": [
+        "mavi-danismanlik"
+      ],
+      "projectRationale": "Hizmet ve şirket anlatımı için danışmanlık demosu incelenebilir. Çok tesisli işletme kurulumu olarak gösterilmez.",
+      "incoming": [
+        "/yalova-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/yalova-web-tasarim",
+        "/tr/web-tasarim",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi"
+      ]
+    },
+    "assessment": "İki sayfa turizm/emlak/hizmet sunumunda örtüşüyordu. İşletme tanıtımı ile şirket/faaliyet ve yayın sorumluluğu ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/karabuk-web-tasarim",
+    "city": "Karabük",
+    "before": {
+      "title": "Karabük Web Tasarım | Sanayi ve Üretim Dijital Vitrin",
+      "description": "Karabük fabrika ve üretim firmaları için hızlı, mobil ve SEO uyumlu web tasarım. B2B netliği, landing ve WhatsApp CTA.",
+      "h1": "Karabük Web Tasarım",
+      "intent": "Karabük Web Tasarım — Karabük sanayisinin dijital vitrini",
+      "projects": [
+        {
+          "id": "mavi-iletisim",
+          "detailHref": "/tr/projects/mavi-iletisim",
+          "title": "Mavi İletişim – Telekom ve Teknik Servis",
+          "description": "Telekom ve teknik servis kurumsal demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://mavi-iletisim-demo.vercel.app/",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mavi-sarkilar",
+          "detailHref": "/tr/projects/mavi-sarkilar",
+          "title": "Mavi Şarkılar – Müzik Platformu",
+          "description": "Müzik platformu arayüz ve yapı demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://spotify-demo-hazel.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/karabuk-kurumsal-web-sitesi",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "https://spotify-demo-hazel.vercel.app/",
+        "/tr/projects/mavi-sarkilar",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/karabuk-kurumsal-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "kirklareli-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.075
+        },
+        {
+          "slug": "bilecik-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.074
+        },
+        {
+          "slug": "yalova-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.06
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "karabuk-kurumsal-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.05
+      },
+      "repeatedParagraphs": [
+        "Karabük web tasarım teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Karabük Web Tasarım | Yerel İşletme ve Hizmet Siteleri",
+      "description": "Karabük ve Safranbolu’daki işletmeler için hizmet, menü, konum ve iletişim odaklı web tasarım. Mevcut içeriklerinizle uygun site kapsamını belirleyin.",
+      "h1": "Karabük Web Tasarım",
+      "projects": [
+        "mavi-kafe",
+        "mavi-danismanlik"
+      ],
+      "projectRationale": "Menü ve yerel hizmet sunumu için demo örnekler; sanayi üretim yazılımı olarak sunulmaz.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/karabuk-kurumsal-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mk-kafe.vercel.app/",
+        "/tr/projects/mavi-kafe",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/karabuk-web-tasarim"
+      ]
+    },
+    "assessment": "İki sayfa sanayi ve üretim vitrini hedefliyordu. Genel sayfa yerel işletme/hizmet; kurumsal sayfa teknik ürün/katalog odağına getirildi.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/karabuk-kurumsal-web-sitesi",
+    "city": "Karabük",
+    "before": {
+      "title": "Karabük Kurumsal Web Sitesi | Sanayi ve Üretim Güveni",
+      "description": "Karabük kurumsal web: çok sayfa, admin panel, referans ve ihracat vitrini. Fabrika ve üretim grupları için profesyonel yapı.",
+      "h1": "Karabük Kurumsal Web Sitesi",
+      "intent": "Karabük Kurumsal Web Sitesi — Karabük’te kurumsal üretim gücünü anlatın",
+      "projects": [
+        {
+          "id": "mk-ops",
+          "detailHref": "/tr/projects/mk-ops",
+          "title": "MK OPS",
+          "description": "Saha operasyonları için SaaS tabanlı operasyon yönetim sistemi.",
+          "tags": [
+            "Next.js",
+            "Dashboard",
+            "SaaS"
+          ],
+          "url": "https://www.mk-ops.tr",
+          "typeLabel": "Sistem"
+        },
+        {
+          "id": "danismanlik",
+          "detailHref": "/tr/projects/mavi-danismanlik",
+          "title": "Danışmanlık – Kurumsal Web Sitesi",
+          "description": "Danışmanlık hizmetleri için kurumsal web sitesi demo.",
+          "tags": [
+            "Next.js",
+            "Kurumsal",
+            "Demo"
+          ],
+          "url": "https://danismanlik-demo.vercel.app/",
+          "typeLabel": "Demo"
+        }
+      ],
+      "incoming": [
+        "/karabuk-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/karabuk-web-tasarim",
+        "https://www.mk-ops.tr",
+        "/tr/projects/mk-ops",
+        "https://danismanlik-demo.vercel.app/",
+        "/tr/projects/mavi-danismanlik",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/karabuk-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "bilecik-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.11
+        },
+        {
+          "slug": "kirklareli-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.11
+        },
+        {
+          "slug": "yalova-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.099
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "karabuk-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.05
+      },
+      "repeatedParagraphs": [
+        "Karabük kurumsal web sitesi teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Karabük Kurumsal Web Sitesi | Ürün ve Teknik Katalog",
+      "description": "Karabük’te üretici ve tedarikçiler için ürün sınıfları, teknik belgeler ve teklif iletişimi. Kurumsal kataloğu gerçek işletme bilgilerinizle planlayın.",
+      "h1": "Karabük Kurumsal Web Sitesi",
+      "projects": [],
+      "projectRationale": "Portföyde metal üreticisi için hazırlanmış kurumsal katalog sitesi bulunmuyor. Örnekler yerine işletmenizin yayımlanabilir ürün belgeleri üzerinden kapsam çıkarılır.",
+      "incoming": [
+        "/karabuk-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/karabuk-web-tasarim",
+        "/tr/web-tasarim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/bilecik-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi"
+      ]
+    },
+    "assessment": "İki sayfa sanayi ve üretim vitrini hedefliyordu. Genel sayfa yerel işletme/hizmet; kurumsal sayfa teknik ürün/katalog odağına getirildi.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/bilecik-web-tasarim",
+    "city": "Bilecik",
+    "before": {
+      "title": "Bilecik Web Tasarım | KOBİ, Lojistik ve Sanayi Vitrin",
+      "description": "Bilecik KOBİ ve lojistik firmaları için mobil, hızlı ve SEO uyumlu web tasarım. Landing, teklif CTA ve yerel görünürlük.",
+      "h1": "Bilecik Web Tasarım",
+      "intent": "Bilecik Web Tasarım — Bilecik KOBİ’lerinin dijital vitrini",
+      "projects": [
+        {
+          "id": "gonul-pusulasi",
+          "detailHref": "/tr/projects/gonul-pusulasi",
+          "title": "Gönül Pusulası – Metin Platformu",
+          "description": "Şiir, duygu ve anlatı üzerine sade dijital metin platformu.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://gonulpusulasi.oner334480.workers.dev/",
+          "typeLabel": "Kişisel"
+        },
+        {
+          "id": "mk-ops",
+          "detailHref": "/tr/projects/mk-ops",
+          "title": "MK OPS",
+          "description": "Saha operasyonları için SaaS tabanlı operasyon yönetim sistemi.",
+          "tags": [
+            "Next.js",
+            "Dashboard",
+            "SaaS"
+          ],
+          "url": "https://www.mk-ops.tr",
+          "typeLabel": "Sistem"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/bilecik-kurumsal-web-sitesi",
+        "https://gonulpusulasi.oner334480.workers.dev/",
+        "/tr/projects/gonul-pusulasi",
+        "https://www.mk-ops.tr",
+        "/tr/projects/mk-ops",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/bilecik-kurumsal-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "kirklareli-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.085
+        },
+        {
+          "slug": "karabuk-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.074
+        },
+        {
+          "slug": "yalova-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.058
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "bilecik-kurumsal-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.054
+      },
+      "repeatedParagraphs": [
+        "Bilecik web tasarım teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Bilecik Web Tasarım | KOBİ, Lojistik ve Sanayi Vitrin",
+      "description": "Bilecik KOBİ ve lojistik firmaları için mobil, hızlı ve SEO uyumlu web tasarım. Landing, teklif CTA ve yerel görünürlük.",
+      "h1": "Bilecik Web Tasarım",
+      "projects": [
+        "mavi-iletisim"
+      ],
+      "projectRationale": "Teknik hizmet ve iletişim yapısı için mevcut demo incelenebilir; Bilecik müşteri kurulumu değildir.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/bilecik-kurumsal-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/bilecik-web-tasarim"
+      ]
+    },
+    "assessment": "Sanayi ve lojistik anlatımı iki sayfada da vardı. Genel hizmet ve talep bilgisi ile teknik katalog/doküman düzeni ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/bilecik-kurumsal-web-sitesi",
+    "city": "Bilecik",
+    "before": {
+      "title": "Bilecik Kurumsal Web Sitesi | Sanayi ve Lojistik Markası",
+      "description": "Bilecik kurumsal web: çok sayfa, admin panel, referans. Sanayi, lojistik ve KOBİ grupları için güven odaklı yapı.",
+      "h1": "Bilecik Kurumsal Web Sitesi",
+      "intent": "Bilecik Kurumsal Web Sitesi — Bilecik’te kurumsal operasyonun dijital yüzü",
+      "projects": [
+        {
+          "id": "musty-music",
+          "detailHref": "/tr/projects/musty-music",
+          "title": "Musty Music – Müzik Sitesi",
+          "description": "Sanatçı portföyü ve müzik odaklı arayüz demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://mk-music3.vercel.app/?lang=tr",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mavi-kadraj",
+          "detailHref": "/tr/projects/mavi-kadraj",
+          "title": "Mavi Kadraj – Fotoğraf Platformu",
+          "description": "Fotoğraf, doğa ve görsel anlatım üzerine dijital portföy.",
+          "tags": [
+            "WordPress",
+            "Design",
+            "Frontend"
+          ],
+          "url": "https://www.mavikadraj.com.tr",
+          "typeLabel": "Kişisel"
+        }
+      ],
+      "incoming": [
+        "/bilecik-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/bilecik-web-tasarim",
+        "https://mk-music3.vercel.app/?lang=tr",
+        "/tr/projects/musty-music",
+        "https://www.mavikadraj.com.tr",
+        "/tr/projects/mavi-kadraj",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/bilecik-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "kirklareli-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.136
+        },
+        {
+          "slug": "kilis-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.12
+        },
+        {
+          "slug": "yalova-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.114
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "bilecik-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.054
+      },
+      "repeatedParagraphs": [
+        "Bilecik kurumsal web sitesi teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Bilecik Kurumsal Web Sitesi | Katalog ve Belge Düzeni",
+      "description": "Bilecik sanayi ve tedarik firmaları için ürün kataloğu, teknik doküman ve şirket bilgisi. İçerik sürümlerini ve güncelleme sorumluluğunu birlikte planlayın.",
+      "h1": "Bilecik Kurumsal Web Sitesi",
+      "projects": [],
+      "projectRationale": "Sanayi kataloğu ve lojistik doküman sunumuna birebir uyan bir portföy sitesi bulunmuyor. Kendi malzemelerinizle yapılacak içerik planı görüşmede değerlendirilir.",
+      "incoming": [
+        "/bilecik-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/bilecik-web-tasarim",
+        "/tr/web-tasarim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/kirklareli-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi"
+      ]
+    },
+    "assessment": "Sanayi ve lojistik anlatımı iki sayfada da vardı. Genel hizmet ve talep bilgisi ile teknik katalog/doküman düzeni ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/kirklareli-web-tasarim",
+    "city": "Kırklareli",
+    "before": {
+      "title": "Kırklareli Web Tasarım | Tarım, Turizm ve Sınır Ticareti",
+      "description": "Kırklareli tarım, turizm ve ticaret için mobil web tasarım. Landing, SEO, hız ve WhatsApp CTA.",
+      "h1": "Kırklareli Web Tasarım",
+      "intent": "Kırklareli Web Tasarım — Kırklareli’nin dijital vitrini",
+      "projects": [
+        {
+          "id": "musty-music",
+          "detailHref": "/tr/projects/musty-music",
+          "title": "Musty Music – Müzik Sitesi",
+          "description": "Sanatçı portföyü ve müzik odaklı arayüz demo.",
+          "tags": [
+            "Next.js",
+            "UI",
+            "Demo"
+          ],
+          "url": "https://mk-music3.vercel.app/?lang=tr",
+          "typeLabel": "Demo"
+        },
+        {
+          "id": "mavi-kadraj",
+          "detailHref": "/tr/projects/mavi-kadraj",
+          "title": "Mavi Kadraj – Fotoğraf Platformu",
+          "description": "Fotoğraf, doğa ve görsel anlatım üzerine dijital portföy.",
+          "tags": [
+            "WordPress",
+            "Design",
+            "Frontend"
+          ],
+          "url": "https://www.mavikadraj.com.tr",
+          "typeLabel": "Kişisel"
+        }
+      ],
+      "incoming": [
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/kirklareli-kurumsal-web-sitesi",
+        "https://mk-music3.vercel.app/?lang=tr",
+        "/tr/projects/musty-music",
+        "https://www.mavikadraj.com.tr",
+        "/tr/projects/mavi-kadraj",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "similarities": [
+        {
+          "slug": "bilecik-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.085
+        },
+        {
+          "slug": "karabuk-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.075
+        },
+        {
+          "slug": "yalova-web-tasarim",
+          "sameCity": false,
+          "shingleJaccard": 0.067
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "kirklareli-kurumsal-web-sitesi",
+        "sameCity": true,
+        "shingleJaccard": 0.061
+      },
+      "repeatedParagraphs": [
+        "Kırklareli web tasarım teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir.",
+        "Kırklareli işletmeleri için web projesi brief, tasarım, geliştirme ve yayın aşamaları net tanımlanır. Mobil öncelik, hız, SEO ve dönüşüm CTA önceliklidir. Teslimattan sonra indeks ve performans kontrol listesi paylaşılır; ücretsiz görüşme ile başlayabilirsiniz."
+      ]
+    },
+    "after": {
+      "title": "Kırklareli Web Tasarım | Tarım, Turizm ve Sınır Ticareti",
+      "description": "Kırklareli tarım, turizm ve ticaret için mobil web tasarım. Landing, SEO, hız ve WhatsApp CTA.",
+      "h1": "Kırklareli Web Tasarım",
+      "projects": [
+        "mavi-kafe",
+        "mavi-kadraj-otel"
+      ],
+      "projectRationale": "Menü, mekân ve oda tanıtımı için mevcut demolar. Bolu kurgusundaki otel örneği Kırklareli referansı olarak kullanılmaz.",
+      "incoming": [
+        "/tr/services",
+        "/bolu-kurumsal-web-sitesi",
+        "/izmit-web-tasarim",
+        "/izmit-fabrika-web-sitesi",
+        "/adapazari-e-ticaret-web-sitesi",
+        "/adapazari-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/duzce-kurumsal-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/zonguldak-kucuk-isletme-web-sitesi",
+        "/canakkale-otel-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/balikesir-dijital-ajans",
+        "/bartin-web-tasarim",
+        "/bartin-mobil-uyumlu-web-sitesi",
+        "/osmaniye-kurumsal-web-sitesi",
+        "/kilis-web-tasarim",
+        "/kilis-kurumsal-web-sitesi",
+        "/yalova-web-tasarim",
+        "/yalova-kurumsal-web-sitesi",
+        "/karabuk-web-tasarim",
+        "/karabuk-kurumsal-web-sitesi",
+        "/bilecik-web-tasarim",
+        "/bilecik-kurumsal-web-sitesi",
+        "/kirklareli-kurumsal-web-sitesi"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/kirklareli-kurumsal-web-sitesi",
+        "/tr/web-tasarim",
+        "https://mk-kafe.vercel.app/",
+        "/tr/projects/mavi-kafe",
+        "https://mk-otel.vercel.app/",
+        "/tr/projects/mavi-kadraj-otel",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/kirklareli-web-tasarim"
+      ]
+    },
+    "assessment": "Tarım/turizm/ticaret kapsamı iki sayfada da genişti. Ziyaret/ürün tanıtımı ile ticari ürün grupları ve B2B iletişim ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  },
+  {
+    "url": "/kirklareli-kurumsal-web-sitesi",
+    "city": "Kırklareli",
+    "before": {
+      "title": "Kırklareli Kurumsal Web Sitesi | Trakya İş Güveni",
+      "description": "Kırklareli kurumsal web: çok sayfa, admin panel, referans. Tarım, turizm ve ticaret grupları için profesyonel yapı.",
+      "h1": "Kırklareli Kurumsal Web Sitesi",
+      "intent": "Kırklareli Kurumsal Web Sitesi — Kırklareli’de kurumsal güven platformu",
+      "projects": [
+        {
+          "id": "gonul-pusulasi",
+          "detailHref": "/tr/projects/gonul-pusulasi",
+          "title": "Gönül Pusulası – Metin Platformu",
+          "description": "Şiir, duygu ve anlatı üzerine sade dijital metin platformu.",
+          "tags": [
+            "HTML",
+            "CSS",
+            "Frontend"
+          ],
+          "url": "https://gonulpusulasi.oner334480.workers.dev/",
+          "typeLabel": "Kişisel"
+        },
+        {
+          "id": "mk-digital",
+          "title": "MK Digital Systems",
+          "description": "Web siteleri, e-ticaret ve özel yazılım geliştiren dijital üretim markası.",
+          "tags": [
+            "Next.js",
+            "Web Development",
+            "UI Systems"
+          ],
+          "url": "https://mk-digital-systems.vercel.app/en",
+          "typeLabel": "Platform"
+        }
+      ],
+      "incoming": [
+        "/kirklareli-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/kirklareli-web-tasarim",
+        "https://gonulpusulasi.oner334480.workers.dev/",
+        "/tr/projects/gonul-pusulasi",
+        "https://mk-digital-systems.vercel.app/en",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/web-tasarim",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "sameCityPages": [
+        "/kirklareli-web-tasarim"
+      ],
+      "similarities": [
+        {
+          "slug": "bilecik-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.136
+        },
+        {
+          "slug": "yalova-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.11
+        },
+        {
+          "slug": "karabuk-kurumsal-web-sitesi",
+          "sameCity": false,
+          "shingleJaccard": 0.11
+        }
+      ],
+      "sameCitySimilarity": {
+        "slug": "kirklareli-web-tasarim",
+        "sameCity": true,
+        "shingleJaccard": 0.061
+      },
+      "repeatedParagraphs": [
+        "Kırklareli kurumsal web sitesi teslimatında kapsam, revizyon turu ve takvim yazılı paylaşılır. MK Digital Systems demo projelerle süreci şeffaf gösterir; ücretsiz görüşme ile ihtiyacınız netleştirilir."
+      ]
+    },
+    "after": {
+      "title": "Kırklareli Kurumsal Web Sitesi | Ürün Grupları ve B2B İletişim",
+      "description": "Kırklareli üretim ve ticaret firmaları için ürün grupları, şirket belgeleri ve B2B iletişim. Kurumsal içerikleri güncelleme ihtiyacınıza göre düzenleyin.",
+      "h1": "Kırklareli Kurumsal Web Sitesi",
+      "projects": [
+        "mavi-iletisim"
+      ],
+      "projectRationale": "Kategori ve hizmet bilgisini sunma yaklaşımı için demo incelenebilir. Tarımsal takip veya ticari sipariş yazılımı örneği değildir.",
+      "incoming": [
+        "/kirklareli-web-tasarim"
+      ],
+      "outgoing": [
+        "/tr",
+        "/tr/projects",
+        "/tr#services",
+        "/tr#studio",
+        "/tr#photography",
+        "/tr#project-inquiry",
+        "#proje-talep-formu",
+        "https://wa.me/905456597551?text=Merhaba%2C%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "/kirklareli-web-tasarim",
+        "/tr/web-tasarim",
+        "https://mavi-iletisim-demo.vercel.app/",
+        "/tr/projects/mavi-iletisim",
+        "/tr/bolu-web-tasarim",
+        "/adapazari-web-tasarim",
+        "/zonguldak-web-tasarim",
+        "/izmit-web-tasarim",
+        "/duzce-seo-uyumlu-web-sitesi",
+        "/canakkale-web-tasarim",
+        "/balikesir-web-tasarim",
+        "/bartin-web-tasarim",
+        "/tr/osmaniye-web-tasarim",
+        "/kilis-web-tasarim",
+        "/yalova-web-tasarim",
+        "/karabuk-web-tasarim",
+        "/bilecik-web-tasarim",
+        "https://wa.me/905456597551?text=Merhaba%2C%20%C5%9Fehir%20bazl%C4%B1%20web%20sitesi%20projem%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+        "https://www.linkedin.com/in/mustafa-oner-82/",
+        "https://www.instagram.com/mavi_kadraj14/",
+        "https://wa.me/905456597551",
+        "mailto:mustafa82oner@gmail.com",
+        "/tr/ozel-yazilim-gelistirme",
+        "/tr/ciftlik-yonetim-sistemi",
+        "/tr/santiye-yonetim-sistemi",
+        "https://wa.me/905456597551?text=Merhaba%20Mustafa%20Bey%2C%20web%20sitesi%20ve%20yaz%C4%B1l%C4%B1m%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      ],
+      "accessChain": [
+        "/tr",
+        "/tr/services",
+        "/kirklareli-web-tasarim",
+        "/kirklareli-kurumsal-web-sitesi"
+      ]
+    },
+    "assessment": "Tarım/turizm/ticaret kapsamı iki sayfada da genişti. Ziyaret/ürün tanıtımı ile ticari ürün grupları ve B2B iletişim ayrıldı.",
+    "change": "Giriş, hizmet, karar bölümleri, avantaj ve FAQ özgünleştirme; proje ve bağlantı seçimi"
+  }
+]
