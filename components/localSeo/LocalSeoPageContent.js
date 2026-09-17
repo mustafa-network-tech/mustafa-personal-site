@@ -8,11 +8,19 @@ import LocalSeoAdvantages from '@/components/localSeo/LocalSeoAdvantages'
 import LocalSeoFaq from '@/components/localSeo/LocalSeoFaq'
 import LocalSeoOtherCities from '@/components/localSeo/LocalSeoOtherCities'
 import LocalSeoContactCta from '@/components/localSeo/LocalSeoContactCta'
+import { LOCAL_PAGE_GUIDANCE } from '@/lib/localSeo/pageGuidance'
+import { getProjectBySlug } from '@/lib/projects/projectsData'
 
 /**
  * @param {{ page: import('@/lib/localSeo/pages').typeof LOCAL_SEO_PAGES[0] }} props
  */
 export default function LocalSeoPageContent({ page }) {
+  const guidance = LOCAL_PAGE_GUIDANCE[page.slug]
+  const projects = guidance?.projects.map(slug => {
+    const project = getProjectBySlug(slug)
+    if (!project) throw new Error(`Unknown local SEO project: ${slug}`)
+    return { id: slug, title: project.tr.title, description: project.tr.shortDesc, tags: project.tags, url: project.liveUrl, typeLabel: project.status.tr, detailHref: `/tr/projects/${slug}` }
+  })
   return (
     <article>
       <LocalSeoHero slug={page.slug} hero={page.hero} />
@@ -26,6 +34,7 @@ export default function LocalSeoPageContent({ page }) {
             {paragraph}
           </p>
         ))}
+        {guidance && <p className="text-[#94A3B8] leading-relaxed mt-6">Şehir sayfasındaki ihtiyaçları genel proje adımlarıyla birlikte değerlendirmek için <Link href={guidance.serviceHref || '/tr/web-tasarim'} className="text-[#4F7CFF] underline underline-offset-4">{guidance.serviceLabel || 'web tasarım sürecini'}</Link> inceleyebilirsiniz. Bölgenizdeki içerik hazırlığını çevrim içi görüşmelerle planlayabiliriz.</p>}
       </section>
 
       <section className="bg-[rgba(15,23,42,0.35)] border-y border-[rgba(248,250,252,0.06)] py-14 md:py-16">
@@ -55,7 +64,7 @@ export default function LocalSeoPageContent({ page }) {
         </section>
       ))}
 
-      <LocalSeoSampleProjects slug={page.slug} sectionTitle={`${page.cityName} için proje vitrini`} />
+      <LocalSeoSampleProjects slug={page.slug} sectionTitle={`${page.cityName} için proje vitrini`} projects={projects} intro={guidance?.note} />
 
       {page.advantages?.length > 0 && (
         <LocalSeoAdvantages title={page.advantagesTitle} items={page.advantages} />

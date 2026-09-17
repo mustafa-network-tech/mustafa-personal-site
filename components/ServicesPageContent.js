@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Globe, ShoppingBag, Code, LayoutDashboard, Smartphone, Briefcase } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import WorkRegions from '@/components/localSeo/WorkRegions'
 
 const icons = [Globe, ShoppingBag, Code, LayoutDashboard, Smartphone, Briefcase]
 
@@ -73,6 +74,8 @@ export default function ServicesPageContent() {
             ))}
           </ol>
         </section>
+
+        {isTr && <WorkRegions />}
 
         <nav className="flex flex-wrap gap-4 text-sm border-t border-[rgba(248,250,252,0.12)] pt-10" aria-label="Next steps">
           <Link href={contactHref} className="text-[#4F7CFF] hover:underline font-medium">

@@ -9,8 +9,8 @@ const PROJECTS_HREF = '/tr/projects'
 /**
  * @param {{ slug: string, sectionTitle?: string }} props
  */
-export default function LocalSeoSampleProjects({ slug, sectionTitle = 'Örnek çalışmalar' }) {
-  const projects = pickProjectsForSlug(slug, 2)
+export default function LocalSeoSampleProjects({ slug, sectionTitle = 'Örnek çalışmalar', projects: selectedProjects, intro }) {
+  const projects = selectedProjects ?? pickProjectsForSlug(slug, 2)
 
   return (
     <section
@@ -27,8 +27,8 @@ export default function LocalSeoSampleProjects({ slug, sectionTitle = 'Örnek ç
           {sectionTitle}
         </h2>
         <p className="text-sm md:text-base text-[#475569] mb-8 max-w-2xl leading-relaxed">
-          Gerçek demo ve vitrin projelerinden seçilmiş örnekler — canlı adres üzerinden inceleyebilir,
-          portföy sayfasından tüm çalışmalara ulaşabilirsiniz.
+          {intro || <>Gerçek demo ve vitrin projelerinden seçilmiş örnekler — canlı adres üzerinden inceleyebilir,
+          portföy sayfasından tüm çalışmalara ulaşabilirsiniz.</>}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
           {projects.map((project) => (
