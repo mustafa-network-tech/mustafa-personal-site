@@ -29,11 +29,11 @@ function Solution({ page }) {
         <p className="studio-kicker text-white/60">Çözüm yaklaşımı</p>
         <h2 id="solution-heading" className="studio-display mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">{page.solutionTitle}</h2>
         <div className="mt-10 border-t border-white/20">
-          {page.sections.map(([heading, text], index) => (
+          {page.sections.map(([heading, text, link], index) => (
             <div key={heading} className="grid gap-4 border-b border-white/20 py-8 md:grid-cols-12 md:gap-8">
               <span aria-hidden="true" className="text-xs text-white/60 md:col-span-1">{String(index + 1).padStart(2, '0')}</span>
               <h3 className="studio-display text-2xl md:col-span-4">{heading}</h3>
-              <p className="text-base leading-8 text-white/70 md:col-span-7">{text}</p>
+              <p className="text-base leading-8 text-white/70 md:col-span-7">{text}{link && <> {link.before}<Link href={link.href} className="underline underline-offset-4 hover:text-white">{link.label}</Link>{link.after}</>}</p>
             </div>
           ))}
         </div>

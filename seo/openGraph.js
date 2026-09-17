@@ -22,7 +22,7 @@ export function buildOpenGraph(opts) {
     siteName,
     title: title || GLOBAL_META[locale]?.title,
     description: description || GLOBAL_META[locale]?.description,
-    images: [{ url: img, width: 1200, height: 630, alt: title || siteName }],
+    images: [{ url: img, ...(Object.values(OG_IMAGES).includes(img) ? { width: 1536, height: 1024 } : {}), alt: title || siteName }],
   }
 }
 

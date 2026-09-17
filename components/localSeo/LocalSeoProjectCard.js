@@ -61,10 +61,10 @@ export default function LocalSeoProjectCard({ project }) {
             Canlı Site
           </a>
           <Link
-            href="/projects"
+            href={project.detailHref || '/tr/projects'}
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 border border-[rgba(0,0,0,0.12)] text-[#1E293B] hover:bg-[rgba(0,0,0,0.04)]"
           >
-            Proje Detayı
+            {project.detailHref ? 'Proje Detayı' : 'Projeleri İncele'}
             <ArrowRight className="w-4 h-4" aria-hidden />
           </Link>
         </div>

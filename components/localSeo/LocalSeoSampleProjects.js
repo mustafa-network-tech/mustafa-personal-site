@@ -4,7 +4,7 @@ import Link from 'next/link'
 import LocalSeoProjectCard from '@/components/localSeo/LocalSeoProjectCard'
 import { pickProjectsForSlug } from '@/lib/localSeo/projectPool'
 
-const PROJECTS_HREF = '/projects'
+const PROJECTS_HREF = '/tr/projects'
 
 /**
  * @param {{ slug: string, sectionTitle?: string }} props

@@ -47,7 +47,7 @@ export default function LocalSeoLandingPage({ params }) {
 
   const path = `/${slug}`
   const breadcrumbJson = getBreadcrumbListSchema([
-    { name: 'Ana Sayfa', url: '/' },
+    { name: 'Ana Sayfa', url: '/tr' },
     { name: page.hero.title, url: path },
   ])
 

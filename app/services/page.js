@@ -10,7 +10,7 @@ const og = buildOpenGraph({ locale: 'en', path: '/services', title: meta.title, 
 const twitter = buildTwitterCard({ locale: 'en', title: meta.title, description: meta.description, image: OG_IMAGES.en })
 
 const breadcrumbJson = getBreadcrumbListSchema([
-  { name: 'Home', url: '/' },
+  { name: 'Home', url: '/en' },
   { name: 'Services', url: '/services' },
 ])
 

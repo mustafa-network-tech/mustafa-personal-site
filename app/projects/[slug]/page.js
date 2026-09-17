@@ -42,7 +42,7 @@ export default function ProjectDetailEn({ params }) {
     url: `${SITE_URL}${path}`,
   })
   const breadcrumbJson = getBreadcrumbListSchema([
-    { name: 'Home', url: '/' },
+    { name: 'Home', url: '/en' },
     { name: 'Projects', url: '/projects' },
     { name: project.en.title, url: path },
   ])
