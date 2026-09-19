@@ -47,7 +47,7 @@ export default function PhotographyMarquee() {
           {[...PHOTO_GALLERY, ...PHOTO_GALLERY].map((photo, index) => (
             <button key={`${photo.id}-${index}`} type="button" onClick={(event) => open(photo, event)} className="photo-marquee-item group relative h-[48svh] w-[82vw] shrink-0 overflow-hidden bg-white/5 text-left md:h-[62vh] md:w-[42vw] lg:w-[32vw]" aria-label={`${photo.alt[language] || photo.alt.tr} — ${language === 'tr' ? 'büyük görüntüle' : 'view larger'}`}>
               <Image src={photo.src} alt={photo.alt[language] || photo.alt.tr} fill sizes="(max-width:768px) 82vw, 42vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.025]" unoptimized />
-              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-5 pb-5 pt-16 text-xs tracking-[.12em] text-white/80 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">{language === 'tr' ? 'BÜYÜK GÖRÜNTÜLE' : 'VIEW LARGE'}</span>
+              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-5 pb-5 pt-16 text-xs tracking-[.12em] text-white/80 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">{photo.caption[language] || photo.caption.tr} — {language === 'tr' ? 'BÜYÜK GÖRÜNTÜLE' : 'VIEW LARGE'}</span>
             </button>
           ))}
         </div>
