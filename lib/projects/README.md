@@ -4,7 +4,7 @@
 
 ## Görsel ekleme
 
-İlgili proje kaydına `imageUrls: ['https://cdn.example.com/ekran-1.webp', 'https://cdn.example.com/ekran-2.webp']` ekleyin. Şantiye Yönetim Sistemi, MK Farm ve MK TraceOps için altışar görsel eklenmiştir. Mevcut projelere aynı alanı `slug` satırının altına ekleyebilirsiniz.
+İlgili proje kaydına `imageUrls: ['https://cdn.example.com/ekran-1.webp', 'https://cdn.example.com/ekran-2.webp']` ekleyin. Şantiye Yönetim Sistemi, MK Farm ve MK TraceOps için dörder görsel eklenmiştir. Ana sayfa kapağı dizinin ilk görselidir; MK Farm için `farm4.jpeg` kullanılır. Mevcut projelere aynı alanı `slug` satırının altına ekleyebilirsiniz.
 
 Saha Görsel Arşivi paylaşım sayfaları (`/p/…`) yerine doğrudan resim döndüren `/p/…/dosya` adreslerini kullanın. `galleryStyle: 'led'` ince mavi-beyaz ışıklı kenarlığı etkinleştirir. Altı görsel mobil/tablette 3 satır × 2 sütun, 1024 px ve üzeri masaüstünde 2 satır × 3 sütun gösterilir.
 
