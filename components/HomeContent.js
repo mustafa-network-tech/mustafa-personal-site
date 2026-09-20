@@ -9,7 +9,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import ClientFeedback from '@/components/ClientFeedback'
 import PhotographyMarquee from '@/components/PhotographyMarquee'
 
-const FEATURED=['santiye-yonetim-sistemi','mk-farm','mavi-kadraj','kadraj-rotam','namehub']
+const FEATURED=['santiye-yonetim-sistemi','mk-farm','mk-traceops','mavi-kadraj','kadraj-rotam','namehub']
 const HERO_SLOGANS={
   tr:[['FİKİRDEN','ÇALIŞAN SİSTEME.'],['KARMAŞADAN','NET BİR AKIŞA.'],['SAHADAN','TEK BİR EKRANA.'],['İHTİYAÇTAN','DİJİTAL ÜRÜNE.'],['BAKIŞTAN','GÜÇLÜ DENEYİME.']],
   en:[['FROM IDEA','TO A WORKING SYSTEM.'],['FROM COMPLEXITY','TO A CLEAR FLOW.'],['FROM THE FIELD','TO ONE SCREEN.'],['FROM A NEED','TO A DIGITAL PRODUCT.'],['FROM VISION','TO A STRONG EXPERIENCE.']],
