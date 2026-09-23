@@ -1,7 +1,7 @@
 // app/layout.js
 import { headers } from 'next/headers'
-import Script from 'next/script'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import LayoutShell from '@/components/LayoutShell'
@@ -38,18 +38,7 @@ export default async function RootLayout({ children }) {
           <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>
         <WhatsAppButton />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-574KJBEVJL"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-574KJBEVJL');
-          `}
-        </Script>
+        <GoogleAnalytics />
       </body>
     </html>
   )
