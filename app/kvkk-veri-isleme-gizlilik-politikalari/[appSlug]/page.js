@@ -10,7 +10,7 @@ export function generateMetadata({ params }) {
   if (!app) return {}
   const canonical = `https://mustafaoner.net${legalHref(app.slug)}`
   const title = `${app.name} | KVKK, Gizlilik ve Yasal Bilgiler`
-  const description = `${app.name} gizlilik politikası, kullanım şartları, hesap silme, çocuk güvenliği ve destek sayfaları.`
+  const description = app.description ?? `${app.name} gizlilik politikası, kullanım şartları, hesap silme, çocuk güvenliği ve destek sayfaları.`
   return { title, description, alternates: { canonical }, openGraph: { title, description, url: canonical, type: 'website' } }
 }
 
