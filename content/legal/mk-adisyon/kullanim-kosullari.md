@@ -20,7 +20,7 @@ MK Adisyon bir ödeme kuruluşu, ÖKC (yazar kasa) veya e-Fatura/e-Arşiv entegr
 
 İşletme, kayıtta doğru ve güncel bilgi vermekle, şifrelerin ve personel hesaplarının güvenliğini sağlamakla yükümlüdür. İşletme, davet ettiği personelin rol ve yetkilerini belirler; personelin sistemdeki işlemlerinden İşletme sorumludur.
 
-İşletme, personelini sisteme eklemeden önce KVKK kapsamında aydınlatmakla ve personel verilerini hukuka uygun işlemekle yükümlüdür. İşten ayrılan personelin erişimini kaldırmak İşletme'nin sorumluluğundadır.
+İşletme, personelini sisteme eklemeden önce KVKK kapsamında aydınlatmakla ve personel verilerini hukuka uygun işlemekle yükümlüdür. İşten ayrılan personelin erişimini panelden devre dışı bırakmak İşletme'nin sorumluluğundadır.
 
 Yetkisiz kullanım fark edildiğinde şifre değiştirilmeli ve [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com) adresine derhâl bildirilmelidir.
 
@@ -28,21 +28,17 @@ Yetkisiz kullanım fark edildiğinde şifre değiştirilmeli ve [mustafa82oner@g
 
 Yeni işletme hesapları kayıt tarihinden itibaren **7 günlük ücretsiz deneme** ile başlar. Deneme için ödeme bilgisi istenmez ve deneme sonunda otomatik ücretlendirme yapılmaz.
 
-Deneme süresi dolduğunda ücretli plana geçilmezse hesap kısıtlanır: yeni sipariş ve işlem girilemez, veriler 30 gün boyunca saklanır. Bu süre içinde abonelik başlatılırsa hesap tüm verileriyle yeniden açılır. 30 günün sonunda işletme verileri silinir.
+Deneme süresi dolduğunda ücretli plana geçilmezse hesap kısıtlanır: yeni sipariş açılamaz, ancak o anda açık olan adisyonlar kapatılabilir ve tahsil edilebilir. Veriler bu süreçte korunur; abonelik başlatılırsa hesap mevcut verileriyle yeniden kullanılabilir. Verilerin saklanması ve silinmesi 7. maddeye tabidir.
 
 ## 5. Abonelik, ücret ve ödeme
 
-Güncel plan ve fiyatlar satın alma öncesinde web sitesinde veya uygulamada gösterilir. Fiyatlara KDV dahil olup olmadığı fiyat bilgisiyle birlikte belirtilir.
+MK Adisyon'da web sitesi veya başka bir kanal üzerinden çevrimiçi ödeme alınmaz. Ücretli abonelikler yalnızca Google Play faturalandırma sistemi üzerinden sunulacaktır; Google Play üzerinden abonelik satın alma şu anda henüz etkin değildir.
 
-Abonelik, seçilen dönem (aylık/yıllık) için peşin ücretlendirilir ve iptal edilmedikçe dönem sonunda aynı süreyle yenilenir. Yenileme öncesinde fiyat değişikliği olursa İşletme'ye en az 30 gün önceden bildirilir; İşletme yeni fiyatı kabul etmezse yenileme tarihinden önce iptal edebilir.
-
-Ödeme web'den alınıyorsa ödeme kuruluşu aracılığıyla, Android uygulamasından alınıyorsa Google Play faturalandırma sistemiyle yapılır; Google Play üzerinden yapılan satın almalarda Google Play'in koşulları da geçerlidir. Web'den yapılan satışlarda ayrıca Mesafeli Satış Sözleşmesi ve Ön Bilgilendirme Formu sunulur.
-
-Ödeme alınamazsa İşletme bilgilendirilir; 7 gün içinde ödeme tamamlanmazsa hesap 4. maddede açıklanan kısıtlı duruma geçer.
+Google Play aboneliği etkinleştirildiğinde plan ücreti, faturalandırma dönemi ve yenileme bilgileri satın alma öncesinde Google Play ekranında gösterilir. Ödeme, otomatik yenileme, iptal ve iade işlemlerinde Google Play'in koşulları ve politikaları geçerlidir.
 
 ## 6. İptal ve iade
 
-İşletme aboneliğini dilediği zaman panelden veya [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com) adresine yazarak iptal edebilir. İptal, içinde bulunulan ödeme döneminin sonunda geçerli olur; hizmet dönem sonuna kadar kullanılabilir. Kısmi dönem için iade yapılmaz. Google Play üzerinden yapılan satın almaların iptal ve iadesi Google Play kurallarına tabidir.
+Google Play üzerinden satın alınan abonelikler Google Play > Ödemeler ve abonelikler bölümünden iptal edilir; iptal ve iade Google Play kurallarına tabidir. Hesabın silinmesi Google Play aboneliğini otomatik olarak iptal etmez.
 
 İşletme'nin 6502 sayılı Tüketicinin Korunması Hakkında Kanun kapsamında tüketici sayıldığı durumlarda, kanundan ve Mesafeli Sözleşmeler Yönetmeliği'nden doğan emredici hakları saklıdır.
 
@@ -50,7 +46,7 @@ Abonelik, seçilen dönem (aylık/yıllık) için peşin ücretlendirilir ve ipt
 
 İşletme'nin sisteme girdiği ürün, sipariş, adisyon, kasa ve personel verileri İşletme'ye aittir. Hizmet Sağlayıcı bu verileri yalnızca hizmeti sunmak için ve [Veri İşleme Sözleşmesi](../veri-isleme-sozlesmesi/) çerçevesinde işler; reklam veya başka amaçlarla kullanmaz ve satmaz.
 
-İşletme, verilerinin bir kopyasını dışa aktarma veya e-posta ile talep etme hakkına sahiptir. Abonelik sona erdiğinde veriler 30 gün saklanır, ardından silinir. Vergi mevzuatı gereği saklanması gereken satış ve kasa kayıtlarını ayrıca muhafaza etmek İşletme'nin sorumluluğundadır.
+İşletme, verilerinin bir kopyasını e-posta ile talep etme hakkına sahiptir; panelde şu an otomatik dışa aktarma özelliği bulunmaz. Veriler, hizmetin sunulması ve ilgili yasal yükümlülükler için gerekli olduğu süre boyunca saklanır; saklama gerekliliği sona erdiğinde ve hukuki bir saklama yükümlülüğü bulunmadığında silinir, anonimleştirilir veya ilgili kişinin ya da İşletme'nin talebi doğrultusunda gerekli işlem uygulanır. Abonelik veya denemenin sona ermesi verileri otomatik olarak silmez. Vergi mevzuatı gereği saklanması gereken satış ve kasa kayıtlarını ayrıca muhafaza etmek İşletme'nin sorumluluğundadır.
 
 ## 8. Kullanım kuralları
 
@@ -78,7 +74,7 @@ MK Adisyon yazılımı, arayüzü, markası ve belgeleri üzerindeki tüm haklar
 
 İşletme sözleşmeyi 6. madde uyarınca iptal ederek sona erdirebilir. Hizmet Sağlayıcı, İşletme'nin bu koşulları ağır biçimde ihlal etmesi, hizmeti hukuka aykırı amaçla kullanması veya ödeme yükümlülüğünü yerine getirmemesi hâlinde hesabı askıya alabilir veya sözleşmeyi feshedebilir. Acil güvenlik durumları dışında fesihten önce İşletme'ye bildirim yapılır.
 
-Hizmet Sağlayıcı hizmeti tamamen sonlandırmaya karar verirse, İşletme'ye en az 60 gün önceden bildirimde bulunur, verilerin dışa aktarılmasına imkân tanır ve kullanılmayan dönem ücretini iade eder.
+Hizmet Sağlayıcı hizmeti tamamen sonlandırmaya karar verirse, İşletme'ye en az 60 gün önceden bildirimde bulunur, verilerin bir kopyasının teslim edilmesine imkân tanır ve kullanılmayan dönem ücretini iade eder.
 
 ## 13. Değişiklikler
 
@@ -86,4 +82,4 @@ Bu koşullar güncellenebilir. Önemli değişiklikler yürürlüğe girmeden en
 
 ## 14. Uygulanacak hukuk ve uyuşmazlıklar
 
-Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda öncelikle [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com) adresine başvurulması rica edilir. Tacirler arasındaki uyuşmazlıklarda **[DOLDURULACAK: il]** mahkemeleri ve icra daireleri yetkilidir. İşletme'nin tüketici sayıldığı durumlarda tüketici hakem heyetleri ve tüketici mahkemelerine başvuru hakkı saklıdır.
+Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda öncelikle [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com) adresine başvurulması rica edilir. Tacirler arasındaki uyuşmazlıklarda Bolu Mahkemeleri ve İcra Daireleri yetkilidir. İşletme'nin tüketici sayıldığı durumlarda tüketici hakem heyetleri ve tüketici mahkemelerine başvuru hakkı saklıdır.

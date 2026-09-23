@@ -14,9 +14,9 @@ Bu sözleşme, İşletme'nin MK Adisyon'a girdiği veya MK Adisyon'un İşletme 
 ## 2. İşlemenin konusu
 
 - **İlgili kişi grupları:** İşletme personeli; masada sipariş veren veya QR menüyü kullanan müşteriler hakkında İşletme'nin girdiği veriler (varsa).
-- **Veri kategorileri:** personelin adı, e-posta adresi, rolü, giriş ve işlem kayıtları; sipariş, adisyon, ödeme kaydı ve kasa işlemleri; İşletme'nin serbest metin alanlarına yazdığı bilgiler.
+- **Veri kategorileri:** personelin adı, e-posta adresi, rolü, giriş ve işlem kayıtları; sipariş, adisyon, ödeme kaydı ve kasa işlemleri; denetim (audit) kayıtları; İşletme'nin sipariş notu ve iptal gerekçesi gibi serbest metin alanlarına yazdığı bilgiler.
 - **Amaç:** yalnızca MK Adisyon hizmetinin sunulması (saklama, görüntüleme, raporlama, yedekleme, destek).
-- **Süre:** abonelik süresi ve sonrasındaki 30 günlük saklama süresi.
+- **Süre:** hizmetin sunulması ve ilgili yasal yükümlülükler için gerekli olan süre.
 
 ## 3. Hizmet Sağlayıcı'nın yükümlülükleri
 
@@ -32,27 +32,26 @@ Bu sözleşme, İşletme'nin MK Adisyon'a girdiği veya MK Adisyon'un İşletme 
 
 - Personelini ve varsa müşterilerini KVKK md. 10 uyarınca aydınlatmak ve verileri geçerli bir hukuki sebebe dayanarak işlemek.
 - MK Adisyon'a yalnızca amaçla bağlantılı, sınırlı ve ölçülü veri girmek; özel nitelikli kişisel veri (sağlık, alerji bilgisiyle kimlik birlikte vb.) girmemek.
-- Personel hesaplarını güncel tutmak, ayrılan personelin erişimini kaldırmak.
+- Personel hesaplarını güncel tutmak, ayrılan personelin erişimini devre dışı bırakmak.
 - Kendi veri sorumlusu yükümlülüklerini (VERBİS, ilgili kişi başvuruları, saklama-imha politikası) yerine getirmek.
 
 ## 5. Alt işleyenler
 
 İşletme, Hizmet Sağlayıcı'nın aşağıdaki alt işleyenleri kullanmasına genel izin verir:
 
-- **Supabase Inc.:** veritabanı, kimlik doğrulama, dosya depolama. Bölge: [DOLDURULACAK].
-- **Vercel Inc.:** web uygulamasının barındırılması ve sunulması. Bölge: [DOLDURULACAK].
-- **E-posta gönderim sağlayıcısı:** davet ve bildirim e-postaları. [DOLDURULACAK: sağlayıcı adı]
+- **Supabase Inc.:** veritabanı, kimlik doğrulama ile kayıt doğrulama ve personel davet e-postaları. Bölge: AWS eu-west-2 (Londra, Birleşik Krallık).
+- **Vercel Inc.:** web uygulamasının barındırılması ve sunulması. Sunucu fonksiyonu bölgesi: iad1 (Washington, D.C., ABD).
 - **Google LLC (Gmail):** destek yazışmaları.
 
 Yeni bir alt işleyen eklenmeden önce İşletme'ye en az 15 gün önceden bildirim yapılır. İşletme haklı bir gerekçeyle itiraz ederse ve makul bir çözüm bulunamazsa aboneliğini iade hakkıyla sona erdirebilir. Hizmet Sağlayıcı, alt işleyenlerin bu sözleşmedekilere eşdeğer koruma sağlamasından sorumludur.
 
 ## 6. Yurt dışına aktarım
 
-Alt işleyenlerin sunucuları Türkiye dışındadır. Hizmet Sağlayıcı, bu aktarımları KVKK md. 9'a uygun olarak, Kurul'un ilan ettiği standart sözleşmeler veya diğer uygun güvenceler çerçevesinde yürütür ve gerekli bildirimleri yapar. İşletme, MK Adisyon'u kullanarak verilerin bu alt işleyenler aracılığıyla yurt dışında işleneceğini bilir ve personelini buna göre aydınlatır.
+Alt işleyenlerin sunucuları Türkiye dışındadır. Hizmet Sağlayıcı, bu aktarımları KVKK md. 9'da öngörülen aktarım şartlarına uygun biçimde yürütür. İşletme, MK Adisyon'u kullanarak verilerin bu alt işleyenler aracılığıyla yurt dışında işleneceğini bilir ve personelini buna göre aydınlatır.
 
 ## 7. Sözleşmenin sona ermesi
 
-Abonelik sona erdiğinde veriler 30 gün saklanır; bu sürede İşletme verilerini dışa aktarabilir veya kopyasını talep edebilir. Süre sonunda veriler aktif sistemden silinir; yedeklerden [Gizlilik Politikası](../gizlilik/)'nda açıklanan döngü içinde çıkar. Kanunen saklanması zorunlu veriler, yalnızca o yükümlülük süresince ve erişimi kısıtlanarak tutulur.
+Abonelik sona erdiğinde veriler otomatik olarak silinmez. İşletme verilerinin kopyasını veya silinmesini e-posta ile talep edebilir. Veriler, hizmetin sunulması ve ilgili yasal yükümlülükler için gerekli olduğu süre boyunca saklanır; saklama gerekliliği sona erdiğinde ve hukuki bir saklama yükümlülüğü bulunmadığında silinir, anonimleştirilir veya ilgili kişinin ya da İşletme'nin talebi doğrultusunda gerekli işlem uygulanır. Aktif sistemden silinen veriler yedeklerden [Gizlilik Politikası](../gizlilik/)'nda açıklanan döngü içinde çıkar. Kanunen saklanması zorunlu veriler, yalnızca o yükümlülük süresince ve erişimi kısıtlanarak tutulur.
 
 ## 8. Öncelik
 

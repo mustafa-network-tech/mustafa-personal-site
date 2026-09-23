@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { LEGAL_BASE } from '@/lib/legal/apps'
 
 const WA_URL =
   'https://wa.me/905456597551?text=' +
@@ -18,6 +20,7 @@ function handleClick() {
 }
 
 export default function WhatsAppButton() {
+  const pathname = usePathname()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -30,6 +33,9 @@ export default function WhatsAppButton() {
       clearTimeout(hideTimer)
     }
   }, [])
+
+  // Yasal sayfalar yalnızca Play Store/kullanıcı bilgilendirmesi içindir.
+  if (pathname?.startsWith(LEGAL_BASE)) return null
 
   return (
     <>

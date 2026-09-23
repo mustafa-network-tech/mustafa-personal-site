@@ -2,7 +2,7 @@
 
 Geliştirici ve yayıncı: **MK DIGITAL SYSTEMS – MUSTAFA ÖNER**.
 
-Uygulama: MK Adisyon — com.mkdigitalsystems.mkadisyon
+Uygulama: MK Adisyon — com.mkdigitalsystems.adisyon
 
 Son güncelleme: 23 Eylül 2026
 
@@ -22,18 +22,18 @@ E-postada şunları belirtin: hesapta kullanılan e-posta adresi, işletme adı 
 
 İşletme hesabının silinmesi, işletmeye bağlı tüm personel hesaplarını ve işletme verilerini de siler. Bu nedenle talep yalnızca işletme hesabının sahibi tarafından yapılabilir.
 
-Silmeden önce ihtiyaç duyduğunuz satış, kasa ve adisyon raporlarını dışa aktarın. Bu kayıtların vergi mevzuatı kapsamında saklanması işletmenizin sorumluluğundadır. Aktif bir aboneliğiniz varsa önce iptal edin; Google Play üzerinden alınan abonelikler Google Play > Ödemeler ve abonelikler bölümünden iptal edilmelidir. Hesabı silmek Google Play aboneliğini otomatik olarak iptal etmez.
+Panelde şu an otomatik dışa aktarma özelliği bulunmadığından, silmeden önce ihtiyaç duyduğunuz satış, kasa ve adisyon kayıtlarını ayrıca muhafaza edin veya kopyasını silme talebinizle birlikte e-posta ile isteyin. Bu kayıtların vergi mevzuatı kapsamında saklanması işletmenizin sorumluluğundadır. Aktif bir aboneliğiniz varsa önce iptal edin; Google Play üzerinden alınan abonelikler Google Play > Ödemeler ve abonelikler bölümünden iptal edilmelidir. Hesabı silmek Google Play aboneliğini otomatik olarak iptal etmez.
 
 ## Personelseniz
 
-Personel hesabınız, çalıştığınız işletme tarafından oluşturulur ve yönetilir. Hesabınızın silinmesi için önce işletme yetkilinize başvurun; yetkili, yönetim panelindeki personel ekranından hesabınızı kaldırabilir.
+Personel hesabınız, çalıştığınız işletme tarafından oluşturulur ve yönetilir. İşletme yetkiliniz, yönetim panelindeki personel ekranından erişiminizi devre dışı bırakabilir; bu işlem hesabınızı ve kişisel verilerinizi silmez. Verilerinize ilişkin talepleriniz için işletme yetkilinize başvurabilir veya yukarıdaki e-posta kanalını kullanabilirsiniz.
 
-İşletmeye ulaşamıyorsanız yukarıdaki e-posta kanalını kullanabilirsiniz. Talebiniz, veri sorumlusu olan işletmeye iletilir ve sonucu size bildirilir.
+E-posta ile gelen talebiniz, veri sorumlusu olan işletmeye iletilir ve sonucu size bildirilir.
 
 ## Hangi veriler silinir?
 
 - İşletme hesabı silindiğinde: hesap ve kimlik doğrulama kayıtları, işletme bilgileri, tüm personel hesapları, ürün, kategori, masa, sipariş, adisyon, ödeme kaydı, gider, kasa ve rapor verileri, QR menü içerikleri.
-- Personel hesabı silindiğinde: personelin giriş bilgileri ve profili. Geçmiş sipariş ve kasa kayıtlarındaki işlem sahibi bilgisi, işletmenin muhasebe bütünlüğü için "silinmiş kullanıcı" olarak anonimleştirilir.
+- Personel için: personelin işletmeye erişimi devre dışı bırakılır ve personel artık giriş yaparak işletme verilerine ulaşamaz. Personel kaydı, işletmenin geçmiş sipariş, ödeme ve denetim kayıtlarıyla bağlantılı olduğundan bu kayıtlarla birlikte işletme hesabında kalır; bu kayıtlara ilişkin talepler veri sorumlusu olan işletmeyle birlikte değerlendirilir.
 
 ## Hangi kayıtlar kalabilir?
 
@@ -46,6 +46,6 @@ Personel hesabınız, çalıştığınız işletme tarafından oluşturulur ve y
 
 Talep, hesap sahipliği doğrulandıktan sonra en kısa sürede ve en geç 30 gün içinde tamamlanır. Sonuç, başvurduğunuz e-posta adresine bildirilir. Başkasının hesabının silinmesini önlemek için hesap sahipliğini doğrulayacak gerekli ve ölçülü ek bilgi istenebilir.
 
-Uygulamayı telefondan kaldırmak, çıkış yapmak veya aboneliği iptal etmek hesabınızı tek başına silmez. Abonelik veya deneme süresi bitmiş hesapların verileri 30 gün sonra otomatik olarak silinir.
+Uygulamayı telefondan kaldırmak, çıkış yapmak veya aboneliği iptal etmek hesabınızı tek başına silmez. Deneme veya abonelik süresinin bitmesi de verileri otomatik olarak silmez; silinmesini istiyorsanız yukarıdaki e-posta kanalından talep gönderin.
 
 Ayrıntılar: [Gizlilik Politikası](../gizlilik/) ve [KVKK Aydınlatma Metni](../kvkk/).

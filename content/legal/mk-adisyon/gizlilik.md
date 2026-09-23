@@ -20,27 +20,28 @@ MK Adisyon; kafe ve restoranların masa, sipariş, mutfak, adisyon, ödeme kayd�
 
 ### Sizin verdiğiniz veriler
 
-- **Kayıt bilgileri:** ad, soyad, e-posta adresi, telefon numarası, işletme adı, şifre (yalnızca doğrulama özeti saklanır).
-- **Personel bilgileri:** işletme yetkilisinin davet ettiği personelin adı, e-posta adresi ve rolü.
-- **İşletme içerikleri:** ürün, kategori, fiyat, masa, sipariş, adisyon, ödeme kaydı, gider ve kasa kayıtları; QR menü içerikleri.
-- **Destek yazışmaları:** e-posta ile ilettiğiniz talepler.
+- **Kayıt bilgileri:** ad, soyad, e-posta adresi, telefon numarası, şifre (yalnızca doğrulama özeti saklanır).
+- **İşletme bilgileri:** işletme adı, işletme türü, şehir, adres, işletme telefonu, işletme e-posta adresi ve isteğe bağlı logo bağlantısı (URL).
+- **Personel bilgileri:** işletme yetkilisinin davet ettiği personelin adı (isteğe bağlı), e-posta adresi ve rolü.
+- **İşletme içerikleri:** ürün, kategori, fiyat, masa, sipariş, sipariş notu, iptal gerekçesi, adisyon, ödeme kaydı, gider ve kasa kayıtları; QR menü içerikleri.
+- **Destek talepleri:** panel içi destek formu (konu ve açıklama), özel yazılım talep formu (ad, telefon, e-posta, şube sayısı, ihtiyaç ve açıklama) ve e-posta ile ilettiğiniz talepler.
 
 ### Otomatik oluşan veriler
 
 - **Hesap ve güvenlik:** kullanıcı kimliği, oturum belirteçleri, giriş zamanı, IP adresi, cihaz ve tarayıcı bilgisi.
-- **İşlem geçmişi:** hangi kullanıcının hangi siparişi, iptali, iadeyi veya tahsilatı ne zaman yaptığı.
+- **İşlem geçmişi ve denetim kayıtları:** hangi kullanıcının hangi siparişi, iptali, iadeyi, tahsilatı veya yönetim işlemini ne zaman yaptığı.
 - **Hata ve altyapı kayıtları:** barındırma ve veritabanı sağlayıcılarının hizmeti sunarken tuttuğu teknik günlükler.
 
 ### Toplamadığımız veriler
 
-MK Adisyon Android uygulaması konum, rehber, mikrofon, SMS veya arama kaydına erişmez. Uygulamada reklam SDK'sı, reklam kimliği takibi veya üçüncü taraf pazarlama analitiği bulunmaz. Masa ve kart ödemeleri sistemde yalnızca kayıt olarak tutulur; MK Adisyon kart numarası, CVV veya banka şifresi saklamaz.
+MK Adisyon Android uygulaması yalnızca internet erişimi izni ister. Konum, kamera, mikrofon, rehber, SMS, telefon/arama kaydı, bildirim, dosya veya fotoğraf izni istemez. Uygulamada reklam SDK'sı, reklam kimliği (Advertising ID), analitik veya hata raporlama (crash reporting) SDK'sı bulunmaz. Masa ve kart ödemeleri sistemde yalnızca kayıt olarak tutulur; MK Adisyon kart numarası, CVV veya banka şifresi saklamaz.
 
 ## 4. Verileri nasıl kullanırız?
 
 - Hesabı oluşturmak, girişi doğrulamak ve rol bazlı yetkileri uygulamak.
 - Masa, sipariş, mutfak, adisyon, kasa ve rapor işlevlerini çalıştırmak ve verileri cihazlar arasında eşitlemek.
 - Deneme süresini, aboneliği ve faturalamayı yönetmek.
-- Personel davetleri, şifre sıfırlama ve zorunlu hizmet bildirimleri göndermek.
+- Kayıt doğrulama ve personel davet e-postalarını ve zorunlu hizmet bildirimlerini göndermek.
 - Destek taleplerini yanıtlamak, hataları gidermek, güvenliği sağlamak ve kötüye kullanımı önlemek.
 - Yasal yükümlülükleri yerine getirmek.
 
@@ -49,8 +50,8 @@ Verileri reklam için kullanmayız, satmayız ve profil çıkarmak amacıyla iş
 ## 5. Kiminle paylaşırız?
 
 - **İşletmeniz:** personel hesabınız ve yaptığınız işlemler, çalıştığınız işletmenin yetkilileri tarafından görülebilir.
-- **Hizmet sağlayıcılar:** Supabase (veritabanı, kimlik doğrulama, depolama), Vercel (web barındırma), e-posta gönderim sağlayıcısı ve Google Gmail (destek). Bu sağlayıcılar verileri yalnızca hizmeti sunmak için işler.
-- **Ödeme sağlayıcıları:** abonelik ödemesi web'den yapılıyorsa ödeme kuruluşu, Android'de yapılıyorsa Google Play.
+- **Hizmet sağlayıcılar:** Supabase (veritabanı, kimlik doğrulama ve kimlik doğrulama e-postaları), Vercel (web barındırma) ve Google Gmail (destek). Bu sağlayıcılar verileri yalnızca hizmeti sunmak için işler.
+- **Ödeme sağlayıcıları:** şu an web'de veya uygulama içinde çevrimiçi ödeme alınmaz. Google Play üzerinden abonelik satışı etkinleştirildiğinde satın alma Google Play tarafından yürütülür.
 - **Yetkili merciler:** kanuni yükümlülük veya hukuka uygun talep olduğunda gerekli kapsamda.
 
 Sağlayıcıların sunucuları Türkiye dışında bulunabilir. Yurt dışı aktarım bilgileri [KVKK Aydınlatma Metni](../kvkk/) madde 7'dedir.
@@ -68,19 +69,19 @@ Hiçbir internet hizmeti için mutlak güvenlik garanti edilemez. Bir güvenlik 
 ## 7. Saklama ve silme
 
 - **Aktif abonelik:** hesap ve işletme verileri abonelik süresince saklanır.
-- **Deneme veya abonelik sona erdiğinde:** hesap kısıtlanır ve veriler 30 gün saklanır; bu sürede abonelik yenilenirse veriler korunur. Süre sonunda işletme verileri silinir veya anonimleştirilir.
+- **Deneme veya abonelik sona erdiğinde:** hesap kısıtlanır ve yeni sipariş açılamaz. İşletme verileri, hizmetin yeniden başlatılabilmesi ve ilgili yasal yükümlülükler için gerekli olduğu süre boyunca saklanır; saklama gerekliliği sona erdiğinde ve hukuki bir saklama yükümlülüğü bulunmadığında silinir, anonimleştirilir veya ilgili kişinin ya da İşletme'nin talebi doğrultusunda gerekli işlem uygulanır. Bu işlem otomatik yapılmaz; silme talebi [Hesap ve Veri Silme](../hesap-silme/) sayfasındaki kanaldan iletilebilir.
 - **Fatura kayıtları:** vergi ve ticaret mevzuatı gereği 10 yıl.
 - **Destek ve silme başvuruları:** talebin sonuçlanmasından itibaren en fazla 3 yıl.
 - **Teknik günlükler:** kullanılan Supabase planına göre Free planda 1 gün, Pro planda 7 gün, Team planda 28 gün. Güncel sınırlar: [Supabase plan ve günlük saklama sınırları](https://supabase.com/pricing).
 - **Yedekler:** Free planda otomatik yedek bulunmaz; Pro planda günlük yedekler 7 gün, Team planda 14 gün saklanır. Aktif veritabanından silinen kayıt, yedekler döngü sonunda yenilendikçe yedeklerden de çıkar. Ayrıntı: [Supabase veritabanı yedekleri](https://supabase.com/docs/guides/platform/backups).
 
-Adisyon, satış ve kasa kayıtlarının vergi mevzuatı kapsamında saklanması işletmenin sorumluluğundadır. Hesabınızı silmeden veya aboneliğiniz bitmeden önce ihtiyaç duyduğunuz raporları dışa aktarmanızı öneririz.
+Adisyon, satış ve kasa kayıtlarının vergi mevzuatı kapsamında saklanması işletmenin sorumluluğundadır. Panelde şu an otomatik dışa aktarma özelliği bulunmaz. Hesabınızı silmeden veya aboneliğiniz bitmeden önce ihtiyaç duyduğunuz kayıtları ayrıca muhafaza etmenizi ya da kopyasını e-posta ile talep etmenizi öneririz.
 
 Hesap ve veri silme adımları: [Hesap ve Veri Silme](../hesap-silme/). Uygulamayı cihazdan kaldırmak hesabı silmez.
 
 ## 8. Çerezler ve cihaz depolaması
 
-Web paneli yalnızca giriş ve güvenlik için zorunlu oturum çerezleri ile tarayıcı depolaması kullanır. Reklam veya analitik çerezi kullanılmaz. Ayrıntılar: [Çerez Politikası](../cerez-politikasi/).
+Web paneli yalnızca giriş için zorunlu oturum çerezleri kullanır; reklam veya analitik çerezi kullanılmaz. Android uygulaması, oturumunuzun açık kalması için oturum bilgisini cihazdaki uygulama depolama alanında tutar; çıkış yaptığınızda bu bilgi silinir. Ayrıntılar: [Çerez Politikası](../cerez-politikasi/).
 
 ## 9. Çocukların gizliliği
 

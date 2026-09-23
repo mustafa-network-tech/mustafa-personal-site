@@ -5,7 +5,7 @@ Bu sayfa, 6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun'un 3.
 ## Hizmet sağlayıcı
 
 - **Ticari unvan:** MK DIGITAL SYSTEMS – MUSTAFA ÖNER
-- **Adres:** [DOLDURULACAK: açık adres]
+- **Adres:** Merkez / Bolu
 - **Vergi dairesi / Vergi numarası:** [DOLDURULACAK]
 - **MERSİS numarası:** [DOLDURULACAK: varsa; şahıs işletmelerinde yoksa bu satırı kaldırın]
 - **Ticaret sicil / Esnaf sicil numarası:** [DOLDURULACAK: varsa]

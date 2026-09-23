@@ -12,9 +12,9 @@ Bu politika, MK Adisyon web panelinde kullanılan çerezleri ve benzeri tarayıc
 
 MK Adisyon web paneli **yalnızca zorunlu çerezler** kullanır. Bu çerezler olmadan giriş yapılamaz ve oturum güvenli şekilde sürdürülemez.
 
-- **Oturum ve kimlik doğrulama çerezleri:** giriş yaptığınızı ve hangi işletme hesabına bağlı olduğunuzu doğrulamak için kullanılır. Supabase kimlik doğrulama altyapısı tarafından oluşturulur. Süre: oturum boyunca veya çıkış yapana kadar; yenileme belirteci en fazla sağlayıcının yapılandırılmış süresi kadar.
-- **Güvenlik çerezleri:** oturumun başka bir site tarafından kötüye kullanılmasını önlemek için kullanılır. Süre: oturum boyunca.
-- **Tercih kayıtları (tarayıcı depolaması):** seçili masa görünümü veya panel ayarı gibi arayüz tercihleri cihazınızda tutulabilir. Bu kayıtlar sunucuya gönderilmez.
+- **Oturum ve kimlik doğrulama çerezleri** (`sb-…-auth-token`): giriş yaptığınızı doğrulamak ve oturumunuzu açık tutmak için kullanılır. Supabase kimlik doğrulama kütüphanesi tarafından oluşturulur. Süre: çıkış yapana kadar, en fazla 400 gün. Çıkış yaptığınızda silinir.
+
+Web paneli bunların dışında çerez oluşturmaz; localStorage veya sessionStorage gibi tarayıcı depolama alanlarını da kullanmaz.
 
 Zorunlu çerezler KVKK md. 5/2-c (sözleşmenin ifası) ve md. 5/2-f (meşru menfaat, bilgi güvenliği) kapsamında kullanılır ve bu nedenle ayrıca açık rıza gerektirmez. Bu yüzden sitede çerez onay banner'ı gösterilmez.
 

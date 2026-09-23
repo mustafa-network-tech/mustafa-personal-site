@@ -22,10 +22,11 @@ Başvuru adresi: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com). Web 
 
 - **Kimlik:** ad, soyad.
 - **İletişim:** e-posta adresi, telefon numarası.
-- **İşletme ve müşteri işlem:** işletme adı, abonelik planı, deneme başlangıç/bitiş tarihleri, abonelik durumu, fatura ve ödeme kayıtları (kart bilgileri MK Adisyon tarafından saklanmaz).
+- **İşletme bilgileri:** işletme adı, işletme türü, şehir, adres, işletme telefonu, işletme e-posta adresi ve isteğe bağlı logo bağlantısı (URL).
+- **Abonelik:** abonelik planı, deneme başlangıç/bitiş tarihleri ve abonelik durumu. Ücretli abonelik başlatıldığında fatura ve ödeme kayıtları da işlenir; kart bilgileri MK Adisyon tarafından saklanmaz.
 - **Hesap ve işlem güvenliği:** kullanıcı kimliği, rol (garson, mutfak, kasa, yönetici), şifre doğrulama bilgisi (şifreler açık metin olarak saklanmaz), oturum kayıtları, giriş zamanları, IP adresi, cihaz/tarayıcı bilgisi, işlem geçmişi.
-- **Operasyon kayıtları:** personelin açtığı masa, aldığı sipariş, yaptığı tahsilat, iade, iptal ve kasa işlemlerinin hangi kullanıcı tarafından ve ne zaman yapıldığı.
-- **Talep/şikâyet:** destek yazışmaları, KVKK ve hesap silme başvuruları.
+- **Operasyon kayıtları:** personelin açtığı masa, aldığı sipariş, yaptığı tahsilat, iade, iptal ve kasa işlemlerinin hangi kullanıcı tarafından ve ne zaman yapıldığı; sipariş notları, iptal gerekçeleri ve işletme denetim (audit) kayıtları.
+- **Talep/şikâyet:** panel içi destek talepleri (konu ve açıklama), özel yazılım talep formu (ad, telefon, e-posta, şube sayısı, ihtiyaç ve açıklama), e-posta ile gelen destek, KVKK ve hesap silme başvuruları.
 
 MK Adisyon, özel nitelikli kişisel veri (sağlık, biyometrik veri, din, etnik köken vb.) toplamak için tasarlanmamıştır. İşletmelerin sipariş notlarına veya serbest metin alanlarına bu tür verileri yazmaması gerekir.
 
@@ -44,7 +45,7 @@ Kişisel veriler reklam amacıyla satılmaz veya üçüncü kişilerle pazarlama
 
 ## 5. Toplama yöntemi ve hukuki sebepler
 
-Veriler; web kayıt formu, giriş ekranları, personel davet akışı, web paneli, Android uygulaması, ödeme sağlayıcısından gelen işlem bildirimleri ve e-posta yazışmaları üzerinden, kısmen otomatik yollarla elektronik ortamda toplanır.
+Veriler; web kayıt formu, giriş ekranları, personel davet akışı, web paneli ve panel içi formlar, Android uygulaması ve e-posta yazışmaları üzerinden, kısmen otomatik yollarla elektronik ortamda toplanır.
 
 - Hesap açma, abonelik, hizmetin sunulması ve personel hesaplarının yönetimi: KVKK md. 5/2-c, **sözleşmenin kurulması veya ifası**.
 - Fatura, vergi ve ticari kayıtların tutulması, yetkili merci talepleri: KVKK md. 5/2-ç, **hukuki yükümlülük**.
@@ -57,21 +58,21 @@ Bu metni okumanız açık rıza verdiğiniz anlamına gelmez. Kullanım Koşulla
 
 Kişisel veriler aşağıdaki alıcı gruplarına, yalnızca belirtilen amaçla ve gerekli ölçüde aktarılabilir:
 
-- **Barındırma ve altyapı sağlayıcıları:** veritabanı, kimlik doğrulama ve dosya depolama için Supabase; web uygulamasının barındırılması ve sunulması için Vercel.
-- **E-posta sağlayıcıları:** davet, şifre sıfırlama ve hizmet bildirimleri için kullanılan e-posta gönderim altyapısı; destek yazışmaları için Google Gmail.
-- **Ödeme sağlayıcıları:** web'den abonelik satın alınıyorsa ödeme kuruluşu; Android'de satın alma yapılıyorsa Google Play. Kart bilgilerini doğrudan bu sağlayıcılar işler.
+- **Barındırma ve altyapı sağlayıcıları:** veritabanı ve kimlik doğrulama için Supabase; web uygulamasının barındırılması ve sunulması için Vercel.
+- **E-posta:** kayıt doğrulama ve personel davet e-postaları Supabase Auth altyapısı üzerinden gönderilir; destek yazışmaları için Google Gmail kullanılır.
+- **Ödeme sağlayıcıları:** MK Adisyon'da şu an web'de veya uygulama içinde çevrimiçi ödeme alınmaz. Google Play üzerinden abonelik satışı etkinleştirildiğinde satın alma işlemini Google Play yürütür ve kart bilgilerini yalnızca Google işler.
 - **İlgili işletme:** personelin hesap, rol ve işlem kayıtları, personelin çalıştığı işletmenin yetkilileriyle paylaşılır.
 - **Yetkili kamu kurum ve kuruluşları:** hukuken yetkili bir talep veya kanuni yükümlülük bulunduğunda.
 
 ## 7. Yurt dışına aktarım
 
-Supabase ve Vercel altyapısı ile Gmail hizmeti Türkiye dışında bulunan sunucular üzerinden çalışır. Supabase proje bölgesi **[DOLDURULACAK: örn. Avrupa (Frankfurt)]**, Vercel sunucu fonksiyonlarının bölgesi **[DOLDURULACAK: örn. fra1 / iad1]** olarak yapılandırılmıştır. Bu sağlayıcıların destek, güvenlik ve alt işleyen süreçleri kapsamında veriler başka ülkelerde de işlenebilir.
+Supabase ve Vercel altyapısı ile Gmail hizmeti Türkiye dışında bulunan sunucular üzerinden çalışır. Supabase veritabanı AWS eu-west-2 (Londra, Birleşik Krallık) bölgesinde, Vercel sunucu fonksiyonları iad1 (Washington, D.C., ABD) bölgesinde çalışır. Bu sağlayıcıların destek, güvenlik ve alt işleyen süreçleri kapsamında veriler başka ülkelerde de işlenebilir.
 
-Yurt dışına aktarım, KVKK md. 9 uyarınca yeterlilik kararı, uygun güvence (ör. Kurul'un ilan ettiği standart sözleşme) veya arızi hâllerden birine dayanılarak yapılır. Standart sözleşme kullanılması hâlinde sözleşme imzalanır ve imzadan itibaren 5 iş günü içinde Kişisel Verileri Koruma Kurumu'na bildirilir. Bu metnin kabulü tek başına geçerli bir aktarım mekanizması oluşturmaz.
+Yurt dışına aktarım, KVKK md. 9'da öngörülen aktarım şartlarına uygun olarak yapılır; uygulanacak aktarım mekanizması ve buna bağlı yükümlülükler KVKK md. 9 ve ilgili ikincil mevzuata göre belirlenir. Bu metnin kabulü tek başına geçerli bir aktarım mekanizması oluşturmaz.
 
 ## 8. Saklama süreleri
 
-- İşletme hesabı ve operasyon kayıtları: abonelik süresince; abonelik veya deneme sona erdikten sonra 30 gün (işletmenin verilerini dışa aktarabilmesi için), ardından silinir veya anonimleştirilir.
+- İşletme hesabı ve operasyon kayıtları: hizmetin sunulması ve ilgili yasal yükümlülükler için gerekli olduğu süre boyunca saklanır; saklama gerekliliği sona erdiğinde ve hukuki bir saklama yükümlülüğü bulunmadığında silinir, anonimleştirilir veya ilgili kişinin ya da İşletme'nin talebi doğrultusunda gerekli işlem uygulanır.
 - Fatura ve ödeme kayıtları: Vergi Usul Kanunu ve Türk Ticaret Kanunu uyarınca 10 yıl.
 - Destek ve KVKK başvuruları: talebin sonuçlanmasından itibaren en fazla 3 yıl.
 - Teknik güvenlik günlükleri ve yedekler: [Gizlilik Politikası](../gizlilik/) sayfasında açıklanan Supabase plan süreleri.
