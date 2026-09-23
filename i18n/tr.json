@@ -282,5 +282,20 @@
   "showcase_footer_sections_title": "Bölümler",
   "showcase_footer_contact_title": "İletişim",
   "showcase_footer_copyright_left": "© 2026 Mustafa Öner / MK Digital Systems",
-  "showcase_footer_copyright_right": "Dijital Proje Vitrini"
+  "showcase_footer_copyright_right": "Dijital Proje Vitrini",
+
+  "home_selected": {
+    "kicker": "Seçilmiş Projeler",
+    "title_line1": "Gerçek ihtiyaçlara,",
+    "title_line2": "gerçek çözümler.",
+    "lead": "İşletmelere özel yazılımlar, dijital platformlar ve modern web deneyimleri.",
+    "view_all": "Tümünü Gör",
+    "view_all_aria": "{category}: Projeler sayfasındaki tüm çalışmaları gör",
+    "all_projects": "Tüm Projeleri Gör",
+    "groups": {
+      "websites": { "title": "Web Siteleri", "desc": "Kurumsal, tanıtım ve özel web çözümleri" },
+      "software": { "title": "Özel Yazılımlar", "desc": "İş süreçlerini kolaylaştıran çözümler" },
+      "applications": { "title": "Uygulamalar", "desc": "MK Digital Systems tarafından geliştirilen uygulamalar ve yakında gelecek ürünler" }
+    }
+  }
 }

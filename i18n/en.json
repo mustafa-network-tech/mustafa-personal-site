@@ -282,5 +282,20 @@
   "showcase_footer_sections_title": "Sections",
   "showcase_footer_contact_title": "Contact",
   "showcase_footer_copyright_left": "© 2026 Mustafa Oner / MK Digital Systems",
-  "showcase_footer_copyright_right": "Digital Project Showcase"
+  "showcase_footer_copyright_right": "Digital Project Showcase",
+
+  "home_selected": {
+    "kicker": "Selected Projects",
+    "title_line1": "Real needs,",
+    "title_line2": "real solutions.",
+    "lead": "Custom software for businesses, digital platforms and modern web experiences.",
+    "view_all": "View All",
+    "view_all_aria": "{category}: view all work on the Projects page",
+    "all_projects": "View All Projects",
+    "groups": {
+      "websites": { "title": "Websites", "desc": "Corporate, promotional and custom web solutions" },
+      "software": { "title": "Custom Software", "desc": "Solutions that simplify business processes" },
+      "applications": { "title": "Applications", "desc": "Apps developed by MK Digital Systems and upcoming products" }
+    }
+  }
 }
