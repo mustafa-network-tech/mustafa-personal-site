@@ -5,12 +5,17 @@ import {
   Package, Layers, Globe, Smartphone, MapPin, Image, CalendarCheck,
   Boxes, Factory, Car, FolderKanban, ShieldCheck, Database, LineChart,
   Check, Search, Music, BookOpen, Languages, Zap, Share2, Bell, Heart,
-  Camera, Activity, Milk, Beef,
+  Camera, Activity, Milk, Beef, PawPrint, Syringe, Stethoscope, Mic, Bot,
 } from 'lucide-react'
 
 // Specific concepts precede broad matches such as management or mobile.
 // Normalize both Turkish and English labels without modifying displayed text.
 const iconRules = [
+  [/hayvan sahibi|pet owner|patient and owner/, PawPrint],
+  [/asi |asi takib|vaccin/, Syringe],
+  [/muayene|examination/, Stethoscope],
+  [/sesli|voice/, Mic],
+  [/\(ai\)|ai ile|ai-assisted|yapay zeka/, Bot],
   [/resepsiyon|reception/, Monitor],
   [/admin/, Settings],
   [/rol baz|rol taban|role.based|user permission/, UserCog],
@@ -24,7 +29,7 @@ const iconRules = [
   [/tahsilat|odeme|collection|payment/, CreditCard],
   [/gider|expense/, Receipt],
   [/kasa|cash desk|cashier/, Wallet],
-  [/rapor|report|analiz|analytic/, BarChart3],
+  [/rapor|report|analiz|analytic|istatistik|statistic/, BarChart3],
   [/islem log|islem gecmis|activity log|activity history|timesheet|puantaj/, ScrollText],
   [/garson|waiter/, UtensilsCrossed],
   [/mutfak|kitchen/, ChefHat],
@@ -37,7 +42,7 @@ const iconRules = [
   [/kategori|category|categories/, Layers],
   [/arac|vehicle/, Car],
   [/proje yonet|project management|is plan|work planning|gorev|task management/, FolderKanban],
-  [/guvenlik|security|erisim|access control|onay|approval/, ShieldCheck],
+  [/guvenlik|security|izolasyon|isolation|erisim|access control|onay|approval/, ShieldCheck],
   [/veritabani|database|veri aktar|data import/, Database],
   [/sut |milk|dairy/, Milk],
   [/besi|beef|hayvan|cattle/, Beef],
@@ -50,7 +55,7 @@ const iconRules = [
   [/siir|poetry|okuma|reading|makale|article|blog|edebi|literary/, BookOpen],
   [/dil dest|dilli|language|localiz/, Languages],
   [/arama|search|filtre|filter|kesif|discovery/, Search],
-  [/bildirim|notification/, Bell],
+  [/bildirim|notification|acil|emergency/, Bell],
   [/favori|favorite|begeni|like system/, Heart],
   [/sosyal medya|social media|paylasim|sharing/, Share2],
   [/hizli|fast|performans|performance/, Zap],

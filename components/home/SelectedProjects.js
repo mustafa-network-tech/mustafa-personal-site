@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import {
   ArrowRight, BedDouble, BookHeart, Building2, Code2, Coffee, ConciergeBell, Factory,
-  Globe, GraduationCap, HardHat, Home, Inbox, LayoutGrid, Smartphone, UtensilsCrossed, Wheat,
+  Globe, GraduationCap, HardHat, Home, LayoutGrid, PawPrint, Smartphone, UtensilsCrossed, Wheat,
 } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { getHomeShowcaseGroups, getStatusKind, HOME_SHOWCASE_MOBILE_LIMIT } from '@/lib/projects/homeShowcase'
@@ -17,6 +17,7 @@ const PROJECT_ICONS = {
   'mavi-kadraj-otel': BedDouble,
   'mavi-gayrimenkul': Home,
   'mavi-kafe': Coffee,
+  'mk-pati': PawPrint,
   'mk-traceops': Factory,
   'santiye-yonetim-sistemi': HardHat,
   'mk-farm': Wheat,
@@ -24,7 +25,6 @@ const PROJECT_ICONS = {
   'mavi-kadrajla-ogreniyorum': GraduationCap,
   'aura-daily': BookHeart,
   'mavi-adisyon': UtensilsCrossed,
-  'mk-inbox': Inbox,
 }
 
 // Sade durum rozetleri: nötr zemin + küçük, düşük doygunlukta nokta.
