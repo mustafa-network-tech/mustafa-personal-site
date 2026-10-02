@@ -106,7 +106,7 @@ Bu politikayı güncelleyebiliriz. Önemli değişiklikleri uygulama içinde vey
 ## 12. İletişim
 
 - **E-posta:** [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com)
-- **Adres:** Merkez / Bolu
+- **Adres:** Bolu, Türkiye
 
 ## İlgili belgeler
 

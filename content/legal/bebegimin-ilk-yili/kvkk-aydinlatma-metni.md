@@ -7,7 +7,7 @@ Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 10 uya
 ## 1. Veri sorumlusu
 
 - **Unvan:** MK DIGITAL SYSTEMS – MUSTAFA ÖNER
-- **Adres:** Merkez / Bolu
+- **Adres:** Bolu, Türkiye
 - **E-posta:** [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com)
 
 ## 2. İşlenen kişisel veri kategorileri
@@ -82,7 +82,7 @@ Bize başvurarak şu haklarınızı kullanabilirsiniz:
 Başvurunuzu Türkçe olarak, kimliğinizi tespit edici bilgilerle birlikte iletebilirsiniz:
 
 - uygulamada kayıtlı e-posta adresinizden [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com) adresine;
-- ıslak imzalı dilekçeyle Merkez / Bolu adresine.
+- ıslak imzalı dilekçeyle Bolu, Türkiye adresine.
 
 Başvurunuz, talebin niteliğine göre en geç 30 gün içinde ücretsiz olarak sonuçlandırılır. İşlemin ayrıca bir maliyet gerektirmesi hâlinde Kurul'un belirlediği tarife uygulanabilir.
 
