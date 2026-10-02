@@ -79,10 +79,7 @@ Bize başvurarak şu haklarınızı kullanabilirsiniz:
 
 ## 8. Başvuru yolu
 
-Başvurunuzu Türkçe olarak, kimliğinizi tespit edici bilgilerle birlikte iletebilirsiniz:
-
-- uygulamada kayıtlı e-posta adresinizden [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com) adresine;
-- ıslak imzalı dilekçeyle Bolu, Türkiye adresine.
+Başvurunuzu Türkçe olarak, kimliğinizi tespit edici bilgilerle birlikte, uygulamada kayıtlı e-posta adresinizden [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com) adresine iletebilirsiniz.
 
 Başvurunuz, talebin niteliğine göre en geç 30 gün içinde ücretsiz olarak sonuçlandırılır. İşlemin ayrıca bir maliyet gerektirmesi hâlinde Kurul'un belirlediği tarife uygulanabilir.
 
