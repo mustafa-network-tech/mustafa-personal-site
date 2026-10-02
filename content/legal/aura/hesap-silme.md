@@ -10,9 +10,9 @@ Bu sayfadan Aura Daily hesabınızın ve hesabınıza bağlı verilerin silinmes
 
 ## Silme talebi gönder
 
-[Hesabımın silinmesini e-posta ile talep et](mailto:mustafa82oner@gmail.com?subject=Aura%20Daily%20-%20Hesap%20Silme%20Talebi).
+[Hesabımın silinmesini e-posta ile talep et](mailto:iletisim@mk-digitalsystems.com?subject=Aura%20Daily%20-%20Hesap%20Silme%20Talebi).
 
-E-posta uygulaması açılmazsa doğrudan mustafa82oner@gmail.com adresine yazın.
+E-posta uygulaması açılmazsa doğrudan iletisim@mk-digitalsystems.com adresine yazın.
 
 Konu: Aura Daily — Hesap Silme Talebi
 

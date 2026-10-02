@@ -14,7 +14,7 @@ Aura Daily’de çocukların cinsel istismarı ve sömürüsü kesin olarak yasa
 
 Uygulamadaki ilgili kullanıcı veya içerik için “Şikâyet et” seçeneğini kullanabilirsiniz. Kullanıcıyı “Engelle” seçeneğiyle engelleyebilirsiniz.
 
-Çocuk güvenliği için iletişim: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com?subject=Aura%20Daily%20-%20Cocuk%20Guvenligi%20Bildirimi).
+Çocuk güvenliği için iletişim: [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com?subject=Aura%20Daily%20-%20Cocuk%20Guvenligi%20Bildirimi).
 
 E-posta konusu olarak “Aura Daily — Çocuk Güvenliği Bildirimi” yazın. Varsa ilgili kullanıcı kodu/kimliği, içeriğin uygulamadaki konumu ve yaklaşık olay zamanı gibi sınırlı bilgileri belirtin. Şifrenizi veya doğrulama kodunuzu göndermeyin.
 
@@ -30,7 +30,7 @@ Bildirim sahibinin ve ilgili çocuğun bilgileri, inceleme ve kanuni yükümlül
 
 ## Güvenlik iletişim noktası
 
-Aura Daily adına çocuk güvenliği iletişim kanalı: MK DIGITAL SYSTEMS – MUSTAFA ÖNER — mustafa82oner@gmail.com.
+Aura Daily adına çocuk güvenliği iletişim kanalı: MK DIGITAL SYSTEMS – MUSTAFA ÖNER — iletisim@mk-digitalsystems.com.
 
 Uygulama içeriğine ilişkin diğer kurallar [Kullanım Şartları ve Topluluk Kuralları](../kullanim-sartlari/) sayfasındadır. Kişisel veriler için [Gizlilik Politikası](../gizlilik-politikasi/) ve hesap kaldırma için [Hesap Silme](../hesap-silme/) sayfasını kullanabilirsiniz.
 

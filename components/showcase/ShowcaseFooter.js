@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const WHATSAPP_URL = 'https://wa.me/905456597551'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/mustafa-oner-82/'
-const EMAIL_URL = 'mailto:mustafa82oner@gmail.com'
+const EMAIL_URL = 'mailto:iletisim@mk-digitalsystems.com'
 
 function IconButton({ href, label, children }) {
   return (

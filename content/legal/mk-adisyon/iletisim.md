@@ -11,12 +11,12 @@ Bu sayfa, 6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun'un 3.
 - **Ticaret sicil / Esnaf sicil numarası:** [DOLDURULACAK: varsa]
 - **Meslek odası:** [DOLDURULACAK: varsa]
 - **Telefon:** [DOLDURULACAK]
-- **E-posta:** [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com)
+- **E-posta:** [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com)
 - **Web sitesi:** [mustafaoner.net](https://mustafaoner.net)
 
 ## Destek
 
-Teknik destek, abonelik, fatura, hesap silme ve KVKK başvuruları için: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com).
+Teknik destek, abonelik, fatura, hesap silme ve KVKK başvuruları için: [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com).
 
 E-postanın konu alanına talebinizin türünü yazmanız yanıtı hızlandırır: "MK Adisyon — Teknik Destek", "MK Adisyon — Abonelik/Fatura", "MK Adisyon — Hesap Silme Talebi" veya "MK Adisyon — KVKK Başvurusu".
 

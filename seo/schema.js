@@ -89,7 +89,7 @@ export function getContactPageSchema(locale = 'tr') {
     mainEntity: {
       '@type': 'Person',
       name: locale === 'tr' ? PERSON_NAME : PERSON_NAME_EN,
-      email: 'mustafa82oner@gmail.com',
+      email: 'iletisim@mk-digitalsystems.com',
     },
   }
 }

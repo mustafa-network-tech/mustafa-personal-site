@@ -8,7 +8,7 @@ Bu metin, ticari unvanı MK DIGITAL SYSTEMS – MUSTAFA ÖNER olan yayıncı tar
 
 Geliştirici, yayıncı ve veri sorumlusu: **MK DIGITAL SYSTEMS – MUSTAFA ÖNER**.
 
-Destek, hesap silme ve veri sorumlusu başvuruları: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com).
+Destek, hesap silme ve veri sorumlusu başvuruları: [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com).
 
 Web sitesi: [mustafaoner.net](https://mustafaoner.net). Bu politikanın adresi: [Aura Daily Gizlilik Politikası](https://mustafaoner.net/kvkk-veri-isleme-gizlilik-politikalari/aura/gizlilik-politikasi/).
 
@@ -49,7 +49,7 @@ Bağlantı işlevleri için kullanılan adınız ve profil fotoğrafınız, bağ
 
 ## 6. Hizmet sağlayıcılar ve aktarım
 
-Hesap doğrulama, dosya depolama ve veritabanı hizmetleri için Avrupa bölgesindeki Supabase altyapısı kullanılır. Destek, hesap silme ve veri sorumlusu başvuruları Google'ın Gmail hizmetindeki mustafa82oner@gmail.com adresinden alınır.
+Hesap doğrulama, dosya depolama ve veritabanı hizmetleri için Avrupa bölgesindeki Supabase altyapısı kullanılır. Destek, hesap silme ve veri sorumlusu başvuruları Google'ın Gmail hizmetindeki iletisim@mk-digitalsystems.com adresinden alınır.
 
 Bu sağlayıcılar, sundukları hizmet için gerekli verileri işler. Seçtiğiniz alıcılarla paylaşım dışında, kişisel verileriniz bağımsız üçüncü kişilere reklam amacıyla verilmez. Kanunen yetkili mercilere, geçerli bir yükümlülük veya hukuka uygun talep bulunduğunda gerekli kapsamda aktarım yapılabilir.
 
@@ -99,7 +99,7 @@ Bir çocuğun verilerinin uygun olmayan biçimde işlendiğini düşünüyorsan�
 
 KVKK kapsamında kişisel verilerinizin işlenip işlenmediğini öğrenme; işlenmişse bilgi isteme; işleme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme; yurt içi veya dışındaki alıcıları öğrenme; eksik veya yanlış verilerin düzeltilmesini isteme; kanuni şartlar oluştuğunda silme veya yok etme isteme; düzeltme ve silme işlemlerinin aktarılan üçüncü kişilere bildirilmesini isteme; yalnızca otomatik analiz sonucunda aleyhinize sonuç doğmasına itiraz etme ve hukuka aykırı işleme nedeniyle zararın giderilmesini talep etme haklarına sahipsiniz.
 
-Bilgi ve taleplerinizi hesabınıza kayıtlı e-posta adresinden veri sorumlusu başvuru adresi olan [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com) adresine iletebilirsiniz. Başvuruda ad-soyad, talebin konusu, Aura hesabında kullanılan e-posta adresi ve cevap için tercih edilen iletişim yöntemini belirtin. KVKK kapsamında mevzuatta öngörülen diğer başvuru yöntemleri de saklıdır. Kimliğinizi veya hesap sahipliğinizi doğrulamak için yalnızca gerekli ve ölçülü ek bilgi istenebilir; şifrenizi veya doğrulama kodunuzu göndermeyin.
+Bilgi ve taleplerinizi hesabınıza kayıtlı e-posta adresinden veri sorumlusu başvuru adresi olan [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com) adresine iletebilirsiniz. Başvuruda ad-soyad, talebin konusu, Aura hesabında kullanılan e-posta adresi ve cevap için tercih edilen iletişim yöntemini belirtin. KVKK kapsamında mevzuatta öngörülen diğer başvuru yöntemleri de saklıdır. Kimliğinizi veya hesap sahipliğinizi doğrulamak için yalnızca gerekli ve ölçülü ek bilgi istenebilir; şifrenizi veya doğrulama kodunuzu göndermeyin.
 
 KVKK kapsamındaki usulüne uygun başvurular, niteliğine göre en kısa sürede ve en geç 30 gün içinde sonuçlandırılır. Kanuni istisnalar dışında başvuru ücretsizdir. Cevabın yetersiz bulunması, başvurunun reddi veya süresinde cevap verilmemesi durumunda Kurula başvuru haklarınız saklıdır.
 

@@ -8,7 +8,7 @@ Bu politika, **MK DIGITAL SYSTEMS – MUSTAFA ÖNER** tarafından geliştirilen 
 
 Geliştirici ve yayıncı: **MK DIGITAL SYSTEMS – MUSTAFA ÖNER**.
 
-Destek, gizlilik ve hesap silme başvuruları: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com).
+Destek, gizlilik ve hesap silme başvuruları: [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com).
 
 Bu politikanın adresi: [MK Adisyon Gizlilik Politikası](https://mustafaoner.net/kvkk-veri-isleme-gizlilik-politikalari/mk-adisyon/gizlilik/).
 
@@ -89,7 +89,7 @@ MK Adisyon işletmelere yönelik bir iş uygulamasıdır ve 18 yaşından küç�
 
 ## 10. Haklarınız
 
-KVKK md. 11 kapsamındaki haklarınızı [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com) adresine başvurarak kullanabilirsiniz. Başvurular en geç 30 gün içinde sonuçlandırılır. Ayrıntılar: [KVKK Aydınlatma Metni](../kvkk/).
+KVKK md. 11 kapsamındaki haklarınızı [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com) adresine başvurarak kullanabilirsiniz. Başvurular en geç 30 gün içinde sonuçlandırılır. Ayrıntılar: [KVKK Aydınlatma Metni](../kvkk/).
 
 ## 11. Değişiklikler
 

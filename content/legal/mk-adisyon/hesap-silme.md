@@ -10,9 +10,9 @@ Bu sayfa, MK Adisyon hesabınızın ve hesabınıza bağlı verilerin nasıl sil
 
 ## Silme talebi gönder
 
-[Hesabımın silinmesini e-posta ile talep et](mailto:mustafa82oner@gmail.com?subject=MK%20Adisyon%20-%20Hesap%20Silme%20Talebi).
+[Hesabımın silinmesini e-posta ile talep et](mailto:iletisim@mk-digitalsystems.com?subject=MK%20Adisyon%20-%20Hesap%20Silme%20Talebi).
 
-E-posta uygulaması açılmazsa doğrudan mustafa82oner@gmail.com adresine yazın.
+E-posta uygulaması açılmazsa doğrudan iletisim@mk-digitalsystems.com adresine yazın.
 
 Konu: MK Adisyon — Hesap Silme Talebi
 

@@ -35,10 +35,10 @@ export default function ContactTr() {
             Web geliştirme, özel yazılım veya kurumsal web sitesi için kısa bir özet ve düşündüğünüz zaman çerçevesi ile yazabilirsiniz.
           </p>
           <a
-            href="mailto:mustafa82oner@gmail.com"
+            href="mailto:iletisim@mk-digitalsystems.com"
             className="inline-flex items-center gap-2 text-[#4F7CFF] font-semibold hover:underline mb-10"
           >
-            mustafa82oner@gmail.com
+            iletisim@mk-digitalsystems.com
           </a>
           <nav className="flex flex-wrap gap-4 text-sm border-t border-[rgba(248,250,252,0.12)] pt-10" aria-label="İlgili sayfalar">
             <Link href="/tr/services" className="text-[#4F7CFF] hover:underline">

@@ -4,7 +4,7 @@ Son güncelleme: 22 Eylül 2026
 
 ## 1. Hizmeti sunan
 
-Aura Daily, geliştirici, yayıncı ve veri sorumlusu **MK DIGITAL SYSTEMS – MUSTAFA ÖNER** tarafından sunulur. Web sitesi: [mustafaoner.net](https://mustafaoner.net). Destek, hesap silme ve veri sorumlusu başvuruları: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com).
+Aura Daily, geliştirici, yayıncı ve veri sorumlusu **MK DIGITAL SYSTEMS – MUSTAFA ÖNER** tarafından sunulur. Web sitesi: [mustafaoner.net](https://mustafaoner.net). Destek, hesap silme ve veri sorumlusu başvuruları: [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com).
 
 Bu şartlar Aura Daily hesabının, günlük tutma işlevlerinin, fotoğraf eklemenin, paylaşımın ve mesajlaşmanın kullanımını düzenler. Kişisel verilerin işlenmesi ayrıca [Gizlilik Politikası ve KVKK Aydınlatma Metni](../gizlilik-politikasi/) kapsamında açıklanır.
 

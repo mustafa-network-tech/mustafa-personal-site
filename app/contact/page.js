@@ -35,10 +35,10 @@ export default function ContactEn() {
             For web development, custom software or a corporate website, email a short brief and the timeline you have in mind.
           </p>
           <a
-            href="mailto:mustafa82oner@gmail.com"
+            href="mailto:iletisim@mk-digitalsystems.com"
             className="inline-flex items-center gap-2 text-[#4F7CFF] font-semibold hover:underline mb-10"
           >
-            mustafa82oner@gmail.com
+            iletisim@mk-digitalsystems.com
           </a>
           <nav className="flex flex-wrap gap-4 text-sm border-t border-[rgba(248,250,252,0.12)] pt-10" aria-label="Related pages">
             <Link href="/services" className="text-[#4F7CFF] hover:underline">

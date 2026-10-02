@@ -8,7 +8,7 @@ Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun ("K
 
 Veri sorumlusu: **MK DIGITAL SYSTEMS – MUSTAFA ÖNER**.
 
-Başvuru adresi: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com). Web sitesi: [mustafaoner.net](https://mustafaoner.net). Ticari unvan, adres ve vergi bilgileri [Künye ve İletişim](../iletisim/) sayfasındadır.
+Başvuru adresi: [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com). Web sitesi: [mustafaoner.net](https://mustafaoner.net). Ticari unvan, adres ve vergi bilgileri [Künye ve İletişim](../iletisim/) sayfasındadır.
 
 ## 2. Bu metin kimleri kapsar?
 
@@ -81,7 +81,7 @@ Yurt dışına aktarım, KVKK md. 9'da öngörülen aktarım şartlarına uygun 
 
 KVKK md. 11 uyarınca; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işleme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, KVKK md. 7 şartları çerçevesinde silinmesini veya yok edilmesini isteme, bu işlemlerin aktarılan üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhinize bir sonuç çıkmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme haklarına sahipsiniz.
 
-Başvurunuzu, kayıtlı e-posta adresinizden [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com?subject=MK%20Adisyon%20-%20KVKK%20Basvurusu) adresine "MK Adisyon — KVKK Başvurusu" konusuyla veya Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'de öngörülen diğer yöntemlerle iletebilirsiniz. Başvuruda ad-soyad, talebin konusu, hesapta kullanılan e-posta adresi ve işletme adı yer almalıdır.
+Başvurunuzu, kayıtlı e-posta adresinizden [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com?subject=MK%20Adisyon%20-%20KVKK%20Basvurusu) adresine "MK Adisyon — KVKK Başvurusu" konusuyla veya Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'de öngörülen diğer yöntemlerle iletebilirsiniz. Başvuruda ad-soyad, talebin konusu, hesapta kullanılan e-posta adresi ve işletme adı yer almalıdır.
 
 Başvurular talebin niteliğine göre en kısa sürede ve en geç 30 gün içinde ücretsiz sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kurul'ca belirlenen tarife uygulanabilir. Başvurunuz reddedilir, cevap yetersiz bulunur veya süresinde cevap verilmezse Kişisel Verileri Koruma Kurulu'na şikâyet hakkınız saklıdır.
 

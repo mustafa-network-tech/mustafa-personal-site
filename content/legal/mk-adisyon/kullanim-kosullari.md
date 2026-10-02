@@ -22,7 +22,7 @@ MK Adisyon bir ödeme kuruluşu, ÖKC (yazar kasa) veya e-Fatura/e-Arşiv entegr
 
 İşletme, personelini sisteme eklemeden önce KVKK kapsamında aydınlatmakla ve personel verilerini hukuka uygun işlemekle yükümlüdür. İşten ayrılan personelin erişimini panelden devre dışı bırakmak İşletme'nin sorumluluğundadır.
 
-Yetkisiz kullanım fark edildiğinde şifre değiştirilmeli ve [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com) adresine derhâl bildirilmelidir.
+Yetkisiz kullanım fark edildiğinde şifre değiştirilmeli ve [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com) adresine derhâl bildirilmelidir.
 
 ## 4. Deneme süresi
 
@@ -82,4 +82,4 @@ Bu koşullar güncellenebilir. Önemli değişiklikler yürürlüğe girmeden en
 
 ## 14. Uygulanacak hukuk ve uyuşmazlıklar
 
-Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda öncelikle [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com) adresine başvurulması rica edilir. Tacirler arasındaki uyuşmazlıklarda Bolu Mahkemeleri ve İcra Daireleri yetkilidir. İşletme'nin tüketici sayıldığı durumlarda tüketici hakem heyetleri ve tüketici mahkemelerine başvuru hakkı saklıdır.
+Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda öncelikle [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com) adresine başvurulması rica edilir. Tacirler arasındaki uyuşmazlıklarda Bolu Mahkemeleri ve İcra Daireleri yetkilidir. İşletme'nin tüketici sayıldığı durumlarda tüketici hakem heyetleri ve tüketici mahkemelerine başvuru hakkı saklıdır.

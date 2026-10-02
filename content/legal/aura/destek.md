@@ -4,7 +4,7 @@ Aura Daily, **MK DIGITAL SYSTEMS – MUSTAFA ÖNER** tarafından geliştirilir v
 
 ## Bize ulaşın
 
-[mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com)
+[iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com)
 
 E-postanın konu alanına talebinizin türünü yazabilirsiniz: “Aura Daily — Teknik Destek”, “Aura Daily — Gizlilik Başvurusu”, “Aura Daily — Hesap Silme Talebi” veya “Aura Daily — İçerik Şikâyeti”.
 
@@ -21,7 +21,7 @@ Teknik sorunlarda cihaz modeli, işletim sistemi, uygulama sürümü ve aldığ�
 
 Geliştirici, yayıncı ve veri sorumlusu: **MK DIGITAL SYSTEMS – MUSTAFA ÖNER**.
 
-Destek, hesap silme ve veri sorumlusu başvuru adresi: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com).
+Destek, hesap silme ve veri sorumlusu başvuru adresi: [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com).
 
 Aura Daily bir acil yardım veya tıbbi danışmanlık hizmeti değildir. Acil bir tehlikede bulunduğunuz yerdeki yetkili acil yardım kuruluşlarına başvurun.
 

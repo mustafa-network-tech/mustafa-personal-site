@@ -34,4 +34,4 @@ Tarayıcınızın ayarlarından çerezleri silebilir veya engelleyebilirsiniz. Z
 
 ## 6. İletişim
 
-Sorularınız için: [mustafa82oner@gmail.com](mailto:mustafa82oner@gmail.com). Kişisel verilerle ilgili ayrıntılar: [KVKK Aydınlatma Metni](../kvkk/) ve [Gizlilik Politikası](../gizlilik/).
+Sorularınız için: [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com). Kişisel verilerle ilgili ayrıntılar: [KVKK Aydınlatma Metni](../kvkk/) ve [Gizlilik Politikası](../gizlilik/).
