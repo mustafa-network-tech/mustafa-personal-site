@@ -4,7 +4,7 @@
  */
 
 export const PROJECTS = [
-  { label: 'MK Digital Systems', typeKey: 'showcase_type_platform', titleKey: 'showcase_card_mk_digital', url: 'https://mk-digital-systems.vercel.app/en', descKey: 'showcase_card_desc_mk_digital' },
+  { label: 'MK Digital Systems', typeKey: 'showcase_type_platform', titleKey: 'showcase_card_mk_digital', url: 'https://www.mk-digitalsystems.com', descKey: 'showcase_card_desc_mk_digital' },
   { label: 'MK Ops', typeKey: 'showcase_type_system', titleKey: 'showcase_card_mk_ops', url: 'https://www.mk-ops.tr', descKey: 'showcase_card_desc_mk_ops' },
   { label: 'ARIA', typeKey: 'showcase_type_platform', titleKey: 'showcase_card_aria', url: 'https://aria-demo-omega.vercel.app/', descKey: 'showcase_card_desc_aria' },
   { label: 'Mavi İletişim', typeKey: 'showcase_type_corporate', titleKey: 'showcase_card_mavi_iletisim', url: 'https://mavi-iletisim-demo.vercel.app/', descKey: 'showcase_card_desc_mavi_iletisim' },

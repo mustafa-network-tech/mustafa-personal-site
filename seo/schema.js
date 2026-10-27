@@ -25,7 +25,7 @@ export function getPersonSchema(locale = 'tr') {
       'Digital systems',
       'UI systems',
     ],
-    sameAs: ['https://www.linkedin.com/in/mustafa-oner-/'],
+    sameAs: ['https://www.linkedin.com/in/mustafa-oner-/', 'https://www.mk-digitalsystems.com'],
   }
 }
 
@@ -36,7 +36,7 @@ export function getOrganizationSchema() {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: 'MK Digital Systems',
-    url: SITE_URL,
+    url: 'https://www.mk-digitalsystems.com',
     description: 'Digital production and web development focused on corporate sites, platforms and custom software.',
   }
 }

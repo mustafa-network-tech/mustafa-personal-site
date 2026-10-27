@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import {
-  ArrowRight, BedDouble, BookHeart, Building2, Code2, Coffee, ConciergeBell, Factory,
+  ArrowRight, Baby, BedDouble, BookHeart, Building2, Code2, Coffee, ConciergeBell, Factory,
   Globe, GraduationCap, HardHat, Home, LayoutGrid, PawPrint, Smartphone, UtensilsCrossed, Wheat,
 } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -24,7 +24,8 @@ const PROJECT_ICONS = {
   'mavi-resepsiyon': ConciergeBell,
   'mavi-kadrajla-ogreniyorum': GraduationCap,
   'aura-daily': BookHeart,
-  'mavi-adisyon': UtensilsCrossed,
+  'bebegimin-ilk-yili': Baby,
+  'mk-adisyon': UtensilsCrossed,
 }
 
 // Sade durum rozetleri: nötr zemin + küçük, düşük doygunlukta nokta.
