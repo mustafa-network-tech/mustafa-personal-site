@@ -2,6 +2,7 @@
 import { headers } from 'next/headers'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import RepublicWelcome from '@/components/RepublicWelcome'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import LayoutShell from '@/components/LayoutShell'
@@ -38,6 +39,7 @@ export default async function RootLayout({ children }) {
           <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>
         <WhatsAppButton />
+        <RepublicWelcome />
         <GoogleAnalytics />
       </body>
     </html>
