@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#8d0000">
+  <title>29 Ekim 2026 — Cumhuriyet Bayramı Karşılama Ekranı</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="preview-page" aria-labelledby="preview-title">
+    <p class="preview-page__eyebrow">Bağımsız önizleme</p>
+    <h1 id="preview-title">29 Ekim 2026<br>Cumhuriyet Bayramı</h1>
+    <p>Karşılama kapandıktan sonra sağ alttaki küçük bayrağa dokunarak yeniden açabilirsiniz.</p>
+    <div class="preview-actions" aria-label="Önizleme kontrolleri">
+      <button class="preview-button" type="button" data-preview-open>Karşılamayı aç</button>
+      <button class="preview-button preview-button--secondary" type="button" data-preview-reset>İlk ziyareti sıfırla</button>
+    </div>
+    <p class="preview-page__note">Canlı kullanımda ekran yalnızca 29 Ekim 2026 tarihinde, Türkiye saatiyle gösterilir.</p>
+  </main>
+
+  <section class="republic-welcome" data-republic-welcome hidden>
+    <div class="republic-welcome__backdrop" aria-hidden="true"></div>
+    <div class="republic-welcome__dialog" role="dialog" aria-modal="true" aria-label="29 Ekim Cumhuriyet Bayramı kutlaması">
+      <picture class="republic-welcome__picture">
+        <source media="(max-width: 720px), (orientation: portrait)" srcset="assets/29-ekim-dikey.png">
+        <img src="assets/29-ekim-kare.png" alt="Türkiye Büyük Millet Meclisi kürsüsünde Mustafa Kemal Atatürk; Türk bayraklarıyla 29 Ekim Cumhuriyet Bayramı kutlama afişi.">
+      </picture>
+
+      <div class="republic-welcome__controls">
+        <div class="republic-welcome__timer" aria-label="Otomatik kapanma süresi">
+          <span data-countdown>10</span>
+          <span class="sr-only">saniye</span>
+        </div>
+        <button class="republic-welcome__skip" type="button" data-republic-close>Geç</button>
+      </div>
+
+      <div class="republic-welcome__progress" aria-hidden="true"><span></span></div>
+    </div>
+  </section>
+
+  <button class="republic-flag" type="button" data-republic-reopen hidden aria-label="29 Ekim kutlamasını yeniden aç">
+    <span class="republic-flag__pole" aria-hidden="true"></span>
+    <span class="republic-flag__cloth" aria-hidden="true"><span class="republic-flag__moon">☾</span><span class="republic-flag__star">★</span></span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
