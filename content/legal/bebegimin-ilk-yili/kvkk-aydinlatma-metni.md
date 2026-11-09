@@ -1,6 +1,6 @@
 # Bebeğimin İlk Yılı KVKK Aydınlatma Metni
 
-Son güncelleme: 2 Ekim 2026
+Son güncelleme: 3 Ekim 2026
 
 Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 10 uyarınca hazırlanmıştır.
 
@@ -14,7 +14,7 @@ Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 10 uya
 
 - **Kimlik:** ad, soyad; bebeğin adı ve doğum tarihi.
 - **İletişim:** e-posta adresi.
-- **Görsel ve işitsel kayıt:** fotoğraf, video, profil fotoğrafı.
+- **Görsel ve işitsel kayıt:** fotoğraf, video, profil fotoğrafı. Fotoğraflardaki konum bilgisi yüklemeden önce silinir. Videolar cihazın kaydettiği hâliyle yüklendiği için, kamerada konum kaydı açıksa video dosyasında çekim yeri bilgisi bulunabilir.
 - **Müşteri işlem:** anılar, mektuplar, yorumlar, davetler, aile yakınlık bilgisi, yetkiler.
 - **Finans:** abonelik ve satın alma kayıtları (kart bilgisi hariç).
 - **İşlem güvenliği:** IP adresi, giriş kayıtları, işlem günlükleri, cihaz bildirim jetonu.

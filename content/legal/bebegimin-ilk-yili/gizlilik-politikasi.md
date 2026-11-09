@@ -1,6 +1,6 @@
 # Bebeğimin İlk Yılı Gizlilik Politikası
 
-Son güncelleme: 2 Ekim 2026
+Son güncelleme: 3 Ekim 2026
 
 Bu politika, Bebeğimin İlk Yılı mobil uygulamasının ve uygulamaya ait [mustafaoner.net](https://mustafaoner.net) sayfalarının kişisel verileri nasıl işlediğini anlatır. Uygulamayı **MK DIGITAL SYSTEMS – MUSTAFA ÖNER** ("biz") sunar.
 
@@ -9,7 +9,9 @@ Bu politika, Bebeğimin İlk Yılı mobil uygulamasının ve uygulamaya ait [mus
 - **Varsayılan olarak özel.** Bebek profilleri, fotoğraflar, videolar ve anılar herkese açık değildir. Arama motorlarında görünmez.
 - **Yalnız davet ettiğiniz aile.** İçerikleri yalnızca sizin davet ettiğiniz ve daveti kabul eden aile üyeleri görür. Her üye, verdiğiniz yetkiler kadar erişebilir. Yetkiler sunucuda, veritabanı güvenlik kurallarıyla denetlenir.
 - **Reklam ve izleme yok.** Uygulamada reklam, reklam takibi veya üçüncü taraf analitik aracı yoktur. Verilerinizi satmayız ve pazarlama amacıyla kimseyle paylaşmayız.
-- **Konum bilgisi silinir.** Fotoğraflardaki konum dahil EXIF bilgileri, yüklenmeden önce cihazınızda temizlenir.
+- **Konumunuzu almayız.** Uygulama cihazınızın konumunu kullanmaz ve konum izni istemez.
+- **Fotoğraflarda konum bilgisi silinir.** Fotoğraflardaki konum dahil EXIF bilgileri, yüklenmeden önce cihazınızda temizlenir.
+- **Videolar olduğu gibi yüklenir.** Videolar, telefonunuzun kaydettiği hâliyle yüklenir. Kameranızda konum kaydı açıksa videonun içinde çekim yeri bilgisi bulunabilir ve bu bilgi videoyu görebilen aile üyelerine ulaşabilir. Bunu istemiyorsanız kamera ayarlarınızdan konum kaydını kapatabilirsiniz.
 - **Özel dosya erişimi.** Fotoğraf ve videolar herkese açık bağlantılarla gösterilmez. Kısa süre (en fazla 1 saat) geçerli, kişiye özel imzalı bağlantılar kullanılır.
 
 ## 2. Hangi verileri topluyoruz?
@@ -80,9 +82,18 @@ Abonelik sona erdiğinde arşiviniz silinmez. Arşiv salt okunur hâle gelir: an
 
 ## 8. Çocukların gizliliği
 
-Uygulama, bebeğinin anılarını kaydetmek isteyen 18 yaşını doldurmuş ebeveynler ve onların davet ettiği yetişkin aile üyeleri içindir. Bebeğe ait veriler, bebeğin yasal temsilcisi olan Anne ve Babanın talimatı ve rızasıyla işlenir. 18 yaşından küçüklerin kendi adına hesap açmasına izin verilmez.
+Uygulama, bebeğinin anılarını kaydetmek isteyen 18 yaşını doldurmuş ebeveynler ve onların davet ettiği yetişkin aile üyeleri içindir. Bebeğe ait veriler, bebeğin yasal temsilcisi olan Anne ve Babanın talimatı ve rızasıyla işlenir. 18 yaşından küçüklerin kendi adına hesap açmasına izin verilmez. Hesap oluşturan kişi 18 yaşını doldurduğunu beyan etmiş sayılır. 18 yaşından küçük birine ait olduğunu öğrendiğimiz hesapları kapatır ve verilerini sileriz. Böyle bir hesap fark ederseniz bize bildirebilirsiniz.
 
-## 9. Güvenlik
+## 9. Uygunsuz içerik ve kötüye kullanım
+
+İçerikler yalnızca davetli aile üyeleri arasında paylaşılır. Aile içindeki denetim ebeveynlerdedir:
+
+- **Üyeyi çıkarma:** Anne veya Baba, bir aile üyesini aileden çıkarabilir. Çıkarılan kişi bebeğin içeriklerini artık göremez ve yeni içerik ekleyemez.
+- **İçeriği silme:** İçerik yönetme yetkisi olan ebeveyn, başka bir üyenin eklediği fotoğraf, video, anı veya yorumu silebilir.
+
+Uygunsuz bir içerik ya da kötüye kullanım fark ederseniz [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com) adresine "İçerik bildirimi" konulu bir e-posta gönderebilirsiniz. E-postada bebek profilini ve içeriği tarif etmeniz yeterlidir. Bildirimleri inceler; gerektiğinde içeriği kaldırır veya ilgili hesabı kapatırız. Yasa dışı içerik söz konusuysa yetkili kurumlara bildirimde bulunuruz.
+
+## 10. Güvenlik
 
 Aldığımız başlıca önlemler:
 
@@ -95,15 +106,15 @@ Aldığımız başlıca önlemler:
 
 Hiçbir sistem %100 güvenli değildir. Bir veri ihlali olursa, KVKK uyarınca Kişisel Verileri Koruma Kurulu'na ve etkilenen kişilere bildirim yaparız.
 
-## 10. Web sitesi ve çerezler
+## 11. Web sitesi ve çerezler
 
 Bebeğimin İlk Yılı'na ait mustafaoner.net sayfaları (bu politika ve diğer yasal belgeler) analitik, reklam veya izleme çerezi kullanmaz. Bu sayfalarda yalnızca sitenin çalışması için gerekli çerezler kullanılabilir.
 
-## 11. Değişiklikler
+## 12. Değişiklikler
 
 Bu politikayı güncelleyebiliriz. Önemli değişiklikleri uygulama içinde veya e-postayla duyururuz.
 
-## 12. İletişim
+## 13. İletişim
 
 - **E-posta:** [iletisim@mk-digitalsystems.com](mailto:iletisim@mk-digitalsystems.com)
 - **Adres:** Bolu, Türkiye
