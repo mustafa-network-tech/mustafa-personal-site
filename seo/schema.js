@@ -6,6 +6,9 @@ import { SITE_URL } from './metadata'
 
 const PERSON_NAME = 'Mustafa Öner'
 const PERSON_NAME_EN = 'Mustafa Oner'
+const PERSON_ID = `${SITE_URL}/#person`
+/** Same @id the MK Digital Systems site uses for its own Organization node. */
+const MK_DIGITAL_ORG_ID = 'https://www.mk-digitalsystems.com/#organization'
 
 /** Person schema – portfolio / professional */
 export function getPersonSchema(locale = 'tr') {
@@ -13,51 +16,47 @@ export function getPersonSchema(locale = 'tr') {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': PERSON_ID,
     name,
-    jobTitle: locale === 'tr' ? 'Web Geliştirici' : 'Web Developer',
+    jobTitle: locale === 'tr' ? 'Yazılım ve Dijital Sistemler Geliştiricisi' : 'Software and Digital Systems Developer',
+    description: locale === 'tr' ? 'Yazılım ve dijital sistemler üzerine çalışan, fotoğraf çeken Mustafa Öner kişisel sitesi.' : 'Personal website of Mustafa Oner, who works on software and digital systems and takes photographs.',
     url: SITE_URL,
-    knowsAbout: [
-      'Web development',
-      'Web design',
-      'Custom software',
-      'Corporate websites',
-      'E-commerce',
-      'Digital systems',
-      'UI systems',
-    ],
+    // Relation only: the site itself is personal; MK Digital Systems is not its owner.
+    worksFor: { '@type': 'Organization', '@id': MK_DIGITAL_ORG_ID, name: 'MK Digital Systems', url: 'https://www.mk-digitalsystems.com' },
+    knowsAbout: ['Software development', 'Digital systems', 'Photography'],
     sameAs: ['https://www.linkedin.com/in/mustafa-oner-/', 'https://www.mk-digitalsystems.com'],
   }
 }
 
-/** Organization – MK Digital Systems as related brand */
+/**
+ * Kept for compatibility but no longer emitted site-wide: the main entity of this
+ * personal site is the Person. MK Digital Systems appears only as Person.worksFor.
+ */
 export function getOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': `${SITE_URL}/#organization`,
+    '@id': MK_DIGITAL_ORG_ID,
     name: 'MK Digital Systems',
     url: 'https://www.mk-digitalsystems.com',
-    description: 'Digital production and web development focused on corporate sites, platforms and custom software.',
   }
 }
 
 /** Website schema with site search potential */
 export function getWebsiteSchema(locale = 'tr') {
-  const name = locale === 'tr' ? 'Mustafa Öner — Web Geliştirme ve Dijital Sistemler' : 'Mustafa Oner — Web Development & Digital Systems'
+  const name = locale === 'tr' ? PERSON_NAME : PERSON_NAME_EN
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name,
     description:
       locale === 'tr'
-        ? 'Portföy, hizmetler ve dijital proje vitrini.'
-        : 'Portfolio, services and digital project showcase.',
+        ? 'Mustafa Öner kişisel sitesi.'
+        : 'Personal website of Mustafa Oner.',
     url: SITE_URL,
     inLanguage: locale === 'tr' ? 'tr-TR' : 'en',
-    publisher: {
-      '@type': 'Person',
-      name: locale === 'tr' ? PERSON_NAME : PERSON_NAME_EN,
-    },
+    publisher: { '@id': PERSON_ID },
+    about: { '@id': PERSON_ID },
   }
 }
 
@@ -84,8 +83,8 @@ export function getContactPageSchema(locale = 'tr') {
     url: `${SITE_URL}${locale === 'tr' ? '/tr/contact' : '/contact'}`,
     description:
       locale === 'tr'
-        ? 'Web ve yazılım proje talepleri için iletişim.'
-        : 'Contact for web development and software project inquiries.',
+        ? 'Mustafa Öner ile kişisel ve profesyonel iletişim.'
+        : 'Personal and professional contact for Mustafa Oner.',
     mainEntity: {
       '@type': 'Person',
       name: locale === 'tr' ? PERSON_NAME : PERSON_NAME_EN,

@@ -8,7 +8,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext'
 import LayoutShell from '@/components/LayoutShell'
 import JsonLd from '@/components/JsonLd'
 import { SITE_URL, GLOBAL_META } from '@/seo/metadata'
-import { getPersonSchema, getWebsiteSchema, getOrganizationSchema } from '@/seo/schema'
+import { getPersonSchema, getWebsiteSchema } from '@/seo/schema'
 
 const LOCALE_HEADER = 'x-path-locale'
 
@@ -30,11 +30,10 @@ export default async function RootLayout({ children }) {
   const locale = headersList.get(LOCALE_HEADER) || 'tr'
   const personSchema = getPersonSchema(locale)
   const websiteSchema = getWebsiteSchema(locale)
-  const orgSchema = getOrganizationSchema()
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className="bg-main text-primary">
-        <JsonLd data={[personSchema, websiteSchema, orgSchema]} />
+        <JsonLd data={[personSchema, websiteSchema]} />
         <LanguageProvider initialLocale={locale}>
           <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>

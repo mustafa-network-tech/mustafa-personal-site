@@ -8,9 +8,9 @@ const LOCALE_HEADER = 'x-path-locale'
 export function middleware(request) {
   const pathname = request.nextUrl.pathname
 
-  // Ana sayfa varsayılan olarak Türkçe
+  // Ana sayfa varsayılan olarak Türkçe (kalıcı, 308)
   if (pathname === '/') {
-    return NextResponse.redirect(new URL('/tr', request.url))
+    return NextResponse.redirect(new URL('/tr', request.url), 308)
   }
 
   const segment = pathname.replace(/^\//, '').split('/')[0]

@@ -1,5 +1,5 @@
 // app/en/page.js – English home
-import HomeContent from '@/components/HomeContent'
+import PersonalHome from '@/components/home/PersonalHome'
 import { GLOBAL_META, PAGE_META, OG_IMAGES } from '@/seo/metadata'
 import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
 
@@ -20,5 +20,5 @@ export const metadata = {
 }
 
 export default function HomeEn() {
-  return <HomeContent />
+  return <PersonalHome />
 }
