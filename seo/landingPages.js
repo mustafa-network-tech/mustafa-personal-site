@@ -24,7 +24,7 @@ export function getLandingSchemas(page) {
     {
       '@context': 'https://schema.org', '@type': 'Service', '@id': `${url}#service`,
       name: LANDING_ROUTES[page.slug], description: page.description, url,
-      provider: { '@id': `${SITE_URL}/#organization` },
+      provider: { '@id': 'https://www.mk-digitalsystems.com/#organization' },
       ...(page.city ? { areaServed: { '@type': 'City', name: page.city } } : {}),
     },
     {
