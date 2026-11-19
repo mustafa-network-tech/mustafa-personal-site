@@ -1,5 +1,5 @@
 // app/tr/page.js – Turkish home
-import HomeContent from '@/components/HomeContent'
+import PersonalHome from '@/components/home/PersonalHome'
 import { SITE_URL, GLOBAL_META, PAGE_META, OG_IMAGES } from '@/seo/metadata'
 import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
 
@@ -20,5 +20,5 @@ export const metadata = {
 }
 
 export default function HomeTr() {
-  return <HomeContent />
+  return <PersonalHome />
 }

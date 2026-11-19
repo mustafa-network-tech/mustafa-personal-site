@@ -32,7 +32,7 @@ export default function ContactEn() {
           <h1 className="text-3xl font-bold text-[#F8FAFC] mb-4">Contact</h1>
           <p className="text-[#E2E8F0] mb-4 leading-relaxed">{meta.description}</p>
           <p className="text-[#94A3B8] mb-10 leading-relaxed">
-            For web development, custom software or a corporate website, email a short brief and the timeline you have in mind.
+            For an introduction, a collaboration or a short message, reach me by email or on LinkedIn.
           </p>
           <a
             href="mailto:iletisim@mk-digitalsystems.com"
@@ -40,20 +40,9 @@ export default function ContactEn() {
           >
             iletisim@mk-digitalsystems.com
           </a>
+          <a href="https://www.linkedin.com/in/mustafa-oner-/" target="_blank" rel="noopener noreferrer" className="block text-[#4F7CFF] font-semibold hover:underline mb-10">LinkedIn</a>
           <nav className="flex flex-wrap gap-4 text-sm border-t border-[rgba(248,250,252,0.12)] pt-10" aria-label="Related pages">
-            <Link href="/services" className="text-[#4F7CFF] hover:underline">
-              Services
-            </Link>
-            <span className="text-[#475569]">·</span>
-            <Link href="/projects" className="text-[#4F7CFF] hover:underline">
-              Projects
-            </Link>
-            <span className="text-[#475569]">·</span>
-            <Link href="/vitrin" className="text-[#4F7CFF] hover:underline">
-              Showcase
-            </Link>
-            <span className="text-[#475569]">·</span>
-            <Link href="/" className="text-[#94A3B8] hover:text-[#F8FAFC]">
+            <Link href="/en" className="text-[#94A3B8] hover:text-[#F8FAFC]">
               ← Home
             </Link>
           </nav>

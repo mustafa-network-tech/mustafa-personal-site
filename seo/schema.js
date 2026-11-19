@@ -18,19 +18,12 @@ export function getPersonSchema(locale = 'tr') {
     '@type': 'Person',
     '@id': PERSON_ID,
     name,
-    jobTitle: locale === 'tr' ? 'Web Geliştirici' : 'Web Developer',
+    jobTitle: locale === 'tr' ? 'Yazılım ve Dijital Sistemler Geliştiricisi' : 'Software and Digital Systems Developer',
+    description: locale === 'tr' ? 'Yazılım ve dijital sistemler üzerine çalışan, fotoğraf çeken Mustafa Öner kişisel sitesi.' : 'Personal website of Mustafa Oner, who works on software and digital systems and takes photographs.',
     url: SITE_URL,
     // Relation only: the site itself is personal; MK Digital Systems is not its owner.
     worksFor: { '@type': 'Organization', '@id': MK_DIGITAL_ORG_ID, name: 'MK Digital Systems', url: 'https://www.mk-digitalsystems.com' },
-    knowsAbout: [
-      'Web development',
-      'Web design',
-      'Custom software',
-      'Corporate websites',
-      'E-commerce',
-      'Digital systems',
-      'UI systems',
-    ],
+    knowsAbout: ['Software development', 'Digital systems', 'Photography'],
     sameAs: ['https://www.linkedin.com/in/mustafa-oner-/', 'https://www.mk-digitalsystems.com'],
   }
 }
@@ -90,8 +83,8 @@ export function getContactPageSchema(locale = 'tr') {
     url: `${SITE_URL}${locale === 'tr' ? '/tr/contact' : '/contact'}`,
     description:
       locale === 'tr'
-        ? 'Web ve yazılım proje talepleri için iletişim.'
-        : 'Contact for web development and software project inquiries.',
+        ? 'Mustafa Öner ile kişisel ve profesyonel iletişim.'
+        : 'Personal and professional contact for Mustafa Oner.',
     mainEntity: {
       '@type': 'Person',
       name: locale === 'tr' ? PERSON_NAME : PERSON_NAME_EN,

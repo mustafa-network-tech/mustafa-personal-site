@@ -8,45 +8,16 @@ export const SITE_URL = 'https://mustafaoner.net'
 /** Global default meta (fallback) */
 export const GLOBAL_META = {
   en: {
-    title: 'Mustafa Oner | Digital Products & Creative Technology',
+    title: 'Mustafa Oner | Software, Digital Systems & Photography',
     description:
-      'Digital products, custom software, operation systems, web experiences and visual content by Mustafa Oner Digital Studio.',
-    keywords: [
-      'web development',
-      'web design',
-      'corporate website',
-      'custom software',
-      'digital systems',
-      'management panel',
-      'e-commerce',
-      'landing page',
-      'mobile app',
-      'digital product development',
-      'software solutions',
-      'Next.js developer',
-      'React developer',
-      'portfolio',
-    ],
+      'Personal website of Mustafa Oner: software and digital systems, the products he works on, and photography.',
+    keywords: ['Mustafa Oner', 'software', 'digital systems', 'photography', 'MK Digital Systems', 'MK OPS'],
   },
   tr: {
-    title: 'Mustafa Öner | Dijital Ürünler ve Creative Technology',
+    title: 'Mustafa Öner | Yazılım, Dijital Sistemler ve Fotoğraf',
     description:
-      'Dijital ürünler, özel yazılım, operasyon sistemleri, web deneyimleri ve görsel içerik. Mustafa Öner Digital Studio.',
-    keywords: [
-      'web geliştirme',
-      'web tasarım',
-      'kurumsal web sitesi',
-      'özel yazılım',
-      'dijital sistemler',
-      'yönetim paneli',
-      'e-ticaret',
-      'landing page',
-      'mobil uygulama',
-      'dijital ürün geliştirme',
-      'yazılım çözümleri',
-      'Next.js developer',
-      'portföy',
-    ],
+      'Mustafa Öner kişisel sitesi: yazılım ve dijital sistemler, üzerinde çalıştığı ürünler ve fotoğraf.',
+    keywords: ['Mustafa Öner', 'yazılım', 'dijital sistemler', 'fotoğraf', 'MK Digital Systems', 'MK OPS'],
   },
 }
 
@@ -94,14 +65,14 @@ export const PAGE_META = {
   },
   contact: {
     en: {
-      title: 'Contact | Web & Software Project Inquiries',
+      title: 'Contact | Mustafa Oner',
       description:
-        'Contact Mustafa Oner for web development, custom software, corporate websites and digital project inquiries. Short response window — send a brief and preferred timeline.',
+        'Contact Mustafa Oner by email or LinkedIn for an introduction, a collaboration or a short message.',
     },
     tr: {
-      title: 'İletişim | Web ve Yazılım Proje Talepleri',
+      title: 'İletişim | Mustafa Öner',
       description:
-        'Web geliştirme, özel yazılım, kurumsal web sitesi ve dijital proje talepleri için iletişime geçin. Kısa bir özet ve tercih ettiğiniz zaman çerçevesi ile yazabilirsiniz.',
+        'Mustafa Öner ile tanışmak, iş birliği yapmak veya kısa bir mesaj göndermek için e-posta ya da LinkedIn üzerinden ulaşabilirsiniz.',
     },
   },
   vitrin: {

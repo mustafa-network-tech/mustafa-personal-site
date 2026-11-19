@@ -32,7 +32,7 @@ export default function ContactTr() {
           <h1 className="text-3xl font-bold text-[#F8FAFC] mb-4">İletişim</h1>
           <p className="text-[#E2E8F0] mb-4 leading-relaxed">{meta.description}</p>
           <p className="text-[#94A3B8] mb-10 leading-relaxed">
-            Web geliştirme, özel yazılım veya kurumsal web sitesi için kısa bir özet ve düşündüğünüz zaman çerçevesi ile yazabilirsiniz.
+            Tanışmak, iş birliği ya da kısa bir mesaj için e-posta veya LinkedIn üzerinden bana ulaşabilirsiniz.
           </p>
           <a
             href="mailto:iletisim@mk-digitalsystems.com"
@@ -40,19 +40,8 @@ export default function ContactTr() {
           >
             iletisim@mk-digitalsystems.com
           </a>
+          <a href="https://www.linkedin.com/in/mustafa-oner-/" target="_blank" rel="noopener noreferrer" className="block text-[#4F7CFF] font-semibold hover:underline mb-10">LinkedIn</a>
           <nav className="flex flex-wrap gap-4 text-sm border-t border-[rgba(248,250,252,0.12)] pt-10" aria-label="İlgili sayfalar">
-            <Link href="/tr/services" className="text-[#4F7CFF] hover:underline">
-              Hizmetler
-            </Link>
-            <span className="text-[#475569]">·</span>
-            <Link href="/tr/projects" className="text-[#4F7CFF] hover:underline">
-              Projeler
-            </Link>
-            <span className="text-[#475569]">·</span>
-            <Link href="/tr/vitrin" className="text-[#4F7CFF] hover:underline">
-              Vitrin
-            </Link>
-            <span className="text-[#475569]">·</span>
             <Link href="/tr" className="text-[#94A3B8] hover:text-[#F8FAFC]">
               ← Ana sayfa
             </Link>

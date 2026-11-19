@@ -7,7 +7,7 @@ import { LEGAL_BASE } from '@/lib/legal/apps'
 const WA_URL =
   'https://wa.me/905456597551?text=' +
   encodeURIComponent(
-    'Merhaba Mustafa Bey, web sitesi ve yazılım hizmetleriniz hakkında bilgi almak istiyorum.'
+    'Merhaba Mustafa Bey, kişisel sitenizden yazıyorum.'
   )
 
 function handleClick() {
@@ -42,10 +42,10 @@ export default function WhatsAppButton() {
       {/* Balon tooltip */}
       <div className={`wa-tooltip ${visible ? 'wa-tooltip--visible' : ''}`}>
         <p className="wa-tooltip__title">
-          İşletmeniz İçin Profesyonel Web Sitesi ve Özel Yazılım Çözümleri
+          Bana WhatsApp’tan yazabilirsiniz
         </p>
         <p className="wa-tooltip__sub">
-          Ücretsiz Ön Görüşme İçin Hemen İletişime Geçin
+          Kısa bir mesaj yeterli
         </p>
         {/* Balonun sağ alt köşesine bakan ok */}
         <span className="wa-tooltip__arrow" />
