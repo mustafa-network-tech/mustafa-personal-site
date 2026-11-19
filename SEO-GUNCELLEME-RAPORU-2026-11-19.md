@@ -47,3 +47,27 @@ Eski URL (proje/şehir/hizmet) yönlendirmesi, sayfa veya içerik silme, ana say
 - [ ] Canlıda: `www/` → `mustafaoner.net/tr` tek 308; yasal URL'ler öncesi/sonrası aynı kod.
 - [ ] Play Console'da kayıtlı yasal URL biçimi (eğik çizgili/çizgisiz) kullanıcı tarafından teyit edildi.
 - [ ] `main`'e merge ve production deployment için ayrı onay alındı.
+
+---
+
+# Aşama 3 — Kişisel site dönüşümü
+
+## Yapılanlar
+- `/tr` ve `/en` ana sayfası yeni `components/home/PersonalHome.js` ile yeniden kuruldu. Sıra: kişisel giriş → hakkımda ve yazılım/dijital sistemler özeti → Ürettiklerim → Mustafa'nın Kadrajından (fotoğraf) → çalışma ilkeleri → sade iletişim.
+- **Ürettiklerim:** MK Digital Systems, MK OPS, MK Farm, MK Adisyon, Bebeğimin İlk Yılı; kısa kart + resmî sayfaya dış bağlantı (hepsi 200). EN'de MK Digital, MK Farm, MK Adisyon İngilizce sayfalara gider; MK OPS ve Bebeğimin İlk Yılı yalnız Türkçe sayfaya.
+- **Fotoğraf bölümü:** mevcut `PhotographyMarquee` bileşeni ve fotoğrafların hepsi aynen korundu (dosya/kalite değişmedi); başlık "Mustafa'nın Kadrajından", altında mevcut Instagram `@mavi_kadraj14` bağlantısı.
+- **Navigasyon:** Ana Sayfa, Hakkımda, Ürettiklerim, Fotoğraf, İlkeler, İletişim. Hizmetler, Projeler, Studio ve "Projeni Konuşalım" düğmesi çıkarıldı. Footer bağlantıları aynı yapıya çevrildi; WhatsApp bağlantısı footer'dan çıkarıldı.
+- **İletişim:** `/tr/contact` ve `/contact` kişisel iletişim sayfasına çevrildi (e-posta + LinkedIn, satış metni ve hizmet/proje/vitrin bağlantıları yok). Yüzen WhatsApp düğmesinin satış odaklı metni ve ön tanımlı mesajı kişisel metinle değiştirildi.
+- **SEO:** TR/EN title, description ve anahtar kelimeler kişisel (yazılım, dijital sistemler, fotoğraf). Ana varlık `Person`; `knowsAbout` ve `jobTitle` kişisel olarak güncellendi; ContactPage şeması kişisel. MK Digital yalnız `worksFor`. Canonical ve hreflang değişmedi.
+- Ana sayfada "Çözümler" (şehir/hizmet iniş sayfası) footer bloğu yalnız `/tr` ve `/en`'de gizlendi; diğer sayfalarda duruyor.
+
+## Dokunulmayanlar
+Eski hizmet/proje/şehir/vitrin sayfaları, dosyaları, URL'leri ve sitemap silinmedi/yönlendirilmedi (`HomeContent.js`, `SelectedProjects.js` vb. diskte duruyor, ana sayfada kullanılmıyor). Yasal klasörlerde `main`'e göre diff 0; `trailingSlash` yok; `www → apex` ve `/ → /tr` kuralları çalışıyor.
+
+## Kontrol
+Production build başarılı. 390 ve 1280 px: `/tr`, `/en`, `/tr/contact`, `/contact` — yatay taşma yok, bozuk görsel yok, tek H1. Yasal: 4 uygulama dizini ve 16 belge 200, eğik çizgili sürüm eskisi gibi 308.
+
+## Açık notlar
+- `Photography.js` ("Mustafa'nın Kadrajından" kategorili galeri: Doğa, Sessiz Anlar vb.) ana sayfada zaten kullanılmıyordu; kategori açıklamaları şu an yayında görünmüyor. İstenirse ayrıca eklenebilir.
+- Kişisel metinler yalnızca projedeki mevcut bilgilerden türetildi; yayından önce gözden geçirilmeli.
+- Footer'daki Instagram (`mk_digital.systems`) ve LinkedIn bağlantıları korundu.
