@@ -3,6 +3,7 @@
  */
 
 import { SITE_URL } from './metadata'
+import { PAGES } from '@/lib/mo/site'
 import { ALL_SLUGS as PROJECT_SLUGS } from '@/lib/projects/projectsData'
 import { getAllLocalSeoSlugs } from '@/lib/localSeo/pages'
 import { LANDING_SLUGS, landingHref } from '@/lib/landingPages/routes'
@@ -26,6 +27,11 @@ export function getSitemapUrls() {
 
   urls.push({ url: `${SITE_URL}/tr`, lastModified: now })
   urls.push({ url: `${SITE_URL}/en`, lastModified: now })
+
+  for (const key of ['about', 'photo', 'projects', 'book']) {
+    urls.push({ url: `${SITE_URL}${PAGES[key].tr}`, lastModified: now })
+    urls.push({ url: `${SITE_URL}${PAGES[key].en}`, lastModified: now })
+  }
 
   for (const path of EN_BASE_PATHS) {
     urls.push({ url: `${SITE_URL}${path}`, lastModified: now })
