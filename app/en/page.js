@@ -1,24 +1,8 @@
-// app/en/page.js – English home
-import PersonalHome from '@/components/home/PersonalHome'
-import { GLOBAL_META, PAGE_META, OG_IMAGES } from '@/seo/metadata'
-import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
+import HomePage from '@/components/mo/HomePage'
+import { pageMetadata } from '@/lib/mo/meta'
 
-const meta = PAGE_META.home.en
-const og = buildOpenGraph({ locale: 'en', path: '/en', title: meta.title, description: meta.description, image: OG_IMAGES.en })
-const twitter = buildTwitterCard({ locale: 'en', title: meta.title, description: meta.description, image: OG_IMAGES.en })
+export const metadata = pageMetadata('home', 'en')
 
-export const metadata = {
-  title: meta.title,
-  description: meta.description,
-  keywords: GLOBAL_META.en.keywords,
-  alternates: {
-    canonical: '/en',
-    languages: { en: '/en', tr: '/tr', 'x-default': '/tr' },
-  },
-  openGraph: og,
-  twitter,
-}
-
-export default function HomeEn() {
-  return <PersonalHome />
+export default function Page() {
+  return <HomePage lang="en" />
 }

@@ -1,7 +1,51 @@
 'use client'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { homeHrefFor,isTurkishPath } from '@/lib/i18n/routes'
+import { isTurkishPath } from '@/lib/i18n/routes'
 import { HUB_SLUGS, LANDING_ROUTES, landingHref } from '@/lib/landingPages/routes'
-export default function Footer(){const {language}=useLanguage();const pathname=usePathname();const tr=isTurkishPath(pathname);const home=homeHrefFor(pathname);const isHome=pathname==='/tr'||pathname==='/en';const links=[[tr?'Hakkımda':'About',`${home}#about`],[tr?'Ürettiklerim':'What I make',`${home}#products`],[tr?'Fotoğraf':'Photography',`${home}#photography`],[tr?'İlkeler':'Principles',`${home}#principles`],[tr?'İletişim':'Contact',`${home}#contact`]];return <footer className="bg-[#101010] text-white"><div className="studio-shell py-16 md:py-24"><div className="grid gap-12 border-b border-white/15 pb-16 md:grid-cols-12"><div className="md:col-span-6"><p className="studio-display text-4xl">MUSTAFA ÖNER</p><p className="mt-2 text-sm tracking-[.18em] text-white/40">{tr?'YAZILIM, DİJİTAL SİSTEMLER VE FOTOĞRAF':'SOFTWARE, DIGITAL SYSTEMS AND PHOTOGRAPHY'}</p></div><nav className="grid grid-cols-2 gap-3 text-sm md:col-span-3">{links.map(([l,h])=><Link key={l} href={h} className="text-white/60 hover:text-white">{l}</Link>)}</nav><div className="space-y-3 text-sm md:col-span-3">{[['MK Digital Systems','https://www.mk-digitalsystems.com'],['LinkedIn','https://www.linkedin.com/in/mustafa-oner-/'],['Instagram','https://www.instagram.com/mk_digital.systems/'],['Email','mailto:iletisim@mk-digitalsystems.com']].map(([l,h])=><a key={l} className="block text-white/60 hover:text-white" href={h} target={h.startsWith('http')?'_blank':undefined} rel="noreferrer">{l} ↗</a>)}</div></div>{tr && !isHome && <nav aria-label="Çözümler" className="border-b border-white/15 py-8"><h2 className="studio-kicker mb-4 text-white/70">Çözümler</h2><div className="flex flex-wrap gap-x-8 gap-y-3">{HUB_SLUGS.map(slug => <Link key={slug} href={landingHref(slug)} className="py-2 text-sm text-white/70 hover:text-white">{LANDING_ROUTES[slug]}</Link>)}</div></nav>}<div className="flex flex-wrap justify-between gap-3 pt-6 text-xs text-white/35"><span>© {new Date().getFullYear()} Mustafa Öner</span><span>ÇANAKKALE — BOLU · TR</span></div></div></footer>}
+import { NAV, SOCIALS, EMAIL, MK_DIGITAL, pageHref, pageKeyFor } from '@/lib/mo/site'
+import { MoLink, SplitLetters } from '@/components/mo/motion'
+
+export default function Footer() {
+  const { language } = useLanguage()
+  const pathname = usePathname()
+  const tr = language === 'tr'
+  const key = pageKeyFor(pathname)
+  const showSolutions = isTurkishPath(pathname) && !key // eski iniş sayfalarındaki iç bağlantılar korunur
+
+  return (
+    <footer className="mo-footer">
+      <div className="mo-wrap">
+        <div className="mo-footer-top">
+          <MoLink href={pageHref('contact', language)} className="mo-footer-cta">
+            <span className="mo-kicker">{tr ? 'Bir mesaj için' : 'For a message'}</span>
+            <span className="mo-footer-big" aria-label="Mustafa Öner"><SplitLetters text="Mustafa Öner" /></span>
+          </MoLink>
+          <nav aria-label={tr ? 'Alt menü' : 'Footer'} className="mo-footer-nav">
+            {NAV.filter((n) => n.key !== 'home').map((n) => (
+              <MoLink key={n.key} href={pageHref(n.key, language)}>{n[tr ? 'tr' : 'en']}</MoLink>
+            ))}
+          </nav>
+          <ul className="mo-footer-soc">
+            <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+            {SOCIALS.filter(([n]) => n !== 'MK Digital Systems').map(([n, h]) => <li key={n}><a href={h} target="_blank" rel="noopener noreferrer">{n} ↗</a></li>)}
+          </ul>
+        </div>
+
+        {showSolutions && (
+          <nav aria-label="Çözümler" className="mo-footer-sol">
+            <h2 className="mo-kicker">Çözümler</h2>
+            <div>{HUB_SLUGS.map((slug) => <Link key={slug} href={landingHref(slug)}>{LANDING_ROUTES[slug]}</Link>)}</div>
+          </nav>
+        )}
+
+        <div className="mo-footer-bottom">
+          <span>© {new Date().getFullYear()} Mustafa Öner</span>
+          <span>Bolu · Osmaniye · Çanakkale</span>
+          <a href={MK_DIGITAL} target="_blank" rel="noopener noreferrer">{tr ? 'Çalıştığım yer: MK Digital Systems ↗' : 'Works with: MK Digital Systems ↗'}</a>
+        </div>
+      </div>
+    </footer>
+  )
+}

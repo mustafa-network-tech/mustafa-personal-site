@@ -1,24 +1,8 @@
-// app/tr/page.js – Turkish home
-import PersonalHome from '@/components/home/PersonalHome'
-import { SITE_URL, GLOBAL_META, PAGE_META, OG_IMAGES } from '@/seo/metadata'
-import { buildOpenGraph, buildTwitterCard } from '@/seo/openGraph'
+import HomePage from '@/components/mo/HomePage'
+import { pageMetadata } from '@/lib/mo/meta'
 
-const meta = PAGE_META.home.tr
-const og = buildOpenGraph({ locale: 'tr', path: '/tr', title: meta.title, description: meta.description, image: OG_IMAGES.tr })
-const twitter = buildTwitterCard({ locale: 'tr', title: meta.title, description: meta.description, image: OG_IMAGES.tr })
+export const metadata = pageMetadata('home', 'tr')
 
-export const metadata = {
-  title: meta.title,
-  description: meta.description,
-  keywords: GLOBAL_META.tr.keywords,
-  alternates: {
-    canonical: '/tr',
-    languages: { tr: '/tr', en: '/en', 'x-default': '/tr' },
-  },
-  openGraph: og,
-  twitter,
-}
-
-export default function HomeTr() {
-  return <PersonalHome />
+export default function Page() {
+  return <HomePage lang="tr" />
 }
