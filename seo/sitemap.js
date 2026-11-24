@@ -28,7 +28,7 @@ export function getSitemapUrls() {
   urls.push({ url: `${SITE_URL}/tr`, lastModified: now })
   urls.push({ url: `${SITE_URL}/en`, lastModified: now })
 
-  for (const key of ['about', 'photo', 'projects', 'book']) {
+  for (const key of ['about', 'experience', 'photo', 'projects', 'book']) {
     urls.push({ url: `${SITE_URL}${PAGES[key].tr}`, lastModified: now })
     urls.push({ url: `${SITE_URL}${PAGES[key].en}`, lastModified: now })
   }

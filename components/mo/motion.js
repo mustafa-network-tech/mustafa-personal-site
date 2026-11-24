@@ -56,9 +56,9 @@ export function SplitLetters({ text, hero = false, className = '', base = 0 }) {
 }
 
 /** Görsel maske açılışı + hafif ölçek */
-export function ImageReveal({ className = '', children, delay = 0 }) {
+export function ImageReveal({ className = '', children, delay = 0, style }) {
   const [ref, seen] = useInView()
-  return <div ref={ref} className={`mo-imgreveal ${seen ? 'is-in' : ''} ${className}`}><div className="mo-imgreveal-c" style={{ '--d': `${delay}ms` }}><div className="mo-imgreveal-i">{children}</div></div></div>
+  return <div ref={ref} style={style} className={`mo-imgreveal ${seen ? 'is-in' : ''} ${className}`}><div className="mo-imgreveal-c" style={{ '--d': `${delay}ms` }}><div className="mo-imgreveal-i">{children}</div></div></div>
 }
 
 /* ---------- kaydırmaya bağlı ---------- */

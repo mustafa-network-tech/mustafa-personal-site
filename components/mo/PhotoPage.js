@@ -6,8 +6,8 @@ import { PHOTOS, PHOTO_CATEGORIES } from '@/lib/mo/photos'
 import { INSTAGRAM } from '@/lib/mo/site'
 
 const T = {
-  tr: { kicker: 'Fotoğraf, Gezi ve Doğa', title: 'Mustafa’nın Kadrajından', lead: 'Sakladığım anlar — bir his, bir mekân, bir an.', all: 'Tümü', close: 'Kapat', prev: 'Önceki fotoğraf', next: 'Sonraki fotoğraf', insta: 'Instagram’da takip et', view: 'Büyük görüntüle', of: '/' },
-  en: { kicker: 'Photography, Travel & Nature', title: 'Through Mustafa’s Lens', lead: 'Moments I keep — a feeling, a place, an instant.', all: 'All', close: 'Close', prev: 'Previous photo', next: 'Next photo', insta: 'Follow on Instagram', view: 'View large', of: '/' },
+  tr: { kicker: 'Fotoğraf, Gezi ve Doğa', title: 'Mustafa’nın Kadrajından', lead: 'Sakladığım anlar — bir his, bir mekân, bir an.', all: 'Tümü', close: 'Kapat', prev: 'Önceki fotoğraf', next: 'Sonraki fotoğraf', site: 'Fotoğrafçılık web sitemiz — mavikadraj.com.tr', insta: 'Instagram’da takip et', view: 'Büyük görüntüle', of: '/' },
+  en: { kicker: 'Photography, Travel & Nature', title: 'Through Mustafa’s Lens', lead: 'Moments I keep — a feeling, a place, an instant.', all: 'All', close: 'Close', prev: 'Previous photo', next: 'Next photo', site: 'Our photography website — mavikadraj.com.tr', insta: 'Follow on Instagram', view: 'View large', of: '/' },
 }
 
 function Photo({ p, lang, onOpen, index }) {
@@ -23,7 +23,7 @@ function Photo({ p, lang, onOpen, index }) {
   )
 }
 
-function Lightbox({ list, index, lang, onClose, onIndex }) {
+export function Lightbox({ list, index, lang, onClose, onIndex }) {
   const t = T[lang]
   const p = list[index]
   const closeRef = useRef(null)
@@ -100,7 +100,8 @@ export default function PhotoPage({ lang = 'tr' }) {
         <div className="mo-masonry" key={cat}>
           {list.map((p, i) => <Photo key={p.id} p={p} lang={lang} index={i} onOpen={onOpen} />)}
         </div>
-        <Reveal className="mt-14"><a className="mo-link" href={INSTAGRAM} target="_blank" rel="noopener noreferrer">{t.insta} — @mavi_kadraj14 <span aria-hidden="true">↗</span></a></Reveal>
+        <Reveal className="mt-14"><a className="mo-link" href="https://www.mavikadraj.com.tr" target="_blank" rel="noopener noreferrer">{t.site} <span aria-hidden="true">↗</span></a></Reveal>
+        <Reveal className="mt-8"><a className="mo-link" href={INSTAGRAM} target="_blank" rel="noopener noreferrer">{t.insta} — @mavi_kadraj14 <span aria-hidden="true">↗</span></a></Reveal>
       </div></section>
       {open !== null && list[open] && <Lightbox list={list} index={open} lang={lang} onClose={onClose} onIndex={setOpen} />}
     </div>

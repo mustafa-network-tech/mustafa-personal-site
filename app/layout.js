@@ -2,7 +2,7 @@
 import { headers } from 'next/headers'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import OzelGunEkrani from '@/components/OzelGunEkrani'
-import { Fraunces, Manrope, Poppins, Ms_Madi, Hurricane, Square_Peg } from 'next/font/google'
+import { Fraunces, Manrope, Poppins, Ms_Madi, Hurricane, Square_Peg, Caveat } from 'next/font/google'
 import './globals.css'
 import './mo.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
@@ -16,6 +16,7 @@ const poppins = Poppins({ subsets: ['latin', 'latin-ext'], weight: ['400', '500'
 const signature = Ms_Madi({ subsets: ['latin', 'latin-ext'], weight: '400', variable: '--f-sign', display: 'block' })
 const hand2 = Hurricane({ subsets: ['latin', 'latin-ext'], weight: '400', variable: '--f-hand2', display: 'block' })
 const hand3 = Square_Peg({ subsets: ['latin', 'latin-ext'], weight: '400', variable: '--f-hand3', display: 'block' })
+const caveat = Caveat({ subsets: ['latin', 'latin-ext'], variable: '--f-hand4', display: 'swap' })
 const manrope = Manrope({ subsets: ['latin', 'latin-ext'], variable: '--f-sans', display: 'swap' })
 
 // Boyamadan önce çalışır: JS sınıfı + açılış kararı (her tam yüklemede/yenilemede; sayfa içi geçişlerde tekrarlanmaz) (reduced-motion ve yasal sayfalarda açılış yok).
@@ -42,7 +43,7 @@ export default async function RootLayout({ children }) {
   const personSchema = getPersonSchema(locale)
   const websiteSchema = getWebsiteSchema(locale)
   return (
-    <html lang={locale} suppressHydrationWarning className={`${fraunces.variable} ${manrope.variable} ${poppins.variable} ${signature.variable} ${hand2.variable} ${hand3.variable}`}>
+    <html lang={locale} suppressHydrationWarning className={`${fraunces.variable} ${manrope.variable} ${poppins.variable} ${signature.variable} ${hand2.variable} ${hand3.variable} ${caveat.variable}`}>
       <head><script dangerouslySetInnerHTML={{ __html: BOOT }} /></head>
       <body className="bg-main text-primary">
         <a href="#icerik" className="mo-skip">{locale === 'en' ? 'Skip to content' : 'İçeriğe geç'}</a>

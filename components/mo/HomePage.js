@@ -2,20 +2,23 @@
 import Image from 'next/image'
 import { MoLink, Reveal, SplitWords, SplitLetters, ScrollWords, ImageReveal, Parallax } from '@/components/mo/motion'
 import { pageHref } from '@/lib/mo/site'
-import { HOME_PHOTOS } from '@/lib/mo/photos'
+import { HOME_PHOTOS, PHOTOS } from '@/lib/mo/photos'
+import { BOOK } from '@/content/book'
+import { EXPLORE_IMAGES } from '@/lib/mo/explore'
 
 // Yalnızca projede mevcut metinler.
 const T = {
   tr: {
     badgesLabel: 'Öne çıkanlar',
-    badges: [['fiber', 'Fiber Optik Sistemleri', 'projects'], ['photo', 'Doğa Fotoğrafçılığı', 'photo'], ['code', 'Web & Yazılım', 'about']],
+    badges: [['fiber', 'Fiber Optik Sistemleri', 'experience'], ['photo', 'Doğa Fotoğrafçılığı', 'photo'], ['code', 'Web & Yazılım', 'about']],
     statement: 'Hayat, tek bir hikâyeden ibaret değil. Teknolojinin hızında üretiyor, doğanın sessizliğinde kendimi dinliyorum. Her yolculukta öğreniyor, her karede hayatın başka bir yüzünü keşfediyorum.',
-    explore: 'Keşfet',
+    explore: 'Hayatımın Farklı Yönleri',
     rows: [
-      ['about', 'Hakkımda', 'Çanakkale ve Bolu merkezli çalışıyorum.'],
-      ['photo', 'Fotoğraf, Gezi ve Doğa', 'Sakladığım anlar — bir his, bir mekân, bir an.'],
-      ['projects', 'Projelerim', 'Birlikte çalıştığım ve geliştirdiğim sistemler.'],
-      ['book', 'Yoldaşın Mücadelesi', 'Kitap'],
+      ['about', 'Hakkımda', 'Hayatım, düşüncelerim ve kendi yolculuğum.', 'about'],
+      ['experience', 'Mesleki Deneyim', 'Fiber optik altyapı ve telekomünikasyon dünyasındaki deneyimlerim.', 'experience'],
+      ['photo', 'Fotoğraf, Gezi ve Doğa', 'Objektifime yansıyan anlar, yollar ve keşifler.', 'photo'],
+      ['projects', 'Projelerim', 'Merakla başlayan, emekle şekillenen dijital çalışmalarım.', 'projects'],
+      ['book', 'Yoldaşın Mücadelesi', 'Hayata, insana ve mücadeleye dair bir kitap.', 'book'],
     ],
     photoTitle: 'Mustafa’nın Kadrajından', photoLead: 'Sakladığım anlar — bir his, bir mekân, bir an.', photoCta: 'Tüm fotoğraflar',
     quote: 'Büyük iş doğru sorularla başlar. Doğru soruları da teknik derinlik ve gerçek dünya deneyimi şekillendirir.',
@@ -23,14 +26,15 @@ const T = {
   },
   en: {
     badgesLabel: 'Highlights',
-    badges: [['fiber', 'Fiber Optic Systems', 'projects'], ['photo', 'Nature Photography', 'photo'], ['code', 'Web & Software', 'about']],
+    badges: [['fiber', 'Fiber Optic Systems', 'experience'], ['photo', 'Nature Photography', 'photo'], ['code', 'Web & Software', 'about']],
     statement: 'Life is not just a single story. I create at the speed of technology and listen to myself in the silence of nature. I learn on every journey, and in every frame I discover another face of life.',
-    explore: 'Explore',
+    explore: 'Different Sides of My Life',
     rows: [
-      ['about', 'About', 'I work from Çanakkale and Bolu.'],
-      ['photo', 'Photography, Travel & Nature', 'Moments I keep — a feeling, a place, an instant.'],
-      ['projects', 'Projects', 'Systems I work on and build.'],
-      ['book', 'Yoldaşın Mücadelesi', 'Book'],
+      ['about', 'About', 'My life, my thoughts and my own journey.', 'about'],
+      ['experience', 'Professional Experience', 'My experience in the world of fiber optic infrastructure and telecommunications.', 'experience'],
+      ['photo', 'Photography, Travel & Nature', 'Moments, roads and discoveries reflected in my lens.', 'photo'],
+      ['projects', 'My Projects', 'Digital work that begins with curiosity and is shaped by effort.', 'projects'],
+      ['book', 'Yoldaşın Mücadelesi', 'A book about life, people and struggle.', 'book'],
     ],
     photoTitle: 'Through Mustafa’s Lens', photoLead: 'Moments I keep — a feeling, a place, an instant.', photoCta: 'All photographs',
     quote: 'Great work starts with the right questions. And the right questions are shaped by technical depth and real-world experience.',
@@ -49,6 +53,11 @@ function BadgeIcon({ name }) {
 export default function HomePage({ lang = 'tr' }) {
   const c = T[lang]
   const [p1, p2, p3] = HOME_PHOTOS
+  const aboutPhoto = PHOTOS.find((p) => p.src.includes('nature4')) || p2
+  const IMG = {}
+  for (const k of Object.keys(EXPLORE_IMAGES)) IMG[k] = EXPLORE_IMAGES[k].src
+  IMG.about = IMG.about || (aboutPhoto && aboutPhoto.src)
+  IMG.photo = IMG.photo || (p1 && p1.src)
   return (
     <div className="mo">
       <section className="mo-hero" aria-label="Mustafa Öner">
@@ -81,18 +90,26 @@ export default function HomePage({ lang = 'tr' }) {
         <ScrollWords className="mo-statement" text={c.statement} />
       </div></section>
 
-      <section className="pb-[clamp(4.5rem,11vw,10rem)]"><div className="mo-wrap">
-        <Reveal><span className="mo-kicker mb-8">{c.explore}</span></Reveal>
-        <nav className="mo-index" aria-label={c.explore}>
-          {c.rows.map(([key, title, desc], i) => (
-            <Reveal key={key} delay={i * 70}>
-              <MoLink href={pageHref(key, lang)}>
-                <span className="mo-index-t">{title}</span>
-                <span className="mo-index-d">{desc}</span>
-                <span className="mo-index-a" aria-hidden="true">↗</span>
-              </MoLink>
-            </Reveal>
-          ))}
+      <section className="mo-xplore"><div className="mo-wrap">
+        <Reveal><h2 className="mo-xplore-h">{c.explore}</h2></Reveal>
+        <nav className="mo-xlist" aria-label={c.explore}>
+          {c.rows.map(([key, title, desc, img], i) => {
+            const inner = (
+              <>
+                <span className="mo-xt">{title}</span>
+                <span className="mo-xthumb" aria-hidden="true" style={EXPLORE_IMAGES[img]?.bg ? { background: EXPLORE_IMAGES[img].bg } : undefined} data-fit={EXPLORE_IMAGES[img]?.fit} data-portrait={EXPLORE_IMAGES[img]?.portrait ? "true" : undefined}>
+                  {IMG[img] && <Image src={IMG[img]} alt="" fill sizes="16rem" loading="lazy" style={EXPLORE_IMAGES[img]?.pos ? { objectPosition: EXPLORE_IMAGES[img].pos } : undefined} />}
+                </span>
+                <span className="mo-xd">{desc}</span>
+                <span className="mo-xa" aria-hidden="true">↗</span>
+              </>
+            )
+            return (
+              <Reveal key={key} delay={i * 80}>
+                <MoLink href={pageHref(key, lang)} className="mo-xrow">{inner}</MoLink>
+              </Reveal>
+            )
+          })}
         </nav>
       </div></section>
 
@@ -117,10 +134,14 @@ export default function HomePage({ lang = 'tr' }) {
         <ScrollWords className="mo-quote" text={`“${c.quote}”`} />
       </div></section>
 
-      <section className="mo-sec mo-dark mo-book-teaser"><div className="mo-wrap">
-        <Reveal><span className="mo-kicker mb-10">{c.bookKicker}</span></Reveal>
-        <h2 className="big" aria-label="Yoldaşın Mücadelesi"><SplitLetters text="Yoldaşın" /> <SplitLetters text="Mücadelesi" base={200} className="mo-it" /></h2>
-        <Reveal className="mt-12"><MoLink href={pageHref('book', lang)} className="mo-link">{c.bookCta} <span aria-hidden="true">→</span></MoLink></Reveal>
+      <section className="mo-sec mo-book-teaser"><div className="mo-wrap mo-book-grid">
+        <Reveal><span className="mo-kicker">{c.bookKicker}</span></Reveal>
+        <MoLink href={pageHref('book', lang)} className="mo-book-link" aria-label={BOOK.title}>
+          <ImageReveal className="mo-book-cover">
+            <Image src={BOOK.cover} alt={BOOK.title} width={BOOK.coverSize.w} height={BOOK.coverSize.h} sizes="(min-width:900px) 70vh, 92vw" style={{ width: 'auto', height: '100%' }} loading="lazy" />
+          </ImageReveal>
+        </MoLink>
+        <Reveal><MoLink href={pageHref('book', lang)} className="mo-link mo-link-s">{c.bookCta} <span aria-hidden="true">→</span></MoLink></Reveal>
       </div></section>
 
       <section className="mo-sec"><div className="mo-wrap">
