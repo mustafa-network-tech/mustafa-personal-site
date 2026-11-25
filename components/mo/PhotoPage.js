@@ -1,13 +1,14 @@
 'use client'
 import Image from 'next/image'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { SplitWords, Reveal } from '@/components/mo/motion'
-import { PHOTOS, PHOTO_CATEGORIES } from '@/lib/mo/photos'
-import { INSTAGRAM } from '@/lib/mo/site'
+import { Reveal } from '@/components/mo/motion'
+import { Head } from '@/components/mo/SubPages'
+import { PAGE_PHOTOS as PHOTOS, PHOTO_CATEGORIES } from '@/lib/mo/photos'
+import { INSTAGRAM, MAVI_KADRAJ, INSTAGRAM_HANDLE } from '@/lib/mo/site'
 
 const T = {
-  tr: { kicker: 'Fotoğraf, Gezi ve Doğa', title: 'Mustafa’nın Kadrajından', lead: 'Sakladığım anlar — bir his, bir mekân, bir an.', all: 'Tümü', close: 'Kapat', prev: 'Önceki fotoğraf', next: 'Sonraki fotoğraf', site: 'Fotoğrafçılık web sitemiz — mavikadraj.com.tr', insta: 'Instagram’da takip et', view: 'Büyük görüntüle', of: '/' },
-  en: { kicker: 'Photography, Travel & Nature', title: 'Through Mustafa’s Lens', lead: 'Moments I keep — a feeling, a place, an instant.', all: 'All', close: 'Close', prev: 'Previous photo', next: 'Next photo', site: 'Our photography website — mavikadraj.com.tr', insta: 'Follow on Instagram', view: 'View large', of: '/' },
+  tr: { kicker: 'Mustafa’nın Kadrajından', title: 'Mustafa’nın Kadrajından', lead: 'Her yolculuk bir hikâye, her fotoğraf hayattan sakladığım bir an.', all: 'Tümü', close: 'Kapat', prev: 'Önceki fotoğraf', next: 'Sonraki fotoğraf', more: 'Bütün fotoğraflarım için', site: 'Mavi Kadraj web sitesi', insta: 'Instagram’da takip et', view: 'Büyük görüntüle', of: '/' },
+  en: { kicker: 'Through Mustafa’s Lens', title: 'Through Mustafa’s Lens', lead: 'Every journey is a story, every photograph a moment I have kept from life.', all: 'All', close: 'Close', prev: 'Previous photo', next: 'Next photo', more: 'For all my photographs', site: 'Mavi Kadraj website', insta: 'Follow on Instagram', view: 'View large', of: '/' },
 }
 
 function Photo({ p, lang, onOpen, index }) {
@@ -16,14 +17,14 @@ function Photo({ p, lang, onOpen, index }) {
     ? <img src={p.src} alt={p.alt[lang]} width={p.w} height={p.h} loading="lazy" decoding="async" />
     : <Image src={p.src} alt={p.alt[lang]} width={p.w} height={p.h} sizes="(min-width:1100px) 33vw, (min-width:560px) 50vw, 100vw" loading={index < 3 ? 'eager' : 'lazy'} />
   return (
-    <button type="button" className="mo-ph" onClick={(e) => onOpen(p, e.currentTarget)} aria-label={`${cap || p.alt[lang]} — ${T[lang].view}`}>
+    <button type="button" className="mo-ph" style={{ '--i': index % 12 }} onClick={(e) => onOpen(p, e.currentTarget)} aria-label={`${cap || p.alt[lang]} — ${T[lang].view}`}>
       {inner}
       {cap && <span>{cap}</span>}
     </button>
   )
 }
 
-export function Lightbox({ list, index, lang, onClose, onIndex }) {
+export function Lightbox({ list, index, lang, onClose, onIndex, exhibit = false }) {
   const t = T[lang]
   const p = list[index]
   const closeRef = useRef(null)
@@ -61,8 +62,9 @@ export function Lightbox({ list, index, lang, onClose, onIndex }) {
   }
 
   return (
-    <div className="mo-lb" role="dialog" aria-modal="true" aria-label={p.caption?.[lang] || p.alt[lang]}>
+    <div className={exhibit ? 'mo-lb mo-lb-ex' : 'mo-lb'} role="dialog" aria-modal="true" aria-label={p.caption?.[lang] || p.alt[lang]}>
       <div className="mo-lb-bar"><span>{index + 1} {t.of} {list.length}</span><button ref={closeRef} type="button" onClick={onClose} aria-label={t.close}>✕</button></div>
+      {exhibit && <div className="mo-lb-back" aria-hidden="true" style={{ backgroundImage: `url(${src})` }} />}
       <div className="mo-lb-stage" onPointerDown={onPointerDown} onPointerUp={onPointerUp} onClick={(e) => e.target === e.currentTarget && onClose()}>
         <button type="button" className="mo-lb-nav mo-lb-prev" onClick={() => go(-1)} aria-label={t.prev}>←</button>
         <img key={src} src={src} alt={p.alt[lang]} width={p.w} height={p.h} draggable="false" style={{ animation: 'mo-fade .5s var(--ease-out) both' }} />
@@ -76,6 +78,7 @@ export function Lightbox({ list, index, lang, onClose, onIndex }) {
 export default function PhotoPage({ lang = 'tr' }) {
   const t = T[lang]
   const [cat, setCat] = useState('all')
+  const [leaving, setLeaving] = useState(false)
   const [open, setOpen] = useState(null) // list index
   const trigger = useRef(null)
   const cats = useMemo(() => PHOTO_CATEGORIES.filter((c) => PHOTOS.some((p) => p.category === c.id)), [])
@@ -86,24 +89,25 @@ export default function PhotoPage({ lang = 'tr' }) {
 
   return (
     <div className="mo">
-      <section className="mo-head"><div className="mo-wrap">
-        <span className="mo-kicker mo-rise">{t.kicker}</span>
-        <SplitWords hero as="h1" text={t.title} className="mo-h1" />
-        <p className="mo-lead mo-rise" style={{ '--d': '500ms' }}>{t.lead}</p>
-      </div></section>
+      <Head kicker={t.kicker} title={t.title} lead={t.lead} bg="/photos/nature/nature6.jpg" bgPos="50% 55%" fog />
       <section className="mo-sec" style={{ paddingTop: 'clamp(2.5rem,6vw,5rem)' }}><div className="mo-wrap">
         <div className="mo-chips" role="group" aria-label={lang === 'tr' ? 'Kategoriler' : 'Categories'}>
           {[{ id: 'all', tr: t.all, en: t.all }, ...cats].map((c) => (
-            <button key={c.id} type="button" className="mo-chip" aria-pressed={cat === c.id} onClick={() => { setCat(c.id) }}>{c[lang]}</button>
+            <button key={c.id} type="button" className="mo-chip" aria-pressed={cat === c.id} onClick={() => { if (c.id === cat || leaving) return; setLeaving(true); setTimeout(() => { setCat(c.id); setLeaving(false) }, 320) }}>{c[lang]}</button>
           ))}
         </div>
-        <div className="mo-masonry" key={cat}>
+        <div className={`mo-masonry${leaving ? ' is-leaving' : ''}`} key={cat}>
           {list.map((p, i) => <Photo key={p.id} p={p} lang={lang} index={i} onOpen={onOpen} />)}
         </div>
-        <Reveal className="mt-14"><a className="mo-link" href="https://www.mavikadraj.com.tr" target="_blank" rel="noopener noreferrer">{t.site} <span aria-hidden="true">↗</span></a></Reveal>
-        <Reveal className="mt-8"><a className="mo-link" href={INSTAGRAM} target="_blank" rel="noopener noreferrer">{t.insta} — @mavi_kadraj14 <span aria-hidden="true">↗</span></a></Reveal>
+        <Reveal className="mo-allph">
+          <p className="mo-allph-t">{t.more}</p>
+          <div className="mo-allph-l">
+            <a className="mo-chip" href={INSTAGRAM} target="_blank" rel="noopener noreferrer">{t.insta} · {INSTAGRAM_HANDLE} <span aria-hidden="true">↗</span></a>
+            <a className="mo-chip" href={MAVI_KADRAJ} target="_blank" rel="noopener noreferrer">{t.site} <span aria-hidden="true">↗</span></a>
+          </div>
+        </Reveal>
       </div></section>
-      {open !== null && list[open] && <Lightbox list={list} index={open} lang={lang} onClose={onClose} onIndex={setOpen} />}
+      {open !== null && list[open] && <Lightbox exhibit list={list} index={open} lang={lang} onClose={onClose} onIndex={setOpen} />}
     </div>
   )
 }

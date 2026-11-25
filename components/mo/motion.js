@@ -97,44 +97,14 @@ export function Parallax({ children, amount = 7, className = '' }) {
 }
 
 /* ---------- sayfa geçişi ---------- */
-const TransitionCtx = createContext({ go: () => {}, phase: 'idle' })
+// Ara perde/bekleme yok: bağlantılar doğrudan ilgili sayfaya gider; hero'ların kendi animasyonları çalışır.
+const TransitionCtx = createContext({ go: () => {} })
 export const useMoNav = () => useContext(TransitionCtx)
 
 export function TransitionProvider({ children }) {
   const router = useRouter()
-  const pathname = usePathname()
-  const [phase, setPhase] = useState('idle') // idle | in | out
-  const pending = useRef(null)
-  const timers = useRef([])
-  const clear = () => { timers.current.forEach(clearTimeout); timers.current = [] }
-
-  const go = useCallback((href) => {
-    if (pending.current) return
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduce) { router.push(href); return }
-    pending.current = href
-    setPhase('in')
-    timers.current.push(setTimeout(() => router.push(href), 620))
-    // Güvenlik: sayfa değişmezse perdeyi kaldır
-    timers.current.push(setTimeout(() => { if (pending.current) { pending.current = null; setPhase('idle') } }, 4000))
-  }, [router])
-
-  useEffect(() => {
-    if (!pending.current) return
-    pending.current = null
-    clear()
-    window.scrollTo(0, 0)
-    setPhase('out')
-    timers.current.push(setTimeout(() => setPhase('idle'), 800))
-    return clear
-  }, [pathname])
-
-  return (
-    <TransitionCtx.Provider value={{ go, phase }}>
-      {children}
-      <div className={`mo-curtain is-${phase}`} aria-hidden="true"><span className="mo-curtain-mark">Mustafa Öner</span></div>
-    </TransitionCtx.Provider>
-  )
+  const go = useCallback((href) => { router.push(href) }, [router])
+  return <TransitionCtx.Provider value={{ go }}>{children}</TransitionCtx.Provider>
 }
 
 /** İç bağlantı: geçiş perdesiyle gider. Dış / modifiye tıklamalar normal çalışır. */

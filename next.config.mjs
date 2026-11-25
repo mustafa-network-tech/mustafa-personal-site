@@ -1,5 +1,3 @@
-import { LOCAL_SEO_REDIRECTS } from './lib/localSeo/canonicalRoutes.mjs'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: process.env.NEXT_BUILD_DIR || '.next',
@@ -12,13 +10,16 @@ const nextConfig = {
     return [
       // Domain order: www -> apex, single permanent hop. The root goes straight to /tr (no second hop).
       { source: '/', has: [{ type: 'host', value: 'www.mustafaoner.net' }], destination: 'https://mustafaoner.net/tr', permanent: true },
-      ...Object.entries(LOCAL_SEO_REDIRECTS).map(([source, destination]) => ({
-        source,
-        destination: `https://mustafaoner.net${destination}`,
-        statusCode: 301,
-      })),
-      { source: '/showcase', destination: 'https://mustafaoner.net/vitrin', permanent: true },
-      { source: '/tr/showcase', destination: 'https://mustafaoner.net/tr/vitrin', permanent: true },
+      // Eski ticari portföy sayfaları -> kişisel sitedeki karşılığı (Projelerim); detay sayfaları da listeye gider.
+      { source: '/projects', destination: 'https://mustafaoner.net/en/my-projects', permanent: true },
+      { source: '/projects/:slug', destination: 'https://mustafaoner.net/en/my-projects', permanent: true },
+      { source: '/tr/projects', destination: 'https://mustafaoner.net/tr/projelerim', permanent: true },
+      { source: '/tr/projects/:slug', destination: 'https://mustafaoner.net/tr/projelerim', permanent: true },
+      // Eski proje vitrini (Vitrin / Showcase) -> Projelerim
+      { source: '/vitrin', destination: 'https://mustafaoner.net/en/my-projects', permanent: true },
+      { source: '/showcase', destination: 'https://mustafaoner.net/en/my-projects', permanent: true },
+      { source: '/tr/vitrin', destination: 'https://mustafaoner.net/tr/projelerim', permanent: true },
+      { source: '/tr/showcase', destination: 'https://mustafaoner.net/tr/projelerim', permanent: true },
       // Catch-all last so the absolute rules above stay single-hop.
       // App legal URLs are locked: the www host keeps serving them exactly as before (no redirect added).
       {

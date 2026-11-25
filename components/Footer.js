@@ -1,49 +1,61 @@
 'use client'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { isTurkishPath } from '@/lib/i18n/routes'
-import { HUB_SLUGS, LANDING_ROUTES, landingHref } from '@/lib/landingPages/routes'
-import { NAV, SOCIALS, EMAIL, MK_DIGITAL, pageHref, pageKeyFor } from '@/lib/mo/site'
-import { MoLink, SplitLetters } from '@/components/mo/motion'
+import { NAV, LINKEDIN, INSTAGRAM, MAVI_KADRAJ, MK_DIGITAL, pageHref } from '@/lib/mo/site'
+import { MoLink, useInView } from '@/components/mo/motion'
+
+const COPY = {
+  tr: { nav: 'Alt menü', explore: 'Keşfet', links: 'Bağlantılar', slogan: 'Hayat, tek bir hikâyeden ibaret değil.', motto: 'Emekle, merakla, tutkuyla.', top: 'Yukarı dön', contact: 'İletişim', privacy: 'Gizlilik' },
+  en: { nav: 'Footer', explore: 'Explore', links: 'Links', slogan: 'Life is more than a single story.', motto: 'With effort, curiosity and passion.', top: 'Back to top', contact: 'Contact', privacy: 'Privacy' },
+}
+const EXPLORE_KEYS = ['about', 'experience', 'photo', 'projects', 'book']
 
 export default function Footer() {
   const { language } = useLanguage()
-  const pathname = usePathname()
+  const [ref, seen] = useInView({ rootMargin: '0px 0px -8% 0px', threshold: 0.05 })
   const tr = language === 'tr'
-  const key = pageKeyFor(pathname)
-  const showSolutions = isTurkishPath(pathname) && !key // eski iniş sayfalarındaki iç bağlantılar korunur
+  const c = COPY[tr ? 'tr' : 'en']
+  const toTop = (e) => {
+    e.preventDefault()
+    window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+  }
 
   return (
-    <footer className="mo-footer">
+    <footer ref={ref} className={`mo-footer ${seen ? 'is-in' : ''}`}>
       <div className="mo-wrap">
         <div className="mo-footer-top">
-          <MoLink href={pageHref('contact', language)} className="mo-footer-cta">
-            <span className="mo-kicker">{tr ? 'Bir mesaj için' : 'For a message'}</span>
-            <span className="mo-footer-big" aria-label="Mustafa Öner"><SplitLetters text="Mustafa Öner" /></span>
-          </MoLink>
-          <nav aria-label={tr ? 'Alt menü' : 'Footer'} className="mo-footer-nav">
-            {NAV.filter((n) => n.key !== 'home').map((n) => (
-              <MoLink key={n.key} href={pageHref(n.key, language)}>{n[tr ? 'tr' : 'en']}</MoLink>
-            ))}
+          <div className="mo-footer-id">
+            <MoLink href={pageHref('home', language)} className="mo-footer-sig" aria-label="Mustafa Öner">Mustafa Öner</MoLink>
+            <svg className="mo-footer-line" viewBox="0 0 260 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d="M2 9 C40 3, 78 12, 118 7 S196 2, 258 8" pathLength="1" />
+            </svg>
+            <p className="mo-footer-slogan">{c.slogan}</p>
+            <p className="mo-footer-places">Bolu · Osmaniye · Çanakkale</p>
+          </div>
+          <nav aria-label={c.nav} className="mo-footer-col">
+            <h2>{c.explore}</h2>
+            <ul>
+              {EXPLORE_KEYS.map((k) => {
+                const n = NAV.find((x) => x.key === k)
+                return <li key={k}><MoLink href={pageHref(k, language)}>{n[tr ? 'tr' : 'en']}</MoLink></li>
+              })}
+            </ul>
           </nav>
-          <ul className="mo-footer-soc">
-            <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
-            {SOCIALS.filter(([n]) => n !== 'MK Digital Systems').map(([n, h]) => <li key={n}><a href={h} target="_blank" rel="noopener noreferrer">{n} ↗</a></li>)}
-          </ul>
+          <div className="mo-footer-col">
+            <h2>{c.links}</h2>
+            <ul>
+              <li><a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a></li>
+              <li><a href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+              <li><a href={MAVI_KADRAJ} target="_blank" rel="noopener noreferrer">Mavi Kadraj <span aria-hidden="true">↗</span></a></li>
+              <li><a href={MK_DIGITAL} target="_blank" rel="noopener noreferrer">MK Digital Systems <span aria-hidden="true">↗</span></a></li>
+              <li><MoLink href={pageHref('contact', language)}>{c.contact} <span aria-hidden="true">↗</span></MoLink></li>
+            </ul>
+          </div>
         </div>
 
-        {showSolutions && (
-          <nav aria-label="Çözümler" className="mo-footer-sol">
-            <h2 className="mo-kicker">Çözümler</h2>
-            <div>{HUB_SLUGS.map((slug) => <Link key={slug} href={landingHref(slug)}>{LANDING_ROUTES[slug]}</Link>)}</div>
-          </nav>
-        )}
-
         <div className="mo-footer-bottom">
-          <span>© {new Date().getFullYear()} Mustafa Öner</span>
-          <span>Bolu · Osmaniye · Çanakkale</span>
-          <a href={MK_DIGITAL} target="_blank" rel="noopener noreferrer">{tr ? 'Çalıştığım yer: MK Digital Systems ↗' : 'Works with: MK Digital Systems ↗'}</a>
+          <span className="mo-footer-legal">© Mustafa Öner <span aria-hidden="true">·</span> <MoLink href={pageHref('privacy', language)}>{c.privacy}</MoLink></span>
+          <span className="mo-footer-motto">{c.motto}</span>
+          <a href="#icerik" onClick={toTop}>{c.top} <span aria-hidden="true">↑</span></a>
         </div>
       </div>
     </footer>

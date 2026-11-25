@@ -17,7 +17,7 @@ const T = {
     rows: [
       ['about', 'Hakkımda', 'Hayatım, düşüncelerim ve kendi yolculuğum.', 'about'],
       ['experience', 'Mesleki Deneyim', 'Fiber optik altyapı ve telekomünikasyon dünyasındaki deneyimlerim.', 'experience'],
-      ['photo', 'Fotoğraf, Gezi ve Doğa', 'Objektifime yansıyan anlar, yollar ve keşifler.', 'photo'],
+      ['photo', 'Mustafa’nın Kadrajından', 'Objektifime yansıyan anlar, yollar ve keşifler.', 'photo'],
       ['projects', 'Projelerim', 'Merakla başlayan, emekle şekillenen dijital çalışmalarım.', 'projects'],
       ['book', 'Yoldaşın Mücadelesi', 'Hayata, insana ve mücadeleye dair bir kitap.', 'book'],
     ],
@@ -33,7 +33,7 @@ const T = {
     rows: [
       ['about', 'About', 'My life, my thoughts and my own journey.', 'about'],
       ['experience', 'Professional Experience', 'My experience in the world of fiber optic infrastructure and telecommunications.', 'experience'],
-      ['photo', 'Photography, Travel & Nature', 'Moments, roads and discoveries reflected in my lens.', 'photo'],
+      ['photo', 'Through Mustafa’s Lens', 'Moments, roads and discoveries reflected in my lens.', 'photo'],
       ['projects', 'My Projects', 'Digital work that begins with curiosity and is shaped by effort.', 'projects'],
       ['book', 'Yoldaşın Mücadelesi', 'A book about life, people and struggle.', 'book'],
     ],

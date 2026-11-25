@@ -28,20 +28,6 @@ export function getPersonSchema(locale = 'tr') {
   }
 }
 
-/**
- * Kept for compatibility but no longer emitted site-wide: the main entity of this
- * personal site is the Person. MK Digital Systems appears only as Person.worksFor.
- */
-export function getOrganizationSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': MK_DIGITAL_ORG_ID,
-    name: 'MK Digital Systems',
-    url: 'https://www.mk-digitalsystems.com',
-  }
-}
-
 /** Website schema with site search potential */
 export function getWebsiteSchema(locale = 'tr') {
   const name = locale === 'tr' ? PERSON_NAME : PERSON_NAME_EN
@@ -105,36 +91,7 @@ export function getContactPageSchema(locale = 'tr') {
     mainEntity: {
       '@type': 'Person',
       name: locale === 'tr' ? PERSON_NAME : PERSON_NAME_EN,
-      email: 'iletisim@mk-digitalsystems.com',
-    },
-  }
-}
-
-/** Service listing page */
-export function getServicesPageSchema(locale = 'tr') {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: locale === 'tr' ? 'Hizmetler' : 'Services',
-    url: `${SITE_URL}${locale === 'tr' ? '/tr/services' : '/services'}`,
-    description:
-      locale === 'tr'
-        ? 'Web tasarımı, özel yazılım ve dijital çözümler.'
-        : 'Web design, custom software and digital solutions.',
-  }
-}
-
-/** Project / software work – portfolio item */
-export function getProjectSchema({ name, description, url }) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'CreativeWork',
-    name,
-    description,
-    url: url || SITE_URL,
-    creator: {
-      '@type': 'Person',
-      name: PERSON_NAME_EN,
+      email: 'mustafa82oner@gmail.com',
     },
   }
 }

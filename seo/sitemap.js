@@ -1,14 +1,13 @@
 /**
  * Sitemap URL list for app/sitemap.js.
  * Kişisel site yapısı: ana sayfa + alt sayfalar (TR ve EN), her biri hreflang karşılığıyla.
- * Eski ticari sayfalar (hizmetler, vitrin, şehir/iniş sayfaları, proje detayları) sitemap'ten çıkarıldı;
- * sayfalar silinmedi veya yönlendirilmedi, yalnızca arama motoruna önerilmiyor.
+ * Eski ticari sayfalar kaldırıldı (301 / 410); sitemap yalnızca kişisel sayfaları listeler.
  */
 
 import { SITE_URL } from './metadata'
 import { PAGES } from '@/lib/mo/site'
 
-const PAGE_KEYS = ['home', 'about', 'experience', 'photo', 'projects', 'book', 'contact']
+const PAGE_KEYS = ['home', 'about', 'experience', 'photo', 'projects', 'book', 'contact', 'privacy']
 
 /** All sitemap URLs with lastModified and TR/EN alternates */
 export function getSitemapUrls() {

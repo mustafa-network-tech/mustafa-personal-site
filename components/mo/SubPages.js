@@ -8,9 +8,9 @@ import { PHOTOS, HOME_PHOTOS } from '@/lib/mo/photos'
 import { ABOUT_MORE, ABOUT_IMAGES } from '@/lib/mo/about'
 import { BOOK } from '@/content/book'
 
-export function Head({ kicker, title, lead, bg, bgPos, fog }) {
+export function Head({ kicker, title, lead, bg, bgPos, fog, variant }) {
   return (
-    <section className={bg ? 'mo-head mo-head-bg' : 'mo-head'}>
+    <section className={bg ? `mo-head mo-head-bg${variant ? ' mo-head-' + variant : ''}` : `mo-head${variant ? ' mo-head-' + variant : ''}`}>
       {bg && <><Image src={bg} alt="" fill priority sizes="100vw" className="mo-head-img" style={bgPos ? { objectPosition: bgPos } : undefined} /><span className="mo-head-shade" aria-hidden="true" />{fog && <span className="mo-head-fog" aria-hidden="true" />}</>}
       <div className="mo-wrap mo-head-in">
       {bg ? (
@@ -36,7 +36,7 @@ const ABOUT = {
   tr: {
     kicker: 'Hakkımda', title: 'Hakkımda', lead: 'Yazılım ve dijital sistemler üzerine çalışıyorum. Bunun yanında fotoğraf çekiyorum.',
     story: "Hayatı tek bir alana sığdırmayı hiçbir zaman istemedim. Bir yanım teknolojide, bir yanım doğada, bir yanım ise kelimelerin dünyasında. Öğrenerek, üreterek ve keşfederek kendi yolumu çiziyorum.",
-    photoKicker: 'Fotoğraf', photoText: 'Fotoğraf ise bana yavaşlamayı ve bakmayı hatırlatan ikinci alanım.', photoLead: 'Sakladığım anlar — bir his, bir mekân, bir an.', photoCta: 'Fotoğraf, Gezi ve Doğa',
+    photoKicker: 'Fotoğraf', photoText: 'Fotoğraf ise bana yavaşlamayı ve bakmayı hatırlatan ikinci alanım.', photoLead: 'Sakladığım anlar — bir his, bir mekân, bir an.', photoCta: 'Mustafa’nın Kadrajından',
     softKicker: 'Yazılım ve dijital sistemler', softBody: "Osmaniye'den Bolu'ya, Bolu'dan Çanakkale'ye uzanan yaşam yolculuğumda farklı şehirler, insanlar ve deneyimler biriktirdim. Mesleki hayatımda fiber optik ve telekomünikasyon altyapılarıyla ilgilenirken, dijital dünyada yazılım projeleri geliştiriyorum.", softBody2: "Fotoğrafçılık, doğa, seyahat, edebiyat ve türküler ise hayatımın vazgeçilmez parçaları. Benim için üretmek yalnızca bir meslek değil, hayata karşı bir duruş biçimi.", softLink: 'MK Digital Systems’ı ziyaret et', projCta: 'Projelerim',
     princKicker: 'Çalışma ilkeleri', princ: ['Önce problem anlaşılır, sonra çözülür.', 'Teknik detaylar büyük resimden asla ayrılmaz.', 'Dokümantasyon bir projenin uzun vadeli hafızasıdır.', 'Test güvenin tek gerçek kaynağıdır.'],
     quote: 'Büyük iş doğru sorularla başlar. Doğru soruları da teknik derinlik ve gerçek dünya deneyimi şekillendirir.',
@@ -44,7 +44,7 @@ const ABOUT = {
   en: {
     kicker: 'About', title: 'About', lead: 'I work on software and digital systems. I also take photographs.',
     story: "I never wanted to fit life into a single field. One side of me is in technology, one in nature, and one in the world of words. By learning, creating and exploring, I draw my own path.",
-    photoKicker: 'Photography', photoText: 'Photography is my second field; it reminds me to slow down and look.', photoLead: 'Moments I keep — a feeling, a place, an instant.', photoCta: 'Photography, Travel & Nature',
+    photoKicker: 'Photography', photoText: 'Photography is my second field; it reminds me to slow down and look.', photoLead: 'Moments I keep — a feeling, a place, an instant.', photoCta: 'Through Mustafa’s Lens',
     softKicker: 'Software and digital systems', softBody: "On my life’s journey from Osmaniye to Bolu and from Bolu to Çanakkale, I have gathered different cities, people and experiences. In my professional life I work with fiber optic and telecommunications infrastructure, and in the digital world I develop software projects.", softBody2: "Photography, nature, travel, literature and folk songs are indispensable parts of my life. For me, creating is not just a profession; it is a way of standing toward life.", softLink: 'Visit MK Digital Systems', projCta: 'Projects',
     princKicker: 'Working principles', princ: ['A problem is understood first, then solved.', 'Technical details are never separated from the bigger picture.', 'Documentation is the long-term memory of a project.', 'Testing is the only real source of trust.'],
     quote: 'Great work starts with the right questions. And the right questions are shaped by technical depth and real-world experience.',
@@ -168,8 +168,8 @@ export function ProjectsPage({ lang = 'tr' }) {
 
 /* ---------------- Yoldaşın Mücadelesi ---------------- */
 const BK = {
-  tr: { kicker: 'Kitap', soon: 'Kitap hakkındaki ayrıntılar yakında burada paylaşılacak.', author: 'Yazar hakkında', quotes: 'Kitaptan alıntılar', pub: 'Yayın ve erişim', access: 'Kitaba ulaş' },
-  en: { kicker: 'Book', soon: 'Details about the book will be shared here soon.', author: 'About the author', quotes: 'Excerpts', pub: 'Publication and access', access: 'Get the book' },
+  tr: { kicker: 'Kitap', lead: 'Hayatın bütün zorluklarına rağmen kendi yolunu çizmenin, emeğin, umudun ve yeniden başlamanın hikâyesi.', soon: 'Kitap hakkındaki ayrıntılar yakında burada paylaşılacak.', author: 'Yazar hakkında', quotes: 'Kitaptan alıntılar', pub: 'Yayın ve erişim', access: 'Kitaba ulaş' },
+  en: { kicker: 'Book', lead: 'The story of drawing your own path, of labour, hope and starting over, in spite of all of life’s hardships.', soon: 'Details about the book will be shared here soon.', author: 'About the author', quotes: 'Excerpts', pub: 'Publication and access', access: 'Get the book' },
 }
 
 export function BookPage({ lang = 'tr' }) {
@@ -181,7 +181,7 @@ export function BookPage({ lang = 'tr' }) {
   const hasAny = fw || author || pub || BOOK.quotes.length
   return (
     <div className="mo">
-      <Head kicker={c.kicker} title={BOOK.title} />
+      <Head kicker={c.kicker} title={BOOK.title} lead={c.lead} bg="/images/yoldasin-mucadelesi-hero.jpg" bgPos="38% 55%" fog />
       <section className="mo-sec"><div className="mo-wrap mo-two">
         <Reveal>
           <Image src={BOOK.cover} alt={BOOK.title} width={BOOK.coverSize.w} height={BOOK.coverSize.h} sizes="(min-width:900px) 40vw, 90vw" style={{ width: '100%', height: 'auto', maxWidth: '26rem' }} priority />
@@ -219,15 +219,15 @@ export function BookPage({ lang = 'tr' }) {
 
 /* ---------------- İletişim ---------------- */
 const CT = {
-  tr: { kicker: 'İletişim', title: 'İletişim', lead: 'Tanışmak, iş birliği ya da kısa bir mesaj için e-posta veya LinkedIn üzerinden ulaşabilirsiniz.', mail: 'E-posta', elsewhere: 'Diğer' },
-  en: { kicker: 'Contact', title: 'Contact', lead: 'For an introduction, a collaboration or a short message, reach me by email or on LinkedIn.', mail: 'Email', elsewhere: 'Elsewhere' },
+  tr: { kicker: 'İletişim', title: 'İletişim', lead: 'Posta güvercini de olur ama e-posta biraz daha hızlı.', mail: 'E-posta', elsewhere: 'Diğer' },
+  en: { kicker: 'Contact', title: 'Contact', lead: 'A carrier pigeon would do, but email is a little faster.', mail: 'Email', elsewhere: 'Elsewhere' },
 }
 
 export function ContactPage({ lang = 'tr' }) {
   const c = CT[lang]
   return (
     <div className="mo">
-      <Head kicker={c.kicker} title={c.title} lead={c.lead} />
+      <Head kicker={c.kicker} title={c.title} lead={c.lead} bg="/images/contact-hero.jpg" bgPos="50% 55%" fog variant="contact" />
       <section className="mo-sec"><div className="mo-wrap grid gap-14">
         <Reveal><span className="mo-kicker mb-5">{c.mail}</span><a className="mo-contact-mail" href={`mailto:${EMAIL}`}>{EMAIL}</a></Reveal>
         <Reveal><span className="mo-kicker mb-5">{c.elsewhere}</span>

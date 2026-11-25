@@ -19,8 +19,8 @@ const hand3 = Square_Peg({ subsets: ['latin', 'latin-ext'], weight: '400', varia
 const caveat = Caveat({ subsets: ['latin', 'latin-ext'], variable: '--f-hand4', display: 'swap' })
 const manrope = Manrope({ subsets: ['latin', 'latin-ext'], variable: '--f-sans', display: 'swap' })
 
-// Boyamadan önce çalışır: JS sınıfı + açılış kararı (her tam yüklemede/yenilemede; sayfa içi geçişlerde tekrarlanmaz) (reduced-motion ve yasal sayfalarda açılış yok).
-const BOOT = `try{var d=document.documentElement,p=location.pathname.replace(/[/]$/,'')||'/';d.classList.add('mo-js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;var n=navigator;if((n.deviceMemory&&n.deviceMemory<=4)||(n.hardwareConcurrency&&n.hardwareConcurrency<=4))d.classList.add('mo-low');var nt=((performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{}).type;if(!rm&&(p==='/tr'||p==='/en')&&nt!=='back_forward'){d.dataset.intro='play';setTimeout(function(){if(d.dataset.intro==='play'){d.dataset.intro='done';d.dataset.hero='go'}},17500)}}catch(e){}`
+// Boyamadan önce çalışır: JS sınıfı + açılış kararı (yalnızca oturumdaki ilk girişte; yenileme ve sayfa içi geçişlerde tekrarlanmaz) (reduced-motion ve yasal sayfalarda açılış yok).
+const BOOT = `try{var d=document.documentElement,p=location.pathname.replace(/[/]$/,'')||'/';d.classList.add('mo-js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;var n=navigator;if((n.deviceMemory&&n.deviceMemory<=4)||(n.hardwareConcurrency&&n.hardwareConcurrency<=4))d.classList.add('mo-low');var nt=((performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{}).type;var seen=0;try{seen=sessionStorage.getItem('mo-seen');sessionStorage.setItem('mo-seen','1')}catch(e){}if(!rm&&!seen&&(p==='/tr'||p==='/en')&&nt!=='back_forward'){d.dataset.intro='play';setTimeout(function(){if(d.dataset.intro==='play'){d.dataset.intro='done';d.dataset.hero='go'}},17500)}}catch(e){}`
 
 const LOCALE_HEADER = 'x-path-locale'
 
@@ -32,7 +32,17 @@ export const metadata = {
   applicationName: 'Mustafa Öner',
   authors: [{ name: 'Mustafa Öner', url: SITE_URL }],
   creator: 'Mustafa Öner',
-  icons: { icon: '/icon.svg' },
+  // Tek, sabit ve çakışmasız ikon tanımı (kaynak: mustafa.jpg -> scripts/generate-site-icons.py)
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/icon-96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     siteName: 'Mustafa Öner',
@@ -40,7 +50,7 @@ export const metadata = {
     alternateLocale: 'en_US',
     title: GLOBAL_META.tr.title,
     description: GLOBAL_META.tr.description,
-    images: [{ url: OG_IMAGES.tr, width: 1536, height: 1024, alt: 'Mustafa Öner' }],
+    images: [{ url: OG_IMAGES.tr, width: 1200, height: 630, alt: 'Mustafa Öner' }],
   },
   twitter: {
     card: 'summary_large_image',

@@ -7,8 +7,8 @@ import Intro from '@/components/mo/Intro'
 import { TransitionProvider } from '@/components/mo/motion'
 import { LEGAL_BASE } from '@/lib/legal/apps'
 
-// Vitrin ve Play Store yasal sayfaları site menüsü/footer olmadan gösterilir.
-const BARE_PATHS = ['/vitrin', '/tr/vitrin', LEGAL_BASE]
+// Play Store yasal sayfaları site menüsü/footer olmadan gösterilir.
+const BARE_PATHS = [LEGAL_BASE]
 
 export default function LayoutShell({ children }) {
   const pathname = usePathname()
