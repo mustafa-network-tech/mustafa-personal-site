@@ -2,10 +2,11 @@
 import { useLanguage } from '@/contexts/LanguageContext'
 import { NAV, LINKEDIN, INSTAGRAM, MAVI_KADRAJ, MK_DIGITAL, pageHref } from '@/lib/mo/site'
 import { MoLink, useInView } from '@/components/mo/motion'
+import { OPEN_EVENT } from '@/lib/consent'
 
 const COPY = {
-  tr: { nav: 'Alt menü', explore: 'Keşfet', links: 'Bağlantılar', slogan: 'Hayat, tek bir hikâyeden ibaret değil.', motto: 'Emekle, merakla, tutkuyla.', top: 'Yukarı dön', contact: 'İletişim', privacy: 'Gizlilik' },
-  en: { nav: 'Footer', explore: 'Explore', links: 'Links', slogan: 'Life is more than a single story.', motto: 'With effort, curiosity and passion.', top: 'Back to top', contact: 'Contact', privacy: 'Privacy' },
+  tr: { nav: 'Alt menü', explore: 'Keşfet', links: 'Bağlantılar', slogan: 'Hayat, tek bir hikâyeden ibaret değil.', motto: 'Emekle, merakla, tutkuyla.', top: 'Yukarı dön', contact: 'İletişim', privacy: 'Gizlilik', cookies: 'Çerez tercihleri' },
+  en: { nav: 'Footer', explore: 'Explore', links: 'Links', slogan: 'Life is more than a single story.', motto: 'With effort, curiosity and passion.', top: 'Back to top', contact: 'Contact', privacy: 'Privacy', cookies: 'Cookie preferences' },
 }
 const EXPLORE_KEYS = ['about', 'experience', 'photo', 'projects', 'book']
 
@@ -53,7 +54,7 @@ export default function Footer() {
         </div>
 
         <div className="mo-footer-bottom">
-          <span className="mo-footer-legal">© Mustafa Öner <span aria-hidden="true">·</span> <MoLink href={pageHref('privacy', language)}>{c.privacy}</MoLink></span>
+          <span className="mo-footer-legal">© Mustafa Öner <span aria-hidden="true">·</span> <MoLink href={pageHref('privacy', language)}>{c.privacy}</MoLink> <span aria-hidden="true">·</span> <button type="button" className="mo-footer-cookie" onClick={() => window.dispatchEvent(new Event(OPEN_EVENT))}>{c.cookies}</button></span>
           <span className="mo-footer-motto">{c.motto}</span>
           <a href="#icerik" onClick={toTop}>{c.top} <span aria-hidden="true">↑</span></a>
         </div>

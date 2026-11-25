@@ -569,3 +569,17 @@ button.mo-link{background:none;border-width:0 0 1px;color:inherit;cursor:pointer
 .mo-prose a:hover{color:#7a4a14}
 .mo-prose-date{font-size:.85rem!important;color:#7a6a4f!important;border-top:1px solid rgba(176,148,86,.4);padding-top:1rem}
 .mo-footer-legal a{margin-left:.2rem}
+
+/* Çerez onayı bandı */
+.mo-consent{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:320;width:min(36rem,calc(100% - 24px));display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1rem;padding:.9rem 1.1rem;border-radius:1.1rem;background:#EAE4D6;border:1px solid rgba(176,148,86,.55);color:#3f3326;box-shadow:0 14px 34px -18px rgba(40,26,10,.55);animation:mo-consent-in .6s var(--ease-out) both}
+.mo-consent p{flex:1 1 16rem;font-size:.84rem;line-height:1.5}
+.mo-consent a{background:linear-gradient(#b0945a,#b0945a) 0 100%/100% 1px no-repeat}
+.mo-consent-btns{display:flex;gap:.5rem;margin-left:auto}
+.mo-consent button{border-radius:999px;padding:.55rem 1.15rem;font:600 .72rem/1 var(--f-sans),sans-serif;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(70,46,18,.3);color:#3a2412;transition:background .3s,border-color .3s}
+.mo-consent button:hover{border-color:#a98a4c;background:rgba(216,196,154,.3)}
+.mo-consent .mo-consent-yes{background:#D8C49A;border-color:#c4aa72}
+.mo-consent .mo-consent-yes:hover{background:#cdb584}
+@keyframes mo-consent-in{from{opacity:0;transform:translate(-50%,14px)}to{opacity:1;transform:translate(-50%,0)}}
+@media(prefers-reduced-motion:reduce){.mo-consent{animation:none}}
+.mo-footer-cookie{font:inherit;color:inherit;padding:.18rem 0;background:linear-gradient(#b0945a,#b0945a) 0 100%/0 1px no-repeat;transition:background-size .4s var(--ease-out)}
+.mo-footer-cookie:hover,.mo-footer-cookie:focus-visible{background-size:100% 1px}

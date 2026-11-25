@@ -1,6 +1,7 @@
 // app/layout.js
 import { headers } from 'next/headers'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import CookieConsent from '@/components/CookieConsent'
 import OzelGunEkrani from '@/components/OzelGunEkrani'
 import { Fraunces, Manrope, Poppins, Ms_Madi, Hurricane, Square_Peg, Caveat } from 'next/font/google'
 import './globals.css'
@@ -75,6 +76,7 @@ export default async function RootLayout({ children }) {
           <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>
         <OzelGunEkrani />
+        <CookieConsent />
         <GoogleAnalytics />
       </body>
     </html>
