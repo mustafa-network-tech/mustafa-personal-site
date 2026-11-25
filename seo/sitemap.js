@@ -1,49 +1,32 @@
 /**
- * Sitemap URL list for app/sitemap.js. Türkçe ana dil; EN + TR sayfalar.
+ * Sitemap URL list for app/sitemap.js.
+ * Kişisel site yapısı: ana sayfa + alt sayfalar (TR ve EN), her biri hreflang karşılığıyla.
+ * Eski ticari sayfalar (hizmetler, vitrin, şehir/iniş sayfaları, proje detayları) sitemap'ten çıkarıldı;
+ * sayfalar silinmedi veya yönlendirilmedi, yalnızca arama motoruna önerilmiyor.
  */
 
 import { SITE_URL } from './metadata'
 import { PAGES } from '@/lib/mo/site'
-import { ALL_SLUGS as PROJECT_SLUGS } from '@/lib/projects/projectsData'
-import { getAllLocalSeoSlugs } from '@/lib/localSeo/pages'
-import { LANDING_SLUGS, landingHref } from '@/lib/landingPages/routes'
-import { LOCAL_SEO_REDIRECTS } from '@/lib/localSeo/canonicalRoutes.mjs'
 
-const LOCAL_SEO_PATHS = getAllLocalSeoSlugs().map((slug) => `/${slug}`).filter((path) => !Object.hasOwn(LOCAL_SEO_REDIRECTS, path))
+const PAGE_KEYS = ['home', 'about', 'experience', 'photo', 'projects', 'book', 'contact']
 
-/** İngilizce kök sayfalar (/tr öneki ile Türkçe karşılığı da üretilir) */
-const EN_BASE_PATHS = [
-  '/projects',
-  '/services',
-  '/contact',
-  '/vitrin',
-  ...PROJECT_SLUGS.map((slug) => `/projects/${slug}`),
-]
-
-/** All sitemap URLs with lastModified */
+/** All sitemap URLs with lastModified and TR/EN alternates */
 export function getSitemapUrls() {
-  const now = new Date().toISOString()
+  const lastModified = new Date().toISOString()
   const urls = []
 
-  urls.push({ url: `${SITE_URL}/tr`, lastModified: now })
-  urls.push({ url: `${SITE_URL}/en`, lastModified: now })
-
-  for (const key of ['about', 'experience', 'photo', 'projects', 'book']) {
-    urls.push({ url: `${SITE_URL}${PAGES[key].tr}`, lastModified: now })
-    urls.push({ url: `${SITE_URL}${PAGES[key].en}`, lastModified: now })
-  }
-
-  for (const path of EN_BASE_PATHS) {
-    urls.push({ url: `${SITE_URL}${path}`, lastModified: now })
-    urls.push({ url: `${SITE_URL}/tr${path}`, lastModified: now })
-  }
-
-  for (const path of LOCAL_SEO_PATHS) {
-    urls.push({ url: `${SITE_URL}${path}`, lastModified: now })
-  }
-
-  for (const slug of LANDING_SLUGS) {
-    urls.push({ url: `${SITE_URL}${landingHref(slug)}`, lastModified: now })
+  for (const key of PAGE_KEYS) {
+    const { tr, en } = PAGES[key]
+    const alternates = { languages: { tr: `${SITE_URL}${tr}`, en: `${SITE_URL}${en}`, 'x-default': `${SITE_URL}${tr}` } }
+    for (const path of [tr, en]) {
+      urls.push({
+        url: `${SITE_URL}${path}`,
+        lastModified,
+        changeFrequency: key === 'home' ? 'weekly' : 'monthly',
+        priority: key === 'home' ? 1 : 0.7,
+        alternates,
+      })
+    }
   }
 
   return urls

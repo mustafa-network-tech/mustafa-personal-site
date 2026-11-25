@@ -8,16 +8,16 @@ export const SITE_URL = 'https://mustafaoner.net'
 /** Global default meta (fallback) */
 export const GLOBAL_META = {
   en: {
-    title: 'Mustafa Oner | Software, Digital Systems & Photography',
+    title: 'Mustafa Öner | Personal Website',
     description:
-      'Personal website of Mustafa Oner: software and digital systems, the products he works on, and photography.',
-    keywords: ['Mustafa Oner', 'software', 'digital systems', 'photography', 'MK Digital Systems', 'MK OPS'],
+      "Fiber optic infrastructure, software, nature photography, travel and literature. Explore Mustafa Öner's personal journey, professional experience and projects.",
+    keywords: ['Mustafa Öner', 'personal website', 'fiber optic infrastructure', 'software', 'nature photography', 'travel', 'literature'],
   },
   tr: {
-    title: 'Mustafa Öner | Yazılım, Dijital Sistemler ve Fotoğraf',
+    title: 'Mustafa Öner | Kişisel Web Sitesi',
     description:
-      'Mustafa Öner kişisel sitesi: yazılım ve dijital sistemler, üzerinde çalıştığı ürünler ve fotoğraf.',
-    keywords: ['Mustafa Öner', 'yazılım', 'dijital sistemler', 'fotoğraf', 'MK Digital Systems', 'MK OPS'],
+      "Fiber optik altyapı, yazılım, doğa fotoğrafçılığı, gezi ve edebiyat. Mustafa Öner'in yaşam yolculuğu, mesleki deneyimleri ve kişisel projeleri.",
+    keywords: ['Mustafa Öner', 'kişisel web sitesi', 'fiber optik altyapı', 'yazılım', 'doğa fotoğrafçılığı', 'gezi', 'edebiyat'],
   },
 }
 
@@ -65,9 +65,9 @@ export const PAGE_META = {
   },
   contact: {
     en: {
-      title: 'Contact | Mustafa Oner',
+      title: 'Contact | Mustafa Öner',
       description:
-        'Contact Mustafa Oner by email or LinkedIn for an introduction, a collaboration or a short message.',
+        'Get in touch with Mustafa Öner by email or LinkedIn for an introduction, a collaboration or a short message.',
     },
     tr: {
       title: 'İletişim | Mustafa Öner',

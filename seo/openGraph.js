@@ -13,7 +13,7 @@ export function buildOpenGraph(opts) {
   const { locale = 'tr', path = '', title, description, image } = opts
   const url = path ? `${SITE_URL}${path}` : SITE_URL
   const img = image || OG_IMAGES[locale] || OG_IMAGES.tr
-  const siteName = locale === 'tr' ? 'Mustafa Öner' : 'Mustafa Oner'
+  const siteName = 'Mustafa Öner'
   const ogLocale = locale === 'tr' ? 'tr_TR' : 'en_US'
   return {
     type: 'website',

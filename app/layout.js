@@ -8,7 +8,7 @@ import './mo.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import LayoutShell from '@/components/LayoutShell'
 import JsonLd from '@/components/JsonLd'
-import { SITE_URL, GLOBAL_META } from '@/seo/metadata'
+import { SITE_URL, GLOBAL_META, OG_IMAGES } from '@/seo/metadata'
 import { getPersonSchema, getWebsiteSchema } from '@/seo/schema'
 
 const fraunces = Fraunces({ subsets: ['latin', 'latin-ext'], variable: '--f-serif', display: 'swap', axes: ['opsz'] })
@@ -29,12 +29,25 @@ export const metadata = {
   title: { default: GLOBAL_META.tr.title },
   description: GLOBAL_META.tr.description,
   keywords: GLOBAL_META.tr.keywords,
+  applicationName: 'Mustafa Öner',
+  authors: [{ name: 'Mustafa Öner', url: SITE_URL }],
+  creator: 'Mustafa Öner',
+  icons: { icon: '/icon.svg' },
   openGraph: {
     type: 'website',
+    siteName: 'Mustafa Öner',
     locale: 'tr_TR',
     alternateLocale: 'en_US',
+    title: GLOBAL_META.tr.title,
+    description: GLOBAL_META.tr.description,
+    images: [{ url: OG_IMAGES.tr, width: 1536, height: 1024, alt: 'Mustafa Öner' }],
   },
-  twitter: { card: 'summary_large_image' },
+  twitter: {
+    card: 'summary_large_image',
+    title: GLOBAL_META.tr.title,
+    description: GLOBAL_META.tr.description,
+    images: [OG_IMAGES.tr],
+  },
 }
 
 export default async function RootLayout({ children }) {

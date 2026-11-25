@@ -1,8 +1,15 @@
 import HomePage from '@/components/mo/HomePage'
+import JsonLd from '@/components/JsonLd'
 import { pageMetadata } from '@/lib/mo/meta'
+import { getProfilePageSchema } from '@/seo/schema'
 
 export const metadata = pageMetadata('home', 'tr')
 
 export default function Page() {
-  return <HomePage lang="tr" />
+  return (
+    <>
+      <JsonLd data={getProfilePageSchema({ locale: 'tr', path: metadata.alternates.canonical, name: metadata.title, description: metadata.description })} />
+      <HomePage lang="tr" />
+    </>
+  )
 }
