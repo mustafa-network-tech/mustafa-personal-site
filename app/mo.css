@@ -51,11 +51,11 @@ html[data-hero=go] .mo-rise{animation:mo-fade 1.1s var(--ease-out) both;animatio
 .mo-js .mo-imgreveal-i{transform:scale(1.25);transition:transform 1.8s var(--ease-out) var(--d,0ms)}
 .mo-js .is-in>.mo-imgreveal-c>.mo-imgreveal-i{transform:none}
 
-/* ---------- açılış: imza ekranı (kömür #141714) ---------- */
+/* ---------- açılış: imza ekranı (antik altın zemin) ---------- */
 .mo-intro{display:none;position:fixed;inset:0;z-index:400;background:transparent;place-items:center;pointer-events:all}
-.mo-surface{position:absolute;inset:0;background:#141714}
+.mo-surface{position:absolute;inset:0;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .38  0 0 0 0 .2  0 0 0 .32 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),radial-gradient(ellipse 78% 68% at 50% 45%,#e6d6b2 0%,#d8c49a 52%,#bfa879 100%);background-blend-mode:multiply,normal}
 .mo-words{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
-.mo-word{position:absolute;left:0;top:0;white-space:nowrap;opacity:0;line-height:1.05;font-weight:400;color:#F2ECDF;transform-origin:50% 60%;will-change:opacity,transform,filter}
+.mo-word{position:absolute;left:0;top:0;white-space:nowrap;opacity:0;line-height:1.05;font-weight:400;color:#3a2412;transform-origin:50% 60%;will-change:opacity,transform,filter}
 .mo-word.f1{font-family:var(--f-sign),cursive}
 .mo-word.f2{font-family:var(--f-hand2),cursive}
 .mo-word.f3{font-family:var(--f-hand3),cursive}
@@ -427,3 +427,87 @@ button.mo-link{background:none;border-width:0 0 1px;color:inherit;cursor:pointer
 @media(prefers-reduced-motion:reduce){.mo-js .mo-sigblock .mo-sigtext,.mo-js .mo-sigblock .mo-sigline{opacity:1!important;transform:none!important;transition:none!important}}
 .mo-sigblock{width:fit-content!important;max-width:100%}
 .mo-sigtext{white-space:nowrap}
+
+/* ===== Fotoğraf rulosu (ana sayfa, Mustafa'nın Kadrajından) ===== */
+.reel-head{margin-bottom:clamp(1.6rem,3.5vw,2.8rem)}
+.reel-title{white-space:nowrap;font-size:clamp(1.55rem,5.4vw,4.6rem)}
+.reel-head .mo-body{margin-top:1rem}
+.reel{position:relative;width:min(100%,980px);margin-inline:auto;padding:0 0 clamp(.8rem,2vw,1.4rem);outline-offset:6px;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.reel::before{content:"";position:absolute;inset:-6% -4% 0;background:radial-gradient(ellipse 60% 55% at 50% 0%,rgba(236,232,200,.13),transparent 70%);pointer-events:none}
+.reel-stage{position:relative;aspect-ratio:3/2;perspective:1500px;perspective-origin:50% 40%;overflow:hidden;container-type:inline-size;box-shadow:0 18px 40px -26px rgba(0,0,0,.6)}
+.reel-sheet{position:absolute;inset:0;transform-origin:100% 50%;will-change:transform;--cut:0%;--roll-l:0%;--roll-w:0%;--roll-o:0;--roll-n:0;--sig-o:0;--curl:0}
+.reel-photo{position:absolute;inset:0;clip-path:inset(0 0 0 var(--cut));-webkit-clip-path:inset(0 0 0 var(--cut));background:#1a2119}
+.reel-photo img{user-select:none;-webkit-user-drag:none}
+.reel-curl{position:absolute;top:0;bottom:0;left:var(--cut);width:22%;opacity:var(--curl);pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.28) 22%,rgba(255,250,235,.1) 44%,rgba(0,0,0,.08) 62%,transparent 100%)}
+.reel-roll{position:absolute;top:0;bottom:0;left:var(--roll-l);width:var(--roll-w);opacity:var(--roll-o);pointer-events:none;border-radius:999px/2%;background:linear-gradient(90deg,#3b3326 0%,#9d9276 14%,#efe6d0 34%,#fbf5e4 44%,#cfc4a8 62%,#7d735b 84%,#2c261b 100%);box-shadow:-22px 0 38px -6px rgba(0,0,0,.55),14px 0 26px -8px rgba(0,0,0,.5)}
+.reel-roll::after{content:"";z-index:1;position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+.reel-floor{position:absolute;left:6%;right:6%;bottom:clamp(.6rem,1.6vw,1.4rem);height:1px;background:linear-gradient(90deg,transparent,rgba(236,232,200,.28),transparent)}
+.reel[data-reduced=true] .reel-sheet{transform:none!important}
+.reel[data-reduced=true] .reel-photo{clip-path:none}
+.reel[data-reduced=true] .reel-curl,.reel[data-reduced=true] .reel-roll{display:none}
+
+.reel-links{display:grid;gap:clamp(1.4rem,3vw,2.4rem);margin-top:clamp(1.8rem,4vw,3rem);padding-top:clamp(1.4rem,2.6vw,2rem);border-top:1px solid rgba(238,240,232,.16)}
+@media(min-width:760px){.reel-links{grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}}
+.reel-link{display:block;color:inherit;text-decoration:none}
+.reel-link-head{display:flex;align-items:center;gap:.7rem;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.reel-link-head svg{width:1.05rem;height:1.05rem;flex:none}
+.reel-link-title{display:inline-block;margin-top:.7rem;font-family:var(--f-serif),Georgia,serif;font-size:clamp(1.5rem,2.6vw,2.2rem);letter-spacing:-.02em;line-height:1.15;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .6s var(--ease-out),color .3s}
+.reel-link-desc{margin-top:.6rem;max-width:26rem;font-size:1rem;line-height:1.65;opacity:.72}
+.reel-link:hover .reel-link-title,.reel-link:focus-visible .reel-link-title{background-size:100% 1px;color:var(--khaki)}
+.reel-link-arrow{display:inline-block;margin-left:.35rem;transition:transform .4s var(--ease-out)}
+.reel-link:hover .reel-link-arrow{transform:translate(.2rem,-.2rem)}
+
+/* Mavi Kadraj imzası: rulonun yüzeyine işlenmiş, ruloyla birlikte hareket eder ve küçülür */
+.reel-sig{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;transform:rotate(180deg) scaleX(.9);white-space:nowrap;font-family:var(--f-sign),var(--f-hand2),cursive;font-size:calc(var(--roll-n) * .66cqw);line-height:1;opacity:var(--sig-o);color:rgba(52,38,18,.92);text-shadow:0 1px 0 rgba(255,252,240,.6),0 -1px 0 rgba(0,0,0,.2);z-index:2;pointer-events:none}
+
+/* Ahşap çerçeve: koyu ceviz, ince; fotoğraf alanının dışında durur (boyut/konum değişmez). Opaklık = rulonun açılma ilerlemesi. */
+.reel{--frame-o:1;--fw:clamp(20px,3.8vw,44px);--fwt:calc(var(--fw) * 1.7)}
+.reel-frame{position:relative;padding:var(--fwt) var(--fw)}
+.reel-wood{position:absolute;inset:0;pointer-events:none;filter:drop-shadow(0 10px 14px rgba(70,42,14,.38))}
+.reel-wood span{position:absolute;display:block}
+.reel-wood .w-t,.reel-wood .w-b{left:0;right:0;height:var(--fw);background:url(/images/frame/walnut-h.jpg) 0 0/auto 100% repeat-x,#3a2415}
+.reel-wood .w-l,.reel-wood .w-r{top:0;bottom:0;width:var(--fw);background:url(/images/frame/walnut-v.jpg) 0 0/100% auto repeat-y,#3a2415}
+.reel-wood .w-t{top:0;height:var(--fwt);clip-path:polygon(0 0,100% 0,calc(100% - var(--fw)) 100%,var(--fw) 100%);box-shadow:inset 0 1px 0 rgba(244,208,140,.3)}
+.reel-wood .w-b{bottom:0;height:var(--fwt);clip-path:polygon(var(--fw) 0,calc(100% - var(--fw)) 0,100% 100%,0 100%);filter:brightness(.86)}
+.reel-wood .w-l{left:0;clip-path:polygon(0 0,100% var(--fwt),100% calc(100% - var(--fwt)),0 100%);filter:brightness(1)}
+.reel-wood .w-r{right:0;clip-path:polygon(0 var(--fwt),100% 0,100% 100%,0 calc(100% - var(--fwt)));filter:brightness(.8)}
+.reel-wood .w-lip{inset:var(--fwt) var(--fw);box-shadow:0 0 0 1px rgba(214,174,98,.6),0 0 0 2px rgba(70,40,14,.38),inset 0 0 12px rgba(70,40,14,.28)}
+/* Çerçeve altına el yazısıyla işlenmiş imza (çerçeveyle birlikte belirginleşir) */
+.reel-wood .w-sig{left:0;right:0;top:0;height:var(--fwt);display:flex;align-items:center;justify-content:center;font-family:var(--f-sign),var(--f-hand2),cursive;font-size:calc(var(--fw) * 1.2);line-height:1}
+.reel-wood .sig-text{position:static;display:inline-block;white-space:pre;text-align:center}
+/* Kazınmış imza: üst-sol duvar gölgede, alt-sağ kenar ışıkta; içi ince altın varak (eskimiş). Rulo geçerken harf harf hafif mavimsi ışıma. */
+.reel-wood .w-sig .ch{position:static;display:inline;color:color-mix(in srgb,#f0d27e,#d4e8ff calc(var(--lit,0) * 85%));text-shadow:-1px -1px 0 rgba(12,6,2,.95),-1.5px -1.5px 1px rgba(0,0,0,.55),1px 1.4px 0 rgba(255,236,180,.45),0 0 calc(var(--lit,0) * 6px) rgba(190,222,255,calc(var(--lit,0) * .95)),0 0 calc(var(--lit,0) * 16px) rgba(120,175,255,calc(var(--lit,0) * .8)),0 0 calc(var(--lit,0) * 30px) rgba(90,150,255,calc(var(--lit,0) * .45))}
+/* Oyma işçiliği: köşe akantus dizileri ve kenar oluk/dişli çizgileri (ahşabın üzerine ışık-gölge katmanı; damarlar altından geçer) */
+.reel-wood .w-corner{position:absolute;width:calc(var(--fw) * 6.818);height:calc(var(--fw) * 6.477);background-size:100% 100%;background-repeat:no-repeat}
+.reel-wood .c-tl{top:0;left:0;background-image:url(/images/frame/corner-tl.webp)}
+.reel-wood .c-tr{top:0;right:0;background-image:url(/images/frame/corner-tr.webp)}
+.reel-wood .c-bl{bottom:0;left:0;background-image:url(/images/frame/corner-bl.webp)}
+.reel-wood .c-br{bottom:0;right:0;background-image:url(/images/frame/corner-br.webp)}
+.reel-wood .w-edge{background-repeat:repeat}
+.reel-wood .w-edge-t,.reel-wood .w-edge-b{left:calc(var(--fw) * 6.818);right:calc(var(--fw) * 6.818);height:var(--fwt);background-image:url(/images/frame/edge-h.png);background-size:auto 100%;background-repeat:repeat-x}
+.reel-wood .w-edge-t{top:0}
+.reel-wood .w-edge-b{bottom:0}
+.reel-wood .w-edge-l,.reel-wood .w-edge-r{top:calc(var(--fw) * 6.477);bottom:calc(var(--fw) * 6.477);width:var(--fw);background-image:url(/images/frame/edge-v.png);background-size:100% auto;background-repeat:repeat-y}
+.reel-wood .w-edge-l{left:0}
+.reel-wood .w-edge-r{right:0}
+
+/* ===== Galeri bölümü: mat şampanya altını zemin (yalnızca bu bölüm) ===== */
+.mo-gallery{position:relative;isolation:isolate;color:#3a2412;background:radial-gradient(ellipse 70% 55% at 50% 38%,rgba(255,244,214,.38),transparent 70%),radial-gradient(ellipse 120% 90% at 50% 50%,transparent 55%,rgba(120,84,36,.2) 100%),radial-gradient(circle at 12% 18%,rgba(150,110,52,.12),transparent 38%),radial-gradient(circle at 88% 82%,rgba(150,110,52,.14),transparent 42%),#d8c498}
+.mo-gallery::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42  0 0 0 0 .3  0 0 0 0 .14  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.mo-gallery .mo-h2{color:#33200e}
+.mo-gallery .mo-body{color:#4a3118;opacity:.92}
+.mo-gallery .mo-link{color:#3a2412}
+.mo-gallery .mo-link:hover{color:#7a4a14}
+.mo-gallery .reel::before{background:radial-gradient(ellipse 60% 55% at 50% 0%,rgba(255,246,220,.35),transparent 70%)}
+.mo-gallery .reel-floor{background:linear-gradient(90deg,transparent,rgba(90,60,24,.35),transparent)}
+.mo-gallery .reel-links{border-top-color:rgba(70,46,18,.28)}
+.mo-gallery .reel-link-head,.mo-gallery .reel-link-desc{color:#4a3118}
+.mo-gallery .reel-link:hover .reel-link-title,.mo-gallery .reel-link:focus-visible .reel-link-title{color:#7a4a14}
+/* Saten cila: yüzeyde yumuşak, geniş bir ışık yansıması (motiflerin üzerinden de geçer) */
+.reel-wood::after{content:"";position:absolute;inset:0;background:linear-gradient(118deg,transparent 22%,rgba(255,238,196,.17) 40%,rgba(255,244,214,.24) 47%,rgba(255,238,196,.12) 56%,transparent 72%);mix-blend-mode:soft-light;pointer-events:none}
+.reel[data-reduced=true] .reel-wood{opacity:1}
+
+/* Rulo üzerindeki imza: rulo sahnenin ortasından geçerken üzerinden ışıltı geçer */
+.reel-sig.reel-glint{color:transparent;text-shadow:none;mix-blend-mode:normal;opacity:var(--glint-o,0);background:linear-gradient(0deg,transparent 38%,rgba(255,247,222,.95) 50%,transparent 62%) 0 calc(var(--glint,0) * 100%)/100% 320% no-repeat;-webkit-background-clip:text;background-clip:text}
+/* Rulo yazısı da aynı anda parlar */
+.reel-sig:not(.reel-glint){color:color-mix(in srgb,rgba(52,38,18,.92),#fff6d8 calc(var(--glint-o,0) * 100%));-webkit-text-stroke:calc(var(--glint-o,0) * .5px) rgba(190,130,30,.9);text-shadow:0 1px 0 rgba(255,252,240,calc(.6 - var(--glint-o,0) * .6)),0 0 calc(var(--glint-o,0) * 5px) rgba(255,244,200,calc(var(--glint-o,0) * 1)),0 0 calc(var(--glint-o,0) * 14px) rgba(255,190,60,calc(var(--glint-o,0) * .95)),0 0 calc(var(--glint-o,0) * 30px) rgba(255,160,30,calc(var(--glint-o,0) * .75))}

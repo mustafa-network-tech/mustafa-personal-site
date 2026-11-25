@@ -1,7 +1,8 @@
 'use client'
 import Image from 'next/image'
 import { MoLink, Reveal, SplitWords, SplitLetters, ScrollWords, ImageReveal, Parallax } from '@/components/mo/motion'
-import { pageHref } from '@/lib/mo/site'
+import { pageHref, INSTAGRAM, INSTAGRAM_HANDLE, MAVI_KADRAJ } from '@/lib/mo/site'
+import PhotoReel from '@/components/mo/PhotoReel'
 import { HOME_PHOTOS, PHOTOS } from '@/lib/mo/photos'
 import { BOOK } from '@/content/book'
 import { EXPLORE_IMAGES } from '@/lib/mo/explore'
@@ -20,7 +21,7 @@ const T = {
       ['projects', 'Projelerim', 'Merakla başlayan, emekle şekillenen dijital çalışmalarım.', 'projects'],
       ['book', 'Yoldaşın Mücadelesi', 'Hayata, insana ve mücadeleye dair bir kitap.', 'book'],
     ],
-    photoTitle: 'Mustafa’nın Kadrajından', photoLead: 'Sakladığım anlar — bir his, bir mekân, bir an.', photoCta: 'Tüm fotoğraflar',
+    photoTitle: 'Mustafa’nın Kadrajından', photoLead: 'Bazen bir yolculuk, bazen doğanın sessizliği, bazen de hayatın içinden küçük bir ayrıntı. Objektifime yansıyan dünyadan kareler.', photoCta: 'Tüm Fotoğraflarımı Keşfet', mavi: 'Mavi Kadraj', maviDesc: 'Doğanın, yolların ve keşiflerin objektifime yansıyan hikâyeleri.', igLabel: 'Instagram',
     quote: 'Büyük iş doğru sorularla başlar. Doğru soruları da teknik derinlik ve gerçek dünya deneyimi şekillendirir.',
     bookKicker: 'Kitap', bookCta: 'Kitabı keşfet', contact: 'İletişim', contactCta: 'Bir mesaj gönder',
   },
@@ -36,7 +37,7 @@ const T = {
       ['projects', 'My Projects', 'Digital work that begins with curiosity and is shaped by effort.', 'projects'],
       ['book', 'Yoldaşın Mücadelesi', 'A book about life, people and struggle.', 'book'],
     ],
-    photoTitle: 'Through Mustafa’s Lens', photoLead: 'Moments I keep — a feeling, a place, an instant.', photoCta: 'All photographs',
+    photoTitle: 'Through Mustafa’s Lens', photoLead: 'Sometimes a journey, sometimes the silence of nature, sometimes a small detail from life. Frames from the world reflected in my lens.', photoCta: 'Explore All My Photographs', mavi: 'Mavi Kadraj', maviDesc: 'Stories of nature, roads and discoveries reflected in my lens.', igLabel: 'Instagram',
     quote: 'Great work starts with the right questions. And the right questions are shaped by technical depth and real-world experience.',
     bookKicker: 'Book', bookCta: 'Discover the book', contact: 'Contact', contactCta: 'Send a message',
   },
@@ -113,22 +114,32 @@ export default function HomePage({ lang = 'tr' }) {
         </nav>
       </div></section>
 
-      <section className="mo-sec mo-dark"><div className="mo-wrap">
-        <div className="mb-12 grid gap-6 md:mb-20 md:grid-cols-2 md:items-end">
-          <SplitWords text={c.photoTitle} className="mo-h2" />
+      <section className="mo-sec mo-gallery"><div className="mo-wrap">
+        <div className="reel-head">
+          <SplitWords text={c.photoTitle} className="mo-h2 reel-title" />
           <Reveal><p className="mo-body">{c.photoLead}</p></Reveal>
         </div>
-        <div className="mo-strip">
-          {[p1, p2, p3].map((p, i) => p && (
-            <ImageReveal key={p.src} delay={i * 120} className={['a', 'b', 'c'][i]}>
-              <Parallax className="h-full" amount={6}>
-                <div className="mo-fill"><Image src={p.src} alt={p.alt[lang]} fill sizes="(min-width:900px) 40vw, 100vw" loading="lazy" /></div>
-              </Parallax>
-            </ImageReveal>
-          ))}
+        <Reveal><PhotoReel lang={lang} /></Reveal>
+        <Reveal className="mt-10 text-center"><MoLink href={pageHref('photo', lang)} className="mo-link">{c.photoCta} <span aria-hidden="true">→</span></MoLink></Reveal>
+        <div className="reel-links">
+          <Reveal>
+            <a className="reel-link" href={INSTAGRAM} target="_blank" rel="noopener noreferrer">
+              <span className="reel-link-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" /></svg>
+                {c.igLabel}
+              </span>
+              <span className="reel-link-title">{INSTAGRAM_HANDLE}<span className="reel-link-arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </Reveal>
+          <Reveal delay={100}>
+            <a className="reel-link" href={MAVI_KADRAJ} target="_blank" rel="noopener noreferrer">
+              <span className="reel-link-head">mavikadraj.com.tr</span>
+              <span className="reel-link-title">{c.mavi}<span className="reel-link-arrow" aria-hidden="true">↗</span></span>
+              <p className="reel-link-desc">{c.maviDesc}</p>
+            </a>
+          </Reveal>
         </div>
-        <Reveal className="mt-12"><MoLink href={pageHref('photo', lang)} className="mo-link">{c.photoCta} <span aria-hidden="true">→</span></MoLink></Reveal>
-      </div></section>
+</div></section>
 
       <section className="mo-sec"><div className="mo-wrap">
         <ScrollWords className="mo-quote" text={`“${c.quote}”`} />
