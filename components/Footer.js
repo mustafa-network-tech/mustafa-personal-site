@@ -8,7 +8,7 @@ const COPY = {
   tr: { nav: 'Alt menü', explore: 'Keşfet', links: 'Bağlantılar', slogan: 'Hayat, tek bir hikâyeden ibaret değil.', motto: 'Emekle, merakla, tutkuyla.', top: 'Yukarı dön', contact: 'İletişim', privacy: 'Gizlilik', cookies: 'Çerez tercihleri' },
   en: { nav: 'Footer', explore: 'Explore', links: 'Links', slogan: 'Life is more than a single story.', motto: 'With effort, curiosity and passion.', top: 'Back to top', contact: 'Contact', privacy: 'Privacy', cookies: 'Cookie preferences' },
 }
-const EXPLORE_KEYS = ['about', 'experience', 'photo', 'projects', 'book']
+const EXPLORE_KEYS = ['about', 'experience', 'photo', 'projects', 'book', 'world']
 
 export default function Footer() {
   const { language } = useLanguage()

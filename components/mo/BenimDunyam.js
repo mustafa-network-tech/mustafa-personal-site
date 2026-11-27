@@ -31,17 +31,8 @@ const T = {
   },
 }
 
-/** Çizgisel güvercin simgesi (currentColor). */
-export function DoveIcon({ className = '' }) {
-  return (
-    <svg className={className} viewBox="0 0 64 44" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-      <path pathLength="1" d="M58 18 L53.4 16.6 C51.8 13.4 47.2 12.8 44.8 15.8 C42.6 18.6 41.8 21.8 38.2 24 C32 27.6 22.6 27.4 14.2 28.4 L4.5 26.4 L9.6 31.4 L5.2 36.4 C15.6 38.8 27.6 41.6 37.6 38.4 C46.8 35.4 51.6 27.6 52.2 20.4 Z" />
-      <path pathLength="1" d="M41 23.4 C37.4 15.4 31 7.6 20.6 2.8 C20.4 6.4 21.2 9.4 22.6 12 C20.4 12 18.6 11.6 16.6 10.8 C18.4 16.8 22.4 22 28.6 26.6" />
-      <path pathLength="1" d="M33.4 20.6 C31 16.8 28.4 13.6 25.4 11" />
-      <circle cx="50.6" cy="16.8" r=".9" fill="currentColor" stroke="none" />
-    </svg>
-  )
-}
+/** Güvercin emojisi (🕊️). Görseldir; ekran okuyucudan gizlenir. */
+const DOVE = '🕊️'
 
 export default function BenimDunyam({ lang = 'tr' }) {
   const c = T[lang === 'en' ? 'en' : 'tr']
@@ -82,7 +73,7 @@ export default function BenimDunyam({ lang = 'tr' }) {
         <div className="mo-world-body">
           <h2 id={titleId} className="mo-world-title">
             <span className="mo-world-step mo-world-write" style={{ '--s': 0 }}>{c.title}</span>
-            <DoveIcon className="mo-world-dove" />
+            <span className="mo-world-dove" aria-hidden="true">{DOVE}</span>
           </h2>
           <p className="mo-world-slogan mo-world-step" style={{ '--s': 1 }}>{c.slogan}</p>
           <div className="mo-world-text mo-world-step" style={{ '--s': 2 }}>
@@ -90,7 +81,7 @@ export default function BenimDunyam({ lang = 'tr' }) {
           </div>
           <div className="mo-world-act mo-world-step" style={{ '--s': 3 }}>
             <a className="mo-world-cta" href={YOLDAS} target="_blank" rel="noopener noreferrer">
-              <DoveIcon className="mo-world-cta-dove" />
+              <span className="mo-world-cta-dove" aria-hidden="true">{DOVE}</span>
               <span>{c.cta}</span>
               <span className="mo-world-cta-a" aria-hidden="true">↗</span>
               <span className="mo-sr">{c.newTab}</span>
