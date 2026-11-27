@@ -6,6 +6,7 @@ import PhotoReel from '@/components/mo/PhotoReel'
 import { HOME_PHOTOS, PHOTOS } from '@/lib/mo/photos'
 import { BOOK } from '@/content/book'
 import { EXPLORE_IMAGES } from '@/lib/mo/explore'
+import BenimDunyam from '@/components/mo/BenimDunyam'
 
 // Yalnızca projede mevcut metinler.
 const T = {
@@ -140,6 +141,8 @@ export default function HomePage({ lang = 'tr' }) {
           </Reveal>
         </div>
 </div></section>
+
+      <BenimDunyam lang={lang} />
 
       <section className="mo-sec"><div className="mo-wrap">
         <ScrollWords className="mo-quote" text={`“${c.quote}”`} />

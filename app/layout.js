@@ -20,8 +20,8 @@ const hand3 = Square_Peg({ subsets: ['latin', 'latin-ext'], weight: '400', varia
 const caveat = Caveat({ subsets: ['latin', 'latin-ext'], variable: '--f-hand4', display: 'swap' })
 const manrope = Manrope({ subsets: ['latin', 'latin-ext'], variable: '--f-sans', display: 'swap' })
 
-// Boyamadan önce çalışır: JS sınıfı + açılış kararı (yalnızca oturumdaki ilk girişte; yenileme ve sayfa içi geçişlerde tekrarlanmaz) (reduced-motion ve yasal sayfalarda açılış yok).
-const BOOT = `try{var d=document.documentElement,p=location.pathname.replace(/[/]$/,'')||'/';d.classList.add('mo-js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;var n=navigator;if((n.deviceMemory&&n.deviceMemory<=4)||(n.hardwareConcurrency&&n.hardwareConcurrency<=4))d.classList.add('mo-low');var nt=((performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{}).type;var seen=0;try{seen=sessionStorage.getItem('mo-seen');sessionStorage.setItem('mo-seen','1')}catch(e){}if(!rm&&!seen&&(p==='/tr'||p==='/en')&&nt!=='back_forward'){d.dataset.intro='play';setTimeout(function(){if(d.dataset.intro==='play'){d.dataset.intro='done';d.dataset.hero='go'}},17500)}}catch(e){}`
+// Boyamadan önce çalışır: JS sınıfı + açılış kararı (yalnızca oturumdaki ilk girişte; yenileme ve sayfa içi geçişlerde tekrarlanmaz) (reduced-motion, yasal sayfalar ve #bölüm bağlantılarında açılış yok).
+const BOOT = `try{var d=document.documentElement,p=location.pathname.replace(/[/]$/,'')||'/';d.classList.add('mo-js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;var n=navigator;if((n.deviceMemory&&n.deviceMemory<=4)||(n.hardwareConcurrency&&n.hardwareConcurrency<=4))d.classList.add('mo-low');var nt=((performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{}).type;var seen=0;try{seen=sessionStorage.getItem('mo-seen');sessionStorage.setItem('mo-seen','1')}catch(e){}if(!rm&&!seen&&!location.hash&&(p==='/tr'||p==='/en')&&nt!=='back_forward'){d.dataset.intro='play';setTimeout(function(){if(d.dataset.intro==='play'){d.dataset.intro='done';d.dataset.hero='go'}},17500)}}catch(e){}`
 
 const LOCALE_HEADER = 'x-path-locale'
 

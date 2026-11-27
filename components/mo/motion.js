@@ -115,6 +115,18 @@ export const MoLink = forwardRef(function MoLink({ href, children, onClick, ...r
     onClick?.(e)
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
     if (href === pathname) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); return }
+    // Aynı sayfadaki bir bölüme bağlantı (örn. /tr#benim-dunyam): yönlendirmeden ilgili bölüme kaydır.
+    const hashAt = href.indexOf('#')
+    if (hashAt > 0 && href.slice(0, hashAt) === pathname) {
+      const target = document.getElementById(href.slice(hashAt + 1))
+      if (target) {
+        e.preventDefault()
+        const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        // Menü kapanıp kaydırma kilidi kalktıktan sonra kaydır.
+        setTimeout(() => target.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' }), 60)
+        return
+      }
+    }
     e.preventDefault()
     go(href)
   }
